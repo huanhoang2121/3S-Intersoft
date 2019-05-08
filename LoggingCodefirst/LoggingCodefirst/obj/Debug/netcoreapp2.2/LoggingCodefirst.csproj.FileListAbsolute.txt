@@ -210,3 +210,4 @@
 /home/local/3SI/huan.hv/3S-Intersoft/LoggingCodefirst/LoggingCodefirst/obj/Debug/netcoreapp2.2/LoggingCodefirst.dll
 /home/local/3SI/huan.hv/3S-Intersoft/LoggingCodefirst/LoggingCodefirst/obj/Debug/netcoreapp2.2/LoggingCodefirst.pdb
 /home/local/3SI/huan.hv/3S-Intersoft/LoggingCodefirst/LoggingCodefirst/obj/Debug/netcoreapp2.2/LoggingCodefirst.csproj.CopyComplete
+/home/local/3SI/huan.hv/3S-Intersoft/LoggingCodefirst/LoggingCodefirst/obj/Debug/netcoreapp2.2/Razor/Views/User/_ChangePasswordPartial.g.cshtml.cs

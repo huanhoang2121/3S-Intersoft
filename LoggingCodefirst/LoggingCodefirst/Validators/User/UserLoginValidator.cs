@@ -8,10 +8,10 @@ namespace LoggingCodefirst.Validators.User
     { 
         public UserLoginValidator(IStringLocalizer<UserLoginValidator> localizer)
         {
-            RuleFor(x => x.Email).NotNull().WithMessage(localizer["Email must not be empty."]);
-            RuleFor(x => x.Email).EmailAddress().WithMessage(localizer["Enter a valid email address."]);
-            RuleFor(x => x.Password).NotNull().WithMessage(localizer["Password must not be empty."]);
-            RuleFor(x => x.Password).MinimumLength(8).WithMessage(localizer["Password cannot be less than 8 characters."]);
+            RuleFor(x => x.Email).NotNull().WithMessage(localizer["Email must not be empty."])
+                .EmailAddress().WithMessage(localizer["Enter a valid email address."]);
+            RuleFor(x => x.Password).NotNull().WithMessage(localizer["Password must not be empty."])
+                .MinimumLength(8).WithMessage(localizer["Password cannot be less than 8 characters."]);
         }
     }
 }

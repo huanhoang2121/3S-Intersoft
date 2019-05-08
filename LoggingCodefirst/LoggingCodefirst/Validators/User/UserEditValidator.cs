@@ -8,8 +8,8 @@ namespace LoggingCodefirst.Validators.User
     {
         public UserEditValidator(IStringLocalizer<UserEditValidator> localizer)
         {
-            RuleFor(x => x.Fullname).NotNull().WithMessage(localizer["Fullname must not be empty."]);
-            RuleFor(x => x.Fullname).MinimumLength(10).WithMessage(localizer["Fullname cannot be less than 10 characters."]);
+            RuleFor(x => x.Fullname).NotNull().WithMessage(localizer["Fullname must not be empty."])
+                .MinimumLength(10).WithMessage(localizer["Fullname cannot be less than 10 characters."]);
         }
         
     }
