@@ -9,6 +9,7 @@ namespace LoggingCodefirst.ViewModels.UserViewModels
         {
             CreateMap<User, UserIndexViewModel>();
             CreateMap<User, UserEditViewModel>();
+            CreateMap<User, UserChangePasswordViewModel>();
         }
     }
 }

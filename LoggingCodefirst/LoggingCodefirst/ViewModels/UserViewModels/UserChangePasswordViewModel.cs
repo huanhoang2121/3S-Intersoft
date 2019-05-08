@@ -5,19 +5,6 @@ namespace LoggingCodefirst.ViewModels.UserViewModels
 {
     public class UserChangePasswordViewModel
     {
-        public UserChangePasswordViewModel()
-        {
-            
-        }
-        
-        public UserChangePasswordViewModel(User user)
-        {
-            Id = user.Id; 
-            Email = user.Email; 
-            OldPassword = user.Password; 
-            NewPassword = user.Password; 
-        }
-
         public int Id { get; set; } 
         [DisplayName("Email Address")]
         public string Email { get; set; }

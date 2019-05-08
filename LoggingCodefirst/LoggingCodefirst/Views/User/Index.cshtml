@@ -88,7 +88,7 @@
                                         @Html.DisplayFor(modelItem => item.Address)
                                     </td>
                                     <td style="text-align: center;">
-                                        <a asp-action="ChangePassword" asp-route-id="@item.Id">
+                                        <a asp-action="_ChangePasswordPartial" asp-route-id="@item.Id">
                                             <i class="mdi mdi-key-variant" style="font-size: 24px; color: black"></i>
                                         </a> 
                                         <a asp-action="Edit" asp-route-id="@item.Id">

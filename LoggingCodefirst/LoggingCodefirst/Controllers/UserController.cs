@@ -144,6 +144,10 @@ namespace LoggingCodefirst.Controllers
             return RedirectToAction(nameof(Index));
         }
         
+        public ActionResult _ChangePasswordPartial() {
+            return View();
+        }
+        
         #endregion
         
     }//end of class
