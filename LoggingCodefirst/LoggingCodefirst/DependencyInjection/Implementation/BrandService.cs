@@ -5,7 +5,7 @@ using AutoMapper;
 using LoggingCodefirst.DependencyInjection.Interface;
 using LoggingCodefirst.Models;
 using LoggingCodefirst.Models.Production;
-using LoggingCodefirst.ViewModels.BrandViewModels;
+using LoggingCodefirst.ViewModels;
 using Microsoft.EntityFrameworkCore;
 
 namespace LoggingCodefirst.DependencyInjection.Implementation
@@ -37,20 +37,20 @@ namespace LoggingCodefirst.DependencyInjection.Implementation
 
         #region Public Methods
 
-        public async Task<List<BrandIndexViewModel>> GetListBrandAsync()
+        public async Task<List<BrandViewModel>> GetListBrandAsync()
         {
             var brands = await _context.Brands.ToListAsync();
-            var viewModels = _mapper.Map<List<BrandIndexViewModel>>(brands);
+            var viewModels = _mapper.Map<List<BrandViewModel>>(brands);
             return viewModels;
         }
 
-        public async Task<bool> CreateBrandAsync(BrandCreateViewModel createViewModel)
+        public async Task<bool> CreateBrandAsync(BrandViewModel brandViewModel)
         {
             try
             {
                 var brand = new Brand
                 {
-                    BrandName = createViewModel.BrandName,
+                    BrandName = brandViewModel.BrandName,
                 };
                 _context.Brands.Add(brand);
                 await _context.SaveChangesAsync();
@@ -63,19 +63,19 @@ namespace LoggingCodefirst.DependencyInjection.Implementation
             }
         }
 
-        public async Task<BrandEditViewModel> GetBrandEditAsync(int? id)
+        public async Task<BrandViewModel> GetBrandEditAsync(int? id)
         {
             var store = await _context.Brands.FindAsync(id);
-            var viewModel = _mapper.Map<BrandEditViewModel>(store);
+            var viewModel = _mapper.Map<BrandViewModel>(store);
             return viewModel;
         }
 
-        public async Task<bool> EditBrandAsync(BrandEditViewModel editViewModel)
+        public async Task<bool> EditBrandAsync(BrandViewModel brandViewModel)
         {
             try
             {
-                var brand = await _context.Brands.FindAsync(editViewModel.Id);
-                brand.BrandName = editViewModel.BrandName;
+                var brand = await _context.Brands.FindAsync(brandViewModel.Id);
+                brand.BrandName = brandViewModel.BrandName;
             
                 _context.Brands.Update(brand);
                 await _context.SaveChangesAsync();

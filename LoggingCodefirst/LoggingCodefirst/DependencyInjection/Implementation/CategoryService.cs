@@ -5,7 +5,7 @@ using AutoMapper;
 using LoggingCodefirst.DependencyInjection.Interface;
 using LoggingCodefirst.Models;
 using LoggingCodefirst.Models.Production;
-using LoggingCodefirst.ViewModels.CategoryViewModels;
+using LoggingCodefirst.ViewModels;
 using Microsoft.EntityFrameworkCore;
 
 namespace LoggingCodefirst.DependencyInjection.Implementation
@@ -33,18 +33,18 @@ namespace LoggingCodefirst.DependencyInjection.Implementation
 
         public IEnumerable<Category> Categories => _context.Categories;
         
-        public async Task<List<CategoryIndexViewModel>> GetListCategoryAsync()
-        {
-            var categories = await _context.Categories.ToListAsync();
-            var viewModels = _mapper.Map<List<CategoryIndexViewModel>>(categories);
-            return viewModels;
-        }
-        
         #endregion
 
         #region Public Methods
+        
+        public async Task<List<CategoryViewModel>> GetListCategoryAsync()
+        {
+            var categories = await _context.Categories.ToListAsync();
+            var viewModels = _mapper.Map<List<CategoryViewModel>>(categories);
+            return viewModels;
+        }
 
-        public async Task<bool> CreateCategoryAsync(CategoryCreateViewModel createViewModel)
+        public async Task<bool> CreateCategoryAsync(CategoryViewModel createViewModel)
         {
             try
             {
@@ -63,14 +63,14 @@ namespace LoggingCodefirst.DependencyInjection.Implementation
             }
         }
 
-        public async Task<CategoryEditViewModel> GetCategoryEditAsync(int? id)
+        public async Task<CategoryViewModel> GetCategoryEditAsync(int? id)
         {
             var store = await _context.Categories.FindAsync(id);
-            var viewModel = _mapper.Map<CategoryEditViewModel>(store);
+            var viewModel = _mapper.Map<CategoryViewModel>(store);
             return viewModel;
         }
 
-        public async Task<bool> EditCategoryAsync(CategoryEditViewModel categoryEditViewModel)
+        public async Task<bool> EditCategoryAsync(CategoryViewModel categoryEditViewModel)
         {
             try
             {

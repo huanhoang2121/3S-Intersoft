@@ -53,6 +53,8 @@
           <e p="20190503025527_UpdateSeedData.cs" t="Include" />
           <e p="20190506035152_UpdateProductImagePath.Designer.cs" t="Include" />
           <e p="20190506035152_UpdateProductImagePath.cs" t="Include" />
+          <e p="20190509084758_UpdateProImg.Designer.cs" t="Include" />
+          <e p="20190509084758_UpdateProImg.cs" t="Include" />
           <e p="DataContextModelSnapshot.cs" t="Include" />
         </e>
         <e p="Models" t="Include">
@@ -93,64 +95,12 @@
             <e p="UserController.vi-VN.Designer.cs" t="Include" />
             <e p="UserController.vi-VN.resx" t="Include" />
           </e>
-          <e p="Validators" t="Include">
-            <e p="Brand" t="Include">
-              <e p="BrandCreateValidator.vi-VN.Designer.cs" t="Include" />
-              <e p="BrandCreateValidator.vi-VN.resx" t="Include" />
-              <e p="BrandEditValidator.vi-VN.Designer.cs" t="Include" />
-              <e p="BrandEditValidator.vi-VN.resx" t="Include" />
-            </e>
-            <e p="Category" t="Include">
-              <e p="CategoryCreateValidator.vi-VN.Designer.cs" t="Include" />
-              <e p="CategoryCreateValidator.vi-VN.resx" t="Include" />
-              <e p="CategoryEditValidator.vi-VN.Designer.cs" t="Include" />
-              <e p="CategoryEditValidator.vi-VN.resx" t="Include" />
-            </e>
-            <e p="Product" t="Include">
-              <e p="ProductCreateValidator.vi-VN.Designer.cs" t="Include" />
-              <e p="ProductCreateValidator.vi-VN.resx" t="Include" />
-              <e p="ProductEditValidator.vi-VN.Designer.cs" t="Include" />
-              <e p="ProductEditValidator.vi-VN.resx" t="Include" />
-            </e>
-            <e p="Stock" t="Include">
-              <e p="StockCreateValidator.vi-VN.Designer.cs" t="Include" />
-              <e p="StockCreateValidator.vi-VN.resx" t="Include" />
-              <e p="StockEditValidator.vi-VN.Designer.cs" t="Include" />
-              <e p="StockEditValidator.vi-VN.resx" t="Include" />
-            </e>
-            <e p="Store" t="Include">
-              <e p="StoreCreateValidator.vi-VN.Designer.cs" t="Include" />
-              <e p="StoreCreateValidator.vi-VN.resx" t="Include" />
-              <e p="StoreEditValidator.vi-VN.Designer.cs" t="Include" />
-              <e p="StoreEditValidator.vi-VN.resx" t="Include" />
-            </e>
-            <e p="User" t="Include">
-              <e p="UserChangePasswordValidator.vi-VN.Designer.cs" t="Include" />
-              <e p="UserChangePasswordValidator.vi-VN.resx" t="Include" />
-              <e p="UserCreateValidator.vi-VN.Designer.cs" t="Include" />
-              <e p="UserCreateValidator.vi-VN.resx" t="Include" />
-              <e p="UserEditValidator.vi-VN.Designer.cs" t="Include" />
-              <e p="UserEditValidator.vi-VN.resx" t="Include" />
-              <e p="UserLoginValidator.vi-VN.Designer.cs" t="Include" />
-              <e p="UserLoginValidator.vi-VN.resx" t="Include" />
-            </e>
-          </e>
-          <e p="ViewResource.cs" t="Include" />
+          <e p="LocalizationService.cs" t="Include" />
+          <e p="PropertyResource.vi-VN.Designer.cs" t="Include" />
+          <e p="PropertyResource.vi-VN.resx" t="Include" />
           <e p="ViewResource.vi-VN.Designer.cs" t="Include" />
           <e p="ViewResource.vi-VN.resx" t="Include" />
           <e p="Views" t="Include">
-            <e p="Account" t="Include">
-              <e p="Login.vi-VN.Designer.cs" t="Include" />
-              <e p="Login.vi-VN.resx" t="Include" />
-            </e>
-            <e p="Brand" t="Include">
-              <e p="Create.vi-VN.Designer.cs" t="Include" />
-              <e p="Create.vi-VN.resx" t="Include" />
-              <e p="Edit.vi-VN.Designer.cs" t="Include" />
-              <e p="Edit.vi-VN.resx" t="Include" />
-              <e p="Index.vi-VN.Designer.cs" t="Include" />
-              <e p="Index.vi-VN.resx" t="Include" />
-            </e>
             <e p="Category" t="Include">
               <e p="Create.vi-VN.Designer.cs" t="Include" />
               <e p="Create.vi-VN.resx" t="Include" />
@@ -159,12 +109,6 @@
               <e p="Index.vi-VN.Designer.cs" t="Include" />
               <e p="Index.vi-VN.resx" t="Include" />
             </e>
-            <e p="Home" t="Include">
-              <e p="Index.vi-VN.Designer.cs" t="Include" />
-              <e p="Index.vi-VN.resx" t="Include" />
-              <e p="Privacy.vi-VN.cs" t="Include" />
-              <e p="Privacy.vi-VN.resx" t="Include" />
-            </e>
             <e p="Product" t="Include">
               <e p="Create.vi-VN.Designer.cs" t="Include" />
               <e p="Create.vi-VN.resx" t="Include" />
@@ -172,16 +116,6 @@
               <e p="Edit.vi-VN.resx" t="Include" />
               <e p="Index.vi-VN.Designer.cs" t="Include" />
               <e p="Index.vi-VN.resx" t="Include" />
-            </e>
-            <e p="Shared" t="Include">
-              <e p="_Layout.vi-VN.Designer.cs" t="Include" />
-              <e p="_Layout.vi-VN.resx" t="Include" />
-              <e p="_LoginPartial.vi-VN.Designer.cs" t="Include" />
-              <e p="_LoginPartial.vi-VN.resx" t="Include" />
-              <e p="_NavigationPartial.vi-VN.Designer.cs" t="Include" />
-              <e p="_NavigationPartial.vi-VN.resx" t="Include" />
-              <e p="_SelectLanguagePartial.vi-VN.Designer.cs" t="Include" />
-              <e p="_SelectLanguagePartial.vi-VN.resx" t="Include" />
             </e>
             <e p="Stock" t="Include">
               <e p="Create.vi-VN.Designer.cs" t="Include" />
@@ -200,14 +134,14 @@
               <e p="Index.vi-VN.resx" t="Include" />
             </e>
             <e p="User" t="Include">
-              <e p="ChangePassword.vi-VN.Designer.cs" t="Include" />
-              <e p="ChangePassword.vi-VN.resx" t="Include" />
               <e p="Create.vi-VN.Designer.cs" t="Include" />
               <e p="Create.vi-VN.resx" t="Include" />
               <e p="Edit.vi-VN.Designer.cs" t="Include" />
               <e p="Edit.vi-VN.resx" t="Include" />
               <e p="Index.vi-VN.Designer.cs" t="Include" />
               <e p="Index.vi-VN.resx" t="Include" />
+              <e p="_ChangePasswordPartial.vi-VN.Designer.cs" t="Include" />
+              <e p="_ChangePasswordPartial.vi-VN.resx" t="Include" />
             </e>
           </e>
         </e>
@@ -217,74 +151,25 @@
         </e>
         <e p="Startup.cs" t="Include" />
         <e p="Validators" t="Include">
-          <e p="Brand" t="Include">
-            <e p="BrandCreateValidator.cs" t="Include" />
-            <e p="BrandEditValidator.cs" t="Include" />
-          </e>
-          <e p="Category" t="Include">
-            <e p="CategoryCreateValidator.cs" t="Include" />
-            <e p="CategoryEditValidator.cs" t="Include" />
-          </e>
-          <e p="Product" t="Include">
-            <e p="ProductCreateValidator.cs" t="Include" />
-            <e p="ProductEditValidator.cs" t="Include" />
-          </e>
-          <e p="Stock" t="Include">
-            <e p="StockCreateValidator.cs" t="Include" />
-            <e p="StockEditValidator.cs" t="Include" />
-          </e>
-          <e p="Store" t="Include">
-            <e p="StoreCreateValidator.cs" t="Include" />
-            <e p="StoreEditValidator.cs" t="Include" />
-          </e>
-          <e p="User" t="Include">
-            <e p="UserChangePasswordValidator.cs" t="Include" />
-            <e p="UserCreateValidator.cs" t="Include" />
-            <e p="UserEditValidator.cs" t="Include" />
-            <e p="UserLoginValidator.cs" t="Include" />
-          </e>
+          <e p="BrandValidator.cs" t="Include" />
+          <e p="CategoryValidator.cs" t="Include" />
+          <e p="LoginValidator.cs" t="Include" />
+          <e p="ProductValidator.cs" t="Include" />
+          <e p="StockValidator.cs" t="Include" />
+          <e p="StoreValidator.cs" t="Include" />
+          <e p="UserChangePasswordValidator.cs" t="Include" />
+          <e p="UserValidator.cs" t="Include" />
         </e>
         <e p="ViewModels" t="Include">
-          <e p="AccountViewModels" t="Include">
-            <e p="AccountLoginViewModel.cs" t="Include" />
-          </e>
-          <e p="BrandViewModels" t="Include">
-            <e p="BrandCreateViewModel.cs" t="Include" />
-            <e p="BrandEditViewModel.cs" t="Include" />
-            <e p="BrandIndexViewModel.cs" t="Include" />
-            <e p="BrandProfile.cs" t="Include" />
-          </e>
-          <e p="CategoryViewModels" t="Include">
-            <e p="CategoryCreateViewModel.cs" t="Include" />
-            <e p="CategoryEditViewModel.cs" t="Include" />
-            <e p="CategoryIndexViewModel.cs" t="Include" />
-            <e p="CategoryProfile.cs" t="Include" />
-          </e>
-          <e p="ProductViewModels" t="Include">
-            <e p="ProductCreateViewModel.cs" t="Include" />
-            <e p="ProductEditViewModel.cs" t="Include" />
-            <e p="ProductIndexViewModel.cs" t="Include" />
-            <e p="ProductProfile.cs" t="Include" />
-          </e>
-          <e p="StockViewModels" t="Include">
-            <e p="StockCreateViewModel.cs" t="Include" />
-            <e p="StockEditViewModel.cs" t="Include" />
-            <e p="StockIndexViewModel.cs" t="Include" />
-            <e p="StockProfile.cs" t="Include" />
-          </e>
-          <e p="StoreViewModels" t="Include">
-            <e p="StoreCreateViewModel.cs" t="Include" />
-            <e p="StoreEditViewModel.cs" t="Include" />
-            <e p="StoreIndexViewModel.cs" t="Include" />
-            <e p="StoreProfile.cs" t="Include" />
-          </e>
-          <e p="UserViewModels" t="Include">
-            <e p="UserChangePasswordViewModel.cs" t="Include" />
-            <e p="UserCreateViewModel.cs" t="Include" />
-            <e p="UserEditViewModel.cs" t="Include" />
-            <e p="UserIndexViewModel.cs" t="Include" />
-            <e p="UserProfile.cs" t="Include" />
-          </e>
+          <e p="BrandViewModel.cs" t="Include" />
+          <e p="CategoryViewModel.cs" t="Include" />
+          <e p="LoginViewModel.cs" t="Include" />
+          <e p="MapProfile.cs" t="Include" />
+          <e p="ProductViewModel.cs" t="Include" />
+          <e p="StockViewModel.cs" t="Include" />
+          <e p="StoreViewModel.cs" t="Include" />
+          <e p="UserChangePasswordViewModel.cs" t="Include" />
+          <e p="UserViewModel.cs" t="Include" />
         </e>
         <e p="Views" t="Include">
           <e p="Account" t="Include">
@@ -330,7 +215,6 @@
             <e p="Index.cshtml" t="Include" />
           </e>
           <e p="User" t="Include">
-            <e p="ChangePassword.cshtml" t="Include" />
             <e p="Create.cshtml" t="Include" />
             <e p="Edit.cshtml" t="Include" />
             <e p="Index.cshtml" t="Include" />
@@ -1614,6 +1498,9 @@
             <e p="05-02-2019-09-04-35.jpg" t="Include" />
             <e p="05-02-2019-09-04-43.jpg" t="Include" />
             <e p="05-02-2019-17-50-29ao_nike_1_den_vnxk20170327141716.jpg" t="Include" />
+            <e p="05092019153907tai_xuong_7a45fb79-6c1b-412a-7670-b7962538ff4f_large.jpg" t="Include" />
+            <e p="05092019154638tai_xuong_7a45fb79-6c1b-412a-7670-b7962538ff4f_large.jpg" t="Include" />
+            <e p="05092019155700tai_xuong__1__1d1f2ab4-3330-491f-77e3-2725057f69a6_large.jpg" t="Include" />
             <e p="05_06_2019_09_12_40ao-adidas-trang-1492535561-2298159-1492535561.jpeg" t="Include" />
             <e p="05_06_2019_11_12_24quan.jpg" t="Include" />
             <e p="05_06_2019_11_12_39quan.jpg" t="Include" />
@@ -1674,6 +1561,9 @@
               <e p="LICENSE.txt" t="Include" />
               <e p="jquery.validate.unobtrusive.js" t="Include" />
               <e p="jquery.validate.unobtrusive.min.js" t="Include" />
+            </e>
+            <e p="js" t="Include">
+              <e p="site.js" t="Include" />
             </e>
           </e>
         </e>

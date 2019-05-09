@@ -1,6 +1,6 @@
-@using LoggingCodefirst.ViewModels.ProductViewModels
+@using LoggingCodefirst.ViewModels
 @using Microsoft.AspNetCore.Mvc.Localization
-@model ProductCreateViewModel
+@model ProductViewModel
 
 @inject IViewLocalizer Localizer
 
@@ -56,7 +56,7 @@
                         </div>
                         <div class="form-group">
                             <label asp-for="ImageFile"></label>
-                            <input type="file" asp-for="ImageFile" class="form-control-file" required/>
+                            <input type="file" asp-for="ImageFile" class="form-control-file"/>
                             <span asp-validation-for="ImageFile" class="text-danger"></span>
                         </div>
                         <div class="form-group">

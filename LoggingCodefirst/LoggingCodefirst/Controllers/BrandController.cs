@@ -1,7 +1,7 @@
 using System.Threading.Tasks;
 using LoggingCodefirst.DependencyInjection.Interface;
+using LoggingCodefirst.ViewModels;
 using Microsoft.AspNetCore.Mvc;
-using LoggingCodefirst.ViewModels.BrandViewModels;
 using Microsoft.Extensions.Localization;
 
 namespace LoggingCodefirst.Controllers
@@ -43,18 +43,18 @@ namespace LoggingCodefirst.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Create(BrandCreateViewModel createViewModel)
+        public async Task<IActionResult> Create(BrandViewModel brandViewModel)
         {
             if (ModelState.IsValid)
             {
-                if (await _brandService.CreateBrandAsync(createViewModel))
+                if (await _brandService.CreateBrandAsync(brandViewModel))
                 {
                     TempData["SuccessMessage"] = _localizer["Create successfully!"].ToString();
                     return RedirectToAction(nameof(Index));
                 }
-                return View(createViewModel);
+                return View(brandViewModel);
             }
-            return View(createViewModel);
+            return View(brandViewModel);
         }
 
         [HttpGet]        
@@ -74,18 +74,18 @@ namespace LoggingCodefirst.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Edit(BrandEditViewModel editViewModel)
+        public async Task<IActionResult> Edit(BrandViewModel brandViewModel)
         {
             if (ModelState.IsValid)
             {
-                if (await _brandService.EditBrandAsync(editViewModel))
+                if (await _brandService.EditBrandAsync(brandViewModel))
                 {
                     TempData["SuccessMessage"] = _localizer["Edit successfully!"].ToString();
                     return RedirectToAction(nameof(Index));
                 }
-                return View(editViewModel);
+                return View(brandViewModel);
             }
-            return View(editViewModel);
+            return View(brandViewModel);
         }
 
         [HttpGet]  

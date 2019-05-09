@@ -2,22 +2,230 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2810dc60-960a-4eab-8cb9-636ba3610c78" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/LoggingCodefirst/Resources/LocalizationService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LoggingCodefirst/Resources/PropertyResource.vi-VN.resx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LoggingCodefirst/Validators/CategoryValidator.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LoggingCodefirst/Validators/ProductValidator.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LoggingCodefirst/Validators/UserChangePasswordValidator.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LoggingCodefirst/Validators/UserValidator.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LoggingCodefirst/ViewModels/BrandViewModel.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LoggingCodefirst/ViewModels/CategoryViewModel.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LoggingCodefirst/ViewModels/MapProfile.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/LoggingCodefirst/wwwroot/lib/js/site.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.LoggingCodefirst/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LoggingCodefirst/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.LoggingCodefirst/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LoggingCodefirst/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.LoggingCodefirst/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LoggingCodefirst/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.LoggingCodefirst/.idea/dataSources/6a0f65ae-f344-4d6a-b3c4-bc6b9c4bcac7.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.LoggingCodefirst/.idea/dataSources/6a0f65ae-f344-4d6a-b3c4-bc6b9c4bcac7/storage_v2/_src_/database/HuanDB.GGh7gQ/schema/dbo.sYMBAA.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LoggingCodefirst/.idea/dataSources/6a0f65ae-f344-4d6a-b3c4-bc6b9c4bcac7/storage_v2/_src_/database/HuanDB.GGh7gQ/schema/dbo.sYMBAA.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.LoggingCodefirst/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LoggingCodefirst/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/Controllers/AccountController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/LoggingCodefirst/Controllers/AccountController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/Controllers/BrandController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/LoggingCodefirst/Controllers/BrandController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/Controllers/CategoryController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/LoggingCodefirst/Controllers/CategoryController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/Controllers/ProductController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/LoggingCodefirst/Controllers/ProductController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/Controllers/StockController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/LoggingCodefirst/Controllers/StockController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/Controllers/StoreController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/LoggingCodefirst/Controllers/StoreController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/LoggingCodefirst/Controllers/UserController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/LoggingCodefirst/Controllers/UserController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/ViewModels/UserViewModels/UserChangePasswordViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/LoggingCodefirst/ViewModels/UserViewModels/UserChangePasswordViewModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/ViewModels/UserViewModels/UserProfile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/LoggingCodefirst/ViewModels/UserViewModels/UserProfile.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/DependencyInjection/Implementation/BrandService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/LoggingCodefirst/DependencyInjection/Implementation/BrandService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/DependencyInjection/Implementation/CategoryService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/LoggingCodefirst/DependencyInjection/Implementation/CategoryService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/DependencyInjection/Implementation/ProductService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/LoggingCodefirst/DependencyInjection/Implementation/ProductService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/DependencyInjection/Implementation/StockService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/LoggingCodefirst/DependencyInjection/Implementation/StockService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/DependencyInjection/Implementation/StoreService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/LoggingCodefirst/DependencyInjection/Implementation/StoreService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/DependencyInjection/Implementation/UserService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/LoggingCodefirst/DependencyInjection/Implementation/UserService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/DependencyInjection/Interface/IBrandService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/LoggingCodefirst/DependencyInjection/Interface/IBrandService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/DependencyInjection/Interface/ICategoryService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/LoggingCodefirst/DependencyInjection/Interface/ICategoryService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/DependencyInjection/Interface/IProductService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/LoggingCodefirst/DependencyInjection/Interface/IProductService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/DependencyInjection/Interface/IStockService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/LoggingCodefirst/DependencyInjection/Interface/IStockService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/DependencyInjection/Interface/IStoreService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/LoggingCodefirst/DependencyInjection/Interface/IStoreService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/DependencyInjection/Interface/IUserService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/LoggingCodefirst/DependencyInjection/Interface/IUserService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/Migrations/DataContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/LoggingCodefirst/Migrations/DataContextModelSnapshot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/Resources/Validators/Brand/BrandCreateValidator.vi-VN.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/LoggingCodefirst/Resources/Views/User/_ChangePasswordPartial.vi-VN.Designer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/Resources/Validators/Brand/BrandCreateValidator.vi-VN.resx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/Resources/Validators/Brand/BrandEditValidator.vi-VN.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/Resources/Validators/Brand/BrandEditValidator.vi-VN.resx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/Resources/Validators/Category/CategoryCreateValidator.vi-VN.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/Resources/Validators/Category/CategoryCreateValidator.vi-VN.resx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/Resources/Validators/Category/CategoryEditValidator.vi-VN.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/Resources/Validators/Category/CategoryEditValidator.vi-VN.resx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/Resources/Validators/Product/ProductCreateValidator.vi-VN.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/Resources/Validators/Product/ProductCreateValidator.vi-VN.resx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/Resources/Validators/Product/ProductEditValidator.vi-VN.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/Resources/Validators/Product/ProductEditValidator.vi-VN.resx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/Resources/Validators/Stock/StockCreateValidator.vi-VN.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/Resources/Validators/Stock/StockCreateValidator.vi-VN.resx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/Resources/Validators/Stock/StockEditValidator.vi-VN.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/Resources/Validators/Stock/StockEditValidator.vi-VN.resx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/Resources/Validators/Store/StoreCreateValidator.vi-VN.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/Resources/Validators/Store/StoreCreateValidator.vi-VN.resx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/Resources/Validators/Store/StoreEditValidator.vi-VN.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/Resources/Validators/Store/StoreEditValidator.vi-VN.resx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/Resources/Validators/User/UserChangePasswordValidator.vi-VN.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/Resources/Validators/User/UserChangePasswordValidator.vi-VN.resx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/Resources/Validators/User/UserCreateValidator.vi-VN.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/Resources/Validators/User/UserCreateValidator.vi-VN.resx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/Resources/Validators/User/UserEditValidator.vi-VN.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/Resources/Validators/User/UserEditValidator.vi-VN.resx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/Resources/Validators/User/UserLoginValidator.vi-VN.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/Resources/Validators/User/UserLoginValidator.vi-VN.resx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/Resources/ViewResource.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/Resources/ViewResource.vi-VN.resx" beforeDir="false" afterPath="$PROJECT_DIR$/LoggingCodefirst/Resources/ViewResource.vi-VN.resx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/Resources/Views/Account/Login.vi-VN.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/Resources/Views/Account/Login.vi-VN.resx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/Resources/Views/Brand/Create.vi-VN.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/Resources/Views/Brand/Create.vi-VN.resx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/Resources/Views/Brand/Edit.vi-VN.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/Resources/Views/Brand/Edit.vi-VN.resx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/Resources/Views/Brand/Index.vi-VN.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/Resources/Views/Brand/Index.vi-VN.resx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/Resources/Views/Home/Index.vi-VN.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/Resources/Views/Home/Index.vi-VN.resx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/Resources/Views/Home/Privacy.vi-VN.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/Resources/Views/Home/Privacy.vi-VN.resx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/Resources/Views/Shared/_Layout.vi-VN.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/Resources/Views/Shared/_Layout.vi-VN.resx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/Resources/Views/Shared/_LoginPartial.vi-VN.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/Resources/Views/Shared/_LoginPartial.vi-VN.resx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/Resources/Views/Shared/_NavigationPartial.vi-VN.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/Resources/Views/Shared/_NavigationPartial.vi-VN.resx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/Resources/Views/Shared/_SelectLanguagePartial.vi-VN.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/Resources/Views/Shared/_SelectLanguagePartial.vi-VN.resx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/Resources/Views/User/ChangePassword.vi-VN.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/Resources/Views/User/ChangePassword.vi-VN.resx" beforeDir="false" afterPath="$PROJECT_DIR$/LoggingCodefirst/Resources/Views/User/_ChangePasswordPartial.vi-VN.resx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/SeedData/EntityConfiguration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/LoggingCodefirst/SeedData/EntityConfiguration.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/LoggingCodefirst/Startup.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/Validators/Brand/BrandCreateValidator.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/Validators/Brand/BrandEditValidator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/LoggingCodefirst/Validators/BrandValidator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/Validators/Category/CategoryCreateValidator.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/Validators/Category/CategoryEditValidator.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/Validators/Product/ProductCreateValidator.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/Validators/Product/ProductEditValidator.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/Validators/Stock/StockCreateValidator.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/Validators/Stock/StockEditValidator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/LoggingCodefirst/Validators/StockValidator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/Validators/Store/StoreCreateValidator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/LoggingCodefirst/Validators/StoreValidator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/Validators/Store/StoreEditValidator.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/Validators/User/UserChangePasswordValidator.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/Validators/User/UserCreateValidator.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/Validators/User/UserEditValidator.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/Validators/User/UserLoginValidator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/LoggingCodefirst/Validators/LoginValidator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/ViewModels/AccountViewModels/AccountLoginViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/LoggingCodefirst/ViewModels/LoginViewModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/ViewModels/BrandViewModels/BrandCreateViewModel.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/ViewModels/BrandViewModels/BrandEditViewModel.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/ViewModels/BrandViewModels/BrandIndexViewModel.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/ViewModels/BrandViewModels/BrandProfile.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/ViewModels/CategoryViewModels/CategoryCreateViewModel.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/ViewModels/CategoryViewModels/CategoryEditViewModel.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/ViewModels/CategoryViewModels/CategoryIndexViewModel.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/ViewModels/CategoryViewModels/CategoryProfile.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/ViewModels/ProductViewModels/ProductCreateViewModel.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/ViewModels/ProductViewModels/ProductEditViewModel.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/ViewModels/ProductViewModels/ProductIndexViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/LoggingCodefirst/ViewModels/ProductViewModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/ViewModels/ProductViewModels/ProductProfile.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/ViewModels/StockViewModels/StockCreateViewModel.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/ViewModels/StockViewModels/StockEditViewModel.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/ViewModels/StockViewModels/StockIndexViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/LoggingCodefirst/ViewModels/StockViewModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/ViewModels/StockViewModels/StockProfile.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/ViewModels/StoreViewModels/StoreCreateViewModel.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/ViewModels/StoreViewModels/StoreEditViewModel.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/ViewModels/StoreViewModels/StoreIndexViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/LoggingCodefirst/ViewModels/StoreViewModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/ViewModels/StoreViewModels/StoreProfile.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/ViewModels/UserViewModels/UserChangePasswordViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/LoggingCodefirst/ViewModels/UserChangePasswordViewModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/ViewModels/UserViewModels/UserCreateViewModel.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/ViewModels/UserViewModels/UserEditViewModel.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/ViewModels/UserViewModels/UserIndexViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/LoggingCodefirst/ViewModels/UserViewModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/ViewModels/UserViewModels/UserProfile.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/Views/Account/Login.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/LoggingCodefirst/Views/Account/Login.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/Views/Brand/Create.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/LoggingCodefirst/Views/Brand/Create.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/Views/Brand/Edit.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/LoggingCodefirst/Views/Brand/Edit.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/Views/Brand/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/LoggingCodefirst/Views/Brand/Index.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/Views/Category/Create.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/LoggingCodefirst/Views/Category/Create.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/Views/Category/Edit.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/LoggingCodefirst/Views/Category/Edit.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/Views/Category/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/LoggingCodefirst/Views/Category/Index.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/Views/Home/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/LoggingCodefirst/Views/Home/Index.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/Views/Home/Privacy.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/LoggingCodefirst/Views/Home/Privacy.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/Views/Product/Create.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/LoggingCodefirst/Views/Product/Create.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/Views/Product/Edit.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/LoggingCodefirst/Views/Product/Edit.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/Views/Product/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/LoggingCodefirst/Views/Product/Index.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/Views/Shared/_Layout.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/LoggingCodefirst/Views/Shared/_Layout.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/Views/Shared/_LoginPartial.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/LoggingCodefirst/Views/Shared/_LoginPartial.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/Views/Shared/_NavigationPartial.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/LoggingCodefirst/Views/Shared/_NavigationPartial.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/Views/Shared/_SelectLanguagePartial.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/LoggingCodefirst/Views/Shared/_SelectLanguagePartial.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/Views/Stock/Create.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/LoggingCodefirst/Views/Stock/Create.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/Views/Stock/Edit.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/LoggingCodefirst/Views/Stock/Edit.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/Views/Stock/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/LoggingCodefirst/Views/Stock/Index.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/Views/Store/Create.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/LoggingCodefirst/Views/Store/Create.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/Views/Store/Edit.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/LoggingCodefirst/Views/Store/Edit.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/Views/Store/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/LoggingCodefirst/Views/Store/Index.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/Views/User/ChangePassword.cshtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/Views/User/Create.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/LoggingCodefirst/Views/User/Create.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/Views/User/Edit.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/LoggingCodefirst/Views/User/Edit.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/LoggingCodefirst/Views/User/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/LoggingCodefirst/Views/User/Index.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/Views/User/_ChangePasswordPartial.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/LoggingCodefirst/Views/User/_ChangePasswordPartial.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/LoggingCodefirst/bin/Debug/netcoreapp2.2/LoggingCodefirst.Views.dll" beforeDir="false" afterPath="$PROJECT_DIR$/LoggingCodefirst/bin/Debug/netcoreapp2.2/LoggingCodefirst.Views.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/LoggingCodefirst/bin/Debug/netcoreapp2.2/LoggingCodefirst.Views.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/LoggingCodefirst/bin/Debug/netcoreapp2.2/LoggingCodefirst.Views.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/bin/Debug/netcoreapp2.2/LoggingCodefirst.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/LoggingCodefirst/bin/Debug/netcoreapp2.2/LoggingCodefirst.deps.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/LoggingCodefirst/bin/Debug/netcoreapp2.2/LoggingCodefirst.dll" beforeDir="false" afterPath="$PROJECT_DIR$/LoggingCodefirst/bin/Debug/netcoreapp2.2/LoggingCodefirst.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/LoggingCodefirst/bin/Debug/netcoreapp2.2/LoggingCodefirst.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/LoggingCodefirst/bin/Debug/netcoreapp2.2/LoggingCodefirst.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/bin/Debug/netcoreapp2.2/vi-VN/LoggingCodefirst.resources.dll" beforeDir="false" afterPath="$PROJECT_DIR$/LoggingCodefirst/bin/Debug/netcoreapp2.2/vi-VN/LoggingCodefirst.resources.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/obj/Debug/netcoreapp2.2/LoggingCodefirst.RazorCoreGenerate.cache" beforeDir="false" afterPath="$PROJECT_DIR$/LoggingCodefirst/obj/Debug/netcoreapp2.2/LoggingCodefirst.RazorCoreGenerate.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/obj/Debug/netcoreapp2.2/LoggingCodefirst.Resources.Validators.Brand.BrandCreateValidator.vi-VN.resources" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/obj/Debug/netcoreapp2.2/LoggingCodefirst.Resources.Validators.Brand.BrandEditValidator.vi-VN.resources" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/obj/Debug/netcoreapp2.2/LoggingCodefirst.Resources.Validators.Category.CategoryCreateValidator.vi-VN.resources" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/obj/Debug/netcoreapp2.2/LoggingCodefirst.Resources.Validators.Category.CategoryEditValidator.vi-VN.resources" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/obj/Debug/netcoreapp2.2/LoggingCodefirst.Resources.Validators.Product.ProductCreateValidator.vi-VN.resources" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/obj/Debug/netcoreapp2.2/LoggingCodefirst.Resources.Validators.Product.ProductEditValidator.vi-VN.resources" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/obj/Debug/netcoreapp2.2/LoggingCodefirst.Resources.Validators.Stock.StockCreateValidator.vi-VN.resources" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/obj/Debug/netcoreapp2.2/LoggingCodefirst.Resources.Validators.Stock.StockEditValidator.vi-VN.resources" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/obj/Debug/netcoreapp2.2/LoggingCodefirst.Resources.Validators.Store.StoreCreateValidator.vi-VN.resources" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/obj/Debug/netcoreapp2.2/LoggingCodefirst.Resources.Validators.Store.StoreEditValidator.vi-VN.resources" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/obj/Debug/netcoreapp2.2/LoggingCodefirst.Resources.Validators.User.UserChangePasswordValidator.vi-VN.resources" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/obj/Debug/netcoreapp2.2/LoggingCodefirst.Resources.Validators.User.UserCreateValidator.vi-VN.resources" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/obj/Debug/netcoreapp2.2/LoggingCodefirst.Resources.Validators.User.UserEditValidator.vi-VN.resources" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/obj/Debug/netcoreapp2.2/LoggingCodefirst.Resources.Validators.User.UserLoginValidator.vi-VN.resources" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/obj/Debug/netcoreapp2.2/LoggingCodefirst.Resources.ViewResource.vi-VN.resources" beforeDir="false" afterPath="$PROJECT_DIR$/LoggingCodefirst/obj/Debug/netcoreapp2.2/LoggingCodefirst.Resources.ViewResource.vi-VN.resources" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/obj/Debug/netcoreapp2.2/LoggingCodefirst.Resources.Views.Account.Login.vi-VN.resources" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/obj/Debug/netcoreapp2.2/LoggingCodefirst.Resources.Views.Brand.Create.vi-VN.resources" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/obj/Debug/netcoreapp2.2/LoggingCodefirst.Resources.Views.Brand.Edit.vi-VN.resources" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/obj/Debug/netcoreapp2.2/LoggingCodefirst.Resources.Views.Brand.Index.vi-VN.resources" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/obj/Debug/netcoreapp2.2/LoggingCodefirst.Resources.Views.Home.Index.vi-VN.resources" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/obj/Debug/netcoreapp2.2/LoggingCodefirst.Resources.Views.Home.Privacy.vi-VN.resources" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/obj/Debug/netcoreapp2.2/LoggingCodefirst.Resources.Views.Shared._Layout.vi-VN.resources" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/obj/Debug/netcoreapp2.2/LoggingCodefirst.Resources.Views.Shared._LoginPartial.vi-VN.resources" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/obj/Debug/netcoreapp2.2/LoggingCodefirst.Resources.Views.Shared._NavigationPartial.vi-VN.resources" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/obj/Debug/netcoreapp2.2/LoggingCodefirst.Resources.Views.Shared._SelectLanguagePartial.vi-VN.resources" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/obj/Debug/netcoreapp2.2/LoggingCodefirst.Resources.Views.User.ChangePassword.vi-VN.resources" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/LoggingCodefirst/obj/Debug/netcoreapp2.2/LoggingCodefirst.Views.dll" beforeDir="false" afterPath="$PROJECT_DIR$/LoggingCodefirst/obj/Debug/netcoreapp2.2/LoggingCodefirst.Views.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/LoggingCodefirst/obj/Debug/netcoreapp2.2/LoggingCodefirst.Views.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/LoggingCodefirst/obj/Debug/netcoreapp2.2/LoggingCodefirst.Views.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/obj/Debug/netcoreapp2.2/LoggingCodefirst.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/LoggingCodefirst/obj/Debug/netcoreapp2.2/LoggingCodefirst.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/obj/Debug/netcoreapp2.2/LoggingCodefirst.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/LoggingCodefirst/obj/Debug/netcoreapp2.2/LoggingCodefirst.csproj.FileListAbsolute.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/LoggingCodefirst/obj/Debug/netcoreapp2.2/LoggingCodefirst.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/LoggingCodefirst/obj/Debug/netcoreapp2.2/LoggingCodefirst.csprojAssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/LoggingCodefirst/obj/Debug/netcoreapp2.2/LoggingCodefirst.dll" beforeDir="false" afterPath="$PROJECT_DIR$/LoggingCodefirst/obj/Debug/netcoreapp2.2/LoggingCodefirst.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/LoggingCodefirst/obj/Debug/netcoreapp2.2/LoggingCodefirst.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/LoggingCodefirst/obj/Debug/netcoreapp2.2/LoggingCodefirst.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/obj/Debug/netcoreapp2.2/Razor/Views/Account/Login.g.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/LoggingCodefirst/obj/Debug/netcoreapp2.2/Razor/Views/Account/Login.g.cshtml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/obj/Debug/netcoreapp2.2/Razor/Views/Brand/Create.g.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/LoggingCodefirst/obj/Debug/netcoreapp2.2/Razor/Views/Brand/Create.g.cshtml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/obj/Debug/netcoreapp2.2/Razor/Views/Brand/Edit.g.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/LoggingCodefirst/obj/Debug/netcoreapp2.2/Razor/Views/Brand/Edit.g.cshtml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/obj/Debug/netcoreapp2.2/Razor/Views/Brand/Index.g.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/LoggingCodefirst/obj/Debug/netcoreapp2.2/Razor/Views/Brand/Index.g.cshtml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/obj/Debug/netcoreapp2.2/Razor/Views/Category/Create.g.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/LoggingCodefirst/obj/Debug/netcoreapp2.2/Razor/Views/Category/Create.g.cshtml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/obj/Debug/netcoreapp2.2/Razor/Views/Category/Edit.g.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/LoggingCodefirst/obj/Debug/netcoreapp2.2/Razor/Views/Category/Edit.g.cshtml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/obj/Debug/netcoreapp2.2/Razor/Views/Category/Index.g.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/LoggingCodefirst/obj/Debug/netcoreapp2.2/Razor/Views/Category/Index.g.cshtml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/obj/Debug/netcoreapp2.2/Razor/Views/Home/Index.g.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/LoggingCodefirst/obj/Debug/netcoreapp2.2/Razor/Views/Home/Index.g.cshtml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/obj/Debug/netcoreapp2.2/Razor/Views/Home/Privacy.g.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/LoggingCodefirst/obj/Debug/netcoreapp2.2/Razor/Views/Home/Privacy.g.cshtml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/obj/Debug/netcoreapp2.2/Razor/Views/Product/Create.g.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/LoggingCodefirst/obj/Debug/netcoreapp2.2/Razor/Views/Product/Create.g.cshtml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/obj/Debug/netcoreapp2.2/Razor/Views/Product/Edit.g.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/LoggingCodefirst/obj/Debug/netcoreapp2.2/Razor/Views/Product/Edit.g.cshtml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/obj/Debug/netcoreapp2.2/Razor/Views/Product/Index.g.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/LoggingCodefirst/obj/Debug/netcoreapp2.2/Razor/Views/Product/Index.g.cshtml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/obj/Debug/netcoreapp2.2/Razor/Views/Shared/_Layout.g.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/LoggingCodefirst/obj/Debug/netcoreapp2.2/Razor/Views/Shared/_Layout.g.cshtml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/obj/Debug/netcoreapp2.2/Razor/Views/Shared/_LoginPartial.g.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/LoggingCodefirst/obj/Debug/netcoreapp2.2/Razor/Views/Shared/_LoginPartial.g.cshtml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/obj/Debug/netcoreapp2.2/Razor/Views/Shared/_NavigationPartial.g.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/LoggingCodefirst/obj/Debug/netcoreapp2.2/Razor/Views/Shared/_NavigationPartial.g.cshtml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/obj/Debug/netcoreapp2.2/Razor/Views/Shared/_SelectLanguagePartial.g.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/LoggingCodefirst/obj/Debug/netcoreapp2.2/Razor/Views/Shared/_SelectLanguagePartial.g.cshtml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/obj/Debug/netcoreapp2.2/Razor/Views/Stock/Create.g.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/LoggingCodefirst/obj/Debug/netcoreapp2.2/Razor/Views/Stock/Create.g.cshtml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/obj/Debug/netcoreapp2.2/Razor/Views/Stock/Edit.g.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/LoggingCodefirst/obj/Debug/netcoreapp2.2/Razor/Views/Stock/Edit.g.cshtml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/obj/Debug/netcoreapp2.2/Razor/Views/Stock/Index.g.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/LoggingCodefirst/obj/Debug/netcoreapp2.2/Razor/Views/Stock/Index.g.cshtml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/obj/Debug/netcoreapp2.2/Razor/Views/Store/Create.g.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/LoggingCodefirst/obj/Debug/netcoreapp2.2/Razor/Views/Store/Create.g.cshtml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/obj/Debug/netcoreapp2.2/Razor/Views/Store/Edit.g.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/LoggingCodefirst/obj/Debug/netcoreapp2.2/Razor/Views/Store/Edit.g.cshtml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/obj/Debug/netcoreapp2.2/Razor/Views/Store/Index.g.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/LoggingCodefirst/obj/Debug/netcoreapp2.2/Razor/Views/Store/Index.g.cshtml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/obj/Debug/netcoreapp2.2/Razor/Views/User/ChangePassword.g.cshtml.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/obj/Debug/netcoreapp2.2/Razor/Views/User/Create.g.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/LoggingCodefirst/obj/Debug/netcoreapp2.2/Razor/Views/User/Create.g.cshtml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/obj/Debug/netcoreapp2.2/Razor/Views/User/Edit.g.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/LoggingCodefirst/obj/Debug/netcoreapp2.2/Razor/Views/User/Edit.g.cshtml.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/LoggingCodefirst/obj/Debug/netcoreapp2.2/Razor/Views/User/Index.g.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/LoggingCodefirst/obj/Debug/netcoreapp2.2/Razor/Views/User/Index.g.cshtml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/obj/Debug/netcoreapp2.2/Razor/Views/User/_ChangePasswordPartial.g.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/LoggingCodefirst/obj/Debug/netcoreapp2.2/Razor/Views/User/_ChangePasswordPartial.g.cshtml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LoggingCodefirst/obj/Debug/netcoreapp2.2/vi-VN/LoggingCodefirst.resources.dll" beforeDir="false" afterPath="$PROJECT_DIR$/LoggingCodefirst/obj/Debug/netcoreapp2.2/vi-VN/LoggingCodefirst.resources.dll" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -53,131 +261,186 @@
         <item name="HuanDB: database" type="bdf80c8a:MssqlImplModel$Database" />
         <item name="dbo: schema" type="3adcb6a6:MssqlImplModel$Schema" />
       </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="huandb@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="HuanDB: database" type="bdf80c8a:MssqlImplModel$Database" />
-        <item name="dbo: schema" type="3adcb6a6:MssqlImplModel$Schema" />
-        <item name="User: table" type="a00791b9:MssqlImplModel$Table" />
-      </path>
     </expand>
     <select />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="UserController.cs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/LoggingCodefirst/Controllers/UserController.cs">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="LocalizationService.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/LoggingCodefirst/Resources/LocalizationService.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="466">
-              <caret line="146" column="50" selection-start-line="146" selection-start-column="28" selection-end-line="146" selection-end-column="50" />
+            <state relative-caret-position="150">
+              <caret line="11" column="46" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="46" />
               <folding>
-                <marker date="1557312854032" expanded="false" signature="6:248" ph="..." />
-                <marker date="1557312854032" expanded="true" signature="288:5190" ph="{...}" />
-                <marker date="1557312854032" expanded="true" signature="335:5174" ph="{...}" />
-                <marker date="1557312854032" expanded="false" signature="350:570" ph="Private Members" />
-                <marker date="1557312854032" expanded="false" signature="588:942" ph="Constructors" />
-                <marker date="1557312854032" expanded="true" signature="784:922" ph="{...}" />
-                <marker date="1557312854032" expanded="true" signature="952:5159" ph="Public Methods" />
-                <marker date="1557312854032" expanded="true" signature="1050:1171" ph="{...}" />
-                <marker date="1557312854032" expanded="true" signature="1228:1362" ph="{...}" />
-                <marker date="1557312854032" expanded="true" signature="1475:2140" ph="{...}" />
-                <marker date="1557312854032" expanded="true" signature="1521:1976" ph="{...}" />
-                <marker date="1557312854032" expanded="true" signature="1608:1800" ph="{...}" />
-                <marker date="1557312854032" expanded="true" signature="2222:2626" ph="{...}" />
-                <marker date="1557312854032" expanded="true" signature="2260:2325" ph="{...}" />
-                <marker date="1557312854032" expanded="true" signature="2419:2484" ph="{...}" />
-                <marker date="1557312854032" expanded="true" signature="2733:3384" ph="{...}" />
-                <marker date="1557312854032" expanded="true" signature="2779:3224" ph="{...}" />
-                <marker date="1557312854032" expanded="true" signature="2862:3052" ph="{...}" />
-                <marker date="1557312854032" expanded="true" signature="3476:3785" ph="{...}" />
-                <marker date="1557312854032" expanded="true" signature="3514:3579" ph="{...}" />
-                <marker date="1557312854032" expanded="true" signature="3679:3744" ph="{...}" />
-                <marker date="1557312854032" expanded="true" signature="3918:4471" ph="{...}" />
-                <marker date="1557312854032" expanded="true" signature="3964:4415" ph="{...}" />
-                <marker date="1557312854032" expanded="true" signature="4059:4260" ph="{...}" />
-                <marker date="1557312854032" expanded="true" signature="4555:5030" ph="{...}" />
-                <marker date="1557312854032" expanded="true" signature="4593:4658" ph="{...}" />
-                <marker date="1557312854032" expanded="true" signature="4714:4890" ph="{...}" />
-                <marker date="1557312854032" expanded="true" signature="5093:5131" ph="{...}" />
+                <marker date="1557399472435" expanded="false" signature="6:65" ph="..." />
+                <marker date="1557399472435" expanded="true" signature="103:733" ph="{...}" />
+                <marker date="1557399472435" expanded="true" signature="142:630" ph="{...}" />
+                <marker date="1557399472435" expanded="true" signature="272:504" ph="{...}" />
+                <marker date="1557399472435" expanded="true" signature="568:624" ph="{...}" />
+                <marker date="1557399472435" expanded="true" signature="719:731" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_ChangePasswordPartial.cshtml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/LoggingCodefirst/Views/User/_ChangePasswordPartial.cshtml">
+      <file leaf-file-name="Index.cshtml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/LoggingCodefirst/Views/Brand/Index.cshtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-74">
-              <caret line="3" column="7" selection-start-line="3" selection-start-column="7" selection-end-line="3" selection-end-column="7" />
+            <state relative-caret-position="345">
+              <caret line="56" column="81" selection-start-line="56" selection-start-column="72" selection-end-line="56" selection-end-column="81" />
               <folding>
-                <marker date="1557307961394" expanded="false" signature="7:94" ph="..." />
-                <marker date="1557307961394" expanded="true" signature="181:2420" ph="&lt;div.../&gt;" />
-                <marker date="1557307961394" expanded="true" signature="244:2413" ph="&lt;div.../&gt;" />
-                <marker date="1557307961394" expanded="true" signature="314:2395" ph="&lt;div.../&gt;" />
-                <marker date="1557307961394" expanded="true" signature="354:551" ph="&lt;div.../&gt;" />
-                <marker date="1557307961394" expanded="true" signature="581:2379" ph="&lt;form.../&gt;" />
-                <marker date="1557307961394" expanded="true" signature="632:2103" ph="&lt;div.../&gt;" />
-                <marker date="1557307961394" expanded="true" signature="821:1092" ph="&lt;div.../&gt;" />
-                <marker date="1557307961394" expanded="true" signature="1113:1419" ph="&lt;div.../&gt;" />
-                <marker date="1557307961394" expanded="true" signature="1440:1745" ph="&lt;div.../&gt;" />
-                <marker date="1557307961394" expanded="true" signature="1766:2080" ph="&lt;div.../&gt;" />
-                <marker date="1557307961394" expanded="true" signature="2120:2359" ph="&lt;div.../&gt;" />
+                <marker date="1557396614582" expanded="true" signature="143:230" ph="@..." />
+                <marker date="1557396614582" expanded="true" signature="232:579" ph="@..." />
+                <marker date="1557396614582" expanded="true" signature="272:579" ph="{...}" />
+                <marker date="1557396614582" expanded="true" signature="279:577" ph="&lt;div.../&gt;" />
+                <marker date="1557396614582" expanded="true" signature="403:566" ph="&lt;button.../&gt;" />
+                <marker date="1557396614582" expanded="true" signature="580:922" ph="@..." />
+                <marker date="1557396614582" expanded="true" signature="618:922" ph="{...}" />
+                <marker date="1557396614582" expanded="true" signature="625:920" ph="&lt;div.../&gt;" />
+                <marker date="1557396614582" expanded="true" signature="746:909" ph="&lt;button.../&gt;" />
+                <marker date="1557396614582" expanded="true" signature="924:1565" ph="&lt;div.../&gt;" />
+                <marker date="1557396614582" expanded="true" signature="958:1558" ph="&lt;div.../&gt;" />
+                <marker date="1557396614582" expanded="true" signature="984:1547" ph="&lt;div.../&gt;" />
+                <marker date="1557396614582" expanded="true" signature="1098:1532" ph="&lt;div.../&gt;" />
+                <marker date="1557396614582" expanded="true" signature="1147:1513" ph="&lt;nav.../&gt;" />
+                <marker date="1557396614582" expanded="true" signature="1197:1490" ph="&lt;ol.../&gt;" />
+                <marker date="1557396614582" expanded="true" signature="1566:4210" ph="&lt;div.../&gt;" />
+                <marker date="1557396614582" expanded="true" signature="1600:4203" ph="&lt;div.../&gt;" />
+                <marker date="1557396614582" expanded="true" signature="1626:4192" ph="&lt;div.../&gt;" />
+                <marker date="1557396614582" expanded="true" signature="1659:4177" ph="&lt;div.../&gt;" />
+                <marker date="1557396614582" expanded="true" signature="1694:4158" ph="&lt;div.../&gt;" />
+                <marker date="1557396614582" expanded="true" signature="1884:4135" ph="&lt;div.../&gt;" />
+                <marker date="1557396614582" expanded="true" signature="1939:4108" ph="&lt;table.../&gt;" />
+                <marker date="1557396614582" expanded="true" signature="2032:2562" ph="&lt;thead.../&gt;" />
+                <marker date="1557396614582" expanded="true" signature="2087:2525" ph="&lt;tr.../&gt;" />
+                <marker date="1557396614582" expanded="true" signature="2229:2382" ph="&lt;th.../&gt;" />
+                <marker date="1557396614582" expanded="true" signature="2591:4075" ph="&lt;tbody.../&gt;" />
+                <marker date="1557396614582" expanded="true" signature="2672:4038" ph="@..." />
+                <marker date="1557396614582" expanded="true" signature="2700:4038" ph="{...}" />
+                <marker date="1557396614582" expanded="true" signature="2805:4008" ph="&lt;tr.../&gt;" />
+                <marker date="1557396614582" expanded="true" signature="2846:2965" ph="&lt;td.../&gt;" />
+                <marker date="1557396614582" expanded="true" signature="3002:3134" ph="&lt;td.../&gt;" />
+                <marker date="1557396614582" expanded="true" signature="3171:3970" ph="&lt;td.../&gt;" />
+                <marker date="1557396614582" expanded="true" signature="3244:3454" ph="&lt;a.../&gt;" />
+                <marker date="1557396614582" expanded="true" signature="3495:3928" ph="&lt;a.../&gt;" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Index.cshtml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/LoggingCodefirst/Views/User/Index.cshtml">
+      <file leaf-file-name="BrandViewModel.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/LoggingCodefirst/ViewModels/BrandViewModel.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="520">
-              <caret line="90" column="77" selection-start-line="90" selection-start-column="77" selection-end-line="90" selection-end-column="77" />
+            <state relative-caret-position="105">
+              <caret line="7" column="32" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="32" />
               <folding>
-                <marker date="1557312892704" expanded="false" signature="7:94" ph="..." />
-                <marker date="1557312892704" expanded="true" signature="170:242" ph="@..." />
-                <marker date="1557312892704" expanded="true" signature="244:591" ph="@..." />
-                <marker date="1557312892704" expanded="true" signature="284:591" ph="{...}" />
-                <marker date="1557312892704" expanded="true" signature="291:589" ph="&lt;div.../&gt;" />
-                <marker date="1557312892704" expanded="true" signature="415:578" ph="&lt;button.../&gt;" />
-                <marker date="1557312892704" expanded="true" signature="592:934" ph="@..." />
-                <marker date="1557312892704" expanded="true" signature="630:934" ph="{...}" />
-                <marker date="1557312892704" expanded="true" signature="637:932" ph="&lt;div.../&gt;" />
-                <marker date="1557312892704" expanded="true" signature="758:921" ph="&lt;button.../&gt;" />
-                <marker date="1557312892704" expanded="true" signature="936:1560" ph="&lt;div.../&gt;" />
-                <marker date="1557312892704" expanded="true" signature="970:1553" ph="&lt;div.../&gt;" />
-                <marker date="1557312892704" expanded="true" signature="996:1542" ph="&lt;div.../&gt;" />
-                <marker date="1557312892704" expanded="true" signature="1110:1527" ph="&lt;div.../&gt;" />
-                <marker date="1557312892704" expanded="true" signature="1159:1508" ph="&lt;nav.../&gt;" />
-                <marker date="1557312892704" expanded="true" signature="1209:1485" ph="&lt;ol.../&gt;" />
-                <marker date="1557312892704" expanded="true" signature="1561:5384" ph="&lt;div.../&gt;" />
-                <marker date="1557312892704" expanded="true" signature="1595:5377" ph="&lt;div.../&gt;" />
-                <marker date="1557312892704" expanded="true" signature="1621:5366" ph="&lt;div.../&gt;" />
-                <marker date="1557312892704" expanded="true" signature="1654:5351" ph="&lt;div.../&gt;" />
-                <marker date="1557312892704" expanded="true" signature="1689:5332" ph="&lt;div.../&gt;" />
-                <marker date="1557312892704" expanded="true" signature="1860:5309" ph="&lt;div.../&gt;" />
-                <marker date="1557312892704" expanded="true" signature="1915:5282" ph="&lt;table.../&gt;" />
-                <marker date="1557312892704" expanded="true" signature="2008:2915" ph="&lt;thead.../&gt;" />
-                <marker date="1557312892704" expanded="true" signature="2067:2878" ph="&lt;tr.../&gt;" />
-                <marker date="1557312892704" expanded="true" signature="2944:5249" ph="&lt;tbody.../&gt;" />
-                <marker date="1557312892704" expanded="true" signature="3035:5212" ph="@..." />
-                <marker date="1557312892704" expanded="true" signature="3063:5212" ph="{...}" />
-                <marker date="1557312892704" expanded="true" signature="3176:5178" ph="&lt;tr.../&gt;" />
-                <marker date="1557312892704" expanded="true" signature="3217:3336" ph="&lt;td.../&gt;" />
-                <marker date="1557312892704" expanded="true" signature="3373:3501" ph="&lt;td.../&gt;" />
-                <marker date="1557312892704" expanded="true" signature="3538:3669" ph="&lt;td.../&gt;" />
-                <marker date="1557312892704" expanded="true" signature="3706:3834" ph="&lt;td.../&gt;" />
-                <marker date="1557312892704" expanded="true" signature="3871:4009" ph="&lt;td.../&gt;" />
-                <marker date="1557312892704" expanded="true" signature="4046:4176" ph="&lt;td.../&gt;" />
-                <marker date="1557312892704" expanded="true" signature="4213:5140" ph="&lt;td.../&gt;" />
-                <marker date="1557312892704" expanded="true" signature="4286:4512" ph="&lt;a.../&gt;" />
-                <marker date="1557312892704" expanded="true" signature="4554:4764" ph="&lt;a.../&gt;" />
-                <marker date="1557312892704" expanded="true" signature="4806:5098" ph="&lt;a.../&gt;" />
+                <marker date="1557387928694" expanded="true" signature="67:234" ph="{...}" />
+                <marker date="1557387928694" expanded="true" signature="101:232" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ViewResource.vi-VN.resx" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/LoggingCodefirst/Resources/ViewResource.vi-VN.resx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="23" column="28" selection-start-line="23" selection-start-column="16" selection-end-line="23" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CategoryViewModel.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/LoggingCodefirst/ViewModels/CategoryViewModel.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="7" column="34" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="34" />
+              <folding>
+                <marker date="1557389868138" expanded="true" signature="67:242" ph="{...}" />
+                <marker date="1557389868138" expanded="true" signature="104:240" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LoginViewModel.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/LoggingCodefirst/ViewModels/LoginViewModel.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="9" column="24" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
+              <folding>
+                <marker date="1557388619727" expanded="true" signature="67:298" ph="{...}" />
+                <marker date="1557388619727" expanded="true" signature="101:296" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ProductViewModel.cs" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/LoggingCodefirst/ViewModels/ProductViewModel.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="11" column="30" lean-forward="true" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
+              <folding>
+                <marker date="1557399678041" expanded="false" signature="6:182" ph="..." />
+                <marker date="1557399678041" expanded="true" signature="221:1182" ph="{...}" />
+                <marker date="1557399678041" expanded="true" signature="257:1180" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ProductValidator.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/LoggingCodefirst/Validators/ProductValidator.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="10" column="38" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="38" />
+              <folding>
+                <marker date="1557391270439" expanded="false" signature="6:92" ph="..." />
+                <marker date="1557391270439" expanded="true" signature="131:696" ph="{...}" />
+                <marker date="1557391270439" expanded="true" signature="204:694" ph="{...}" />
+                <marker date="1557391270439" expanded="true" signature="273:679" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Startup.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/LoggingCodefirst/Startup.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="68" column="63" selection-start-line="68" selection-start-column="47" selection-end-line="68" selection-end-column="63" />
+              <folding>
+                <marker date="1557398987703" expanded="false" signature="6:693" ph="..." />
+                <marker date="1557398987703" expanded="true" signature="721:5366" ph="{...}" />
+                <marker date="1557398987703" expanded="true" signature="748:5364" ph="{...}" />
+                <marker date="1557398987703" expanded="true" signature="807:870" ph="{...}" />
+                <marker date="1557398987703" expanded="true" signature="1093:4123" ph="{...}" />
+                <marker date="1557398987703" expanded="true" signature="1166:1443" ph="{...}" />
+                <marker date="1557398987703" expanded="true" signature="2332:4100" ph="Resources" />
+                <marker date="1557398987703" expanded="true" signature="2647:3014" ph="{...}" />
+                <marker date="1557398987703" expanded="true" signature="2746:2995" ph="{...}" />
+                <marker date="1557398987703" expanded="true" signature="3030:3542" ph="/* services.AddMvc() ... */" />
+                <marker date="1557398987703" expanded="true" signature="3638:4061" ph="{...}" />
+                <marker date="1557398987703" expanded="true" signature="3731:3841" ph="{...}" />
+                <marker date="1557398987703" expanded="true" signature="4311:5358" ph="{...}" />
+                <marker date="1557398987703" expanded="true" signature="4358:4435" ph="{...}" />
+                <marker date="1557398987703" expanded="true" signature="4452:4711" ph="{...}" />
+                <marker date="1557398987703" expanded="false" signature="4917:5140" ph="Resources" />
+                <marker date="1557398987703" expanded="true" signature="5175:5346" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -189,6 +452,7 @@
       <find>jquery.min.js</find>
       <find>waves-dark</find>
       <find>datatables</find>
+      <find>Localizer</find>
     </findStrings>
     <replaceStrings>
       <replace>listuser</replace>
@@ -204,85 +468,49 @@
     <setting file="file://$PROJECT_DIR$/LoggingCodefirst/SeedData/ModelBuilderExtensions.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/LoggingCodefirst/Resources/Views/Store/Index.vi-VN.resx" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/LoggingCodefirst/SeedData/EntityConfiguration.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/050F29A0-F172-42A7-9DFE-CF368F9A5026/08/4a8f8573/CultureInfo.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/LoggingCodefirst/Resources/Views/Stock/Create.vi-VN.resx" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/A4C40EB2-420A-4C66-A15E-4E3DB1AE0928/15/Profile.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/LoggingCodefirst/Resources/Views/Stock/Edit.vi-VN.resx" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/LoggingCodefirst/Resources/Views/Stock/Index.vi-VN.resx" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/LoggingCodefirst/Resources/Views/Brand/Create.vi-VN.resx" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/050F29A0-F172-42A7-9DFE-CF368F9A5026/4c/02eda88c/_ThreadPoolWaitCallback.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/050F29A0-F172-42A7-9DFE-CF368F9A5026/f6/08f04b67/ThreadPoolWorkQueue.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/050F29A0-F172-42A7-9DFE-CF368F9A5026/28/fe176d0a/AwaitTaskContinuation.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/LoggingCodefirst/Resources/Views/Brand/Edit.vi-VN.resx" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/LoggingCodefirst/Resources/Views/Brand/Index.vi-VN.resx" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/050F29A0-F172-42A7-9DFE-CF368F9A5026/c3/685bfa0e/AsyncTaskMethodBuilder`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/LoggingCodefirst/Resources/Views/User/Index.vi-VN.Designer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/050F29A0-F172-42A7-9DFE-CF368F9A5026/96/2b4a774d/ExecutionContext.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/LoggingCodefirst/Resources/Views/User/Create.vi-VN.resx" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/AB35F7E7-BEF1-4521-9149-DC1C4849EFAA/6e/fba5894d/IStringLocalizer`1.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/LoggingCodefirst/Resources/Views/User/Create.vi-VN.Designer.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/2D506C52-CF4B-4BDB-B896-80B6E2C92982/a4/57c67830/DbUpdateConcurrencyException.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/LoggingCodefirst/Resources/Views/User/Edit.vi-VN.resx" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/LoggingCodefirst/Validators/Category/CategoryCreateValidator.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/LoggingCodefirst/Validators/Category/CategoryEditValidator.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/LoggingCodefirst/Validators/Product/ProductEditValidator.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/LoggingCodefirst/Validators/Product/ProductCreateValidator.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/LoggingCodefirst/Validators/Store/StoreCreateValidator.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/LoggingCodefirst/Validators/Store/StoreEditValidator.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/LoggingCodefirst/Validators/Stock/StockCreateValidator.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/LoggingCodefirst/Validators/Brand/BrandEditValidator.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/LoggingCodefirst/Validators/Brand/BrandCreateValidator.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/LoggingCodefirst/Validators/User/UserChangePasswordValidator.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/LoggingCodefirst/Validators/User/UserEditValidator.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/LoggingCodefirst/Resources/Views/User/ChangePassword.vi-VN.resx" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/LoggingCodefirst/Resources/Views/User/Index.vi-VN.resx" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/LoggingCodefirst/Resources/Views/Home/Privacy.vi-VN.resx" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/LoggingCodefirst/Resources/Views/Home/Index.vi-VN.resx" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/LoggingCodefirst/Validators/User/UserLoginValidator.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/LoggingCodefirst/Validators/User/UserCreateValidator.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/050F29A0-F172-42A7-9DFE-CF368F9A5026/1d/69c022b4/ICollection`1.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/050F29A0-F172-42A7-9DFE-CF368F9A5026/08/4a8f8573/CultureInfo.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/A4C40EB2-420A-4C66-A15E-4E3DB1AE0928/15/Profile.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/AB35F7E7-BEF1-4521-9149-DC1C4849EFAA/e2/5887681e/IStringLocalizer.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/LoggingCodefirst/Models/ErrorViewModel.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/LoggingCodefirst/Models/DataContext.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/LoggingCodefirst/ViewModels/UserViewModels/UserEditViewModel.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/LoggingCodefirst/ViewModels/UserViewModels/UserCreateViewModel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/LoggingCodefirst/Resources/Views/User/Create.vi-VN.resx" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/LoggingCodefirst/Migrations/20190426025648_UpdateProductImage.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/LoggingCodefirst/ViewModels/StockViewModels/StockCreateViewModel.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/LoggingCodefirst/ViewModels/StockViewModels/StockEditViewModel.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/LoggingCodefirst/ViewModels/StockViewModels/StockIndexViewModel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/LoggingCodefirst/ViewModels/StockViewModel.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/LoggingCodefirst/Migrations/20190502085144_UpdateStock2.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/LoggingCodefirst/ViewModels/StockViewModels/StockProfile.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/LoggingCodefirst/ViewModels/BrandViewModels/BrandProfile.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/LoggingCodefirst/ViewModels/BrandViewModels/BrandCreateViewModel.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/LoggingCodefirst/ViewModels/BrandViewModels/BrandEditViewModel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/LoggingCodefirst/Migrations/20190509084758_UpdateProImg.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/LoggingCodefirst/ViewModels/MapProfile.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/LoggingCodefirst/Migrations/20190509084758_UpdateProImg.Designer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/LoggingCodefirst/Migrations/20190502023646_AddStock.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/LoggingCodefirst/ViewModels/BrandViewModels/BrandIndexViewModel.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/LoggingCodefirst/Migrations/DataContextModelSnapshot.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/LoggingCodefirst/ViewModels/CategoryViewModels/CategoryIndexViewModel.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/LoggingCodefirst/ViewModels/CategoryViewModels/CategoryEditViewModel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/LoggingCodefirst/ViewModels/CategoryViewModel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/LoggingCodefirst/Validators/CategoryValidator.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/LoggingCodefirst/Migrations/20190424031719_AddDatabase.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/LoggingCodefirst/ViewModels/CategoryViewModels/CategoryProfile.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/LoggingCodefirst/ViewModels/CategoryViewModels/CategoryCreateViewModel.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/LoggingCodefirst/ViewModels/ProductViewModels/ProductCreateViewModel.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/LoggingCodefirst/ViewModels/ProductViewModels/ProductIndexViewModel.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/LoggingCodefirst/ViewModels/ProductViewModels/ProductProfile.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/LoggingCodefirst/ViewModels/BrandViewModel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/LoggingCodefirst/ViewModels/ProductViewModel.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/LoggingCodefirst/Migrations/20190425075909_Add-Category-Brand-Product.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/050F29A0-F172-42A7-9DFE-CF368F9A5026/ce/d26e6b8d/FileStream.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/LoggingCodefirst/ViewModels/ProductViewModels/ProductEditViewModel.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/LoggingCodefirst/ViewModels/UserViewModels/UserIndexViewModel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/LoggingCodefirst/ViewModels/UserViewModel.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/LoggingCodefirst/Migrations/20190506035152_UpdateProductImagePath.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/LoggingCodefirst/ViewModels/UserViewModels/UserProfile.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/LoggingCodefirst/Resources/Controllers/AccountController.vi-VN.resx" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/LoggingCodefirst/ViewModels/UserViewModels/UserChangePasswordViewModel.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/LoggingCodefirst/ViewModels/StoreViewModels/StoreIndexViewModel.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/LoggingCodefirst/ViewModels/StoreViewModels/StoreCreateViewModel.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/LoggingCodefirst/ViewModels/StoreViewModels/StoreProfile.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/LoggingCodefirst/ViewModels/StoreViewModels/StoreEditViewModel.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/LoggingCodefirst/ViewModels/AccountViewModels/AccountLoginViewModel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/LoggingCodefirst/ViewModels/UserChangePasswordViewModel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/LoggingCodefirst/Resources/LocalizationService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/LoggingCodefirst/ViewModels/StoreViewModel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/050F29A0-F172-42A7-9DFE-CF368F9A5026/24/cf9393b2/TaskContinuation.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/LoggingCodefirst/ViewModels/LoginViewModel.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/LoggingCodefirst/Models/Production/Category.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/LoggingCodefirst/Models/Production/Brand.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/LoggingCodefirst/Models/Production/Product.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/LoggingCodefirst/Models/Production/Stock.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/050F29A0-F172-42A7-9DFE-CF368F9A5026/45/8be7d1b8/TaskScheduler.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/LoggingCodefirst/Models/Sales/User.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/LoggingCodefirst/Models/Sales/OrderItem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/LoggingCodefirst/DependencyInjection/Implementation/CategoryService.cs" root0="FORCE_HIGHLIGHTING" />
@@ -292,14 +520,17 @@
     <setting file="file://$PROJECT_DIR$/LoggingCodefirst/Migrations/20190503025527_UpdateSeedData.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/LoggingCodefirst/DependencyInjection/Implementation/StoreService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/LoggingCodefirst/Models/Sales/Store.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/050F29A0-F172-42A7-9DFE-CF368F9A5026/3d/6823c858/ThreadPoolTaskScheduler.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/LoggingCodefirst/DependencyInjection/Implementation/UserService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/LoggingCodefirst/Migrations/20190502081952_UpdateStock.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/LoggingCodefirst/DependencyInjection/Implementation/ProductService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/LoggingCodefirst/Resources/Controllers/StoreController.vi-VN.resx" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/LoggingCodefirst/DependencyInjection/Implementation/StockService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/AB35F7E7-BEF1-4521-9149-DC1C4849EFAA/6e/fba5894d/IStringLocalizer`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/LoggingCodefirst/DependencyInjection/Interface/IUserService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/2254925F-A632-4F31-B1D5-B3D82A28CAEE/2a/5deab5e9/PasswordValidator`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/LoggingCodefirst/DependencyInjection/Interface/ICategoryService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/050F29A0-F172-42A7-9DFE-CF368F9A5026/67/bdd7d8a8/ContinuationTaskFromResultTask`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/LoggingCodefirst/DependencyInjection/Interface/IProductService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/LoggingCodefirst/DependencyInjection/Interface/IBrandService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/LoggingCodefirst/Resources/Controllers/CategoryController.vi-VN.resx" root0="FORCE_HIGHLIGHTING" />
@@ -307,16 +538,19 @@
     <setting file="file://$PROJECT_DIR$/LoggingCodefirst/DependencyInjection/Interface/IStockService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/LoggingCodefirst/Resources/Controllers/ProductController.vi-VN.resx" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/050F29A0-F172-42A7-9DFE-CF368F9A5026/00/ab0cb195/CultureData.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/050F29A0-F172-42A7-9DFE-CF368F9A5026/73/332b7442/TaskCompletionSource`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/LoggingCodefirst/Resources/Controllers/AccountController.vi-VN.Designer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/LoggingCodefirst/Resources/Controllers/BrandController.vi-VN.resx" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/7C2BA99B-1061-4107-AA78-E276437948FD/08/4c62c6f9/IRequestCultureFeature.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/050F29A0-F172-42A7-9DFE-CF368F9A5026/c3/d824c726/Task`1.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/LoggingCodefirst/Resources/Views/User/Create.vi-VN.Designer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/A4C40EB2-420A-4C66-A15E-4E3DB1AE0928/6a/ac9da93a/IMapper.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/2D506C52-CF4B-4BDB-B896-80B6E2C92982/a4/57c67830/DbUpdateConcurrencyException.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/2254925F-A632-4F31-B1D5-B3D82A28CAEE/38/b42446d3/PasswordOptions.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/LoggingCodefirst/Views/User/_ChangePasswordPartial.cshtml" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/LoggingCodefirst/Resources/Controllers/StockController.vi-VN.resx" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/LoggingCodefirst/Resources/Views/User/Edit.vi-VN.resx" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/LoggingCodefirst/Resources/Controllers/UserController.vi-VN.resx" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/LoggingCodefirst/obj/Debug/netcoreapp2.2/Razor/Views/User/_ChangePasswordPartial.g.cshtml.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/LoggingCodefirst/Resources/Validators/Category/CategoryEditValidator.vi-VN.resx" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/LoggingCodefirst/Infrastructure/SecurePasswordHasher.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/LoggingCodefirst/Controllers/UserController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/LoggingCodefirst/Controllers/ProductController.cs" root0="FORCE_HIGHLIGHTING" />
@@ -328,22 +562,13 @@
     <setting file="file://$PROJECT_DIR$/LoggingCodefirst/Controllers/StoreController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/2254925F-A632-4F31-B1D5-B3D82A28CAEE/64/c151fd36/IdentityOptions.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/LoggingCodefirst/Controllers/BrandController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/LoggingCodefirst/Resources/Validators/Category/CategoryCreateValidator.vi-VN.resx" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/LoggingCodefirst/Resources/Validators/Product/ProductCreateValidator.vi-VN.resx" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/LoggingCodefirst/Resources/Validators/Product/ProductEditValidator.vi-VN.resx" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/LoggingCodefirst/Resources/Validators/Store/StoreEditValidator.vi-VN.resx" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/LoggingCodefirst/Resources/Validators/Store/StoreCreateValidator.vi-VN.resx" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/LoggingCodefirst/Validators/ProductValidator.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/LoggingCodefirst/Validators/StoreValidator.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/LoggingCodefirst/Validators/StockValidator.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/050F29A0-F172-42A7-9DFE-CF368F9A5026/47/231c1244/Task.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/LoggingCodefirst/Resources/Validators/Stock/StockEditValidator.vi-VN.resx" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/LoggingCodefirst/Resources/Validators/Stock/StockCreateValidator.vi-VN.resx" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/LoggingCodefirst/Resources/Validators/Brand/BrandEditValidator.vi-VN.resx" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0366DF96-A306-4DFB-8E8E-8F21BCA68142/0d/fb84ba0f/ControllerActionInvoker.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/LoggingCodefirst/Resources/Validators/Brand/BrandCreateValidator.vi-VN.resx" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/LoggingCodefirst/Resources/Validators/User/UserLoginValidator.vi-VN.resx" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/LoggingCodefirst/Resources/Validators/User/UserEditValidator.vi-VN.resx" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/LoggingCodefirst/Resources/Validators/User/UserCreateValidator.vi-VN.resx" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/LoggingCodefirst/Resources/Validators/User/UserLoginValidator.vi-VN.Designer.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/LoggingCodefirst/Resources/Validators/User/UserChangePasswordValidator.vi-VN.resx" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/LoggingCodefirst/Validators/BrandValidator.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/LoggingCodefirst/Validators/UserChangePasswordValidator.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/LoggingCodefirst/Views/Category/Edit.cshtml" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/LoggingCodefirst/Views/Category/Create.cshtml" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/LoggingCodefirst/Views/Category/Index.cshtml" root0="FORCE_HIGHLIGHTING" />
@@ -364,8 +589,10 @@
     <setting file="file://$PROJECT_DIR$/LoggingCodefirst/Views/Store/Edit.cshtml" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/LoggingCodefirst/Resources/Views/Category/Edit.vi-VN.resx" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/LoggingCodefirst/Views/Store/Create.cshtml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/LoggingCodefirst/Resources/Views/User/_ChangePasswordPartial.vi-VN.resx" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/LoggingCodefirst/Views/Store/Index.cshtml" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/LoggingCodefirst/Views/Stock/Edit.cshtml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/LoggingCodefirst/Resources/Views/User/Index.vi-VN.resx" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/LoggingCodefirst/Resources/Views/Category/Index.vi-VN.resx" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/LoggingCodefirst/Views/Stock/Create.cshtml" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/LoggingCodefirst/Views/Stock/Index.cshtml" root0="FORCE_HIGHLIGHTING" />
@@ -376,80 +603,78 @@
     <setting file="file://$PROJECT_DIR$/LoggingCodefirst/Views/User/Create.cshtml" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/LoggingCodefirst/Views/User/Index.cshtml" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/LoggingCodefirst/Resources/Views/Product/Create.vi-VN.resx" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/LoggingCodefirst/Views/User/ChangePassword.cshtml" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/LoggingCodefirst/Views/Home/Privacy.cshtml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/LoggingCodefirst/Validators/UserValidator.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/LoggingCodefirst/Views/Home/Index.cshtml" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/LoggingCodefirst/Resources/Views/Product/Edit.vi-VN.resx" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/LoggingCodefirst/Resources/PropertyResource.vi-VN.Designer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/LoggingCodefirst/Resources/Views/Product/Index.vi-VN.resx" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/LoggingCodefirst/Resources/Views/Account/Login.vi-VN.resx" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/LoggingCodefirst/Resources/Views/Shared/_LoginPartial.vi-VN.resx" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/LoggingCodefirst/Resources/PropertyResource.vi-VN.resx" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/LoggingCodefirst/Views/_ViewImports.cshtml" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/LoggingCodefirst/Program.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/FED7A670-80DB-4646-8578-7E8EA98BDDBA/5c/5282b940/Expression.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/LoggingCodefirst/Startup.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/87E8CE02-3EE4-404D-9082-6C8A5038171A/7f/b478af58/IActionResult.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/LoggingCodefirst/Validators/LoginValidator.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/DD7BBB1E-B6CB-4178-A82C-D5136B2606B8/78/45a01cb1/IApplicationBuilder.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/LoggingCodefirst/Resources/ViewResource.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/LoggingCodefirst/Resources/Views/Shared/_Layout.vi-VN.resx" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/050F29A0-F172-42A7-9DFE-CF368F9A5026/1d/69c022b4/ICollection`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/LoggingCodefirst/Resources/ViewResource.vi-VN.Designer.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/LoggingCodefirst/Resources/Views/Shared/_SelectLanguagePartial.vi-VN.resx" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/LoggingCodefirst/Resources/ViewResource.vi-VN.resx" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/LoggingCodefirst/Resources/Views/Shared/_NavigationPartial.vi-VN.resx" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/LoggingCodefirst/Resources/Controllers/UserController.vi-VN.resx" />
-        <option value="$PROJECT_DIR$/LoggingCodefirst/Resources/ControllerResource.Designer.cs" />
-        <option value="$PROJECT_DIR$/LoggingCodefirst/Resources/ControllerResource.resx" />
-        <option value="$PROJECT_DIR$/LoggingCodefirst/Resources/ControllerResource.cs" />
-        <option value="$PROJECT_DIR$/LoggingCodefirst/Resources/Controllers/ControllerResource.vi-VN.resx" />
-        <option value="$PROJECT_DIR$/LoggingCodefirst/Resources/Controllers/ControllerResource.cs" />
-        <option value="$PROJECT_DIR$/LoggingCodefirst/Resources/ViewResource.vi-VN.resx" />
-        <option value="$PROJECT_DIR$/LoggingCodefirst/Resources/SharedResources.Designer.cs" />
-        <option value="$PROJECT_DIR$/LoggingCodefirst/Resources/SharedResources.resx" />
-        <option value="$PROJECT_DIR$/LoggingCodefirst/Resources/SharedResources.cs" />
-        <option value="$PROJECT_DIR$/LoggingCodefirst/Resources/SharedResources.vi-VN.resx" />
-        <option value="$PROJECT_DIR$/LoggingCodefirst/appsettings.json" />
-        <option value="$PROJECT_DIR$/LoggingCodefirst/Startup.cs" />
-        <option value="$PROJECT_DIR$/LoggingCodefirst/Controllers/AccountController.cs" />
-        <option value="$PROJECT_DIR$/LoggingCodefirst/Controllers/BrandController.cs" />
-        <option value="$PROJECT_DIR$/LoggingCodefirst/Controllers/CategoryController.cs" />
-        <option value="$PROJECT_DIR$/LoggingCodefirst/Controllers/ProductController.cs" />
-        <option value="$PROJECT_DIR$/LoggingCodefirst/Controllers/StockController.cs" />
+        <option value="$PROJECT_DIR$/LoggingCodefirst/Validators/StockValidator.cs" />
+        <option value="$PROJECT_DIR$/LoggingCodefirst/ViewModels/StoreViewModels/StoreIndexViewModel.cs" />
+        <option value="$PROJECT_DIR$/LoggingCodefirst/ViewModels/Profile.cs" />
         <option value="$PROJECT_DIR$/LoggingCodefirst/Controllers/StoreController.cs" />
-        <option value="$PROJECT_DIR$/LoggingCodefirst/DependencyInjection/Implementation/BrandService.cs" />
-        <option value="$PROJECT_DIR$/LoggingCodefirst/DependencyInjection/Implementation/CategoryService.cs" />
-        <option value="$PROJECT_DIR$/LoggingCodefirst/DependencyInjection/Implementation/ProductService.cs" />
-        <option value="$PROJECT_DIR$/LoggingCodefirst/DependencyInjection/Implementation/StockService.cs" />
+        <option value="$PROJECT_DIR$/LoggingCodefirst/Views/Store/Edit.cshtml" />
+        <option value="$PROJECT_DIR$/LoggingCodefirst/Views/Store/Create.cshtml" />
+        <option value="$PROJECT_DIR$/LoggingCodefirst/Views/Store/Index.cshtml" />
         <option value="$PROJECT_DIR$/LoggingCodefirst/DependencyInjection/Implementation/StoreService.cs" />
-        <option value="$PROJECT_DIR$/LoggingCodefirst/DependencyInjection/Implementation/UserService.cs" />
-        <option value="$PROJECT_DIR$/LoggingCodefirst/DependencyInjection/Interface/ICategoryService.cs" />
-        <option value="$PROJECT_DIR$/LoggingCodefirst/DependencyInjection/Interface/IBrandService.cs" />
-        <option value="$PROJECT_DIR$/LoggingCodefirst/DependencyInjection/Interface/IProductService.cs" />
-        <option value="$PROJECT_DIR$/LoggingCodefirst/DependencyInjection/Interface/IStockService.cs" />
         <option value="$PROJECT_DIR$/LoggingCodefirst/DependencyInjection/Interface/IStoreService.cs" />
-        <option value="$PROJECT_DIR$/LoggingCodefirst/DependencyInjection/Interface/IUserService.cs" />
-        <option value="$PROJECT_DIR$/LoggingCodefirst/Migrations/DataContextModelSnapshot.cs" />
-        <option value="$PROJECT_DIR$/LoggingCodefirst/Models/Sales/User.cs" />
+        <option value="$PROJECT_DIR$/LoggingCodefirst/Validators/Store/StoreEditValidator.cs" />
+        <option value="$PROJECT_DIR$/LoggingCodefirst/Validators/Store/StoreCreateValidator.cs" />
+        <option value="$PROJECT_DIR$/LoggingCodefirst/Validators/StoreValidator.cs" />
+        <option value="$PROJECT_DIR$/LoggingCodefirst/ViewModels/StoreViewModel.cs" />
+        <option value="$PROJECT_DIR$/LoggingCodefirst/ViewModels/UserViewModels/UserChangePasswordViewModel.cs" />
+        <option value="$PROJECT_DIR$/LoggingCodefirst/Validators/User/UserChangePasswordValidator.cs" />
+        <option value="$PROJECT_DIR$/LoggingCodefirst/Resources/Validators/User/UserChangePasswordValidator.vi-VN.resx" />
+        <option value="$PROJECT_DIR$/LoggingCodefirst/Validators/UserChangePasswordValidator.cs" />
+        <option value="$PROJECT_DIR$/LoggingCodefirst/ViewModels/UserChangePasswordViewModel.cs" />
+        <option value="$PROJECT_DIR$/LoggingCodefirst/ViewModels/MapProfile.cs" />
+        <option value="$PROJECT_DIR$/LoggingCodefirst/ViewModels/UserViewModels/UserViewModel.cs" />
+        <option value="$PROJECT_DIR$/LoggingCodefirst/Controllers/UserController.cs" />
         <option value="$PROJECT_DIR$/LoggingCodefirst/Views/User/Edit.cshtml" />
         <option value="$PROJECT_DIR$/LoggingCodefirst/Views/User/Create.cshtml" />
-        <option value="$PROJECT_DIR$/LoggingCodefirst/ViewModels/UserViewModels/UserCreateViewModel.cs" />
-        <option value="$PROJECT_DIR$/LoggingCodefirst/ViewModels/UserViewModels/UserEditViewModel.cs" />
-        <option value="$PROJECT_DIR$/LoggingCodefirst/Views/User/_ChangePasswordPartial.cshtml" />
-        <option value="$PROJECT_DIR$/LoggingCodefirst/Views/User/ChangePassword.cshtml" />
-        <option value="$PROJECT_DIR$/LoggingCodefirst/Validators/User/UserCreateValidator.cs" />
-        <option value="$PROJECT_DIR$/LoggingCodefirst/Validators/User/UserChangePasswordValidator.cs" />
-        <option value="$PROJECT_DIR$/LoggingCodefirst/Validators/User/UserEditValidator.cs" />
-        <option value="$PROJECT_DIR$/LoggingCodefirst/Validators/User/UserLoginValidator.cs" />
-        <option value="$PROJECT_DIR$/LoggingCodefirst/Validators/Store/StoreCreateValidator.cs" />
-        <option value="$PROJECT_DIR$/LoggingCodefirst/Validators/Store/StoreEditValidator.cs" />
-        <option value="$PROJECT_DIR$/LoggingCodefirst/Validators/Stock/StockValidator.cs" />
-        <option value="$PROJECT_DIR$/LoggingCodefirst/ViewModels/UserViewModels/UserProfile.cs" />
-        <option value="$PROJECT_DIR$/LoggingCodefirst/ViewModels/UserViewModels/UserChangePasswordViewModel.cs" />
-        <option value="$PROJECT_DIR$/LoggingCodefirst/ViewModels/UserViewModels/UserIndexViewModel.cs" />
-        <option value="$PROJECT_DIR$/LoggingCodefirst/Controllers/UserController.cs" />
         <option value="$PROJECT_DIR$/LoggingCodefirst/Views/User/Index.cshtml" />
+        <option value="$PROJECT_DIR$/LoggingCodefirst/DependencyInjection/Implementation/UserService.cs" />
+        <option value="$PROJECT_DIR$/LoggingCodefirst/DependencyInjection/Interface/IUserService.cs" />
+        <option value="$PROJECT_DIR$/LoggingCodefirst/Validators/User/UserEditValidator.cs" />
+        <option value="$PROJECT_DIR$/LoggingCodefirst/ViewModels/UserViewModel.cs" />
+        <option value="$PROJECT_DIR$/LoggingCodefirst/Validators/User/UserCreateValidator.cs" />
+        <option value="$PROJECT_DIR$/LoggingCodefirst/Resources/PropertyResources.vi-VN.resx" />
+        <option value="$PROJECT_DIR$/LoggingCodefirst/Resources/PropertyResource.cs" />
+        <option value="$PROJECT_DIR$/LoggingCodefirst/Views/Home/Index.cshtml" />
+        <option value="$PROJECT_DIR$/LoggingCodefirst/Views/Home/Privacy.cshtml" />
+        <option value="$PROJECT_DIR$/LoggingCodefirst/Views/Account/Login.cshtml" />
+        <option value="$PROJECT_DIR$/LoggingCodefirst/Views/Shared/_Layout.cshtml" />
+        <option value="$PROJECT_DIR$/LoggingCodefirst/Views/Shared/_LoginPartial.cshtml" />
+        <option value="$PROJECT_DIR$/LoggingCodefirst/Views/Shared/_NavigationPartial.cshtml" />
+        <option value="$PROJECT_DIR$/LoggingCodefirst/Views/Shared/_SelectLanguagePartial.cshtml" />
+        <option value="$PROJECT_DIR$/LoggingCodefirst/Views/Brand/Create.cshtml" />
+        <option value="$PROJECT_DIR$/LoggingCodefirst/Views/Brand/Edit.cshtml" />
+        <option value="$PROJECT_DIR$/LoggingCodefirst/Resources/Views/Brand/Index.vi-VN.resx" />
+        <option value="$PROJECT_DIR$/LoggingCodefirst/Views/Brand/Index.cshtml" />
+        <option value="$PROJECT_DIR$/LoggingCodefirst/Resources/Views/Brand/Edit.vi-VN.resx" />
+        <option value="$PROJECT_DIR$/LoggingCodefirst/Validators/UserValidator.cs" />
+        <option value="$PROJECT_DIR$/LoggingCodefirst/Resources/ValidateResource.vi-VN.resx" />
+        <option value="$PROJECT_DIR$/LoggingCodefirst/Resources/ViewResource.vi-VN.resx" />
+        <option value="$PROJECT_DIR$/LoggingCodefirst/Startup.cs" />
+        <option value="$PROJECT_DIR$/LoggingCodefirst/ViewModels/BrandViewModel.cs" />
+        <option value="$PROJECT_DIR$/LoggingCodefirst/Resources/PropertyResource.vi-VN.resx" />
+        <option value="$PROJECT_DIR$/LoggingCodefirst/Resources/LocalizationService.cs" />
+        <option value="$PROJECT_DIR$/LoggingCodefirst/ViewModels/ProductViewModel.cs" />
       </list>
     </option>
   </component>
@@ -472,7 +697,9 @@
     <option name="width" value="927" />
     <option name="height" value="1055" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectView">
     <navigator currentView="SolutionExplorer" proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -495,33 +722,32 @@
               <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
               <item name="LoggingCodefirst (1 project)" type="977d5f41:SolutionExplorerNodeRider" />
               <item name="LoggingCodefirst" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Controllers" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Resources" type="977d5f41:SolutionExplorerNodeRider" />
             </path>
             <path>
               <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
               <item name="LoggingCodefirst (1 project)" type="977d5f41:SolutionExplorerNodeRider" />
               <item name="LoggingCodefirst" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="DependencyInjection" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Resources" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Views" type="977d5f41:SolutionExplorerNodeRider" />
             </path>
             <path>
               <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
               <item name="LoggingCodefirst (1 project)" type="977d5f41:SolutionExplorerNodeRider" />
               <item name="LoggingCodefirst" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="DependencyInjection" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Implementation" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="SeedData" type="977d5f41:SolutionExplorerNodeRider" />
+            </path>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="LoggingCodefirst (1 project)" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="LoggingCodefirst" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Validators" type="977d5f41:SolutionExplorerNodeRider" />
             </path>
             <path>
               <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
               <item name="LoggingCodefirst (1 project)" type="977d5f41:SolutionExplorerNodeRider" />
               <item name="LoggingCodefirst" type="977d5f41:SolutionExplorerNodeRider" />
               <item name="ViewModels" type="977d5f41:SolutionExplorerNodeRider" />
-            </path>
-            <path>
-              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
-              <item name="LoggingCodefirst (1 project)" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="LoggingCodefirst" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="ViewModels" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="UserViewModels" type="977d5f41:SolutionExplorerNodeRider" />
             </path>
             <path>
               <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
@@ -534,7 +760,7 @@
               <item name="LoggingCodefirst (1 project)" type="977d5f41:SolutionExplorerNodeRider" />
               <item name="LoggingCodefirst" type="977d5f41:SolutionExplorerNodeRider" />
               <item name="Views" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="User" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Brand" type="977d5f41:SolutionExplorerNodeRider" />
             </path>
           </expand>
           <select />
@@ -637,6 +863,8 @@
       <workItem from="1557223099362" duration="3892000" />
       <workItem from="1557305953430" duration="4012000" />
       <workItem from="1557310443256" duration="2800000" />
+      <workItem from="1557367419650" duration="26692000" />
+      <workItem from="1557397846449" duration="1808000" />
     </task>
     <task id="LOCAL-00001" summary="Update Validators">
       <created>1557310712491</created>
@@ -649,7 +877,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="361894000" />
+    <option name="totallyTimeSpent" value="390394000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -666,21 +894,21 @@
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32900432" />
       <window_info anchor="right" id="Errors In Solution" order="3" weight="0.32872164" />
-      <window_info anchor="bottom" id="Event Log" order="17" sideWeight="0.30879912" side_tool="true" weight="0.335141" />
+      <window_info anchor="bottom" id="Event Log" order="17" sideWeight="0.20697288" side_tool="true" weight="0.3286334" />
       <window_info anchor="bottom" id="Unit Tests" order="10" weight="0.32900432" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="REST Client" order="11" weight="0.32900432" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.77697843" visible="true" weight="0.22885032" />
       <window_info anchor="bottom" id="Version Control" order="13" sideWeight="0.6912009" weight="0.335141" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.7775318" weight="0.22993493" />
-      <window_info anchor="bottom" id="Terminal" order="12" sideWeight="0.8588821" weight="0.3286334" />
+      <window_info anchor="bottom" id="Terminal" order="12" sideWeight="0.7930271" weight="0.3286334" />
       <window_info anchor="bottom" id="NuGet" order="7" sideWeight="0.4971623" weight="0.32900432" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.27614832" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1953514" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Build" order="14" sideWeight="0.49584946" weight="0.318872" />
-      <window_info anchor="right" id="Database" order="4" weight="0.11178749" />
+      <window_info anchor="right" id="Database" order="4" weight="0.1776425" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.9192031" weight="0.3991323" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.9192031" weight="0.39935064" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -694,11 +922,11 @@
     </layout>
     <layout-to-restore>
       <window_info anchor="bottom" id="NuGet" order="7" sideWeight="0.4971623" weight="0.32900432" />
-      <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49529606" visible="true" weight="0.23051947" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info content_ui="combo" id="Project" order="0" weight="0.2429441" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -708,18 +936,18 @@
       <window_info anchor="bottom" id="Build" order="14" sideWeight="0.49584946" weight="0.31926408" />
       <window_info anchor="bottom" id="Unit Tests" order="10" weight="0.32900432" />
       <window_info anchor="bottom" id="REST Client" order="11" weight="0.32900432" />
-      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="right" id="Errors In Solution" order="3" weight="0.3291714" />
       <window_info anchor="right" id="Database" order="4" weight="0.22136137" />
       <window_info anchor="bottom" id="Terminal" order="12" sideWeight="0.49584946" weight="0.32900432" />
       <window_info anchor="bottom" id="Event Log" order="17" sideWeight="0.0807969" side_tool="true" weight="0.39935064" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="13" show_stripe_button="false" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.9192031" weight="0.39935064" />
       <window_info anchor="bottom" id="Database Console" order="15" weight="0.32900432" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Change Signature" order="18" side_tool="true" />
-      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -761,458 +989,416 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="53" />
+      <option name="time" value="57" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/LoggingCodefirst/Migrations/DataContextModelSnapshot.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="49" selection-start-line="5" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LoggingCodefirst/Migrations/20190508091842_RemoveUserImage.cs" />
-    <entry file="das://2648ecf6-33a6-4e43-92d7-a2e66b16c0a7/database/HuanDB/schema/dbo/table/User" />
-    <entry file="file://$PROJECT_DIR$/LoggingCodefirst/Migrations/20190508092136_AddUserImage.cs" />
-    <entry file="das://2648ecf6-33a6-4e43-92d7-a2e66b16c0a7/database/HuanDB/schema/dbo/table/Store" />
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/5044fd6c-7e93-4f9c-8b79-9192a0e72d03/console.sql">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="das://5044fd6c-7e93-4f9c-8b79-9192a0e72d03/database/HuanDB/schema/dbo/table/User" />
-    <entry file="file://$PROJECT_DIR$/LoggingCodefirst/Migrations/20190507030600_UpdateUser.cs" />
-    <entry file="das://5044fd6c-7e93-4f9c-8b79-9192a0e72d03/database/HuanDB/schema/dbo/table/__EFMigrationsHistory" />
-    <entry file="das://6a0f65ae-f344-4d6a-b3c4-bc6b9c4bcac7/database/HuanDB/schema/dbo/table/User">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/6a0f65ae-f344-4d6a-b3c4-bc6b9c4bcac7/console.sql">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LoggingCodefirst/Migrations/20190506035152_UpdateProductImagePath.cs">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LoggingCodefirst/Views/User/Edit.cshtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="2" column="19" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LoggingCodefirst/Models/Sales/User.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="42" selection-start-line="10" selection-start-column="42" selection-end-line="10" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LoggingCodefirst/ViewModels/UserViewModels/UserEditViewModel.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="17" column="44" selection-start-line="17" selection-start-column="44" selection-end-line="17" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LoggingCodefirst/Views/User/Create.cshtml">
+    <entry file="file://$PROJECT_DIR$/LoggingCodefirst/Views/User/Index.cshtml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
-          <caret line="2" column="19" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LoggingCodefirst/ViewModels/UserViewModels/UserCreateViewModel.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="18" column="40" selection-start-line="18" selection-start-column="40" selection-end-line="18" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LoggingCodefirst/Views/User/ChangePassword.cshtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LoggingCodefirst/Controllers/BrandController.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-397">
-          <caret line="45" column="84" selection-start-line="45" selection-start-column="69" selection-end-line="45" selection-end-column="84" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LoggingCodefirst/Controllers/CategoryController.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="803">
-          <caret line="84" column="67" selection-start-line="84" selection-start-column="67" selection-end-line="84" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LoggingCodefirst/Controllers/StockController.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-345">
-          <caret line="54" column="80" lean-forward="true" selection-start-line="54" selection-start-column="80" selection-end-line="54" selection-end-column="80" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LoggingCodefirst/Controllers/StoreController.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-585" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LoggingCodefirst/DependencyInjection/Implementation/BrandService.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="645">
-          <caret line="68" column="58" selection-start-line="68" selection-start-column="58" selection-end-line="68" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LoggingCodefirst/DependencyInjection/Interface/IUserService.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="10" column="26" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LoggingCodefirst/DependencyInjection/Implementation/ProductService.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="975">
-          <caret line="91" column="69" selection-start-line="91" selection-start-column="69" selection-end-line="91" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LoggingCodefirst/Controllers/HomeController.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="14" column="29" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LoggingCodefirst/DependencyInjection/Interface/IBrandService.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="9" column="27" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LoggingCodefirst/DependencyInjection/Interface/ICategoryService.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="9" column="30" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LoggingCodefirst/Controllers/ProductController.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="49" column="75" selection-start-line="49" selection-start-column="75" selection-end-line="49" selection-end-column="75" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LoggingCodefirst/Validators/User/UserCreateValidator.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="17" column="12" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="12" />
-          <folding>
-            <marker date="1557309972157" expanded="false" signature="6:187" ph="..." />
-            <marker date="1557309972157" expanded="true" signature="311:1503" ph="{...}" />
-            <marker date="1557309972157" expanded="true" signature="427:1488" ph="{...}" />
-            <marker date="1557309972157" expanded="true" signature="755:896" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LoggingCodefirst/Validators/User/UserChangePasswordValidator.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="16" column="16" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
-          <folding>
-            <marker date="1557310025177" expanded="false" signature="6:114" ph="..." />
-            <marker date="1557310025177" expanded="true" signature="253:1112" ph="{...}" />
-            <marker date="1557310025177" expanded="true" signature="359:1097" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LoggingCodefirst/Validators/User/UserEditValidator.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="11" column="16" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
-          <folding>
-            <marker date="1557310032821" expanded="false" signature="6:114" ph="..." />
-            <marker date="1557310032821" expanded="true" signature="233:561" ph="{...}" />
-            <marker date="1557310032821" expanded="true" signature="319:546" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LoggingCodefirst/Validators/User/UserLoginValidator.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="13" column="16" selection-start-line="13" selection-start-column="16" selection-end-line="13" selection-end-column="16" />
-          <folding>
-            <marker date="1557310044861" expanded="false" signature="6:117" ph="..." />
-            <marker date="1557310044861" expanded="true" signature="242:745" ph="{...}" />
-            <marker date="1557310044861" expanded="true" signature="331:739" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LoggingCodefirst/Validators/Store/StoreCreateValidator.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="19" column="16" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="16" />
-          <folding>
-            <marker date="1557310061017" expanded="false" signature="6:188" ph="..." />
-            <marker date="1557310061017" expanded="true" signature="314:1131" ph="{...}" />
-            <marker date="1557310061017" expanded="true" signature="434:1116" ph="{...}" />
-            <marker date="1557310061017" expanded="true" signature="541:683" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LoggingCodefirst/Validators/Store/StoreEditValidator.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="10" column="104" selection-start-line="10" selection-start-column="104" selection-end-line="10" selection-end-column="104" />
-          <folding>
-            <marker date="1557310080925" expanded="false" signature="6:115" ph="..." />
-            <marker date="1557310080925" expanded="true" signature="237:574" ph="{...}" />
-            <marker date="1557310080925" expanded="true" signature="325:559" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LoggingCodefirst/Validators/Stock/StockEditValidator.cs">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LoggingCodefirst/Validators/Stock/StockCreateValidator.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="6" column="28" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LoggingCodefirst/Validators/Product/ProductCreateValidator.cs">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LoggingCodefirst/Validators/Product/ProductEditValidator.cs">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LoggingCodefirst/Validators/Category/CategoryCreateValidator.cs">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LoggingCodefirst/Validators/Category/CategoryEditValidator.cs">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LoggingCodefirst/Validators/Brand/BrandCreateValidator.cs">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LoggingCodefirst/Validators/Brand/BrandEditValidator.cs">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LoggingCodefirst/Controllers/AccountController.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="79" column="1" lean-forward="true" selection-start-line="79" selection-start-column="1" selection-end-line="79" selection-end-column="1" />
-          <folding>
-            <marker date="1557306132116" expanded="false" signature="6:242" ph="..." />
-            <marker date="1557306132116" expanded="true" signature="282:2455" ph="{...}" />
-            <marker date="1557306132116" expanded="true" signature="332:2439" ph="{...}" />
-            <marker date="1557306132116" expanded="false" signature="347:524" ph="Private Members" />
-            <marker date="1557306132116" expanded="false" signature="542:801" ph="Constructors" />
-            <marker date="1557306132116" expanded="true" signature="677:773" ph="{...}" />
-            <marker date="1557306132116" expanded="false" signature="811:2424" ph="Public Methods" />
-            <marker date="1557306132116" expanded="true" signature="843:957" ph="/// Get Login User Function ... " />
-            <marker date="1557306132116" expanded="true" signature="1012:1059" ph="{...}" />
-            <marker date="1557306132116" expanded="true" signature="1077:1192" ph="/// Post Login User Function ... " />
-            <marker date="1557306132116" expanded="true" signature="1287:2085" ph="{...}" />
-            <marker date="1557306132116" expanded="true" signature="1333:2043" ph="{...}" />
-            <marker date="1557306132116" expanded="true" signature="1441:1899" ph="{...}" />
-            <marker date="1557306132116" expanded="true" signature="2103:2214" ph="/// Logout User Function ... " />
-            <marker date="1557306132116" expanded="true" signature="2270:2396" ph="{...}" />
-          </folding>
+          <caret line="3" column="32" selection-start-line="3" selection-start-column="32" selection-end-line="3" selection-end-column="32" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/LoggingCodefirst/DependencyInjection/Implementation/UserService.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="385">
-          <caret line="136" column="71" lean-forward="true" selection-start-line="136" selection-start-column="71" selection-end-line="136" selection-end-column="71" />
+        <state relative-caret-position="-190">
+          <caret line="96" column="4" selection-start-line="96" selection-start-column="4" selection-end-line="96" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LoggingCodefirst/DependencyInjection/Interface/IUserService.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="18" column="38" selection-start-line="18" selection-start-column="38" selection-end-line="18" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LoggingCodefirst/Resources/Validators/User/UserChangePasswordValidator.vi-VN.resx" />
+    <entry file="file://$PROJECT_DIR$/LoggingCodefirst/Resources/Validators/User/UserCreateValidator.vi-VN.resx" />
+    <entry file="file://$PROJECT_DIR$/LoggingCodefirst/Validators/User/UserEditValidator.cs" />
+    <entry file="file://$PROJECT_DIR$/LoggingCodefirst/Validators/User/UserCreateValidator.cs" />
+    <entry file="file://$PROJECT_DIR$/LoggingCodefirst/ViewModels/MapProfile.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="15" column="41" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LoggingCodefirst/Resources/PropertyResource.vi-VN.Designer.cs">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LoggingCodefirst/Resources/Controllers/AccountController.vi-VN.resx">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LoggingCodefirst/Resources/Views/Account/Login.vi-VN.resx" />
+    <entry file="file://$PROJECT_DIR$/LoggingCodefirst/Views/Home/Privacy.cshtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="27" column="107" selection-start-line="27" selection-start-column="107" selection-end-line="27" selection-end-column="107" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LoggingCodefirst/Resources/Views/Home/Privacy.vi-VN.resx" />
+    <entry file="file://$PROJECT_DIR$/LoggingCodefirst/Views/Home/Index.cshtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="5" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LoggingCodefirst/Resources/Views/Shared/_Layout.vi-VN.resx" />
+    <entry file="file://$PROJECT_DIR$/LoggingCodefirst/Views/Shared/_Layout.cshtml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LoggingCodefirst/Views/Shared/_LoginPartial.cshtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="32" lean-forward="true" selection-start-column="32" selection-end-line="3" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LoggingCodefirst/Views/Shared/_NavigationPartial.cshtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="2" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LoggingCodefirst/Views/Shared/_LoginLayout.cshtml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LoggingCodefirst/Views/Shared/_SelectLanguagePartial.cshtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="101" selection-start-line="13" selection-start-column="101" selection-end-line="13" selection-end-column="101" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LoggingCodefirst/Resources/Views/Shared/_SelectLanguagePartial.vi-VN.resx" />
+    <entry file="file://$PROJECT_DIR$/LoggingCodefirst/Resources/Views/Shared/_NavigationPartial.vi-VN.resx" />
+    <entry file="file://$PROJECT_DIR$/LoggingCodefirst/Resources/Views/Shared/_LoginPartial.vi-VN.resx" />
+    <entry file="file://$PROJECT_DIR$/LoggingCodefirst/Views/Account/Login.cshtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" selection-start-line="2" selection-end-line="8" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LoggingCodefirst/Resources/Views/Brand/Index.vi-VN.resx" />
+    <entry file="file://$PROJECT_DIR$/LoggingCodefirst/Views/Brand/Edit.cshtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" selection-start-line="1" selection-end-line="7" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LoggingCodefirst/Resources/Views/Brand/Edit.vi-VN.resx" />
+    <entry file="file://$PROJECT_DIR$/LoggingCodefirst/Resources/Views/Brand/Create.vi-VN.resx" />
+    <entry file="file://$PROJECT_DIR$/LoggingCodefirst/Validators/UserChangePasswordValidator.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="10" column="106" selection-start-line="10" selection-start-column="92" selection-end-line="10" selection-end-column="106" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LoggingCodefirst/ViewModels/UserViewModel.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="12" column="29" lean-forward="true" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="29" />
           <folding>
-            <marker date="1557306672263" expanded="false" signature="6:432" ph="..." />
-            <marker date="1557306672263" expanded="true" signature="495:5428" ph="{...}" />
-            <marker date="1557306672263" expanded="true" signature="541:5412" ph="{...}" />
-            <marker date="1557306672263" expanded="false" signature="557:706" ph="Private Members" />
-            <marker date="1557306672263" expanded="false" signature="724:927" ph="Constructors" />
-            <marker date="1557306672263" expanded="true" signature="817:899" ph="{...}" />
-            <marker date="1557306672263" expanded="false" signature="945:1087" ph="Public Properties" />
-            <marker date="1557306672263" expanded="true" signature="1097:5397" ph="Public Methods" />
-            <marker date="1557306672263" expanded="true" signature="1183:1380" ph="{...}" />
-            <marker date="1557306672263" expanded="true" signature="1444:1548" ph="{...}" />
-            <marker date="1557306672263" expanded="true" signature="1628:1870" ph="{...}" />
-            <marker date="1557306672263" expanded="true" signature="1956:2696" ph="{...}" />
-            <marker date="1557306672263" expanded="true" signature="1982:2558" ph="{...}" />
-            <marker date="1557306672263" expanded="true" signature="2049:2421" ph="{...}" />
-            <marker date="1557306672263" expanded="true" signature="2590:2686" ph="{...}" />
-            <marker date="1557306672263" expanded="true" signature="2776:2959" ph="{...}" />
-            <marker date="1557306672263" expanded="true" signature="3051:3759" ph="{...}" />
-            <marker date="1557306672263" expanded="true" signature="3077:3621" ph="{...}" />
-            <marker date="1557306672263" expanded="true" signature="3653:3749" ph="{...}" />
-            <marker date="1557306672263" expanded="true" signature="3825:4205" ph="{...}" />
-            <marker date="1557306672263" expanded="true" signature="3851:4067" ph="{...}" />
-            <marker date="1557306672263" expanded="true" signature="4099:4195" ph="{...}" />
-            <marker date="1557306672263" expanded="true" signature="4293:4506" ph="{...}" />
-            <marker date="1557306672263" expanded="true" signature="4616:5369" ph="{...}" />
-            <marker date="1557306672263" expanded="true" signature="4642:5231" ph="{...}" />
-            <marker date="1557306672263" expanded="true" signature="4837:5187" ph="{...}" />
-            <marker date="1557306672263" expanded="true" signature="5263:5359" ph="{...}" />
+            <marker date="1557393646141" expanded="false" signature="6:65" ph="..." />
+            <marker date="1557393646141" expanded="true" signature="104:830" ph="{...}" />
+            <marker date="1557393646141" expanded="true" signature="137:828" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/LoggingCodefirst/ViewModels/UserViewModels/UserChangePasswordViewModel.cs">
+    <entry file="file://$PROJECT_DIR$/LoggingCodefirst/SeedData/ModelBuilderExtensions.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <marker date="1557176702000" expanded="false" signature="6:154" ph="..." />
+            <marker date="1557176702000" expanded="true" signature="191:2790" ph="{...}" />
+            <marker date="1557176702000" expanded="true" signature="240:2788" ph="{...}" />
+            <marker date="1557176702000" expanded="true" signature="310:2782" ph="{...}" />
+            <marker date="1557176702000" expanded="true" signature="435:788" ph="{...}" />
+            <marker date="1557176702000" expanded="true" signature="832:1185" ph="{...}" />
+            <marker date="1557176702000" expanded="true" signature="1296:1722" ph="{...}" />
+            <marker date="1557176702000" expanded="true" signature="2247:2550" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LoggingCodefirst/SeedData/EntityConfiguration.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="295">
+          <caret line="23" column="66" selection-start-line="23" selection-start-column="66" selection-end-line="23" selection-end-column="66" />
+          <folding>
+            <marker date="1557391542904" expanded="false" signature="6:115" ph="..." />
+            <marker date="1557391542904" expanded="true" signature="152:3306" ph="{...}" />
+            <marker date="1557391542904" expanded="true" signature="199:3304" ph="{...}" />
+            <marker date="1557391542904" expanded="true" signature="289:983" ph="{...}" />
+            <marker date="1557391542904" expanded="true" signature="1066:1660" ph="{...}" />
+            <marker date="1557391542904" expanded="true" signature="1747:1938" ph="{...}" />
+            <marker date="1557391542904" expanded="true" signature="2022:2201" ph="{...}" />
+            <marker date="1557391542904" expanded="true" signature="2287:2809" ph="{...}" />
+            <marker date="1557391542904" expanded="true" signature="2893:3298" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LoggingCodefirst/Validators/CategoryValidator.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
-          <caret line="5" column="44" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="44" />
+          <caret line="8" column="72" selection-start-line="8" selection-start-column="34" selection-end-line="8" selection-end-column="72" />
           <folding>
-            <marker date="1557312194672" expanded="false" signature="6:65" ph="..." />
-            <marker date="1557312194672" expanded="true" signature="119:474" ph="{...}" />
-            <marker date="1557312194672" expanded="true" signature="166:472" ph="{...}" />
+            <marker date="1557389965828" expanded="false" signature="6:165" ph="..." />
+            <marker date="1557389965828" expanded="true" signature="204:858" ph="{...}" />
+            <marker date="1557389965828" expanded="true" signature="279:856" ph="{...}" />
+            <marker date="1557389965828" expanded="true" signature="383:841" ph="{...}" />
+            <marker date="1557389965828" expanded="true" signature="508:700" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/LoggingCodefirst/ViewModels/UserViewModels/UserIndexViewModel.cs">
+    <entry file="file://$PROJECT_DIR$/LoggingCodefirst/Validators/LoginValidator.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <marker date="1557388771478" expanded="false" signature="6:99" ph="..." />
+            <marker date="1557388771478" expanded="true" signature="138:705" ph="{...}" />
+            <marker date="1557388771478" expanded="true" signature="208:703" ph="{...}" />
+            <marker date="1557388771478" expanded="true" signature="289:697" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LoggingCodefirst/Validators/BrandValidator.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="15" column="98" lean-forward="true" selection-start-line="15" selection-start-column="80" selection-end-line="15" selection-end-column="98" />
+          <folding>
+            <marker date="1557389358561" expanded="false" signature="6:165" ph="..." />
+            <marker date="1557389358561" expanded="true" signature="204:807" ph="{...}" />
+            <marker date="1557389358561" expanded="true" signature="273:805" ph="{...}" />
+            <marker date="1557389358561" expanded="true" signature="368:790" ph="{...}" />
+            <marker date="1557389358561" expanded="true" signature="475:652" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LoggingCodefirst/Validators/UserValidator.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
-          <caret line="24" column="48" selection-start-line="24" selection-start-column="48" selection-end-line="24" selection-end-column="48" />
+          <caret line="23" column="138" lean-forward="true" selection-start-line="23" selection-start-column="138" selection-end-line="23" selection-end-column="138" />
           <folding>
-            <marker date="1557312804145" expanded="false" signature="6:65" ph="..." />
-            <marker date="1557312804145" expanded="true" signature="119:850" ph="{...}" />
-            <marker date="1557312804145" expanded="true" signature="157:848" ph="{...}" />
+            <marker date="1557398295295" expanded="true" signature="6:165" ph="..." />
+            <marker date="1557398295295" expanded="true" signature="204:1689" ph="{...}" />
+            <marker date="1557398295295" expanded="true" signature="272:1687" ph="{...}" />
+            <marker date="1557398295295" expanded="true" signature="364:1681" ph="{...}" />
+            <marker date="1557398295295" expanded="true" signature="740:903" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/LoggingCodefirst/ViewModels/UserViewModels/UserProfile.cs">
+    <entry file="file://$PROJECT_DIR$/LoggingCodefirst/Resources/ValidateResource.vi-VN.resx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="16" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LoggingCodefirst/Resources/PropertyResource.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="4" selection-start-line="2" selection-start-column="4" selection-end-line="5" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LoggingCodefirst/LoggingCodefirst.csproj">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LoggingCodefirst/Resources/ViewResource.vi-VN.Designer.cs">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LoggingCodefirst/Views/Brand/Create.cshtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-66">
+          <caret line="3" column="27" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="27" />
+          <folding>
+            <marker date="1557396203859" expanded="true" signature="123:211" ph="@..." />
+            <marker date="1557396203859" expanded="true" signature="213:854" ph="&lt;div.../&gt;" />
+            <marker date="1557396203859" expanded="true" signature="247:847" ph="&lt;div.../&gt;" />
+            <marker date="1557396203859" expanded="true" signature="273:836" ph="&lt;div.../&gt;" />
+            <marker date="1557396203859" expanded="true" signature="387:821" ph="&lt;div.../&gt;" />
+            <marker date="1557396203859" expanded="true" signature="436:802" ph="&lt;nav.../&gt;" />
+            <marker date="1557396203859" expanded="true" signature="486:779" ph="&lt;ol.../&gt;" />
+            <marker date="1557396203859" expanded="true" signature="855:1912" ph="&lt;div.../&gt;" />
+            <marker date="1557396203859" expanded="true" signature="889:1905" ph="&lt;div.../&gt;" />
+            <marker date="1557396203859" expanded="true" signature="915:1894" ph="&lt;div.../&gt;" />
+            <marker date="1557396203859" expanded="true" signature="947:1879" ph="&lt;div.../&gt;" />
+            <marker date="1557396203859" expanded="true" signature="982:1860" ph="&lt;div.../&gt;" />
+            <marker date="1557396203859" expanded="true" signature="1026:1688" ph="&lt;form.../&gt;" />
+            <marker date="1557396203859" expanded="true" signature="1168:1459" ph="&lt;div.../&gt;" />
+            <marker date="1557396203859" expanded="true" signature="1484:1660" ph="&lt;div.../&gt;" />
+            <marker date="1557396203859" expanded="true" signature="1709:1837" ph="&lt;div.../&gt;" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LoggingCodefirst/Views/Brand/Index.cshtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="56" column="81" selection-start-line="56" selection-start-column="72" selection-end-line="56" selection-end-column="81" />
+          <folding>
+            <marker date="1557396614582" expanded="true" signature="143:230" ph="@..." />
+            <marker date="1557396614582" expanded="true" signature="232:579" ph="@..." />
+            <marker date="1557396614582" expanded="true" signature="272:579" ph="{...}" />
+            <marker date="1557396614582" expanded="true" signature="279:577" ph="&lt;div.../&gt;" />
+            <marker date="1557396614582" expanded="true" signature="403:566" ph="&lt;button.../&gt;" />
+            <marker date="1557396614582" expanded="true" signature="580:922" ph="@..." />
+            <marker date="1557396614582" expanded="true" signature="618:922" ph="{...}" />
+            <marker date="1557396614582" expanded="true" signature="625:920" ph="&lt;div.../&gt;" />
+            <marker date="1557396614582" expanded="true" signature="746:909" ph="&lt;button.../&gt;" />
+            <marker date="1557396614582" expanded="true" signature="924:1565" ph="&lt;div.../&gt;" />
+            <marker date="1557396614582" expanded="true" signature="958:1558" ph="&lt;div.../&gt;" />
+            <marker date="1557396614582" expanded="true" signature="984:1547" ph="&lt;div.../&gt;" />
+            <marker date="1557396614582" expanded="true" signature="1098:1532" ph="&lt;div.../&gt;" />
+            <marker date="1557396614582" expanded="true" signature="1147:1513" ph="&lt;nav.../&gt;" />
+            <marker date="1557396614582" expanded="true" signature="1197:1490" ph="&lt;ol.../&gt;" />
+            <marker date="1557396614582" expanded="true" signature="1566:4210" ph="&lt;div.../&gt;" />
+            <marker date="1557396614582" expanded="true" signature="1600:4203" ph="&lt;div.../&gt;" />
+            <marker date="1557396614582" expanded="true" signature="1626:4192" ph="&lt;div.../&gt;" />
+            <marker date="1557396614582" expanded="true" signature="1659:4177" ph="&lt;div.../&gt;" />
+            <marker date="1557396614582" expanded="true" signature="1694:4158" ph="&lt;div.../&gt;" />
+            <marker date="1557396614582" expanded="true" signature="1884:4135" ph="&lt;div.../&gt;" />
+            <marker date="1557396614582" expanded="true" signature="1939:4108" ph="&lt;table.../&gt;" />
+            <marker date="1557396614582" expanded="true" signature="2032:2562" ph="&lt;thead.../&gt;" />
+            <marker date="1557396614582" expanded="true" signature="2087:2525" ph="&lt;tr.../&gt;" />
+            <marker date="1557396614582" expanded="true" signature="2229:2382" ph="&lt;th.../&gt;" />
+            <marker date="1557396614582" expanded="true" signature="2591:4075" ph="&lt;tbody.../&gt;" />
+            <marker date="1557396614582" expanded="true" signature="2672:4038" ph="@..." />
+            <marker date="1557396614582" expanded="true" signature="2700:4038" ph="{...}" />
+            <marker date="1557396614582" expanded="true" signature="2805:4008" ph="&lt;tr.../&gt;" />
+            <marker date="1557396614582" expanded="true" signature="2846:2965" ph="&lt;td.../&gt;" />
+            <marker date="1557396614582" expanded="true" signature="3002:3134" ph="&lt;td.../&gt;" />
+            <marker date="1557396614582" expanded="true" signature="3171:3970" ph="&lt;td.../&gt;" />
+            <marker date="1557396614582" expanded="true" signature="3244:3454" ph="&lt;a.../&gt;" />
+            <marker date="1557396614582" expanded="true" signature="3495:3928" ph="&lt;a.../&gt;" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LoggingCodefirst/ViewModels/CategoryViewModel.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="34" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="34" />
+          <folding>
+            <marker date="1557389868138" expanded="true" signature="67:242" ph="{...}" />
+            <marker date="1557389868138" expanded="true" signature="104:240" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LoggingCodefirst/Resources/LocalizationService.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
-          <caret line="11" column="55" selection-start-line="11" selection-start-column="55" selection-end-line="11" selection-end-column="55" />
+          <caret line="11" column="46" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="46" />
           <folding>
-            <marker date="1557312189016" expanded="false" signature="6:54" ph="..." />
-            <marker date="1557312189016" expanded="true" signature="108:373" ph="{...}" />
-            <marker date="1557312189016" expanded="true" signature="149:371" ph="{...}" />
-            <marker date="1557312189016" expanded="true" signature="184:365" ph="{...}" />
+            <marker date="1557399472435" expanded="false" signature="6:65" ph="..." />
+            <marker date="1557399472435" expanded="true" signature="103:733" ph="{...}" />
+            <marker date="1557399472435" expanded="true" signature="142:630" ph="{...}" />
+            <marker date="1557399472435" expanded="true" signature="272:504" ph="{...}" />
+            <marker date="1557399472435" expanded="true" signature="568:624" ph="{...}" />
+            <marker date="1557399472435" expanded="true" signature="719:731" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/LoggingCodefirst/Controllers/UserController.cs">
+    <entry file="file://$PROJECT_DIR$/LoggingCodefirst/Startup.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="466">
-          <caret line="146" column="50" selection-start-line="146" selection-start-column="28" selection-end-line="146" selection-end-column="50" />
+        <state relative-caret-position="315">
+          <caret line="68" column="63" selection-start-line="68" selection-start-column="47" selection-end-line="68" selection-end-column="63" />
           <folding>
-            <marker date="1557312854032" expanded="false" signature="6:248" ph="..." />
-            <marker date="1557312854032" expanded="true" signature="288:5190" ph="{...}" />
-            <marker date="1557312854032" expanded="true" signature="335:5174" ph="{...}" />
-            <marker date="1557312854032" expanded="false" signature="350:570" ph="Private Members" />
-            <marker date="1557312854032" expanded="false" signature="588:942" ph="Constructors" />
-            <marker date="1557312854032" expanded="true" signature="784:922" ph="{...}" />
-            <marker date="1557312854032" expanded="true" signature="952:5159" ph="Public Methods" />
-            <marker date="1557312854032" expanded="true" signature="1050:1171" ph="{...}" />
-            <marker date="1557312854032" expanded="true" signature="1228:1362" ph="{...}" />
-            <marker date="1557312854032" expanded="true" signature="1475:2140" ph="{...}" />
-            <marker date="1557312854032" expanded="true" signature="1521:1976" ph="{...}" />
-            <marker date="1557312854032" expanded="true" signature="1608:1800" ph="{...}" />
-            <marker date="1557312854032" expanded="true" signature="2222:2626" ph="{...}" />
-            <marker date="1557312854032" expanded="true" signature="2260:2325" ph="{...}" />
-            <marker date="1557312854032" expanded="true" signature="2419:2484" ph="{...}" />
-            <marker date="1557312854032" expanded="true" signature="2733:3384" ph="{...}" />
-            <marker date="1557312854032" expanded="true" signature="2779:3224" ph="{...}" />
-            <marker date="1557312854032" expanded="true" signature="2862:3052" ph="{...}" />
-            <marker date="1557312854032" expanded="true" signature="3476:3785" ph="{...}" />
-            <marker date="1557312854032" expanded="true" signature="3514:3579" ph="{...}" />
-            <marker date="1557312854032" expanded="true" signature="3679:3744" ph="{...}" />
-            <marker date="1557312854032" expanded="true" signature="3918:4471" ph="{...}" />
-            <marker date="1557312854032" expanded="true" signature="3964:4415" ph="{...}" />
-            <marker date="1557312854032" expanded="true" signature="4059:4260" ph="{...}" />
-            <marker date="1557312854032" expanded="true" signature="4555:5030" ph="{...}" />
-            <marker date="1557312854032" expanded="true" signature="4593:4658" ph="{...}" />
-            <marker date="1557312854032" expanded="true" signature="4714:4890" ph="{...}" />
-            <marker date="1557312854032" expanded="true" signature="5093:5131" ph="{...}" />
+            <marker date="1557398987703" expanded="false" signature="6:693" ph="..." />
+            <marker date="1557398987703" expanded="true" signature="721:5366" ph="{...}" />
+            <marker date="1557398987703" expanded="true" signature="748:5364" ph="{...}" />
+            <marker date="1557398987703" expanded="true" signature="807:870" ph="{...}" />
+            <marker date="1557398987703" expanded="true" signature="1093:4123" ph="{...}" />
+            <marker date="1557398987703" expanded="true" signature="1166:1443" ph="{...}" />
+            <marker date="1557398987703" expanded="true" signature="2332:4100" ph="Resources" />
+            <marker date="1557398987703" expanded="true" signature="2647:3014" ph="{...}" />
+            <marker date="1557398987703" expanded="true" signature="2746:2995" ph="{...}" />
+            <marker date="1557398987703" expanded="true" signature="3030:3542" ph="/* services.AddMvc() ... */" />
+            <marker date="1557398987703" expanded="true" signature="3638:4061" ph="{...}" />
+            <marker date="1557398987703" expanded="true" signature="3731:3841" ph="{...}" />
+            <marker date="1557398987703" expanded="true" signature="4311:5358" ph="{...}" />
+            <marker date="1557398987703" expanded="true" signature="4358:4435" ph="{...}" />
+            <marker date="1557398987703" expanded="true" signature="4452:4711" ph="{...}" />
+            <marker date="1557398987703" expanded="false" signature="4917:5140" ph="Resources" />
+            <marker date="1557398987703" expanded="true" signature="5175:5346" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/LoggingCodefirst/Views/User/_ChangePasswordPartial.cshtml">
+    <entry file="file://$PROJECT_DIR$/LoggingCodefirst/Resources/PropertyResource.vi-VN.resx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-74">
-          <caret line="3" column="7" selection-start-line="3" selection-start-column="7" selection-end-line="3" selection-end-column="7" />
+        <state relative-caret-position="480">
+          <caret line="47" column="26" selection-start-line="47" selection-start-column="16" selection-end-line="47" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LoggingCodefirst/ViewModels/BrandViewModel.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="32" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="32" />
           <folding>
-            <marker date="1557307961394" expanded="false" signature="7:94" ph="..." />
-            <marker date="1557307961394" expanded="true" signature="181:2420" ph="&lt;div.../&gt;" />
-            <marker date="1557307961394" expanded="true" signature="244:2413" ph="&lt;div.../&gt;" />
-            <marker date="1557307961394" expanded="true" signature="314:2395" ph="&lt;div.../&gt;" />
-            <marker date="1557307961394" expanded="true" signature="354:551" ph="&lt;div.../&gt;" />
-            <marker date="1557307961394" expanded="true" signature="581:2379" ph="&lt;form.../&gt;" />
-            <marker date="1557307961394" expanded="true" signature="632:2103" ph="&lt;div.../&gt;" />
-            <marker date="1557307961394" expanded="true" signature="821:1092" ph="&lt;div.../&gt;" />
-            <marker date="1557307961394" expanded="true" signature="1113:1419" ph="&lt;div.../&gt;" />
-            <marker date="1557307961394" expanded="true" signature="1440:1745" ph="&lt;div.../&gt;" />
-            <marker date="1557307961394" expanded="true" signature="1766:2080" ph="&lt;div.../&gt;" />
-            <marker date="1557307961394" expanded="true" signature="2120:2359" ph="&lt;div.../&gt;" />
+            <marker date="1557387928694" expanded="true" signature="67:234" ph="{...}" />
+            <marker date="1557387928694" expanded="true" signature="101:232" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/LoggingCodefirst/Views/User/Index.cshtml">
+    <entry file="file://$PROJECT_DIR$/LoggingCodefirst/Validators/ProductValidator.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="520">
-          <caret line="90" column="77" selection-start-line="90" selection-start-column="77" selection-end-line="90" selection-end-column="77" />
+        <state relative-caret-position="120">
+          <caret line="10" column="38" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="38" />
           <folding>
-            <marker date="1557312892704" expanded="false" signature="7:94" ph="..." />
-            <marker date="1557312892704" expanded="true" signature="170:242" ph="@..." />
-            <marker date="1557312892704" expanded="true" signature="244:591" ph="@..." />
-            <marker date="1557312892704" expanded="true" signature="284:591" ph="{...}" />
-            <marker date="1557312892704" expanded="true" signature="291:589" ph="&lt;div.../&gt;" />
-            <marker date="1557312892704" expanded="true" signature="415:578" ph="&lt;button.../&gt;" />
-            <marker date="1557312892704" expanded="true" signature="592:934" ph="@..." />
-            <marker date="1557312892704" expanded="true" signature="630:934" ph="{...}" />
-            <marker date="1557312892704" expanded="true" signature="637:932" ph="&lt;div.../&gt;" />
-            <marker date="1557312892704" expanded="true" signature="758:921" ph="&lt;button.../&gt;" />
-            <marker date="1557312892704" expanded="true" signature="936:1560" ph="&lt;div.../&gt;" />
-            <marker date="1557312892704" expanded="true" signature="970:1553" ph="&lt;div.../&gt;" />
-            <marker date="1557312892704" expanded="true" signature="996:1542" ph="&lt;div.../&gt;" />
-            <marker date="1557312892704" expanded="true" signature="1110:1527" ph="&lt;div.../&gt;" />
-            <marker date="1557312892704" expanded="true" signature="1159:1508" ph="&lt;nav.../&gt;" />
-            <marker date="1557312892704" expanded="true" signature="1209:1485" ph="&lt;ol.../&gt;" />
-            <marker date="1557312892704" expanded="true" signature="1561:5384" ph="&lt;div.../&gt;" />
-            <marker date="1557312892704" expanded="true" signature="1595:5377" ph="&lt;div.../&gt;" />
-            <marker date="1557312892704" expanded="true" signature="1621:5366" ph="&lt;div.../&gt;" />
-            <marker date="1557312892704" expanded="true" signature="1654:5351" ph="&lt;div.../&gt;" />
-            <marker date="1557312892704" expanded="true" signature="1689:5332" ph="&lt;div.../&gt;" />
-            <marker date="1557312892704" expanded="true" signature="1860:5309" ph="&lt;div.../&gt;" />
-            <marker date="1557312892704" expanded="true" signature="1915:5282" ph="&lt;table.../&gt;" />
-            <marker date="1557312892704" expanded="true" signature="2008:2915" ph="&lt;thead.../&gt;" />
-            <marker date="1557312892704" expanded="true" signature="2067:2878" ph="&lt;tr.../&gt;" />
-            <marker date="1557312892704" expanded="true" signature="2944:5249" ph="&lt;tbody.../&gt;" />
-            <marker date="1557312892704" expanded="true" signature="3035:5212" ph="@..." />
-            <marker date="1557312892704" expanded="true" signature="3063:5212" ph="{...}" />
-            <marker date="1557312892704" expanded="true" signature="3176:5178" ph="&lt;tr.../&gt;" />
-            <marker date="1557312892704" expanded="true" signature="3217:3336" ph="&lt;td.../&gt;" />
-            <marker date="1557312892704" expanded="true" signature="3373:3501" ph="&lt;td.../&gt;" />
-            <marker date="1557312892704" expanded="true" signature="3538:3669" ph="&lt;td.../&gt;" />
-            <marker date="1557312892704" expanded="true" signature="3706:3834" ph="&lt;td.../&gt;" />
-            <marker date="1557312892704" expanded="true" signature="3871:4009" ph="&lt;td.../&gt;" />
-            <marker date="1557312892704" expanded="true" signature="4046:4176" ph="&lt;td.../&gt;" />
-            <marker date="1557312892704" expanded="true" signature="4213:5140" ph="&lt;td.../&gt;" />
-            <marker date="1557312892704" expanded="true" signature="4286:4512" ph="&lt;a.../&gt;" />
-            <marker date="1557312892704" expanded="true" signature="4554:4764" ph="&lt;a.../&gt;" />
-            <marker date="1557312892704" expanded="true" signature="4806:5098" ph="&lt;a.../&gt;" />
+            <marker date="1557391270439" expanded="false" signature="6:92" ph="..." />
+            <marker date="1557391270439" expanded="true" signature="131:696" ph="{...}" />
+            <marker date="1557391270439" expanded="true" signature="204:694" ph="{...}" />
+            <marker date="1557391270439" expanded="true" signature="273:679" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LoggingCodefirst/Resources/ViewResource.vi-VN.resx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="23" column="28" selection-start-line="23" selection-start-column="16" selection-end-line="23" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LoggingCodefirst/ViewModels/LoginViewModel.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="24" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
+          <folding>
+            <marker date="1557388619727" expanded="true" signature="67:298" ph="{...}" />
+            <marker date="1557388619727" expanded="true" signature="101:296" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LoggingCodefirst/ViewModels/ProductViewModel.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="11" column="30" lean-forward="true" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
+          <folding>
+            <marker date="1557399678041" expanded="false" signature="6:182" ph="..." />
+            <marker date="1557399678041" expanded="true" signature="221:1182" ph="{...}" />
+            <marker date="1557399678041" expanded="true" signature="257:1180" ph="{...}" />
           </folding>
         </state>
       </provider>

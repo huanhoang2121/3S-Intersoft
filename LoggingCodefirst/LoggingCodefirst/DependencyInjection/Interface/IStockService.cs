@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 using LoggingCodefirst.Models.Production;
-using LoggingCodefirst.ViewModels.StockViewModels;
+using LoggingCodefirst.ViewModels;
 
 namespace LoggingCodefirst.DependencyInjection.Interface
 {
@@ -9,10 +9,10 @@ namespace LoggingCodefirst.DependencyInjection.Interface
     {
         IEnumerable<Stock> Stocks { get; }
         
-        Task<List<StockIndexViewModel>> GetListStockAsync();
-        Task<bool> CreateStockAsync(StockCreateViewModel stockCreateViewModel);
-        Task<StockEditViewModel> GetStockEditAsync(int? productid, int? storeid);
-        Task<bool> EditStockAsync(StockEditViewModel stockEditViewModel);
+        Task<List<StockViewModel>> GetListStockAsync();
+        Task<bool> CreateStockAsync(StockViewModel stockCreateViewModel);
+        Task<StockViewModel> GetStockEditAsync(int? productid, int? storeid);
+        Task<bool> EditStockAsync(StockViewModel stockEditViewModel);
         Task<bool> DeleteStockAsync(int? productid, int? storeid);
     }//end of interface
 }

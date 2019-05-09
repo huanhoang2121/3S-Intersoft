@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 using LoggingCodefirst.Models.Production;
-using LoggingCodefirst.ViewModels.CategoryViewModels;
+using LoggingCodefirst.ViewModels;
 
 namespace LoggingCodefirst.DependencyInjection.Interface
 {
@@ -9,10 +9,10 @@ namespace LoggingCodefirst.DependencyInjection.Interface
     {
         IEnumerable<Category> Categories { get; }
         
-        Task<List<CategoryIndexViewModel>> GetListCategoryAsync();
-        Task<bool> CreateCategoryAsync(CategoryCreateViewModel categoryCreateViewModel);
-        Task<CategoryEditViewModel> GetCategoryEditAsync(int? id);
-        Task<bool> EditCategoryAsync(CategoryEditViewModel categoryEditViewModel);
+        Task<List<CategoryViewModel>> GetListCategoryAsync();
+        Task<bool> CreateCategoryAsync(CategoryViewModel categoryCreateViewModel);
+        Task<CategoryViewModel> GetCategoryEditAsync(int? id);
+        Task<bool> EditCategoryAsync(CategoryViewModel categoryEditViewModel);
         Task<bool> DeleteCategoryAsync(int? id);
     }//end of interface
 }

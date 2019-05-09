@@ -6,7 +6,7 @@ using AutoMapper;
 using LoggingCodefirst.DependencyInjection.Interface;
 using LoggingCodefirst.Models;
 using LoggingCodefirst.Models.Production;
-using LoggingCodefirst.ViewModels.ProductViewModels;
+using LoggingCodefirst.ViewModels;
 using Microsoft.EntityFrameworkCore;
 
 namespace LoggingCodefirst.DependencyInjection.Implementation
@@ -38,7 +38,7 @@ namespace LoggingCodefirst.DependencyInjection.Implementation
 
         #region Public Methods
 
-        public async Task<List<ProductIndexViewModel>> GetListProductAsync()
+        public async Task<List<ProductViewModel>> GetListProductAsync()
         {
             var products = await _context.Products
                 .Include(u => u.Brand)
@@ -46,22 +46,14 @@ namespace LoggingCodefirst.DependencyInjection.Implementation
                 .Include(s => s.Stocks)
                     .ThenInclude(i => i.Store)
                 .ToListAsync();
-            var viewModels = _mapper.Map<List<ProductIndexViewModel>>(products);
+            var viewModels = _mapper.Map<List<ProductViewModel>>(products);
             return viewModels;
         }
 
-        public async Task<bool> CreateProductAsync(ProductCreateViewModel createViewModel)
+        public async Task<bool> CreateProductAsync(ProductViewModel createViewModel)
         {
             try
             {
-                var imageSrc = DateTime.Now.ToString("MMddyyyyHHmmss") + createViewModel.ImageFile.FileName;
-                var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/images", imageSrc);
-
-                using (var stream = new FileStream(path, FileMode.Create))
-                {
-                    await createViewModel.ImageFile.CopyToAsync(stream);
-                }
-            
                 var product = new Product
                 {
                     ProductName = createViewModel.ProductName,
@@ -69,8 +61,20 @@ namespace LoggingCodefirst.DependencyInjection.Implementation
                     CategoryId = createViewModel.CategoryId,
                     ListPrice = createViewModel.ListPrice,
                     ModelYear = createViewModel.ModelYear,
-                    ImagePath = imageSrc,
                 };
+                
+                if (createViewModel.ImageFile != null)
+                {
+                    var imageSrc = DateTime.Now.ToString("MMddyyyyHHmmss") + createViewModel.ImageFile.FileName;
+                    var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/images", imageSrc );
+
+                    using (var stream = new FileStream(path, FileMode.Create))
+                    {
+                        await createViewModel.ImageFile.CopyToAsync(stream);
+                    }
+                    product.ImagePath = imageSrc;
+                }
+                
                 _context.Products.Add(product);
                 await _context.SaveChangesAsync();
                 return true;
@@ -82,14 +86,14 @@ namespace LoggingCodefirst.DependencyInjection.Implementation
             }
         }
 
-        public async Task<ProductEditViewModel> GetProductEditAsync(int? id)
+        public async Task<ProductViewModel> GetProductEditAsync(int? id)
         {
             var product = await _context.Products.FindAsync(id);
-            var viewModel = _mapper.Map<ProductEditViewModel>(product);
+            var viewModel = _mapper.Map<ProductViewModel>(product);
             return viewModel;
         }
 
-        public async Task<bool> EditProductAsync(ProductEditViewModel editViewModel)
+        public async Task<bool> EditProductAsync(ProductViewModel editViewModel)
         {
             try
             {

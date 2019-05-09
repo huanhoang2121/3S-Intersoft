@@ -1,7 +1,7 @@
 ﻿@using Microsoft.AspNetCore.Http
-@using Microsoft.AspNetCore.Mvc.Localization
-@inject IViewLocalizer Localizer
+@using LoggingCodefirst.Resources
 
+@inject LocalizationService Localizer
 <nav class="navbar top-navbar navbar-expand-md navbar-dark">
     <div class="navbar-header" data-logobg="skin5">
         <a class="nav-toggler waves-effect waves-light d-block d-md-none" href="javascript:void(0)"><i class="ti-menu ti-close"></i></a>
@@ -34,7 +34,7 @@
             @if (string.IsNullOrEmpty(Context.Session.GetString("username")))
             {
                 <li class="nav-item">
-                    <a class="nav-link" asp-area="" asp-controller="Account" asp-action="Login">@Localizer["Login"]</a>
+                    <a class="nav-link" asp-area="" asp-controller="Account" asp-action="Login">@Localizer.GetLocalizedString("Login")</a>
                 </li>
             }
             else
@@ -110,10 +110,10 @@
                     <img src="~/assets/images/users/1.jpg" alt="user" class="rounded-circle" width="31">
                 </a>
                 <div class="dropdown-menu dropdown-menu-right user-dd animated">
-                    <a class="dropdown-item" href="javascript:void(0)"><i class="ti-user m-r-5 m-l-5"></i> @Localizer["Hello"] @Context.Session.GetString("username")!</a>
-                    <a class="dropdown-item" asp-controller="User" asp-action="ChangePassword" asp-route-id="@Context.Session.GetString("userid")"><i class="ti-key m-r-5 m-l-5"></i> @Localizer["Change Password"]</a>
-                    <a class="dropdown-item" asp-controller="User" asp-action="Edit" asp-route-id="@Context.Session.GetString("userid")"><i class="ti-settings m-r-5 m-l-5"></i> @Localizer["Account Setting"]</a>
-                    <a class="dropdown-item" asp-controller="Account" asp-action="Logout"><i class="fa fa-power-off m-r-5 m-l-5"></i> @Localizer["Logout"]</a>
+                    <a class="dropdown-item" href="javascript:void(0)"><i class="ti-user m-r-5 m-l-5"></i> @Localizer.GetLocalizedString("Hello") @Context.Session.GetString("username")!</a>
+                    <a class="dropdown-item" asp-controller="User" asp-action="ChangePassword" asp-route-id="@Context.Session.GetString("userid")"><i class="ti-key m-r-5 m-l-5"></i> @Localizer.GetLocalizedString("Change Password")</a>
+                    <a class="dropdown-item" asp-controller="User" asp-action="Edit" asp-route-id="@Context.Session.GetString("userid")"><i class="ti-settings m-r-5 m-l-5"></i> @Localizer.GetLocalizedString("Account Setting")</a>
+                    <a class="dropdown-item" asp-controller="Account" asp-action="Logout"><i class="fa fa-power-off m-r-5 m-l-5"></i> @Localizer.GetLocalizedString("Logout")</a>
                 </div>
             </li>
             <!-- User profile -->

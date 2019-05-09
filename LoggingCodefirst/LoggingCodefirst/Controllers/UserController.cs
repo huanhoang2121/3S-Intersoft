@@ -1,6 +1,6 @@
 ﻿using System.Threading.Tasks;
 using LoggingCodefirst.DependencyInjection.Interface;
-using LoggingCodefirst.ViewModels.UserViewModels;
+using LoggingCodefirst.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.Extensions.Localization;
@@ -48,7 +48,7 @@ namespace LoggingCodefirst.Controllers
         }
         
         [HttpPost]
-        public async Task<IActionResult> Create(UserCreateViewModel createViewModel)
+        public async Task<IActionResult> Create(UserViewModel createViewModel)
         {
             if (ModelState.IsValid)
             {
@@ -81,7 +81,7 @@ namespace LoggingCodefirst.Controllers
         }
         
         [HttpPost]
-        public async Task<IActionResult> Edit(UserEditViewModel editViewModel)
+        public async Task<IActionResult> Edit(UserViewModel editViewModel)
         {
             if (ModelState.IsValid)
             {
@@ -109,7 +109,7 @@ namespace LoggingCodefirst.Controllers
             {
                 return BadRequest();
             }
-            return View(user);
+            return PartialView("_ChangePasswordPartial",user);  
         }
         
         [HttpPost]
@@ -119,13 +119,13 @@ namespace LoggingCodefirst.Controllers
             {
                 if (await _userService.ChangePasswordAsync(changePasswordModel))
                 {
-                    TempData["SuccessMessage"] = _localizer["Change password successfully!"].ToString();
+                    ViewData["SuccessMessage"] = _localizer["Change password successfully!"].ToString();
                     return RedirectToAction(nameof(Index));
                 }
                 TempData["ErrorMessage"] = _localizer["Change password fail!"].ToString();
-                return View(changePasswordModel);
+                return PartialView("_ChangePasswordPartial",changePasswordModel);  
             }
-            return View(changePasswordModel);
+            return PartialView("_ChangePasswordPartial",changePasswordModel);  
         }
         
         [HttpGet]
@@ -142,10 +142,6 @@ namespace LoggingCodefirst.Controllers
             }
             TempData["ErrorMessage"] = _localizer["Delete fail!"].ToString();
             return RedirectToAction(nameof(Index));
-        }
-        
-        public ActionResult _ChangePasswordPartial() {
-            return View();
         }
         
         #endregion

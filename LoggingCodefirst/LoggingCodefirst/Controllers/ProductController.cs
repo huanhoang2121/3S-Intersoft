@@ -1,8 +1,8 @@
 using System.Threading.Tasks;
 using LoggingCodefirst.DependencyInjection.Interface;
+using LoggingCodefirst.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
-using LoggingCodefirst.ViewModels.ProductViewModels;
 using Microsoft.Extensions.Localization;
 
 namespace LoggingCodefirst.Controllers
@@ -52,7 +52,7 @@ namespace LoggingCodefirst.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Create(ProductCreateViewModel createViewModel)
+        public async Task<IActionResult> Create(ProductViewModel createViewModel)
         {
             if (ModelState.IsValid)
             {
@@ -90,7 +90,7 @@ namespace LoggingCodefirst.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Edit(ProductEditViewModel editViewModel)
+        public async Task<IActionResult> Edit(ProductViewModel editViewModel)
         {
             if (ModelState.IsValid)
             {

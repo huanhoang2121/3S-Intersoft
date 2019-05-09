@@ -82,8 +82,7 @@ namespace LoggingCodefirst.Migrations
 
                     b.Property<int>("CategoryId");
 
-                    b.Property<string>("ImagePath")
-                        .IsRequired();
+                    b.Property<string>("ImagePath");
 
                     b.Property<decimal>("ListPrice");
 
@@ -220,8 +219,6 @@ namespace LoggingCodefirst.Migrations
                     b.Property<string>("Fullname")
                         .HasMaxLength(100);
 
-                    b.Property<string>("ImagePath");
-
                     b.Property<bool>("IsActive");
 
                     b.Property<string>("Password")
@@ -250,7 +247,7 @@ namespace LoggingCodefirst.Migrations
                             Email = "huan.hv@3si.com.vn",
                             Fullname = "Hoàng Văn Huấn",
                             IsActive = true,
-                            Password = "10000:ewHxnnWHEDWEZXlv6kbA74llOS5VqtE8+eqpHTA87j1M2z/N",
+                            Password = "10000:qvehCF89JW0RjZX1Q3KOKasOPnr0ToRgJKtkfTOr0WMxGa3y",
                             Phone = "0964973404",
                             StoreId = 2
                         });

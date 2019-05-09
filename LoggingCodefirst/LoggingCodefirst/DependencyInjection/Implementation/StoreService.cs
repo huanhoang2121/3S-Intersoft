@@ -5,7 +5,7 @@ using AutoMapper;
 using LoggingCodefirst.DependencyInjection.Interface;
 using LoggingCodefirst.Models;
 using LoggingCodefirst.Models.Sales;
-using LoggingCodefirst.ViewModels.StoreViewModels;
+using LoggingCodefirst.ViewModels;
 using Microsoft.EntityFrameworkCore;
 
 namespace LoggingCodefirst.DependencyInjection.Implementation
@@ -37,17 +37,17 @@ namespace LoggingCodefirst.DependencyInjection.Implementation
 
         #region Public Methods
 
-        public async Task<List<StoreIndexViewModel>> GetListStoreAsync()
+        public async Task<List<StoreViewModel>> GetListStoreAsync()
         {
             var stores = await _context.Stores
                 .Include(s => s.Stocks)
                 .ThenInclude(i => i.Product)
                 .ToListAsync();
-            var viewModels = _mapper.Map<List<StoreIndexViewModel>>(stores);
+            var viewModels = _mapper.Map<List<StoreViewModel>>(stores);
             return viewModels;
         }
         
-        public async Task<bool> CreateStoreAsync(StoreCreateViewModel storeCreateModel)
+        public async Task<bool> CreateStoreAsync(StoreViewModel storeCreateModel)
         {
             try
             {
@@ -72,14 +72,14 @@ namespace LoggingCodefirst.DependencyInjection.Implementation
             }
         }
 
-        public async Task<StoreEditViewModel> GetStoreEditAsync(int? id)
+        public async Task<StoreViewModel> GetStoreEditAsync(int? id)
         {
             var store = await _context.Stores.FindAsync(id);
-            var viewModel = _mapper.Map<StoreEditViewModel>(store);
+            var viewModel = _mapper.Map<StoreViewModel>(store);
             return viewModel;
         }
 
-        public async Task<bool> StoreEditAsync(StoreEditViewModel editViewModel)
+        public async Task<bool> StoreEditAsync(StoreViewModel editViewModel)
         {
             try
             {

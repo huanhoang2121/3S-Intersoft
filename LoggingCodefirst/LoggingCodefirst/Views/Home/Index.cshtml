@@ -1,8 +1,8 @@
-﻿@using Microsoft.AspNetCore.Mvc.Localization
+﻿@using LoggingCodefirst.Resources
 
-@inject IViewLocalizer Localizer
+@inject LocalizationService Localizer
 @{
-    ViewData["Title"] = Localizer["Home Page"];
+    ViewData["Title"] = Localizer.GetLocalizedString("Home");
 }
 <div class="page-breadcrumb">
     <div class="row">
@@ -11,8 +11,8 @@
             <div class="ml-auto text-right">
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a  asp-controller="Home" asp-action="Index">@Localizer["Home"]</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">@Localizer["Index"]</li>
+                        <li class="breadcrumb-item"><a  asp-controller="Home" asp-action="Index">@ViewBag.Title</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">@ViewBag.Title</li>
                     </ol>
                 </nav>
             </div>
@@ -25,8 +25,8 @@
             <div class="card">
                 <div class="card-body">
                     <div class="text-center">
-                        <h1 class="display-4">@Localizer["Welcome"]</h1>
-                        <p>@Localizer["Learn about"] <a href="https://docs.microsoft.com/aspnet/core">@Localizer["building Web apps with ASP.NET Core"]</a>.</p>
+                        <h1 class="display-4">@Localizer.GetLocalizedString("Welcome")</h1>
+                        <p>@Localizer.GetLocalizedString("Learn about")<a href="https://docs.microsoft.com/aspnet/core">@Localizer.GetLocalizedString(" building Web apps with ASP.NET Core")</a>.</p>
                     </div>
                 </div>
             </div>

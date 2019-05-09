@@ -7,7 +7,7 @@ using LoggingCodefirst.DependencyInjection.Implementation;
 using LoggingCodefirst.DependencyInjection.Interface;
 using LoggingCodefirst.Models;
 using LoggingCodefirst.Resources;
-using LoggingCodefirst.Validators.User;
+using LoggingCodefirst.Validators;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -16,7 +16,6 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Localization;
 using Microsoft.Extensions.Options;
 
 namespace LoggingCodefirst
@@ -51,21 +50,36 @@ namespace LoggingCodefirst
             services.AddSession();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 //            validate
-            services.AddMvc().AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<UserLoginValidator>());
+            services.AddMvc().AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<LoginValidator>());
             
             services.AddDbContext<DataContext>(item => item.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
             
-            #region snippet1
-                
+            #region Resources
+            
+            services.AddSingleton<LocalizationService>();
+            services.AddLocalization(options => options.ResourcesPath = "Resources");
+            
             services.AddMvc()
-                .AddViewLocalization(options => options.ResourcesPath = "Resources")
-                .AddDataAnnotationsLocalization(options=> {
-                    var type = typeof(ViewResource);
-                    var assemblyName = new AssemblyName(type.GetTypeInfo().Assembly.FullName);
-                    var factory = services.BuildServiceProvider().GetService<IStringLocalizerFactory>();
-                    var localizer = factory.Create("ViewResource", assemblyName.Name);
-                    options.DataAnnotationLocalizerProvider = (t, f) => localizer;
+                .AddViewLocalization()
+                .AddDataAnnotationsLocalization(options =>
+                {
+                    options.DataAnnotationLocalizerProvider = (type, factory) =>
+                    {
+                        var assemblyName = new AssemblyName(typeof(PropertyResource).GetTypeInfo().Assembly.FullName);
+                        return factory.Create("PropertyResource", assemblyName.Name);
+                    };
                 });
+            
+//            services.AddMvc()
+//                .AddViewLocalization()
+//                .AddDataAnnotationsLocalization(options =>
+//                {
+//                    options.DataAnnotationLocalizerProvider = (type, factory) =>
+//                    {
+//                        var assemblyName = new AssemblyName(typeof(SharedResource).GetTypeInfo().Assembly.FullName);
+//                        return factory.Create("SharedResource", assemblyName.Name);
+//                    };
+//                });
             
             
             services.Configure<RequestLocalizationOptions>(options =>
@@ -103,7 +117,7 @@ namespace LoggingCodefirst
             app.UseCookiePolicy();
             app.UseSession();
             
-            #region snippet2
+            #region Resources
             
             var options = app.ApplicationServices.GetService<IOptions<RequestLocalizationOptions>>();
             app.UseRequestLocalization(options.Value);

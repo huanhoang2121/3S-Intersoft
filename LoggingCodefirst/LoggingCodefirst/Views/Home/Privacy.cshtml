@@ -1,8 +1,8 @@
-﻿@using Microsoft.AspNetCore.Mvc.Localization
+﻿@using LoggingCodefirst.Resources
 
-@inject IViewLocalizer Localizer
+@inject LocalizationService Localizer
 @{
-    ViewData["Title"] = Localizer["Privacy Policy"];
+    ViewData["Title"] = Localizer.GetLocalizedString("Privacy");
 }
 
 <div class="page-breadcrumb">
@@ -12,8 +12,8 @@
             <div class="ml-auto text-right">
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a  asp-controller="Home" asp-action="Index">@Localizer["Home"]</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">@Localizer["Privacy"]</li>
+                        <li class="breadcrumb-item"><a  asp-controller="Home" asp-action="Index">@Localizer.GetLocalizedString("Home")</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">@ViewBag.Title</li>
                     </ol>
                 </nav>
             </div>
@@ -25,7 +25,7 @@
         <div class="col-12">
             <div class="card">
                 <div class="card-body">
-                    <p>@Localizer["Use this page to detail your site's privacy policy."]</p>
+                    <p>@Localizer.GetLocalizedString("Use this page to detail your site's privacy policy.")</p>
                 </div>
             </div>
         </div>

@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 using LoggingCodefirst.Models.Production;
-using LoggingCodefirst.ViewModels.BrandViewModels;
+using LoggingCodefirst.ViewModels;
 
 namespace LoggingCodefirst.DependencyInjection.Interface
 {
@@ -9,10 +9,10 @@ namespace LoggingCodefirst.DependencyInjection.Interface
     {
         IEnumerable<Brand> Brands { get; }
         
-        Task<List<BrandIndexViewModel>> GetListBrandAsync();
-        Task<bool> CreateBrandAsync(BrandCreateViewModel brandCreateViewModel);
-        Task<BrandEditViewModel> GetBrandEditAsync(int? id);
-        Task<bool> EditBrandAsync(BrandEditViewModel brandEditViewModel);
+        Task<List<BrandViewModel>> GetListBrandAsync();
+        Task<bool> CreateBrandAsync(BrandViewModel brandViewModel);
+        Task<BrandViewModel> GetBrandEditAsync(int? id);
+        Task<bool> EditBrandAsync(BrandViewModel brandViewModel);
         Task<bool> DeleteBrandAsync(int? id);
     }//end of interface
 }

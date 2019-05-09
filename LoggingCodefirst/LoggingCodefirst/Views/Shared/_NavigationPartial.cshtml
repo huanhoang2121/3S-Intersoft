@@ -1,5 +1,6 @@
-﻿@using Microsoft.AspNetCore.Mvc.Localization
-@inject IViewLocalizer Localizer
+﻿@using LoggingCodefirst.Resources
+
+@inject LocalizationService Localizer
 
  <div class="scroll-sidebar">
     <!-- Sidebar navigation-->
@@ -7,42 +8,42 @@
         <ul id="sidebarnav" class="p-t-30">
             <li class="sidebar-item"> 
                 <a class="sidebar-link waves-effect sidebar-link" asp-controller="Home" asp-action="Index" aria-expanded="false">
-                    <i class="mdi mdi-view-dashboard"></i><span class="hide-menu">@Localizer["Home"]</span>
+                    <i class="mdi mdi-view-dashboard"></i><span class="hide-menu">@Localizer.GetLocalizedString("Home")</span>
                 </a>
             </li>
             <li class="sidebar-item"> 
                 <a class="sidebar-link waves-effect  sidebar-link" asp-controller="Home" asp-action="Privacy" aria-expanded="false">
-                    <i class="mdi mdi-lock"></i><span class="hide-menu">@Localizer["Privacy"]</span>
+                    <i class="mdi mdi-lock"></i><span class="hide-menu">@Localizer.GetLocalizedString("Privacy")</span>
                 </a>
             </li>
             <li class="sidebar-item"> 
                 <a class="sidebar-link waves-effect  sidebar-link" asp-controller="User" asp-action="Index" aria-expanded="false">
-                    <i class="mdi mdi-account"></i><span class="hide-menu">@Localizer["User"]</span>
+                    <i class="mdi mdi-account"></i><span class="hide-menu">@Localizer.GetLocalizedString("User")</span>
                 </a>
             </li>
             <li class="sidebar-item"> 
                 <a class="sidebar-link waves-effect  sidebar-link" asp-controller="Store" asp-action="Index" aria-expanded="false">
-                    <i class="mdi mdi-store"></i><span class="hide-menu">@Localizer["Store"]</span>
+                    <i class="mdi mdi-store"></i><span class="hide-menu">@Localizer.GetLocalizedString("Store")</span>
                 </a>
             </li>
             <li class="sidebar-item"> 
                 <a class="sidebar-link waves-effect  sidebar-link" asp-controller="Brand" asp-action="Index" aria-expanded="false">
-                    <i class="mdi mdi-source-branch"></i><span class="hide-menu">@Localizer["Brand"]</span>
+                    <i class="mdi mdi-source-branch"></i><span class="hide-menu">@Localizer.GetLocalizedString("Brand")</span>
                 </a>
             </li>
             <li class="sidebar-item"> 
                 <a class="sidebar-link waves-effect  sidebar-link" asp-controller="Category" asp-action="Index" aria-expanded="false">
-                    <i class="mdi mdi-format-list-bulleted-type"></i><span class="hide-menu">@Localizer["Category"]</span>
+                    <i class="mdi mdi-format-list-bulleted-type"></i><span class="hide-menu">@Localizer.GetLocalizedString("Category")</span>
                 </a>
             </li>
             <li class="sidebar-item"> 
                 <a class="sidebar-link waves-effect  sidebar-link" asp-controller="Product" asp-action="Index" aria-expanded="false">
-                    <i class="mdi mdi-tshirt-crew"></i><span class="hide-menu">@Localizer["Product"]</span>
+                    <i class="mdi mdi-tshirt-crew"></i><span class="hide-menu">@Localizer.GetLocalizedString("Product")</span>
                 </a>
             </li>
             <li class="sidebar-item"> 
                 <a class="sidebar-link waves-effect  sidebar-link" asp-controller="Stock" asp-action="Index" aria-expanded="false">
-                    <i class="mdi mdi-store-24-hour"></i><span class="hide-menu">@Localizer["Stock"]</span>
+                    <i class="mdi mdi-store-24-hour"></i><span class="hide-menu">@Localizer.GetLocalizedString("Stock")</span>
                 </a>
             </li>
             @await Html.PartialAsync("_SelectLanguagePartial")

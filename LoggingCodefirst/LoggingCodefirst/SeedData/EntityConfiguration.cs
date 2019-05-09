@@ -45,7 +45,6 @@ namespace LoggingCodefirst.SeedData
             modelBuilder.Entity<Product>().Property(t => t.CategoryId).IsRequired();
             modelBuilder.Entity<Product>().Property(t => t.ModelYear).IsRequired();
             modelBuilder.Entity<Product>().Property(t => t.ListPrice).IsRequired();
-            modelBuilder.Entity<Product>().Property(t => t.ImagePath).IsRequired();
         }
         public static void StockEntityConfiguration(this ModelBuilder modelBuilder)
         {

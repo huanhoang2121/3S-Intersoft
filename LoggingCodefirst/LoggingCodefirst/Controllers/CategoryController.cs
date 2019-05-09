@@ -1,14 +1,7 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using LoggingCodefirst.DependencyInjection.Interface;
+using LoggingCodefirst.ViewModels;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
-using Microsoft.EntityFrameworkCore;
-using LoggingCodefirst.Models;
-using LoggingCodefirst.Models.Production;
-using LoggingCodefirst.ViewModels.CategoryViewModels;
 using Microsoft.Extensions.Localization;
 
 namespace LoggingCodefirst.Controllers
@@ -51,18 +44,18 @@ namespace LoggingCodefirst.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Create(CategoryCreateViewModel createViewModel)
+        public async Task<IActionResult> Create(CategoryViewModel categoryViewModel)
         {
             if (ModelState.IsValid)
             {
-                if (await _categoryService.CreateCategoryAsync(createViewModel))
+                if (await _categoryService.CreateCategoryAsync(categoryViewModel))
                 {
                     TempData["SuccessMessage"] = _localizer["Create successfully!"].ToString();
                     return RedirectToAction(nameof(Index));
                 }
-                return View(createViewModel);
+                return View(categoryViewModel);
             }
-            return View(createViewModel);
+            return View(categoryViewModel);
         }
 
         [HttpGet]        
@@ -82,18 +75,18 @@ namespace LoggingCodefirst.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Edit(CategoryEditViewModel editViewModel)
+        public async Task<IActionResult> Edit(CategoryViewModel categoryViewModel)
         {
             if (ModelState.IsValid)
             {
-                if (await _categoryService.EditCategoryAsync(editViewModel))
+                if (await _categoryService.EditCategoryAsync(categoryViewModel))
                 {
                     TempData["SuccessMessage"] = _localizer["Edit successfully!"].ToString();
                     return RedirectToAction(nameof(Index));
                 }
-                return View(editViewModel);
+                return View(categoryViewModel);
             }
-            return View(editViewModel);
+            return View(categoryViewModel);
         }
 
         

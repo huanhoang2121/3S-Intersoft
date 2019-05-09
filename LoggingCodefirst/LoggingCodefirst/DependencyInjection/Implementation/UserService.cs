@@ -8,8 +8,7 @@ using LoggingCodefirst.DependencyInjection.Interface;
 using LoggingCodefirst.Infrastructure;
 using LoggingCodefirst.Models;
 using LoggingCodefirst.Models.Sales;
-using LoggingCodefirst.ViewModels.AccountViewModels;
-using LoggingCodefirst.ViewModels.UserViewModels;
+using LoggingCodefirst.ViewModels;
 using Microsoft.EntityFrameworkCore;
 
 namespace LoggingCodefirst.DependencyInjection.Implementation
@@ -41,9 +40,9 @@ namespace LoggingCodefirst.DependencyInjection.Implementation
 
         #region Public Methods
         
-        public bool Login(AccountLoginViewModel model)
+        public bool Login(LoginViewModel loginViewModel)
         {  
-            var user = _context.Users.FirstOrDefault(s => s.Email == model.Email && SecurePasswordHasher.Verify(model.Password, s.Password));
+            var user = _context.Users.FirstOrDefault(s => s.Email == loginViewModel.Email && SecurePasswordHasher.Verify(loginViewModel.Password, s.Password));
             return user != null;
         }
 
@@ -52,16 +51,16 @@ namespace LoggingCodefirst.DependencyInjection.Implementation
             return await _context.Users.FirstOrDefaultAsync(u => u.Email == email);
         }
         
-        public async Task<List<UserIndexViewModel>> GetListUserAsync()
+        public async Task<List<UserViewModel>> GetListUserAsync()
         {
             var users = await _context.Users
                 .Include(u => u.Store)
                 .ToListAsync();
-            var viewModels = _mapper.Map<List<UserIndexViewModel>>(users);
+            var viewModels = _mapper.Map<List<UserViewModel>>(users);
             return viewModels;
         }
 
-        public async Task<bool> CreateUserAsync(UserCreateViewModel createViewModel)
+        public async Task<bool> CreateUserAsync(UserViewModel createViewModel)
         {
             try
             {
@@ -85,14 +84,14 @@ namespace LoggingCodefirst.DependencyInjection.Implementation
             }
         }
         
-        public async Task<UserEditViewModel> GetUserEditAsync(int? id)
+        public async Task<UserViewModel> GetUserEditAsync(int? id)
         {
             var user = await _context.Users.FindAsync(id);
-            var editViewModel = _mapper.Map<UserEditViewModel>(user);
+            var editViewModel = _mapper.Map<UserViewModel>(user);
             return editViewModel;
         }
         
-        public async Task<bool> EditUserAsync(UserEditViewModel userEditViewModel)
+        public async Task<bool> EditUserAsync(UserViewModel userEditViewModel)
         {
             try
             {
@@ -143,17 +142,17 @@ namespace LoggingCodefirst.DependencyInjection.Implementation
             try
             {
                 var user = await _context.Users.FindAsync(changePasswordModel.Id);
-
-                if (SecurePasswordHasher.Verify(changePasswordModel.OldPassword, user.Password))
-                {
-                    user.Email = changePasswordModel.Email;
-                    user.Password = SecurePasswordHasher.Hash(changePasswordModel.NewPassword);
+//
+//                if (SecurePasswordHasher.Verify(changePasswordModel.OldPassword, user.Password))
+//                {
+                user.Email = changePasswordModel.Email;
+                user.Password = SecurePasswordHasher.Hash(changePasswordModel.NewPassword);
                     
-                    _context.Users.Update(user);
-                    await _context.SaveChangesAsync();
-                    return true;
-                }
-                return false;
+                _context.Users.Update(user);
+                await _context.SaveChangesAsync();
+                return true;
+//                }
+//                return false;
             }
             catch (Exception e)
             {
@@ -161,7 +160,7 @@ namespace LoggingCodefirst.DependencyInjection.Implementation
                 return false;
             }
         }
-        
+
         #endregion
         
     }//end of class
