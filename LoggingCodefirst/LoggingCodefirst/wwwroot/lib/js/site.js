@@ -22,7 +22,7 @@ $(function () {
 
             var isValid = newBody.find('[name="IsValid"]').val() === 'True';
             if (isValid) {
-                placeholderElement.find('.modal').modal('hide');
+                placeholderElement.find('.modal').modal('hidden');
             }
         });
     });

@@ -19,60 +19,63 @@
 </head>
 
 <body>
-    <div class="preloader">
-        <div class="lds-ripple">
-            <div class="lds-pos"></div>
-            <div class="lds-pos"></div>
-        </div>
+<div class="preloader">
+    <div class="lds-ripple">
+        <div class="lds-pos"></div>
+        <div class="lds-pos"></div>
     </div>
-    <div id="main-wrapper">
-        <header class="topbar" data-navbarbg="skin5">
-            @await Html.PartialAsync("_LoginPartial")
-        </header>
-        <aside class="left-sidebar" data-sidebarbg="skin5">
-            <!-- Sidebar scroll-->
-            @await Html.PartialAsync("_NavigationPartial")
-            <!-- End Sidebar scroll-->
-        </aside>
-        <div class="page-wrapper">
+</div>
+<div id="main-wrapper">
+    <header class="topbar" data-navbarbg="skin5">
+        @await Html.PartialAsync("_LoginPartial")
+    </header>
+    <aside class="left-sidebar" data-sidebarbg="skin5">
+        <!-- Sidebar scroll-->
+        @await Html.PartialAsync("_NavigationPartial")
+        <!-- End Sidebar scroll-->
+    </aside>
+    <div class="page-wrapper">
             
-            @RenderBody()
+        @RenderBody()
+                              
+        <!-- Modal placeholder -->
+        <div id="modal-placeholder"></div>
 
-            <!-- Footer -->
-            <footer class="footer text-center">
-                Used by <a href="#">Huấn Hoàng</a>.
-            </footer>
-            <!-- End footer -->
-        </div>
+        <!-- Footer -->
+        <footer class="footer text-center">
+            Used by <a href="#">Huấn Hoàng</a>.
+        </footer>
+        <!-- End footer -->
     </div>
+</div>
     
-    <!-- All Jquery -->
-    <script src="~/assets/libs/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/js/site.js"></script>
-    <!--===============================================================================================-->
-    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
-    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
-    <!--===============================================================================================-->
-    <!-- Bootstrap tether Core JavaScript -->
-    <script src="~/assets/libs/popper.js/dist/umd/popper.min.js"></script>
-    <script src="~/assets/libs/bootstrap/dist/js/bootstrap.min.js"></script>
-    <!-- slimscrollbar scrollbar JavaScript -->
-    <script src="~/assets/libs/perfect-scrollbar/dist/perfect-scrollbar.jquery.min.js"></script>
-    <script src="~/assets/extra-libs/sparkline/sparkline.js"></script>
-    <!--Wave Effects -->
-    <script src="~/dist/js/waves.js"></script>
-    <!--Menu sidebar -->
-    <script src="~/dist/js/sidebarmenu.js"></script>
-    <!--Custom JavaScript -->
-    <script src="~/dist/js/custom.min.js"></script>
-    <!-- this page js -->
-    <script src="~/assets/extra-libs/multicheck/datatable-checkbox-init.js"></script>
-    <script src="~/assets/extra-libs/multicheck/jquery.multicheck.js"></script>
-    <script src="~/assets/extra-libs/DataTables/datatables.min.js"></script>
-    <script>
-        $('#zero_config').DataTable();
-    </script>
-    @RenderSection("Scripts", required: false)
+<!-- All Jquery -->
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+<script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+<!--===============================================================================================-->
+<!-- Bootstrap tether Core JavaScript -->
+<script src="~/assets/libs/popper.js/dist/umd/popper.min.js"></script>
+<script src="~/assets/libs/bootstrap/dist/js/bootstrap.min.js"></script>
+<!-- slimscrollbar scrollbar JavaScript -->
+<script src="~/assets/libs/perfect-scrollbar/dist/perfect-scrollbar.jquery.min.js"></script>
+<script src="~/assets/extra-libs/sparkline/sparkline.js"></script>
+<!--Wave Effects -->
+<script src="~/dist/js/waves.js"></script>
+<!--Menu sidebar -->
+<script src="~/dist/js/sidebarmenu.js"></script>
+<!--Custom JavaScript -->
+<script src="~/dist/js/custom.min.js"></script>
+<!-- this page js -->
+<script src="~/assets/extra-libs/multicheck/datatable-checkbox-init.js"></script>
+<script src="~/assets/extra-libs/multicheck/jquery.multicheck.js"></script>
+<script src="~/assets/extra-libs/DataTables/datatables.min.js"></script>
+<!-- Custom js -->
+<script src="~/lib/js/site.js"></script>
+<script>
+    $('#zero_config').DataTable();
+</script>
+@RenderSection("Scripts", required: false)
 
 </body>
 

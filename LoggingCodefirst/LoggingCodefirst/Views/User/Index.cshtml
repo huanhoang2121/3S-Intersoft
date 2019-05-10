@@ -1,7 +1,4 @@
-﻿@model IEnumerable<LoggingCodefirst.ViewModels.UserViewModel>
-@using LoggingCodefirst.Resources
-
-@inject LocalizationService Localizer
+﻿@model IEnumerable<UserViewModel>
 @{
     ViewBag.Title = Localizer.GetLocalizedString("User");
     Layout = "_Layout";
@@ -86,9 +83,6 @@
                                         @Html.DisplayFor(modelItem => item.Address)
                                     </td>
                                     <td style="text-align: center;">
-                                        
-                                        <!-- Modal placeholder -->
-                                        <div id="modal-placeholder"></div>
                                         <!-- Button trigger modal -->
                                         <a data-toggle="ajax-modal" data-target="#add-contact" data-url="@Url.Action("ChangePassword", new {id = item.Id})">
                                             <i class="mdi mdi-key-variant" style="font-size: 24px; color: black"></i>
