@@ -8,6 +8,7 @@
           <e p="AccountController.cs" t="Include" />
           <e p="BrandController.cs" t="Include" />
           <e p="CategoryController.cs" t="Include" />
+          <e p="ErrorController.cs" t="Include" />
           <e p="HomeController.cs" t="Include" />
           <e p="ProductController.cs" t="Include" />
           <e p="StockController.cs" t="Include" />
@@ -121,6 +122,13 @@
             <e p="Edit.cshtml" t="Include" />
             <e p="Index.cshtml" t="Include" />
           </e>
+          <e p="Error" t="Include">
+            <e p="Error400.cshtml" t="Include" />
+            <e p="Error403.cshtml" t="Include" />
+            <e p="Error404.cshtml" t="Include" />
+            <e p="Error405.cshtml" t="Include" />
+            <e p="Error500.cshtml" t="Include" />
+          </e>
           <e p="Home" t="Include">
             <e p="Index.cshtml" t="Include" />
             <e p="Privacy.cshtml" t="Include" />
@@ -133,6 +141,7 @@
           <e p="Shared" t="Include">
             <e p="Error.cshtml" t="Include" />
             <e p="_CookieConsentPartial.cshtml" t="Include" />
+            <e p="_ErrorLayout.cshtml" t="Include" />
             <e p="_Layout.cshtml" t="Include" />
             <e p="_LoginLayout.cshtml" t="Include" />
             <e p="_LoginPartial.cshtml" t="Include" />

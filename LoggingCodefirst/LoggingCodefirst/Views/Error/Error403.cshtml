@@ -1,0 +1,15 @@
+﻿@using LoggingCodefirst.Resources
+
+@inject LocalizationService Localizer
+@{
+    ViewBag.Title = Localizer.GetLocalizedString("403");
+    Layout = "_ErrorLayout";
+}
+
+<div class="error-box">
+    <div class="error-body text-center">
+        <h1 class="error-title text-danger">@ViewBag.Title</h1>
+        <h3 class="text-uppercase">@Localizer.GetLocalizedString("Forbidden!")</h3>
+        <p class="text-muted m-t-30 m-b-30">@Localizer.GetLocalizedString("The server understands the request but does not want the child to receive the information.")</p>
+        <a href="javascript:history.go(-1)" class="btn btn-danger btn-rounded waves-effect waves-light m-b-40">@Localizer.GetLocalizedString("Back")</a> </div>
+</div>

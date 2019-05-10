@@ -5,7 +5,6 @@ using AutoMapper;
 using FluentValidation.AspNetCore;
 using LoggingCodefirst.DependencyInjection.Implementation;
 using LoggingCodefirst.DependencyInjection.Interface;
-using LoggingCodefirst.Models;
 using LoggingCodefirst.Models.Data;
 using LoggingCodefirst.Resources;
 using LoggingCodefirst.Validators;
@@ -116,12 +115,31 @@ namespace LoggingCodefirst
             app.Use(async (context, next) =>
             {
                 await next();
-                // Custom 404 page
-                if (context.Response.StatusCode == StatusCodes.Status404NotFound
-                    && !context.Response.HasStarted)
+                if (!context.Response.HasStarted)
                 {
-                    context.Request.Path ="error/404";
-                    await next();
+                    switch (context.Response.StatusCode)
+                    {
+                        case StatusCodes.Status400BadRequest :
+                            context.Request.Path ="/Error/400";
+                            await next();
+                            break;
+                        case StatusCodes.Status403Forbidden :
+                            context.Request.Path ="/Error/403";
+                            await next();
+                            break;
+                        case StatusCodes.Status404NotFound :
+                            context.Request.Path ="/Error/404";
+                            await next();
+                            break;
+                        case StatusCodes.Status405MethodNotAllowed :
+                            context.Request.Path ="/Error/405";
+                            await next();
+                            break;
+                        case StatusCodes.Status500InternalServerError:
+                            context.Request.Path ="/Error/500";
+                            await next();
+                            break;
+                    }
                 }
             });
             

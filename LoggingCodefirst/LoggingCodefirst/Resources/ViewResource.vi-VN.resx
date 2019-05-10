@@ -175,5 +175,36 @@
     <data name="Change password fail!" xml:space="preserve">
         <value>Thay đổi mật khẩu lỗi!</value>
     </data>
+    <!-- Controller -->
+    <data name="Bad request!" xml:space="preserve">
+        <value>Yêu cầu này bị lỗi!</value>
+    </data>
+    <data name="Unrecognized server is required." xml:space="preserve">
+        <value>Máy chủ không thể nhận dạng được yêu cầu.</value>
+    </data>
+    <data name="Forbidden!" xml:space="preserve">
+        <value>Bị cấm truy cập!</value>
+    </data>
+    <data name="The server understands the request but does not want the child to receive the information." xml:space="preserve">
+        <value>Máy chủ hiểu yêu cầu nhưng không muốn cho máy con nhận thông tin.</value>
+    </data>
+    <data name="Not found!" xml:space="preserve">
+        <value>Không tìm thấy!</value>
+    </data>
+    <data name="The website is temporarily unavailable or the website has been changed." xml:space="preserve">
+        <value>Trang web tạm thời không sẵn sàng hoặc website đã bị thay đổi.</value>
+    </data>
+    <data name="Method not allowed!" xml:space="preserve">
+        <value>Phương thức không được phép!</value>
+    </data>
+    <data name="The requested request method is not accepted on this server." xml:space="preserve">
+        <value>Phương thức yêu cầu đã sử dụng không được chấp nhận ở server này.</value>
+    </data>
+    <data name="Internal server error!" xml:space="preserve">
+        <value>Phương thức không được phép!</value>
+    </data>
+    <data name="The server unexpectedly failed, unable to complete the request." xml:space="preserve">
+        <value>Máy chủ bất ngờ bị lỗi, không thể hoàn thành yêu cầu.</value>
+    </data>
     
 </root>

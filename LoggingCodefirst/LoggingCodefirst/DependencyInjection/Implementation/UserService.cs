@@ -48,7 +48,7 @@ namespace LoggingCodefirst.DependencyInjection.Implementation
 
         public async Task<User> GetUserNameAsync(string email)
         {
-            return await _context.Users.FirstOrDefaultAsync(u => u.Email == email);
+            return await _context.Users.FindAsync(email);
         }
         
         public async Task<List<UserViewModel>> GetListUserAsync()
@@ -142,17 +142,13 @@ namespace LoggingCodefirst.DependencyInjection.Implementation
             try
             {
                 var user = await _context.Users.FindAsync(changePasswordModel.Id);
-//
-//                if (SecurePasswordHasher.Verify(changePasswordModel.OldPassword, user.Password))
-//                {
+
                 user.Email = changePasswordModel.Email;
                 user.Password = SecurePasswordHasher.Hash(changePasswordModel.NewPassword);
                     
                 _context.Users.Update(user);
                 await _context.SaveChangesAsync();
                 return true;
-//                }
-//                return false;
             }
             catch (Exception e)
             {

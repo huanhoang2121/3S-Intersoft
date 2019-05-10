@@ -164,3 +164,9 @@
 /home/local/3SI/huan.hv/3S-Intersoft/LoggingCodefirst/LoggingCodefirst/obj/Debug/netcoreapp2.2/LoggingCodefirst.pdb
 /home/local/3SI/huan.hv/3S-Intersoft/LoggingCodefirst/LoggingCodefirst/obj/Debug/netcoreapp2.2/LoggingCodefirst.csproj.CopyComplete
 /home/local/3SI/huan.hv/3S-Intersoft/LoggingCodefirst/LoggingCodefirst/obj/Debug/netcoreapp2.2/LoggingCodefirst.Resources.PropertyResource.vi-VN.resources
+/home/local/3SI/huan.hv/3S-Intersoft/LoggingCodefirst/LoggingCodefirst/obj/Debug/netcoreapp2.2/Razor/Views/Error/Error500.g.cshtml.cs
+/home/local/3SI/huan.hv/3S-Intersoft/LoggingCodefirst/LoggingCodefirst/obj/Debug/netcoreapp2.2/Razor/Views/Shared/_ErrorLayout.g.cshtml.cs
+/home/local/3SI/huan.hv/3S-Intersoft/LoggingCodefirst/LoggingCodefirst/obj/Debug/netcoreapp2.2/Razor/Views/Error/Error400.g.cshtml.cs
+/home/local/3SI/huan.hv/3S-Intersoft/LoggingCodefirst/LoggingCodefirst/obj/Debug/netcoreapp2.2/Razor/Views/Error/Error403.g.cshtml.cs
+/home/local/3SI/huan.hv/3S-Intersoft/LoggingCodefirst/LoggingCodefirst/obj/Debug/netcoreapp2.2/Razor/Views/Error/Error404.g.cshtml.cs
+/home/local/3SI/huan.hv/3S-Intersoft/LoggingCodefirst/LoggingCodefirst/obj/Debug/netcoreapp2.2/Razor/Views/Error/Error405.g.cshtml.cs
