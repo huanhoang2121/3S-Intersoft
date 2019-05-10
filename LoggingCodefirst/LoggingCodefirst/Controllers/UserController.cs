@@ -1,9 +1,9 @@
 ﻿using System.Threading.Tasks;
 using LoggingCodefirst.DependencyInjection.Interface;
+using LoggingCodefirst.Resources;
 using LoggingCodefirst.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
-using Microsoft.Extensions.Localization;
 
 namespace LoggingCodefirst.Controllers
 {
@@ -13,7 +13,7 @@ namespace LoggingCodefirst.Controllers
 
         private readonly IUserService _userService;
         private readonly IStoreService _storeService;
-        private readonly IStringLocalizer<UserController> _localizer;
+        private readonly LocalizationService _localizer;
 
         #endregion
         
@@ -22,7 +22,7 @@ namespace LoggingCodefirst.Controllers
         public UserController(
             IUserService userService, 
             IStoreService storeService, 
-            IStringLocalizer<UserController> localizer)
+            LocalizationService localizer)
         {
             _localizer = localizer;
             _userService = userService;
@@ -54,7 +54,7 @@ namespace LoggingCodefirst.Controllers
             {
                 if (await _userService.CreateUserAsync(createViewModel))
                 {
-                    TempData["SuccessMessage"] = _localizer["Create successfully!"].ToString();
+                    TempData["SuccessMessage"] = _localizer.GetLocalizedString("Create successfully!").ToString();
                     return RedirectToAction(nameof(Index));
                 }
                 ViewBag.StoreId = new SelectList(_storeService.Stores, "Id", "StoreName", createViewModel.StoreId);
@@ -87,7 +87,7 @@ namespace LoggingCodefirst.Controllers
             {
                 if (await _userService.EditUserAsync(editViewModel))
                 {
-                    TempData["SuccessMessage"] = _localizer["Edit successfully!"].ToString();
+                    TempData["SuccessMessage"] = _localizer.GetLocalizedString("Edit successfully!").ToString();
                     return RedirectToAction(nameof(Index));
                 }
                 ViewBag.StoreId = new SelectList(_storeService.Stores, "Id", "StoreName", editViewModel.StoreId);
@@ -119,10 +119,10 @@ namespace LoggingCodefirst.Controllers
             {
                 if (await _userService.ChangePasswordAsync(changePasswordModel))
                 {
-                    ViewData["SuccessMessage"] = _localizer["Change password successfully!"].ToString();
+                    ViewData["SuccessMessage"] = _localizer.GetLocalizedString("Change password successfully!").ToString();
                     return RedirectToAction(nameof(Index));
                 }
-                TempData["ErrorMessage"] = _localizer["Change password fail!"].ToString();
+                TempData["ErrorMessage"] = _localizer.GetLocalizedString("Change password fail!").ToString();
                 return PartialView("_ChangePasswordPartial",changePasswordModel);  
             }
             return PartialView("_ChangePasswordPartial",changePasswordModel);  
@@ -137,10 +137,10 @@ namespace LoggingCodefirst.Controllers
             }
             if (await _userService.DeleteUserAsync(id))
             {
-                TempData["SuccessMessage"] = _localizer["Delete successfully!"].ToString();
+                TempData["SuccessMessage"] = _localizer.GetLocalizedString("Delete successfully!").ToString();
                 return RedirectToAction(nameof(Index));
             }
-            TempData["ErrorMessage"] = _localizer["Delete fail!"].ToString();
+            TempData["ErrorMessage"] = _localizer.GetLocalizedString("Delete fail!").ToString();
             return RedirectToAction(nameof(Index));
         }
         

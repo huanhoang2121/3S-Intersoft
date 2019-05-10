@@ -1,6 +1,5 @@
 ﻿using AutoMapper;
-using LoggingCodefirst.Models.Production;
-using LoggingCodefirst.Models.Sales;
+using LoggingCodefirst.Models;
 
 namespace LoggingCodefirst.ViewModels
 {

@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
-using LoggingCodefirst.Models.Production;
+using LoggingCodefirst.Models;
 using Microsoft.AspNetCore.Http;
 
 namespace LoggingCodefirst.ViewModels

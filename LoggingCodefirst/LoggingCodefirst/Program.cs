@@ -1,5 +1,6 @@
 ﻿using System;
 using LoggingCodefirst.Models;
+using LoggingCodefirst.Models.Data;
 using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;

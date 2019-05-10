@@ -1,8 +1,8 @@
 using System.Threading.Tasks;
 using LoggingCodefirst.DependencyInjection.Interface;
+using LoggingCodefirst.Resources;
 using LoggingCodefirst.ViewModels;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Localization;
 
 namespace LoggingCodefirst.Controllers
 {
@@ -11,7 +11,7 @@ namespace LoggingCodefirst.Controllers
         #region Private Members
 
         private readonly IBrandService _brandService;
-        private readonly IStringLocalizer<BrandController> _localizer;
+        private readonly LocalizationService _localizer;
 
         #endregion
         
@@ -19,7 +19,7 @@ namespace LoggingCodefirst.Controllers
 
         public BrandController(
             IBrandService brandService, 
-            IStringLocalizer<BrandController> localizer)
+            LocalizationService localizer)
         {
             _localizer = localizer;
             _brandService = brandService;
@@ -49,7 +49,7 @@ namespace LoggingCodefirst.Controllers
             {
                 if (await _brandService.CreateBrandAsync(brandViewModel))
                 {
-                    TempData["SuccessMessage"] = _localizer["Create successfully!"].ToString();
+                    TempData["SuccessMessage"] = _localizer.GetLocalizedString("Create successfully!").ToString();
                     return RedirectToAction(nameof(Index));
                 }
                 return View(brandViewModel);
@@ -80,7 +80,7 @@ namespace LoggingCodefirst.Controllers
             {
                 if (await _brandService.EditBrandAsync(brandViewModel))
                 {
-                    TempData["SuccessMessage"] = _localizer["Edit successfully!"].ToString();
+                    TempData["SuccessMessage"] = _localizer.GetLocalizedString("Edit successfully!").ToString();
                     return RedirectToAction(nameof(Index));
                 }
                 return View(brandViewModel);
@@ -98,10 +98,10 @@ namespace LoggingCodefirst.Controllers
 
             if (await _brandService.DeleteBrandAsync(id))
             {
-                TempData["SuccessMessage"] = _localizer["Delete successfully!"].ToString();
+                TempData["SuccessMessage"] = _localizer.GetLocalizedString("Delete successfully!").ToString();
                 return RedirectToAction(nameof(Index));
             }
-            TempData["ErrorMessage"] = _localizer["Delete fail!"].ToString();
+            TempData["ErrorMessage"] = _localizer.GetLocalizedString("Delete fail!").ToString();
             return RedirectToAction(nameof(Index));
         }
         

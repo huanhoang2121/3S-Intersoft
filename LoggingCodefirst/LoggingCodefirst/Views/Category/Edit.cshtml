@@ -1,11 +1,10 @@
 @using LoggingCodefirst.ViewModels
 @model CategoryViewModel
-@using Microsoft.AspNetCore.Mvc.Localization
+@using LoggingCodefirst.Resources
 
-@inject IViewLocalizer Localizer
-
+@inject LocalizationService Localizer
 @{
-    ViewBag.Title = Localizer["Edit Category"];
+    ViewBag.Title = Localizer.GetLocalizedString("Edit");
     Layout = "_Layout";
 }
 
@@ -16,8 +15,8 @@
             <div class="ml-auto text-right">
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a asp-controller="Category" asp-action="Index">@Localizer["Category"]</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">@Localizer["Edit"]</li>
+                        <li class="breadcrumb-item"><a asp-controller="Category" asp-action="Index">@Localizer.GetLocalizedString("Category")</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">@ViewBag.Title</li>
                     </ol>
                 </nav>
             </div>
@@ -38,11 +37,11 @@
                             <span asp-validation-for="CategoryName" class="text-danger"></span>
                         </div>
                         <div class="form-group">
-                            <button type="submit" class="btn btn-primary">@Localizer["Save"]</button>
+                            <button type="submit" class="btn btn-primary">@Localizer.GetLocalizedString("Save")</button>
                         </div>
                     </form>
                     <div>
-                        <a asp-action="Index">@Localizer["Back to List"]</a>
+                        <a asp-action="Index">@Localizer.GetLocalizedString("Back to List")</a>
                     </div>
                 </div>
             </div>

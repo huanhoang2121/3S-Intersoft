@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 using AutoMapper;
 using LoggingCodefirst.DependencyInjection.Interface;
 using LoggingCodefirst.Models;
-using LoggingCodefirst.Models.Sales;
+using LoggingCodefirst.Models.Data;
 using LoggingCodefirst.ViewModels;
 using Microsoft.EntityFrameworkCore;
 

@@ -1,5 +1,4 @@
-﻿using System.Linq;
-using FluentValidation;
+﻿using FluentValidation;
 using LoggingCodefirst.DependencyInjection.Interface;
 using LoggingCodefirst.Resources;
 using LoggingCodefirst.ViewModels;
@@ -10,7 +9,7 @@ namespace LoggingCodefirst.Validators
     {
         public StoreValidator(LocalizationService localizer, IStoreService storeService)
         {
-            var stores = storeService.Stores.ToList();
+            var stores = storeService.Stores;
             foreach (var store in stores)
             {
                 RuleFor(x => x.Email).NotEqual(store.Email).WithMessage(store.StoreName + localizer.GetLocalizedString(" already exists."));

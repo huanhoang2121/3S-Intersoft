@@ -1,9 +1,9 @@
 using System.Threading.Tasks;
 using LoggingCodefirst.DependencyInjection.Interface;
+using LoggingCodefirst.Resources;
 using LoggingCodefirst.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
-using Microsoft.Extensions.Localization;
 
 namespace LoggingCodefirst.Controllers
 {
@@ -14,7 +14,7 @@ namespace LoggingCodefirst.Controllers
         private readonly IProductService _productService;
         private readonly IBrandService _brandService;
         private readonly ICategoryService _categoryService;
-        private readonly IStringLocalizer<ProductController> _localizer;
+        private readonly LocalizationService _localizer;
 
         #endregion
         
@@ -24,7 +24,7 @@ namespace LoggingCodefirst.Controllers
             IProductService productService,
             IBrandService brandService, 
             ICategoryService categoryService, 
-            IStringLocalizer<ProductController> localizer)
+            LocalizationService localizer)
         {
             _localizer = localizer;
             _productService = productService;
@@ -58,7 +58,7 @@ namespace LoggingCodefirst.Controllers
             {
                 if (await _productService.CreateProductAsync(createViewModel))
                 {
-                    TempData["SuccessMessage"] = _localizer["Create successfully!"].ToString();
+                    TempData["SuccessMessage"] = _localizer.GetLocalizedString("Create successfully!").ToString();
                     return RedirectToAction(nameof(Index));
                 }
                 ViewData["BrandId"] = new SelectList(_brandService.Brands, "Id", "BrandName", createViewModel.BrandId);
@@ -96,7 +96,7 @@ namespace LoggingCodefirst.Controllers
             {
                 if (await _productService.EditProductAsync(editViewModel))
                 {
-                    TempData["SuccessMessage"] = _localizer["Edit successfully!"].ToString();
+                    TempData["SuccessMessage"] = _localizer.GetLocalizedString("Edit successfully!").ToString();
                     return RedirectToAction(nameof(Index));
                 }
                 ViewData["BrandId"] = new SelectList(_brandService.Brands, "Id", "BrandName", editViewModel.BrandId);
@@ -118,10 +118,10 @@ namespace LoggingCodefirst.Controllers
             
             if (await _productService.DeleteProductAsync(id))
             {
-                TempData["SuccessMessage"] = _localizer["Delete successfully!"].ToString();
+                TempData["SuccessMessage"] = _localizer.GetLocalizedString("Delete successfully!").ToString();
                 return RedirectToAction(nameof(Index));
             }
-            TempData["ErrorMessage"] = _localizer["Delete fail!"].ToString();
+            TempData["ErrorMessage"] = _localizer.GetLocalizedString("Delete fail!").ToString();
             return RedirectToAction(nameof(Index));
         }
         

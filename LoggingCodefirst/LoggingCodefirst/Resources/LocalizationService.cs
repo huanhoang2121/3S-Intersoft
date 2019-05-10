@@ -11,6 +11,7 @@ namespace LoggingCodefirst.Resources
         {
             var type = typeof(PropertyResource);
             var assemblyName = new AssemblyName(type.GetTypeInfo().Assembly.FullName);
+            _localizer = factory.Create("PropertyResource", assemblyName.Name);
             _localizer = factory.Create("ViewResource", assemblyName.Name);
         }
  

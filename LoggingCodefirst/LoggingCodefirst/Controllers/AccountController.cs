@@ -1,9 +1,9 @@
 ﻿using System.Threading.Tasks;
 using LoggingCodefirst.DependencyInjection.Interface;
+using LoggingCodefirst.Resources;
 using LoggingCodefirst.ViewModels;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Localization;
 
 namespace LoggingCodefirst.Controllers
 {
@@ -12,13 +12,13 @@ namespace LoggingCodefirst.Controllers
         #region Private Members
         
         private readonly IUserService _userService;
-        private readonly IStringLocalizer<AccountController> _localizer;
-
+        private readonly LocalizationService _localizer;
+         
         #endregion
         
         #region Constructors
         
-        public AccountController(IUserService userService, IStringLocalizer<AccountController> localizer)
+        public AccountController(IUserService userService, LocalizationService localizer)
         {
             _userService = userService;
             _localizer = localizer;
@@ -54,10 +54,10 @@ namespace LoggingCodefirst.Controllers
                     HttpContext.Session.SetString("userid", user.Id.ToString());
                     HttpContext.Session.SetString("username", user.Fullname);
                         
-                    TempData["SuccessMessage"] = _localizer["Login successfully!"].ToString();
+                    TempData["SuccessMessage"] = _localizer.GetLocalizedString("Login successfully!").ToString();
                     return RedirectToAction("Index", "User");
                 }
-                ViewData["ErrorMessage"] = _localizer["Login fail! Email or password incorrect!"];
+                ViewData["ErrorMessage"] = _localizer.GetLocalizedString("Login fail! Email or password incorrect!");
                 return View();
             }
             return View(loginViewModel);

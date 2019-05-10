@@ -1,5 +1,4 @@
-﻿using System.Linq;
-using FluentValidation;
+﻿using FluentValidation;
 using LoggingCodefirst.DependencyInjection.Interface;
 using LoggingCodefirst.Resources;
 using LoggingCodefirst.ViewModels;
@@ -10,7 +9,7 @@ namespace LoggingCodefirst.Validators
     {
         public UserValidator(LocalizationService localizer, IUserService userService)
         {
-            var users = userService.Users.ToList();
+            var users = userService.Users;
             
             RuleFor(x => x.Email).NotNull().WithMessage(localizer.GetLocalizedString("{PropertyName} must not be empty."));
             RuleFor(x => x.Email).EmailAddress().WithMessage(localizer.GetLocalizedString("Enter a valid email address."));

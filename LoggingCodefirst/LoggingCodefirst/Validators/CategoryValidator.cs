@@ -1,5 +1,4 @@
-﻿using System.Linq;
-using FluentValidation;
+﻿using FluentValidation;
 using LoggingCodefirst.DependencyInjection.Interface;
 using LoggingCodefirst.Resources;
 using LoggingCodefirst.ViewModels;
@@ -10,7 +9,7 @@ namespace LoggingCodefirst.Validators
     {
         public CategoryValidator(LocalizationService localizer, ICategoryService categoryService)
         {
-            var categories = categoryService.Categories.ToList();
+            var categories = categoryService.Categories;
             foreach (var category in categories)
             {
                 RuleFor(x => x.CategoryName).NotEqual(category.CategoryName).WithMessage(category.CategoryName + localizer.GetLocalizedString(" already exists."));

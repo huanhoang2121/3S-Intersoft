@@ -1,5 +1,4 @@
-﻿using System.Linq;
-using FluentValidation;
+﻿using FluentValidation;
 using LoggingCodefirst.DependencyInjection.Interface;
 using LoggingCodefirst.Resources;
 using LoggingCodefirst.ViewModels;
@@ -10,7 +9,7 @@ namespace LoggingCodefirst.Validators
     {
         public BrandValidator(LocalizationService localizer, IBrandService brandService)
         {
-            var brands = brandService.Brands.ToList();
+            var brands = brandService.Brands;
             foreach (var brand in brands)
             {
                 RuleFor(x => x.BrandName).NotEqual(brand.BrandName).WithMessage(brand.BrandName + localizer.GetLocalizedString(" already exists."));

@@ -7,6 +7,8 @@ namespace LoggingCodefirst.ViewModels
         public int Id { get; set; } 
         [DisplayName("Email Address")]
         public string Email { get; set; }
+        [DisplayName("Current Password")]
+        public string CurrentPassword { get; set; }
         [DisplayName("New Password")]
         public string NewPassword { get; set; }
         [DisplayName("Confirm Password")]

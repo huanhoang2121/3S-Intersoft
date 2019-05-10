@@ -58,96 +58,31 @@
           <e p="DataContextModelSnapshot.cs" t="Include" />
         </e>
         <e p="Models" t="Include">
-          <e p="DataContext.cs" t="Include" />
-          <e p="ErrorViewModel.cs" t="Include" />
-          <e p="Production" t="Include">
-            <e p="Brand.cs" t="Include" />
-            <e p="Category.cs" t="Include" />
-            <e p="Product.cs" t="Include" />
-            <e p="Stock.cs" t="Include" />
+          <e p="Brand.cs" t="Include" />
+          <e p="Category.cs" t="Include" />
+          <e p="Customer.cs" t="Include" />
+          <e p="Data" t="Include">
+            <e p="DataContext.cs" t="Include" />
+            <e p="EntityConfiguration.cs" t="Include" />
+            <e p="ModelBuilderExtensions.cs" t="Include" />
           </e>
-          <e p="Sales" t="Include">
-            <e p="Customer.cs" t="Include" />
-            <e p="Order.cs" t="Include" />
-            <e p="OrderItem.cs" t="Include" />
-            <e p="Store.cs" t="Include" />
-            <e p="User.cs" t="Include" />
-          </e>
+          <e p="Order.cs" t="Include" />
+          <e p="OrderItem.cs" t="Include" />
+          <e p="Product.cs" t="Include" />
+          <e p="Stock.cs" t="Include" />
+          <e p="Store.cs" t="Include" />
+          <e p="User.cs" t="Include" />
         </e>
         <e p="Program.cs" t="Include" />
         <e p="Properties" t="Include">
           <e p="launchSettings.json" t="Include" />
         </e>
         <e p="Resources" t="Include">
-          <e p="Controllers" t="Include">
-            <e p="AccountController.vi-VN.Designer.cs" t="Include" />
-            <e p="AccountController.vi-VN.resx" t="Include" />
-            <e p="BrandController.vi-VN.Designer.cs" t="Include" />
-            <e p="BrandController.vi-VN.resx" t="Include" />
-            <e p="CategoryController.vi-VN.Designer.cs" t="Include" />
-            <e p="CategoryController.vi-VN.resx" t="Include" />
-            <e p="ProductController.vi-VN.Designer.cs" t="Include" />
-            <e p="ProductController.vi-VN.resx" t="Include" />
-            <e p="StockController.vi-VN.Designer.cs" t="Include" />
-            <e p="StockController.vi-VN.resx" t="Include" />
-            <e p="StoreController.vi-VN.Designer.cs" t="Include" />
-            <e p="StoreController.vi-VN.resx" t="Include" />
-            <e p="UserController.vi-VN.Designer.cs" t="Include" />
-            <e p="UserController.vi-VN.resx" t="Include" />
-          </e>
           <e p="LocalizationService.cs" t="Include" />
           <e p="PropertyResource.vi-VN.Designer.cs" t="Include" />
           <e p="PropertyResource.vi-VN.resx" t="Include" />
           <e p="ViewResource.vi-VN.Designer.cs" t="Include" />
           <e p="ViewResource.vi-VN.resx" t="Include" />
-          <e p="Views" t="Include">
-            <e p="Category" t="Include">
-              <e p="Create.vi-VN.Designer.cs" t="Include" />
-              <e p="Create.vi-VN.resx" t="Include" />
-              <e p="Edit.vi-VN.Designer.cs" t="Include" />
-              <e p="Edit.vi-VN.resx" t="Include" />
-              <e p="Index.vi-VN.Designer.cs" t="Include" />
-              <e p="Index.vi-VN.resx" t="Include" />
-            </e>
-            <e p="Product" t="Include">
-              <e p="Create.vi-VN.Designer.cs" t="Include" />
-              <e p="Create.vi-VN.resx" t="Include" />
-              <e p="Edit.vi-VN.Designer.cs" t="Include" />
-              <e p="Edit.vi-VN.resx" t="Include" />
-              <e p="Index.vi-VN.Designer.cs" t="Include" />
-              <e p="Index.vi-VN.resx" t="Include" />
-            </e>
-            <e p="Stock" t="Include">
-              <e p="Create.vi-VN.Designer.cs" t="Include" />
-              <e p="Create.vi-VN.resx" t="Include" />
-              <e p="Edit.vi-VN.Designer.cs" t="Include" />
-              <e p="Edit.vi-VN.resx" t="Include" />
-              <e p="Index.vi-VN.Designer.cs" t="Include" />
-              <e p="Index.vi-VN.resx" t="Include" />
-            </e>
-            <e p="Store" t="Include">
-              <e p="Create.vi-VN.Designer.cs" t="Include" />
-              <e p="Create.vi-VN.resx" t="Include" />
-              <e p="Edit.vi-VN.Designer.cs" t="Include" />
-              <e p="Edit.vi-VN.resx" t="Include" />
-              <e p="Index.vi-VN.Designer.cs" t="Include" />
-              <e p="Index.vi-VN.resx" t="Include" />
-            </e>
-            <e p="User" t="Include">
-              <e p="Create.vi-VN.Designer.cs" t="Include" />
-              <e p="Create.vi-VN.resx" t="Include" />
-              <e p="Edit.vi-VN.Designer.cs" t="Include" />
-              <e p="Edit.vi-VN.resx" t="Include" />
-              <e p="Index.vi-VN.Designer.cs" t="Include" />
-              <e p="Index.vi-VN.resx" t="Include" />
-              <e p="_ChangePasswordPartial.vi-VN.Designer.cs" t="Include" />
-              <e p="_ChangePasswordPartial.vi-VN.resx" t="Include" />
-            </e>
-          </e>
-        </e>
-        <e p="SeedData" t="Include">
-          <e p="EntityConfiguration.cs" t="Include" />
-          <e p="ModelBuilderExtensions.cs" t="Include" />
         </e>
         <e p="Startup.cs" t="Include" />
         <e p="Validators" t="Include">
@@ -163,6 +98,7 @@
         <e p="ViewModels" t="Include">
           <e p="BrandViewModel.cs" t="Include" />
           <e p="CategoryViewModel.cs" t="Include" />
+          <e p="ErrorViewModel.cs" t="Include" />
           <e p="LoginViewModel.cs" t="Include" />
           <e p="MapProfile.cs" t="Include" />
           <e p="ProductViewModel.cs" t="Include" />
@@ -1501,6 +1437,7 @@
             <e p="05092019153907tai_xuong_7a45fb79-6c1b-412a-7670-b7962538ff4f_large.jpg" t="Include" />
             <e p="05092019154638tai_xuong_7a45fb79-6c1b-412a-7670-b7962538ff4f_large.jpg" t="Include" />
             <e p="05092019155700tai_xuong__1__1d1f2ab4-3330-491f-77e3-2725057f69a6_large.jpg" t="Include" />
+            <e p="05102019130507tai_xuong__1__1d1f2ab4-3330-491f-77e3-2725057f69a6_large.jpg" t="Include" />
             <e p="05_06_2019_09_12_40ao-adidas-trang-1492535561-2298159-1492535561.jpeg" t="Include" />
             <e p="05_06_2019_11_12_24quan.jpg" t="Include" />
             <e p="05_06_2019_11_12_39quan.jpg" t="Include" />

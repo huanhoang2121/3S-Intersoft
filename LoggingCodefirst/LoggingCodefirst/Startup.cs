@@ -6,6 +6,7 @@ using FluentValidation.AspNetCore;
 using LoggingCodefirst.DependencyInjection.Implementation;
 using LoggingCodefirst.DependencyInjection.Interface;
 using LoggingCodefirst.Models;
+using LoggingCodefirst.Models.Data;
 using LoggingCodefirst.Resources;
 using LoggingCodefirst.Validators;
 using Microsoft.AspNetCore.Builder;
@@ -111,6 +112,19 @@ namespace LoggingCodefirst
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
+            
+            app.Use(async (context, next) =>
+            {
+                await next();
+                // Custom 404 page
+                if (context.Response.StatusCode == StatusCodes.Status404NotFound
+                    && !context.Response.HasStarted)
+                {
+                    context.Request.Path ="error/404";
+                    await next();
+                }
+            });
+            
             app.UseRequestLocalization();
             app.UseHttpsRedirection();
             app.UseStaticFiles();

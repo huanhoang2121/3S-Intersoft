@@ -1,9 +1,9 @@
 using System.Threading.Tasks;
 using LoggingCodefirst.DependencyInjection.Interface;
+using LoggingCodefirst.Resources;
 using LoggingCodefirst.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
-using Microsoft.Extensions.Localization;
 
 namespace LoggingCodefirst.Controllers
 {
@@ -14,7 +14,7 @@ namespace LoggingCodefirst.Controllers
         private readonly IStockService _stockService;
         private readonly IProductService _productService;
         private readonly IStoreService _storeService;
-        private readonly IStringLocalizer<StockController> _localizer;
+        private readonly LocalizationService _localizer;
 
         #endregion
         
@@ -24,7 +24,7 @@ namespace LoggingCodefirst.Controllers
             IStockService stockService, 
             IProductService productService, 
             IStoreService storeService, 
-            IStringLocalizer<StockController> localizer)
+            LocalizationService localizer)
         {
             _localizer = localizer;
             _stockService = stockService;
@@ -58,7 +58,7 @@ namespace LoggingCodefirst.Controllers
             {
                 if (await _stockService.CreateStockAsync(createViewModel))
                 {
-                    TempData["SuccessMessage"] = _localizer["Create successfully!"].ToString();
+                    TempData["SuccessMessage"] = _localizer.GetLocalizedString("Create successfully!").ToString();
                     return RedirectToAction(nameof(Index));
                 }
             }
@@ -92,7 +92,7 @@ namespace LoggingCodefirst.Controllers
             {
                 if (await _stockService.EditStockAsync(editViewModel))
                 {
-                    TempData["SuccessMessage"] = _localizer["Edit successfully!"].ToString();
+                    TempData["SuccessMessage"] = _localizer.GetLocalizedString("Edit successfully!").ToString();
                     return RedirectToAction(nameof(Index));
                 }
             }
@@ -110,10 +110,10 @@ namespace LoggingCodefirst.Controllers
             }
             if (await _stockService.DeleteStockAsync(productid,storeid))
             {
-                TempData["SuccessMessage"] = _localizer["Delete successfully!"].ToString();
+                TempData["SuccessMessage"] = _localizer.GetLocalizedString("Delete successfully!").ToString();
                 return RedirectToAction(nameof(Index));
             }
-            TempData["ErrorMessage"] = _localizer["Delete fail!"].ToString();
+            TempData["ErrorMessage"] = _localizer.GetLocalizedString("Delete fail!").ToString();
             return RedirectToAction(nameof(Index));
         }
         
