@@ -30,14 +30,17 @@
             @if (string.IsNullOrEmpty(Context.Session.GetString("username")))
             {
                 <li class="nav-item">
-                    <a class="nav-link" asp-area="" asp-controller="Account" asp-action="Login">@Localizer.GetLocalizedString("Login")</a>
+                    <a class="nav-link" asp-area="" asp-controller="Account" asp-action="Login">
+                        <i class="ti-shift-right m-r-5 m-l-5"></i> @Localizer.GetLocalizedString("btn_Login")
+                    </a>
                 </li>
             }
             else
             {
             <!-- Comment -->
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle waves-effect" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="mdi mdi-bell font-24"></i>
+                <a class="nav-link dropdown-toggle waves-effect" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> 
+                    <i class="mdi mdi-bell font-24"></i>
                 </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item" href="#">Action</a>
@@ -49,7 +52,8 @@
             <!-- End Comment -->
             <!-- Messages -->
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle waves-effect" href="" id="2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="font-24 mdi mdi-comment-processing"></i>
+                <a class="nav-link dropdown-toggle waves-effect" href="" id="2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> 
+                    <i class="font-24 mdi mdi-comment-processing"></i>
                 </a>
                 <div class="dropdown-menu dropdown-menu-right mailbox animated bounceInDown" aria-labelledby="2">
                     <ul class="list-style-none">
@@ -107,16 +111,17 @@
                 </a>
                 <div class="dropdown-menu dropdown-menu-right user-dd animated">
                     <a class="dropdown-item" href="javascript:void(0)">
-                        <i class="ti-user m-r-5 m-l-5"></i> @Localizer.GetLocalizedString("Hello") @Context.Session.GetString("username")!
+                        <i class="ti-user m-r-5 m-l-5"></i> @Localizer.GetLocalizedString("msg_Hello") @Context.Session.GetString("username")!
                     </a>
-                    @* <a class="dropdown-item" asp-controller="User" asp-action="ChangePassword" asp-route-id="@Context.Session.GetString("userid")"> *@
-                    <a class="dropdown-item" data-toggle="ajax-modal" data-target="#add-contact" data-url="@Url.Action("ChangePassword","User", new {id = Context.Session.GetString("userid")})">
-                        <i class="ti-key m-r-5 m-l-5"></i> @Localizer.GetLocalizedString("Change Password")
+                    <a class="dropdown-item" data-toggle="ajax-modal" data-url="@Url.Action("ChangePassword","User", new {id = Context.Session.GetString("userid")})">
+                        <i class="ti-key m-r-5 m-l-5"></i> @Localizer.GetLocalizedString("act_ChangePassword")
                     </a>
                     <a class="dropdown-item" asp-controller="User" asp-action="Edit" asp-route-id="@Context.Session.GetString("userid")">
-                        <i class="ti-settings m-r-5 m-l-5"></i> @Localizer.GetLocalizedString("Account Setting")
+                        <i class="ti-settings m-r-5 m-l-5"></i> @Localizer.GetLocalizedString("btn_AccountSetting")
                     </a>
-                    <a class="dropdown-item" asp-controller="Account" asp-action="Logout"><i class="fa fa-power-off m-r-5 m-l-5"></i> @Localizer.GetLocalizedString("Logout")</a>
+                    <a class="dropdown-item" asp-controller="Account" asp-action="Logout">
+                        <i class="fa fa-power-off m-r-5 m-l-5"></i> @Localizer.GetLocalizedString("btn_Logout")
+                    </a>
                 </div>
             </li>
             <!-- User profile -->

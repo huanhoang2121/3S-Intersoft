@@ -1,28 +1,30 @@
 {
   "format": 1,
   "restore": {
-    "/home/local/3SI/huan.hv/3S-Intersoft/LoggingCodefirst/LoggingCodefirst/LoggingCodefirst.csproj": {}
+    "G:\\3S-Intersoft\\LoggingCodefirst\\LoggingCodefirst\\LoggingCodefirst.csproj": {}
   },
   "projects": {
-    "/home/local/3SI/huan.hv/3S-Intersoft/LoggingCodefirst/LoggingCodefirst/LoggingCodefirst.csproj": {
+    "G:\\3S-Intersoft\\LoggingCodefirst\\LoggingCodefirst\\LoggingCodefirst.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/local/3SI/huan.hv/3S-Intersoft/LoggingCodefirst/LoggingCodefirst/LoggingCodefirst.csproj",
+        "projectUniqueName": "G:\\3S-Intersoft\\LoggingCodefirst\\LoggingCodefirst\\LoggingCodefirst.csproj",
         "projectName": "LoggingCodefirst",
-        "projectPath": "/home/local/3SI/huan.hv/3S-Intersoft/LoggingCodefirst/LoggingCodefirst/LoggingCodefirst.csproj",
-        "packagesPath": "/home/local/3SI/huan.hv/.nuget/packages/",
-        "outputPath": "/home/local/3SI/huan.hv/3S-Intersoft/LoggingCodefirst/LoggingCodefirst/obj/",
+        "projectPath": "G:\\3S-Intersoft\\LoggingCodefirst\\LoggingCodefirst\\LoggingCodefirst.csproj",
+        "packagesPath": "C:\\Users\\huanh\\.nuget\\packages\\",
+        "outputPath": "G:\\3S-Intersoft\\LoggingCodefirst\\LoggingCodefirst\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "/usr/share/dotnet/sdk/NuGetFallbackFolder"
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "/home/local/3SI/huan.hv/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\huanh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp2.2"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {

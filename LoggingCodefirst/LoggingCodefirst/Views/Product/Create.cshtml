@@ -1,6 +1,6 @@
 @model ProductViewModel
 @{
-    ViewBag.Title = Localizer.GetLocalizedString("Create");
+    ViewBag.Title = Localizer.GetLocalizedString("btn_Create");
     Layout = "_Layout";
 }
 
@@ -11,7 +11,7 @@
             <div class="ml-auto text-right">
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a asp-controller="Product" asp-action="Index">@Localizer.GetLocalizedString("Product")</a></li>
+                        <li class="breadcrumb-item"><a asp-controller="Product" asp-action="Index">@Localizer.GetLocalizedString("ctr_Product")</a></li>
                         <li class="breadcrumb-item active" aria-current="page">@ViewBag.Title</li>
                     </ol>
                 </nav>
@@ -55,11 +55,11 @@
                             <span asp-validation-for="ImageFile" class="text-danger"></span>
                         </div>
                         <div class="form-group">
-                            <button type="submit" class="btn btn-primary">@Localizer.GetLocalizedString("Save")</button>
+                            <button type="submit" class="btn btn-primary">@Localizer.GetLocalizedString("btn_Save")</button>
                         </div>
                     </form>
                     <div>
-                        <a asp-action="Index">@Localizer.GetLocalizedString("Back to List")</a>
+                        <a asp-action="Index">@Localizer.GetLocalizedString("btn_BackToList")</a>
                     </div>
                 </div>
             </div>

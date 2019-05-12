@@ -54,7 +54,7 @@ namespace LoggingCodefirst.DependencyInjection.Implementation
                 var st = await _context.Stocks.FindAsync(stockCreateViewModel.ProductId, stockCreateViewModel.StoreId);
                 if (st != null)
                 {
-                    st.Quanlity += stockCreateViewModel.Quanlity;
+                    st.Quantity += stockCreateViewModel.Quantity;
                     _context.Stocks.Update(st);
                     await _context.SaveChangesAsync();
                     return true;
@@ -63,7 +63,7 @@ namespace LoggingCodefirst.DependencyInjection.Implementation
                 {
                     ProductId = stockCreateViewModel.ProductId,
                     StoreId = stockCreateViewModel.StoreId,
-                    Quanlity = stockCreateViewModel.Quanlity
+                    Quantity = stockCreateViewModel.Quantity
                 };
                 _context.Stocks.Add(stock);
                 await _context.SaveChangesAsync();
@@ -91,7 +91,7 @@ namespace LoggingCodefirst.DependencyInjection.Implementation
 
                 stock.ProductId = editViewModel.ProductId;
                 stock.StoreId = editViewModel.StoreId;
-                stock.Quanlity = editViewModel.Quanlity;
+                stock.Quantity = editViewModel.Quantity;
             
                 _context.Stocks.Update(stock);
                 await _context.SaveChangesAsync();

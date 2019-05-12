@@ -11,20 +11,20 @@ namespace LoggingCodefirst.Validators
         {
             var users = userService.Users;
             
-            RuleFor(x => x.Email).NotNull().WithMessage(localizer.GetLocalizedString("{PropertyName} must not be empty."))
-                .EmailAddress().WithMessage(localizer.GetLocalizedString("Enter a valid email address."));
+            RuleFor(x => x.Email).NotNull().WithMessage(localizer.GetLocalizedString("msg_vld_NotEmpty"))
+                .EmailAddress().WithMessage(localizer.GetLocalizedString("msg_vld_ValidEmail"));
             
             foreach (var user in users)
             {
-                RuleFor(x => x.Email).NotEqual(user.Email).WithMessage(user.Email + localizer.GetLocalizedString(" already exists."));
+                RuleFor(x => x.Email).NotEqual(user.Email).WithMessage(user.Email + localizer.GetLocalizedString("msg_vld_Exists"));
             }
             
-            RuleFor(x => x.Password).NotNull().WithMessage(localizer.GetLocalizedString("{PropertyName} must not be empty."))
-                .MinimumLength(8).WithMessage(localizer.GetLocalizedString("{PropertyName} cannot be less than 8 characters."))
-                .Matches("^(?=.*[0-9])(?=.*[a-zA-Z])([a-zA-Z0-9]+)$").WithMessage(localizer.GetLocalizedString("{PropertyName} must contain both letters and numbers."));
+            RuleFor(x => x.Password).NotNull().WithMessage(localizer.GetLocalizedString("msg_vld_NotEmpty"))
+                .MinimumLength(8).WithMessage(localizer.GetLocalizedString("msg_vld_8Characters"))
+                .Matches("^(?=.*[0-9])(?=.*[a-zA-Z])([a-zA-Z0-9]+)$").WithMessage(localizer.GetLocalizedString("msg_vld_Password."));
             
-            RuleFor(x => x.Fullname).NotNull().WithMessage(localizer.GetLocalizedString("{PropertyName} must not be empty."))
-                .MinimumLength(8).WithMessage(localizer.GetLocalizedString("{PropertyName} cannot be less than 8 characters."));
+            RuleFor(x => x.Fullname).NotNull().WithMessage(localizer.GetLocalizedString("msg_vld_NotEmpty"))
+                .MinimumLength(8).WithMessage(localizer.GetLocalizedString("msg_vld_8Characters"));
         }
     }
 }

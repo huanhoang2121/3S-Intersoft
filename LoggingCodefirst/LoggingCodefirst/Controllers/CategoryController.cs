@@ -50,9 +50,10 @@ namespace LoggingCodefirst.Controllers
             {
                 if (await _categoryService.CreateCategoryAsync(categoryViewModel))
                 {
-                    TempData["SuccessMessage"] = _localizer.GetLocalizedString("Create successfully!").ToString();
+                    TempData["SuccessMessage"] = _localizer.GetLocalizedString("msg_CreateSuccess").ToString();
                     return RedirectToAction(nameof(Index));
                 }
+                TempData["ErrorMessage"] = _localizer.GetLocalizedString("err_CreateFail").ToString();
                 return View(categoryViewModel);
             }
             return View(categoryViewModel);
@@ -81,9 +82,10 @@ namespace LoggingCodefirst.Controllers
             {
                 if (await _categoryService.EditCategoryAsync(categoryViewModel))
                 {
-                    TempData["SuccessMessage"] = _localizer.GetLocalizedString("Edit successfully!").ToString();
+                    TempData["SuccessMessage"] = _localizer.GetLocalizedString("msg_EditSuccess").ToString();
                     return RedirectToAction(nameof(Index));
                 }
+                TempData["ErrorMessage"] = _localizer.GetLocalizedString("err_EditFail").ToString();
                 return View(categoryViewModel);
             }
             return View(categoryViewModel);
@@ -98,10 +100,10 @@ namespace LoggingCodefirst.Controllers
             }
             if (await _categoryService.DeleteCategoryAsync(id))
             {
-                TempData["SuccessMessage"] = _localizer.GetLocalizedString("Delete successfully!").ToString();
+                TempData["SuccessMessage"] = _localizer.GetLocalizedString("msg_DeleteSuccess").ToString();
                 return RedirectToAction(nameof(Index));
             }
-            TempData["ErrorMessage"] = _localizer.GetLocalizedString("Delete fail!").ToString();
+            TempData["ErrorMessage"] = _localizer.GetLocalizedString("err_DeleteFail").ToString();
             return RedirectToAction(nameof(Index));
         }
         

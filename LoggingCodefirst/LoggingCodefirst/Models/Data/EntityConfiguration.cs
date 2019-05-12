@@ -49,7 +49,7 @@ namespace LoggingCodefirst.Models.Data
             modelBuilder.Entity<Stock>().ToTable("Stock");
             modelBuilder.Entity<Stock>().Property(t => t.ProductId).IsRequired();
             modelBuilder.Entity<Stock>().Property(t => t.StoreId).IsRequired();
-            modelBuilder.Entity<Stock>().Property(t => t.Quanlity).IsRequired();
+            modelBuilder.Entity<Stock>().Property(t => t.Quantity).IsRequired();
             modelBuilder.Entity<Stock>().HasKey(s=> new {s.ProductId, s.StoreId});
         }
     }

@@ -1,6 +1,6 @@
 @model StockViewModel
 @{
-    ViewBag.Title = Localizer.GetLocalizedString("Create");
+    ViewBag.Title = Localizer.GetLocalizedString("btn_Create");
     Layout = "_Layout";
 }
 
@@ -11,7 +11,7 @@
             <div class="ml-auto text-right">
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a asp-controller="Stock" asp-action="Index">@Localizer.GetLocalizedString("Stock")</a></li>
+                        <li class="breadcrumb-item"><a asp-controller="Stock" asp-action="Index">@Localizer.GetLocalizedString("ctr_Stock")</a></li>
                         <li class="breadcrumb-item active" aria-current="page">@ViewBag.Title</li>
                     </ol>
                 </nav>
@@ -35,16 +35,16 @@
                             <select asp-for="ProductId" class ="form-control" asp-items="ViewBag.ProductId"></select>
                         </div>
                         <div class="form-group">
-                            <label asp-for="Quanlity"></label>
-                            <input asp-for="Quanlity" class="form-control" />
-                            <span asp-validation-for="Quanlity" class="text-danger"></span>
+                            <label asp-for="Quantity"></label>
+                            <input asp-for="Quantity" class="form-control" />
+                            <span asp-validation-for="Quantity" class="text-danger"></span>
                         </div>
                         <div class="form-group">
-                            <button type="submit" class="btn btn-primary">@Localizer.GetLocalizedString("Save")</button>
+                            <button type="submit" class="btn btn-primary">@Localizer.GetLocalizedString("btn_Save")</button>
                         </div>
                     </form>
                     <div>
-                        <a asp-action="Index">@Localizer.GetLocalizedString("Back to List")</a>
+                        <a asp-action="Index">@Localizer.GetLocalizedString("btn_BackToList")</a>
                     </div>
                 </div>
             </div>

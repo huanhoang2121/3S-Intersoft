@@ -12,9 +12,9 @@ namespace LoggingCodefirst.Validators
             var categories = categoryService.Categories;
             foreach (var category in categories)
             {
-                RuleFor(x => x.CategoryName).NotEqual(category.CategoryName).WithMessage(category.CategoryName + localizer.GetLocalizedString(" already exists."));
+                RuleFor(x => x.CategoryName).NotEqual(category.CategoryName).WithMessage(category.CategoryName + localizer.GetLocalizedString("msg_vld_Exists"));
             }
-            RuleFor(x => x.CategoryName).NotNull().WithMessage(localizer.GetLocalizedString("{PropertyName} must not be empty."));
+            RuleFor(x => x.CategoryName).NotNull().WithMessage(localizer.GetLocalizedString("msg_vld_NotEmpty"));
         }
         
     }

@@ -1,5 +1,5 @@
 ﻿@{
-    ViewData["Title"] = Localizer.GetLocalizedString("Home");
+    ViewData["Title"] = Localizer.GetLocalizedString("act_Index");
 }
 <div class="page-breadcrumb">
     <div class="row">
@@ -8,7 +8,7 @@
             <div class="ml-auto text-right">
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a  asp-controller="Home" asp-action="Index">@ViewBag.Title</a></li>
+                        <li class="breadcrumb-item"><a asp-controller="Home" asp-action="Index">@Localizer.GetLocalizedString("ctr_Home")</a></li>
                         <li class="breadcrumb-item active" aria-current="page">@ViewBag.Title</li>
                     </ol>
                 </nav>
@@ -22,8 +22,8 @@
             <div class="card">
                 <div class="card-body">
                     <div class="text-center">
-                        <h1 class="display-4">@Localizer.GetLocalizedString("Welcome")</h1>
-                        <p>@Localizer.GetLocalizedString("Learn about")<a href="https://docs.microsoft.com/aspnet/core">@Localizer.GetLocalizedString(" building Web apps with ASP.NET Core")</a>.</p>
+                        <h1 class="display-4">@ViewBag.Title</h1>
+                        <p>@Localizer.GetLocalizedString("msg_Home_Detail1")<a href="https://docs.microsoft.com/aspnet/core">@Localizer.GetLocalizedString("msg_Home_Detail2")</a>.</p>
                     </div>
                 </div>
             </div>

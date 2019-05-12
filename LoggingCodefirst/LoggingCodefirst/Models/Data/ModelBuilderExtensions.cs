@@ -67,8 +67,8 @@ namespace LoggingCodefirst.Models.Data
                 }
             );
             modelBuilder.Entity<Stock>().HasData(  
-                new Stock{ StoreId = 1, ProductId = 1, Quanlity = 3 },
-                new Stock{ StoreId = 2, ProductId = 1, Quanlity = 2 }
+                new Stock{ StoreId = 1, ProductId = 1, Quantity = 3 },
+                new Stock{ StoreId = 2, ProductId = 1, Quantity = 2 }
             ); 
         }
     }

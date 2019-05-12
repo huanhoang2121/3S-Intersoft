@@ -12,15 +12,15 @@ namespace LoggingCodefirst.Validators
             var stores = storeService.Stores;
             foreach (var store in stores)
             {
-                RuleFor(x => x.Email).NotEqual(store.Email).WithMessage(store.StoreName + localizer.GetLocalizedString(" already exists."));
+                RuleFor(x => x.Email).NotEqual(store.Email).WithMessage(store.StoreName + localizer.GetLocalizedString("msg_vld_Exists"));
             }
             
-            RuleFor(x => x.Email).NotNull().WithMessage(localizer.GetLocalizedString("{PropertyName} must not be empty."))
-                .EmailAddress().WithMessage(localizer.GetLocalizedString("Enter a valid email address."));
+            RuleFor(x => x.Email).NotNull().WithMessage(localizer.GetLocalizedString("msg_vld_NotEmpty"))
+                .EmailAddress().WithMessage(localizer.GetLocalizedString("msg_vld_ValidEmail"));
             
-            RuleFor(x => x.StoreName).NotNull().WithMessage(localizer.GetLocalizedString("{PropertyName} must not be empty."));
+            RuleFor(x => x.StoreName).NotNull().WithMessage(localizer.GetLocalizedString("msg_vld_NotEmpty"));
             
-            RuleFor(x => x.Phone).NotNull().WithMessage(localizer.GetLocalizedString("{PropertyName} must not be empty."));
+            RuleFor(x => x.Phone).NotNull().WithMessage(localizer.GetLocalizedString("msg_vld_NotEmpty"));
         }
         
     }

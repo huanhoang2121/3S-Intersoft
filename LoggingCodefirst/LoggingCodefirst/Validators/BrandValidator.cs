@@ -12,9 +12,11 @@ namespace LoggingCodefirst.Validators
             var brands = brandService.Brands;
             foreach (var brand in brands)
             {
-                RuleFor(x => x.BrandName).NotEqual(brand.BrandName).WithMessage(brand.BrandName + localizer.GetLocalizedString(" already exists."));
+                RuleFor(x => x.BrandName)
+                    .NotEqual(brand.BrandName).WithMessage(brand.BrandName + localizer.GetLocalizedString("msg_vld_Exists"));
             }
-            RuleFor(x => x.BrandName).NotNull().WithMessage(localizer.GetLocalizedString("{PropertyName} must not be empty."));
+            RuleFor(x => x.BrandName)
+                .NotNull().WithMessage(localizer.GetLocalizedString("msg_vld_NotEmpty"));
         }
         
     }

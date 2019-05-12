@@ -58,9 +58,13 @@ namespace LoggingCodefirst.Controllers
             {
                 if (await _stockService.CreateStockAsync(createViewModel))
                 {
-                    TempData["SuccessMessage"] = _localizer.GetLocalizedString("Create successfully!").ToString();
+                    TempData["SuccessMessage"] = _localizer.GetLocalizedString("msg_CreateSuccess").ToString();
                     return RedirectToAction(nameof(Index));
                 }
+                TempData["ErrorMessage"] = _localizer.GetLocalizedString("err_CreateFail").ToString();
+                ViewData["ProductId"] = new SelectList(_productService.Products, "Id", "ProductName", createViewModel.ProductId);
+                ViewData["StoreId"] = new SelectList(_storeService.Stores, "Id", "StoreName", createViewModel.StoreId);
+                return View(createViewModel);
             }
             ViewData["ProductId"] = new SelectList(_productService.Products, "Id", "ProductName", createViewModel.ProductId);
             ViewData["StoreId"] = new SelectList(_storeService.Stores, "Id", "StoreName", createViewModel.StoreId);
@@ -92,9 +96,13 @@ namespace LoggingCodefirst.Controllers
             {
                 if (await _stockService.EditStockAsync(editViewModel))
                 {
-                    TempData["SuccessMessage"] = _localizer.GetLocalizedString("Edit successfully!").ToString();
+                    TempData["SuccessMessage"] = _localizer.GetLocalizedString("msg_EditSuccess").ToString();
                     return RedirectToAction(nameof(Index));
                 }
+                TempData["ErrorMessage"] = _localizer.GetLocalizedString("err_EditFail").ToString();
+                ViewData["ProductId"] = new SelectList(_productService.Products, "Id", "ProductName", editViewModel.ProductId);
+                ViewData["StoreId"] = new SelectList(_storeService.Stores, "Id", "StoreName", editViewModel.StoreId);
+                return View(editViewModel);
             }
             ViewData["ProductId"] = new SelectList(_productService.Products, "Id", "ProductName", editViewModel.ProductId);
             ViewData["StoreId"] = new SelectList(_storeService.Stores, "Id", "StoreName", editViewModel.StoreId);
@@ -110,10 +118,10 @@ namespace LoggingCodefirst.Controllers
             }
             if (await _stockService.DeleteStockAsync(productid,storeid))
             {
-                TempData["SuccessMessage"] = _localizer.GetLocalizedString("Delete successfully!").ToString();
+                TempData["SuccessMessage"] = _localizer.GetLocalizedString("msg_DeleteSuccess").ToString();
                 return RedirectToAction(nameof(Index));
             }
-            TempData["ErrorMessage"] = _localizer.GetLocalizedString("Delete fail!").ToString();
+            TempData["ErrorMessage"] = _localizer.GetLocalizedString("err_DeleteFail").ToString();
             return RedirectToAction(nameof(Index));
         }
         

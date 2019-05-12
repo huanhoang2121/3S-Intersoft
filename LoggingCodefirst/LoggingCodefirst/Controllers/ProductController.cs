@@ -58,9 +58,10 @@ namespace LoggingCodefirst.Controllers
             {
                 if (await _productService.CreateProductAsync(createViewModel))
                 {
-                    TempData["SuccessMessage"] = _localizer.GetLocalizedString("Create successfully!").ToString();
+                    TempData["SuccessMessage"] = _localizer.GetLocalizedString("msg_CreateSuccess").ToString();
                     return RedirectToAction(nameof(Index));
                 }
+                TempData["ErrorMessage"] = _localizer.GetLocalizedString("err_CreateFail").ToString();
                 ViewData["BrandId"] = new SelectList(_brandService.Brands, "Id", "BrandName", createViewModel.BrandId);
                 ViewData["CategoryId"] = new SelectList(_categoryService.Categories, "Id", "CategoryName", createViewModel.CategoryId);
                 return View(createViewModel);
@@ -96,9 +97,10 @@ namespace LoggingCodefirst.Controllers
             {
                 if (await _productService.EditProductAsync(editViewModel))
                 {
-                    TempData["SuccessMessage"] = _localizer.GetLocalizedString("Edit successfully!").ToString();
+                    TempData["SuccessMessage"] = _localizer.GetLocalizedString("msg_EditSuccess").ToString();
                     return RedirectToAction(nameof(Index));
                 }
+                TempData["ErrorMessage"] = _localizer.GetLocalizedString("err_EditFail").ToString();
                 ViewData["BrandId"] = new SelectList(_brandService.Brands, "Id", "BrandName", editViewModel.BrandId);
                 ViewData["CategoryId"] = new SelectList(_categoryService.Categories, "Id", "CategoryName", editViewModel.CategoryId);
                 return View(editViewModel);
@@ -118,10 +120,10 @@ namespace LoggingCodefirst.Controllers
             
             if (await _productService.DeleteProductAsync(id))
             {
-                TempData["SuccessMessage"] = _localizer.GetLocalizedString("Delete successfully!").ToString();
+                TempData["SuccessMessage"] = _localizer.GetLocalizedString("msg_DeleteSuccess").ToString();
                 return RedirectToAction(nameof(Index));
             }
-            TempData["ErrorMessage"] = _localizer.GetLocalizedString("Delete fail!").ToString();
+            TempData["ErrorMessage"] = _localizer.GetLocalizedString("err_DeleteFail").ToString();
             return RedirectToAction(nameof(Index));
         }
         

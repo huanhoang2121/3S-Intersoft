@@ -1,7 +1,7 @@
 $(function () {
     var placeholderElement = $('#modal-placeholder');
 
-    $(document).on('click', 'a[data-toggle="ajax-modal"]', function () {
+    $(document).on('click', 'a[data-toggle="ajax-modal"]', function (event) {
         var url = $(this).data('url');
         $.get(url).done(function (data) {
             placeholderElement.html(data);
@@ -9,7 +9,7 @@ $(function () {
         });
     });
 
-    placeholderElement.on('click', '[data-save="save"]', function (event) {
+    placeholderElement.on('click', '[data-save="modal"]', function (event) {
         event.preventDefault();
 
         var form = $(this).parents('.modal').find('form');
@@ -20,9 +20,10 @@ $(function () {
             var newBody = $('.modal-body', data);
             placeholderElement.find('.modal-body').replaceWith(newBody);
 
-            var isValid = newBody.find('[name="IsValid"]').val() === 'True';
+            var isValid = newBody.find('[name="IsValid"]').val() == 'True';
             if (isValid) {
-                placeholderElement.find('.modal').modal('hidden');
+                $('#notification').text('Data saved successfully!');
+                placeholderElement.find('.modal').modal('hide');
             }
         });
     });

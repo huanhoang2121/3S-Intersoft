@@ -54,9 +54,10 @@ namespace LoggingCodefirst.Controllers
             {
                 if (await _userService.CreateUserAsync(createViewModel))
                 {
-                    TempData["SuccessMessage"] = _localizer.GetLocalizedString("Create successfully!").ToString();
+                    TempData["SuccessMessage"] = _localizer.GetLocalizedString("msg_CreateSuccess").ToString();
                     return RedirectToAction(nameof(Index));
                 }
+                TempData["ErrorMessage"] = _localizer.GetLocalizedString("err_CreateFail").ToString();
                 ViewBag.StoreId = new SelectList(_storeService.Stores, "Id", "StoreName", createViewModel.StoreId);
                 return View(createViewModel);
             }
@@ -87,9 +88,10 @@ namespace LoggingCodefirst.Controllers
             {
                 if (await _userService.EditUserAsync(editViewModel))
                 {
-                    TempData["SuccessMessage"] = _localizer.GetLocalizedString("Edit successfully!").ToString();
+                    TempData["SuccessMessage"] = _localizer.GetLocalizedString("msg_EditSuccess").ToString();
                     return RedirectToAction(nameof(Index));
                 }
+                TempData["ErrorMessage"] = _localizer.GetLocalizedString("err_EditFail").ToString();
                 ViewBag.StoreId = new SelectList(_storeService.Stores, "Id", "StoreName", editViewModel.StoreId);
                 return View(editViewModel);
             }
@@ -119,10 +121,10 @@ namespace LoggingCodefirst.Controllers
             {
                 if (await _userService.ChangePasswordAsync(changePasswordModel))
                 {
-                    ViewData["SuccessMessage"] = _localizer.GetLocalizedString("Change password successfully!").ToString();
+                    ViewData["SuccessMessage"] = _localizer.GetLocalizedString("msg_ChangePasswordSuccess").ToString();
                     return RedirectToAction(nameof(Index));
                 }
-                TempData["ErrorMessage"] = _localizer.GetLocalizedString("Change password fail!").ToString();
+                TempData["ErrorMessage"] = _localizer.GetLocalizedString("err_ChangePasswordFail").ToString();
                 return PartialView("_ChangePasswordPartial",changePasswordModel);  
             }
             return PartialView("_ChangePasswordPartial",changePasswordModel);  
@@ -137,10 +139,10 @@ namespace LoggingCodefirst.Controllers
             }
             if (await _userService.DeleteUserAsync(id))
             {
-                TempData["SuccessMessage"] = _localizer.GetLocalizedString("Delete successfully!").ToString();
+                TempData["SuccessMessage"] = _localizer.GetLocalizedString("msg_DeleteSuccess").ToString();
                 return RedirectToAction(nameof(Index));
             }
-            TempData["ErrorMessage"] = _localizer.GetLocalizedString("Delete fail!").ToString();
+            TempData["ErrorMessage"] = _localizer.GetLocalizedString("err_DeleteFail").ToString();
             return RedirectToAction(nameof(Index));
         }
         

@@ -49,9 +49,10 @@ namespace LoggingCodefirst.Controllers
             {
                 if (await _storeService.CreateStoreAsync(createViewModel))
                 {
-                    TempData["SuccessMessage"] = _localizer.GetLocalizedString("Create successfully!").ToString();
+                    TempData["SuccessMessage"] = _localizer.GetLocalizedString("msg_CreateSuccess").ToString();
                     return RedirectToAction(nameof(Index));
                 }
+                TempData["ErrorMessage"] = _localizer.GetLocalizedString("err_CreateFail").ToString();
                 return View(createViewModel);
             }
             return View(createViewModel);
@@ -80,9 +81,10 @@ namespace LoggingCodefirst.Controllers
             {
                 if (await _storeService.StoreEditAsync(editViewModel))
                 {
-                    TempData["SuccessMessage"] = _localizer.GetLocalizedString("Edit successfully!").ToString();
+                    TempData["SuccessMessage"] = _localizer.GetLocalizedString("msg_EditSuccess").ToString();
                     return RedirectToAction(nameof(Index));
                 }
+                TempData["ErrorMessage"] = _localizer.GetLocalizedString("err_EditFail").ToString();
                 return View(editViewModel);
             }
             return View(editViewModel);
@@ -98,10 +100,10 @@ namespace LoggingCodefirst.Controllers
             
             if (await _storeService.DeleteStoreAsync(id))
             {
-                TempData["SuccessMessage"] = _localizer.GetLocalizedString("Delete successfully!").ToString();
+                TempData["SuccessMessage"] = _localizer.GetLocalizedString("msg_DeleteSuccess").ToString();
                 return RedirectToAction(nameof(Index));
             }
-            TempData["ErrorMessage"] = _localizer.GetLocalizedString("Delete fail!").ToString();
+            TempData["ErrorMessage"] = _localizer.GetLocalizedString("err_DeleteFail").ToString();
             return RedirectToAction(nameof(Index));
         }
         

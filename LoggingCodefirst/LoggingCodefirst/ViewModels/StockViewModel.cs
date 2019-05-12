@@ -9,8 +9,8 @@ namespace LoggingCodefirst.ViewModels
         public int StoreId { get; set; }
         [DisplayName("Product Name")] 
         public int ProductId { get; set; }
-        [DisplayName("Quanlity")] 
-        public int Quanlity { get; set; }
+        [DisplayName("Quantity")] 
+        public int Quantity { get; set; }
         [DisplayName("Store Name")] 
         public Store Store { get; set; }
         [DisplayName("Product Name")] 

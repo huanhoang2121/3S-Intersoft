@@ -8,7 +8,7 @@ namespace LoggingCodefirst.Validators
     {
         public StockValidator(LocalizationService localizer)
         {
-            RuleFor(x => x.Quanlity).NotNull().WithMessage(localizer.GetLocalizedString("{PropertyName} must not be empty."));
+            RuleFor(x => x.Quantity).NotNull().WithMessage(localizer.GetLocalizedString("msg_vld_NotEmpty"));
         }
         
     }

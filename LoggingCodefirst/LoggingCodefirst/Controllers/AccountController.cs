@@ -54,10 +54,10 @@ namespace LoggingCodefirst.Controllers
                     HttpContext.Session.SetString("userid", user.Id.ToString());
                     HttpContext.Session.SetString("username", user.Fullname);
                         
-                    TempData["SuccessMessage"] = _localizer.GetLocalizedString("Login successfully!").ToString();
+                    TempData["SuccessMessage"] = _localizer.GetLocalizedString("msg_LoginSuccess").ToString();
                     return RedirectToAction("Index", "User");
                 }
-                ViewData["ErrorMessage"] = _localizer.GetLocalizedString("Login fail! Email or password incorrect!");
+                ViewData["ErrorMessage"] = _localizer.GetLocalizedString("err_LoginFail");
                 return View();
             }
             return View(loginViewModel);
