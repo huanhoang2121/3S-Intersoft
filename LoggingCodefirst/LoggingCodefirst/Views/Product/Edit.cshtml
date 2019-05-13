@@ -21,49 +21,51 @@
 </div>
 <div class="container-fluid">
     <div class="row">
-        <div class="col-6">
+        <div class="col-12">
             <div class="card">
                 <div class="card-body">
                     <form asp-action="Edit" enctype="multipart/form-data">
                         <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                         <input type="hidden" asp-for="Id" />
-                        <div class="form-group">
-                            <label asp-for="ProductName"></label>
-                            <input asp-for="ProductName" class="form-control" />
-                            <span asp-validation-for="ProductName" class="text-danger"></span>
-                        </div>
-                        <div class="form-group">
-                            <label asp-for="BrandId"></label>
-                            <select asp-for="BrandId" class="form-control" asp-items="ViewBag.BrandId"></select>
-                            <span asp-validation-for="BrandId" class="text-danger"></span>
-                        </div>
-                        <div class="form-group">
-                            <label asp-for="CategoryId"></label>
-                            <select asp-for="CategoryId" class="form-control" asp-items="ViewBag.CategoryId"></select>
-                            <span asp-validation-for="CategoryId" class="text-danger"></span>
-                        </div>
-                        <div class="form-group">
-                            <label asp-for="ModelYear"></label>
-                            <input asp-for="ModelYear" class="form-control" />
-                            <span asp-validation-for="ModelYear" class="text-danger"></span>
-                        </div>
-                        <div class="form-group">
-                            <label asp-for="ListPrice"></label>
-                            <input asp-for="ListPrice" class="form-control" />
-                            <span asp-validation-for="ListPrice" class="text-danger"></span>
-                        </div>
-                        <div class="form-group">
-                            <label asp-for="ImageFile"></label>
-                            <input type="file" asp-for="ImageFile" class="form-control-file"/>
-                            <span asp-validation-for="ImageFile" class="text-danger"></span>
-                        </div>
-                        <div class="form-group">
-                            <button type="submit" class="btn btn-primary">@Localizer.GetLocalizedString("btn_Save")</button>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label asp-for="ProductName"></label>
+                                    <input asp-for="ProductName" class="form-control" />
+                                    <span asp-validation-for="ProductName" class="text-danger"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="BrandId"></label>
+                                    <select asp-for="BrandId" class ="form-control" asp-items="ViewBag.BrandId"></select>
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="CategoryId"></label>
+                                    <select asp-for="CategoryId" class ="form-control" asp-items="ViewBag.CategoryId"></select>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label asp-for="ModelYear"></label>
+                                    <input asp-for="ModelYear" class="form-control" />
+                                    <span asp-validation-for="ModelYear" class="text-danger"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="ListPrice"></label>
+                                    <input asp-for="ListPrice" class="form-control" />
+                                    <span asp-validation-for="ListPrice" class="text-danger"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="ImageFile"></label>
+                                    <input type="file" asp-for="ImageFile" class="form-control-file"/>
+                                    <span asp-validation-for="ImageFile" class="text-danger"></span>
+                                </div>
+                                <div class="form-group">
+                                    <a href="javascript:history.go(-1)"><button type="button" class="btn btn-cyan"> @Localizer.GetLocalizedString("btn_Back")</button></a>
+                                    <button type="submit" class="btn btn-primary">@Localizer.GetLocalizedString("btn_Save")</button>
+                                </div>
+                            </div>
                         </div>
                     </form>
-                    <div>
-                        <a asp-action="Index">@Localizer.GetLocalizedString("btn_BackToList")</a>
-                    </div>
                 </div>
             </div>
         </div>

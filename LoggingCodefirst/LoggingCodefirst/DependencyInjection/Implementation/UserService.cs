@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
@@ -9,6 +8,7 @@ using LoggingCodefirst.Infrastructure;
 using LoggingCodefirst.Models;
 using LoggingCodefirst.Models.Data;
 using LoggingCodefirst.ViewModels;
+using LoggingCodefirst.ViewModels.User;
 using Microsoft.EntityFrameworkCore;
 
 namespace LoggingCodefirst.DependencyInjection.Implementation
@@ -84,21 +84,20 @@ namespace LoggingCodefirst.DependencyInjection.Implementation
             }
         }
         
-        public async Task<UserViewModel> GetUserEditAsync(int? id)
+        public async Task<UserEditViewModel> GetUserEditAsync(int? id)
         {
             var user = await _context.Users.FindAsync(id);
-            var editViewModel = _mapper.Map<UserViewModel>(user);
+            var editViewModel = _mapper.Map<UserEditViewModel>(user);
             return editViewModel;
         }
         
-        public async Task<bool> EditUserAsync(UserViewModel userEditViewModel)
+        public async Task<bool> EditUserAsync(UserEditViewModel userEditViewModel)
         {
             try
             {
                 var user = await _context.Users.FindAsync(userEditViewModel.Id);
             
                 user.Fullname = userEditViewModel.Fullname;
-                user.Email = userEditViewModel.Email;
                 user.Address = userEditViewModel.Address;
                 user.Phone = userEditViewModel.Phone;
                 user.StoreId = userEditViewModel.StoreId;
@@ -142,8 +141,32 @@ namespace LoggingCodefirst.DependencyInjection.Implementation
             try
             {
                 var user = await _context.Users.FindAsync(changePasswordModel.Id);
-                user.Email = changePasswordModel.Email;
                 user.Password = SecurePasswordHasher.Hash(changePasswordModel.NewPassword);
+                    
+                _context.Users.Update(user);
+                await _context.SaveChangesAsync();
+                return true;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                return false;
+            }
+        }
+        
+        public async Task<UserChangeEmailViewModel> GetChangeEmailAsync(int? id)
+        {
+            var user = await _context.Users.FindAsync(id);
+            var changeEmailViewModel = _mapper.Map<UserChangeEmailViewModel>(user);
+            return changeEmailViewModel;
+        }
+        
+        public async Task<bool> ChangeEmailAsync(UserChangeEmailViewModel changeEmailViewModel)
+        {
+            try
+            {
+                var user = await _context.Users.FindAsync(changeEmailViewModel.Id);
+                user.Email = changeEmailViewModel.Email;
                     
                 _context.Users.Update(user);
                 await _context.SaveChangesAsync();

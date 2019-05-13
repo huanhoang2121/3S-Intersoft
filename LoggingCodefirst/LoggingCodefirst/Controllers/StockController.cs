@@ -61,7 +61,7 @@ namespace LoggingCodefirst.Controllers
                     TempData["SuccessMessage"] = _localizer.GetLocalizedString("msg_CreateSuccess").ToString();
                     return RedirectToAction(nameof(Index));
                 }
-                TempData["ErrorMessage"] = _localizer.GetLocalizedString("err_CreateFail").ToString();
+                ViewData["ErrorMessage"] = _localizer.GetLocalizedString("err_CreateFail").ToString();
                 ViewData["ProductId"] = new SelectList(_productService.Products, "Id", "ProductName", createViewModel.ProductId);
                 ViewData["StoreId"] = new SelectList(_storeService.Stores, "Id", "StoreName", createViewModel.StoreId);
                 return View(createViewModel);
@@ -99,7 +99,7 @@ namespace LoggingCodefirst.Controllers
                     TempData["SuccessMessage"] = _localizer.GetLocalizedString("msg_EditSuccess").ToString();
                     return RedirectToAction(nameof(Index));
                 }
-                TempData["ErrorMessage"] = _localizer.GetLocalizedString("err_EditFail").ToString();
+                ViewData["ErrorMessage"] = _localizer.GetLocalizedString("err_EditFail").ToString();
                 ViewData["ProductId"] = new SelectList(_productService.Products, "Id", "ProductName", editViewModel.ProductId);
                 ViewData["StoreId"] = new SelectList(_storeService.Stores, "Id", "StoreName", editViewModel.StoreId);
                 return View(editViewModel);

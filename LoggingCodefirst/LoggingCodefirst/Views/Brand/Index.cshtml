@@ -1,28 +1,7 @@
-
 @model IEnumerable<BrandViewModel>
-
 @{
     ViewBag.Title = Localizer.GetLocalizedString("ctr_Brand");
     Layout = "_Layout";
-}
-
-@if (TempData["SuccessMessage"] != null)
-{
-    <div class="alert alert-success" style="padding-left: 25px;">
-        <strong>@TempData["SuccessMessage"]</strong> 
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-            <span aria-hidden="true" style="font-size:20px">×</span>
-        </button>
-    </div>
-}
-@if (TempData["ErrorMessage"] != null)
-{
-    <div class="alert alert-danger" style="padding-left: 25px;">
-        <strong>@TempData["ErrorMessage"]</strong> 
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-            <span aria-hidden="true" style="font-size:20px">×</span>
-        </button>
-    </div>
 }
 
 <div class="page-breadcrumb">

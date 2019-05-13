@@ -2,7 +2,7 @@
 using System.ComponentModel;
 using LoggingCodefirst.Models;
 
-namespace LoggingCodefirst.ViewModels
+namespace LoggingCodefirst.ViewModels.Store
 {
     public class StoreViewModel
     {

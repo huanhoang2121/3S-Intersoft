@@ -2,6 +2,7 @@
 using LoggingCodefirst.DependencyInjection.Interface;
 using LoggingCodefirst.Resources;
 using LoggingCodefirst.ViewModels;
+using LoggingCodefirst.ViewModels.Store;
 
 namespace LoggingCodefirst.Validators
 {

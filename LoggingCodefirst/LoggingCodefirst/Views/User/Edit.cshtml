@@ -1,4 +1,4 @@
-﻿@model UserViewModel
+﻿@model UserEditViewModel
 @{
     ViewBag.Title = Localizer.GetLocalizedString("btn_Edit");
     Layout = "_Layout";
@@ -20,45 +20,48 @@
 </div>
 <div class="container-fluid">
     <div class="row">
-        <div class="col-6">
+        <div class="col-12">
             <div class="card">
                 <div class="card-body">
                     <form asp-action="Edit">
                         <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                         <input type="hidden" asp-for="Id" />
-                        <div class="form-group">
-                            <label asp-for="Email"></label>
-                            <input asp-for="Email" class="form-control" readonly/>
-                            <span asp-validation-for="Email" class="text-danger"></span>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label asp-for="Fullname"></label>
-                            <input asp-for="Fullname" class="form-control" />
-                            <span asp-validation-for="Fullname" class="text-danger"></span>
-                        </div>
-                        <div class="form-group">
-                            <label asp-for="Phone"></label>
-                            <input asp-for="Phone" type="number" class="form-control" />
-                            <span asp-validation-for="Phone" class="text-danger"></span>
-                        </div>
-                        <div class="form-group">
-                            <label asp-for="StoreId"></label>
-                            <select asp-for="StoreId" class="form-control" asp-items="ViewBag.StoreId"></select>
-                            <span asp-validation-for="StoreId" class="text-danger"></span>
-                        </div>
-                        <div class="form-group">
-                            <label asp-for="Address"></label>
-                            <input asp-for="Address" class="form-control" />
-                            <span asp-validation-for="Address" class="text-danger"></span>
-                        </div>
-                        <div class="form-group">
-                            <button type="submit" class="btn btn-primary">@Localizer.GetLocalizedString("btn_Save")</button>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label asp-for="Fullname"></label>
+                                    <input asp-for="Fullname" class="form-control" />
+                                    <span asp-validation-for="Fullname" class="text-danger"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="StoreId"></label>
+                                    <select asp-for="StoreId" class="form-control" asp-items="ViewBag.StoreId"></select>
+                                    <span asp-validation-for="StoreId" class="text-danger"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="IsActive"></label>
+                                    <input type="checkbox" asp-for="IsActive" class="form-control"/>
+                                    <span asp-validation-for="IsActive" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label asp-for="Address"></label>
+                                    <input asp-for="Address" class="form-control" />
+                                    <span asp-validation-for="Address" class="text-danger"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="Phone"></label>
+                                    <input asp-for="Phone" type="number" class="form-control" />
+                                    <span asp-validation-for="Phone" class="text-danger"></span>
+                                </div>
+                                <div class="form-group">
+                                    <a href="javascript:history.go(-1)"><button type="button" class="btn btn-cyan"> @Localizer.GetLocalizedString("btn_Back")</button></a>
+                                    <button type="submit" class="btn btn-primary">@Localizer.GetLocalizedString("btn_Save")</button>
+                                </div>
+                            </div>
                         </div>
                     </form>
-                    <div>
-                        <a asp-action="Index">@Localizer.GetLocalizedString("btn_BackToList")</a>
-                    </div>
                 </div>
             </div>
         </div>

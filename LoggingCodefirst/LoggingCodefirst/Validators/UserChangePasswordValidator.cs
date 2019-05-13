@@ -1,6 +1,7 @@
 ﻿using FluentValidation;
 using LoggingCodefirst.Resources;
 using LoggingCodefirst.ViewModels;
+using LoggingCodefirst.ViewModels.User;
 
 namespace LoggingCodefirst.Validators
 {
@@ -13,7 +14,7 @@ namespace LoggingCodefirst.Validators
                 .Matches("^(?=.*[0-9])(?=.*[a-zA-Z])([a-zA-Z0-9]+)$").WithMessage(localizer.GetLocalizedString("msg_vld_Password"));
 
             RuleFor(x => x.ConfirmPassword).Equal(x => x.NewPassword)
-                .WithMessage(localizer.GetLocalizedString("Incorrect confirm password!"));
+                .WithMessage(localizer.GetLocalizedString("msg_vld_ConfirmPassword"));
         }
         
     }

@@ -1,5 +1,7 @@
 ﻿using AutoMapper;
 using LoggingCodefirst.Models;
+using LoggingCodefirst.ViewModels.Store;
+using LoggingCodefirst.ViewModels.User;
 
 namespace LoggingCodefirst.ViewModels
 {
@@ -11,9 +13,13 @@ namespace LoggingCodefirst.ViewModels
             CreateMap<Category, CategoryViewModel>();
             CreateMap<Product, ProductViewModel>();
             CreateMap<Stock, StockViewModel>();
-            CreateMap<Store, StoreViewModel>();
-            CreateMap<User, UserViewModel>();
-            CreateMap<User, UserChangePasswordViewModel>();
+            CreateMap<Models.Store, StoreViewModel>();
+            CreateMap<Models.Store, StoreEditViewModel>();
+            CreateMap<Models.Store, StoreChangeEmailViewModel>();
+            CreateMap<Models.User, UserViewModel>();
+            CreateMap<Models.User, UserEditViewModel>();
+            CreateMap<Models.User, UserChangeEmailViewModel>();
+            CreateMap<Models.User, UserChangePasswordViewModel>();
         }
     }
 }

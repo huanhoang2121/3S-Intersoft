@@ -1,7 +1,6 @@
 ﻿using System.ComponentModel;
-using LoggingCodefirst.Models;
 
-namespace LoggingCodefirst.ViewModels
+namespace LoggingCodefirst.ViewModels.User
 {
     public class UserViewModel
     {
@@ -22,6 +21,6 @@ namespace LoggingCodefirst.ViewModels
         [DisplayName("Store Name")]
         public int StoreId { get; set; }
         [DisplayName("Store Name")]
-        public virtual Store Store { get; set; }
+        public virtual Models.Store Store { get; set; }
     }
 }

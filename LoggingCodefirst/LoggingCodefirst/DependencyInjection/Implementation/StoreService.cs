@@ -6,6 +6,7 @@ using LoggingCodefirst.DependencyInjection.Interface;
 using LoggingCodefirst.Models;
 using LoggingCodefirst.Models.Data;
 using LoggingCodefirst.ViewModels;
+using LoggingCodefirst.ViewModels.Store;
 using Microsoft.EntityFrameworkCore;
 
 namespace LoggingCodefirst.DependencyInjection.Implementation
@@ -72,21 +73,20 @@ namespace LoggingCodefirst.DependencyInjection.Implementation
             }
         }
 
-        public async Task<StoreViewModel> GetStoreEditAsync(int? id)
+        public async Task<StoreEditViewModel> GetStoreEditAsync(int? id)
         {
             var store = await _context.Stores.FindAsync(id);
-            var viewModel = _mapper.Map<StoreViewModel>(store);
+            var viewModel = _mapper.Map<StoreEditViewModel>(store);
             return viewModel;
         }
 
-        public async Task<bool> StoreEditAsync(StoreViewModel editViewModel)
+        public async Task<bool> StoreEditAsync(StoreEditViewModel editViewModel)
         {
             try
             {
                 var store = await _context.Stores.FindAsync(editViewModel.Id);
             
                 store.StoreName = editViewModel.StoreName;
-                store.Email = editViewModel.Email;
                 store.Phone = editViewModel.Phone;
                 store.Street = editViewModel.Street;
                 store.City = editViewModel.City;
@@ -110,6 +110,31 @@ namespace LoggingCodefirst.DependencyInjection.Implementation
             {
                 var store = await _context.Stores.FindAsync(id);
                 _context.Stores.Remove(store);
+                await _context.SaveChangesAsync();
+                return true;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                return false;
+            }
+        }
+        
+        public async Task<StoreChangeEmailViewModel> GetChangeEmailAsync(int? id)
+        {
+            var store = await _context.Stores.FindAsync(id);
+            var changeEmailViewModel = _mapper.Map<StoreChangeEmailViewModel>(store);
+            return changeEmailViewModel;
+        }
+        
+        public async Task<bool> ChangeEmailAsync(StoreChangeEmailViewModel changeEmailViewModel)
+        {
+            try
+            {
+                var store = await _context.Stores.FindAsync(changeEmailViewModel.Id);
+                store.Email = changeEmailViewModel.Email;
+                    
+                _context.Stores.Update(store);
                 await _context.SaveChangesAsync();
                 return true;
             }

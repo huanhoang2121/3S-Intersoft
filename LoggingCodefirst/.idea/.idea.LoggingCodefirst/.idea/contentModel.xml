@@ -56,6 +56,8 @@
           <e p="20190506035152_UpdateProductImagePath.cs" t="Include" />
           <e p="20190509084758_UpdateProImg.Designer.cs" t="Include" />
           <e p="20190509084758_UpdateProImg.cs" t="Include" />
+          <e p="20190512144342_UpdateStock3.Designer.cs" t="Include" />
+          <e p="20190512144342_UpdateStock3.cs" t="Include" />
           <e p="DataContextModelSnapshot.cs" t="Include" />
         </e>
         <e p="Models" t="Include">
@@ -80,9 +82,9 @@
         </e>
         <e p="Resources" t="Include">
           <e p="LocalizationService.cs" t="Include" />
-          <e p="PropertyResource.vi-VN.Designer.cs" t="Include" />
+          <e p="PropertyResource.en-US.resx" t="Include" />
           <e p="PropertyResource.vi-VN.resx" t="Include" />
-          <e p="ViewResource.vi-VN.Designer.cs" t="Include" />
+          <e p="ViewResource.en-US.resx" t="Include" />
           <e p="ViewResource.vi-VN.resx" t="Include" />
         </e>
         <e p="Startup.cs" t="Include" />
@@ -92,8 +94,12 @@
           <e p="LoginValidator.cs" t="Include" />
           <e p="ProductValidator.cs" t="Include" />
           <e p="StockValidator.cs" t="Include" />
+          <e p="StoreChangeEmailValidator.cs" t="Include" />
+          <e p="StoreEditValidator.cs" t="Include" />
           <e p="StoreValidator.cs" t="Include" />
+          <e p="UserChangeEmailValidator.cs" t="Include" />
           <e p="UserChangePasswordValidator.cs" t="Include" />
+          <e p="UserEditValidator.cs" t="Include" />
           <e p="UserValidator.cs" t="Include" />
         </e>
         <e p="ViewModels" t="Include">
@@ -104,9 +110,17 @@
           <e p="MapProfile.cs" t="Include" />
           <e p="ProductViewModel.cs" t="Include" />
           <e p="StockViewModel.cs" t="Include" />
-          <e p="StoreViewModel.cs" t="Include" />
-          <e p="UserChangePasswordViewModel.cs" t="Include" />
-          <e p="UserViewModel.cs" t="Include" />
+          <e p="Store" t="Include">
+            <e p="StoreChangeEmailViewModel.cs" t="Include" />
+            <e p="StoreEditViewModel.cs" t="Include" />
+            <e p="StoreViewModel.cs" t="Include" />
+          </e>
+          <e p="User" t="Include">
+            <e p="UserChangeEmailViewModel.cs" t="Include" />
+            <e p="UserChangePasswordViewModel.cs" t="Include" />
+            <e p="UserEditViewModel.cs" t="Include" />
+            <e p="UserViewModel.cs" t="Include" />
+          </e>
         </e>
         <e p="Views" t="Include">
           <e p="Account" t="Include">
@@ -158,11 +172,13 @@
             <e p="Create.cshtml" t="Include" />
             <e p="Edit.cshtml" t="Include" />
             <e p="Index.cshtml" t="Include" />
+            <e p="_ChangeEmailPartial.cshtml" t="Include" />
           </e>
           <e p="User" t="Include">
             <e p="Create.cshtml" t="Include" />
             <e p="Edit.cshtml" t="Include" />
             <e p="Index.cshtml" t="Include" />
+            <e p="_ChangeEmailPartial.cshtml" t="Include" />
             <e p="_ChangePasswordPartial.cshtml" t="Include" />
           </e>
           <e p="_ViewImports.cshtml" t="Include" />

@@ -117,14 +117,17 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="btn_BackToList" xml:space="preserve">
-    <value>Trở lại danh sách</value>
+  <data name="btn_Back" xml:space="preserve">
+    <value>Trở về</value>
   </data>
   <data name="btn_Close" xml:space="preserve">
     <value>Đóng</value>
   </data>
   <data name="btn_Create" xml:space="preserve">
     <value>Thêm</value>
+  </data>
+  <data name="btn_Edit" xml:space="preserve">
+    <value>Sửa</value>
   </data>
   <data name="btn_ForgotPassword" xml:space="preserve">
     <value>Quên mật khẩu?</value>
@@ -183,11 +186,11 @@
   <data name="err_500_Title" xml:space="preserve">
     <value>Phương thức không được phép!</value>
   </data>
-  <data name="err_btn_Back" xml:space="preserve">
-    <value>Trở về</value>
-  </data>
   <data name="err_ChangePasswordFail" xml:space="preserve">
     <value>Thay đổi mật khẩu lỗi!</value>
+  </data>
+  <data name="err_ChangeEmailFail" xml:space="preserve">
+    <value>Thay đổi Email lỗi!</value>
   </data>
   <data name="err_CreateFail" xml:space="preserve">
     <value>Thêm lỗi!</value>
@@ -203,6 +206,9 @@
   </data>
   <data name="msg_ChangePasswordSuccess" xml:space="preserve">
     <value>Thay đổi mật khẩu thành công!</value>
+  </data>
+  <data name="msg_ChangeEmailSuccess" xml:space="preserve">
+    <value>Thay đổi Email thành công!</value>
   </data>
   <data name="msg_CreateSuccess" xml:space="preserve">
     <value>Thêm mới thành công!</value>
@@ -235,16 +241,16 @@
     <value>Xác nhận mật khẩu không chính xác!</value>
   </data>
   <data name="msg_vld_Exists" xml:space="preserve">
-    <value>đã tồn tại.</value>
+    <value> đã tồn tại!</value>
   </data>
   <data name="msg_vld_ValidEmail" xml:space="preserve">
-    <value>Nhập địa chỉ email hợp lệ.</value>
+    <value>Nhập địa chỉ email hợp lệ!</value>
   </data>
   <data name="msg_vld_NotEmpty" xml:space="preserve">
-    <value>{PropertyName} không được để trống.</value>
+    <value>{PropertyName} không được để trống!</value>
   </data>
   <data name="msg_vld_Password" xml:space="preserve">
-    <value>{PropertyName} phải chứa cả chữ, số và không có kí tự đặc biệt.</value>
+    <value>{PropertyName} phải chứa cả chữ, số và không có kí tự đặc biệt!</value>
   </data>
   <data name="ctr_Brand" xml:space="preserve">
     <value>Thương hiệu</value>
@@ -262,7 +268,7 @@
     <value>Danh sách</value>
   </data>
   <data name="msg_Welcome" xml:space="preserve">
-    <value>Xin chào</value>
+    <value>Chào mừng</value>
   </data>
   <data name="act_Privacy" xml:space="preserve">
     <value>Bảo mật</value>
@@ -284,6 +290,9 @@
   </data>
   <data name="act_ChangePassword" xml:space="preserve">
     <value>Thay đổi mật khẩu</value>
+  </data>
+  <data name="act_ChangeEmail" xml:space="preserve">
+    <value>Thay đổi Email</value>
   </data>
   <data name="msg_del_Brand" xml:space="preserve">
     <value>Khi bạn xóa thương hiệu này, các sản phẩm liên quan sẽ bị xóa! Bạn có chắc chắn muốn xóa?</value>

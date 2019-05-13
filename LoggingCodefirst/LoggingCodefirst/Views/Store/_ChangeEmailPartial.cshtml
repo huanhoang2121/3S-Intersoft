@@ -1,0 +1,30 @@
+﻿@model StoreChangeEmailViewModel
+
+<!-- Modal -->
+<div class="modal fade" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">@Localizer.GetLocalizedString("act_ChangeEmail")</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="changepassword" asp-action="ChangeEmail" enctype="multipart/form-data">
+                    <input name="IsValid" type="hidden" value="@ViewData.ModelState.IsValid.ToString()" />
+                    <input type="hidden" asp-for="Id"/>
+                    <div class="form-group" style="text-align: left">
+                        <label asp-for="Email"></label>
+                        <input asp-for="Email" class="form-control"/>
+                        <span asp-validation-for="Email" class="text-danger"></span>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">@Localizer.GetLocalizedString("btn_Close")</button>
+                <button type="submit" form="changepassword" class="btn btn-primary" data-save="modal">@Localizer.GetLocalizedString("btn_Save")</button>
+            </div>
+        </div>
+    </div>
+</div>

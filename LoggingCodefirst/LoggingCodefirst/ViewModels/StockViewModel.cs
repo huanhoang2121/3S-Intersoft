@@ -12,7 +12,7 @@ namespace LoggingCodefirst.ViewModels
         [DisplayName("Quantity")] 
         public int Quantity { get; set; }
         [DisplayName("Store Name")] 
-        public Store Store { get; set; }
+        public Models.Store Store { get; set; }
         [DisplayName("Product Name")] 
         public Product Product { get; set; }
     }

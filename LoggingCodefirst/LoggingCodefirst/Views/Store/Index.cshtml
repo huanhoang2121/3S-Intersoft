@@ -4,25 +4,6 @@
     Layout = "_Layout";
 }
 
-@if (TempData["SuccessMessage"] != null)
-{
-    <div class="alert alert-success" style="padding-left: 25px;">
-        <strong>@TempData["SuccessMessage"]</strong> 
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-            <span aria-hidden="true" style="font-size:20px">×</span>
-        </button>
-    </div>
-}
-@if (TempData["ErrorMessage"] != null)
-{
-    <div class="alert alert-danger" style="padding-left: 25px;">
-        <strong>@TempData["ErrorMessage"]</strong> 
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-            <span aria-hidden="true" style="font-size:20px">×</span>
-        </button>
-    </div>
-}
-
 <div class="page-breadcrumb">
     <div class="row">
         <div class="col-12 d-flex align-items-center">
@@ -91,6 +72,9 @@
                                     <td style="text-align: center;">
                                         <a asp-action="Edit" asp-route-id="@item.Id">
                                             <i class="mdi mdi-grease-pencil" style="font-size: 24px; color: black"></i>
+                                        </a>
+                                        <a data-toggle="ajax-modal" data-url="@Url.Action("ChangeEmail", new {id = item.Id})">
+                                            <i class="mdi mdi-email" style="font-size: 24px; color: black"></i>
                                         </a>
                                         <a asp-action="Delete" asp-route-id="@item.Id" 
                                            onclick="return confirm('@Localizer.GetLocalizedString("msg_del_Store")');">

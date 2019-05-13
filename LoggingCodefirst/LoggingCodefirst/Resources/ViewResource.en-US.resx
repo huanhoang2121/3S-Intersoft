@@ -117,14 +117,17 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="btn_BackToList" xml:space="preserve">
-    <value>Back to List</value>
+  <data name="btn_Back" xml:space="preserve">
+    <value>Back</value>
   </data>
   <data name="btn_Close" xml:space="preserve">
     <value>Close</value>
   </data>
   <data name="btn_Create" xml:space="preserve">
     <value>Create</value>
+  </data>
+  <data name="btn_Edit" xml:space="preserve">
+    <value>Edit</value>
   </data>
   <data name="btn_ForgotPassword" xml:space="preserve">
     <value>Forgot Password?</value>
@@ -152,6 +155,9 @@
   </data>
   <data name="act_ChangePassword" xml:space="preserve">
     <value>Change Password</value>
+  </data>
+  <data name="act_ChangeEmail" xml:space="preserve">
+    <value>Change Email</value>
   </data>
   <data name="act_Index" xml:space="preserve">
     <value>Index</value>
@@ -213,11 +219,11 @@
   <data name="err_500_Title" xml:space="preserve">
     <value>Internal server error!</value>
   </data>
-  <data name="err_btn_Back" xml:space="preserve">
-    <value>Back</value>
-  </data>
   <data name="err_ChangePasswordFail" xml:space="preserve">
     <value>Change Password fail!</value>
+  </data>
+  <data name="err_ChangeEmailFail" xml:space="preserve">
+    <value>Change Email fail!</value>
   </data>
   <data name="err_CreateFail" xml:space="preserve">
     <value>Create fail!</value>
@@ -242,6 +248,9 @@
   </data>
   <data name="msg_ChangePasswordSuccess" xml:space="preserve">
     <value>Change Password successfully!</value>
+  </data>
+  <data name="msg_ChangeEmailSuccess" xml:space="preserve">
+    <value>Change Email successfully!</value>
   </data>
   <data name="msg_CreateSuccess" xml:space="preserve">
     <value>Create successfully!</value>

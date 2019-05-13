@@ -1,7 +1,7 @@
 $(function () {
     var placeholderElement = $('#modal-placeholder');
 
-    $(document).on('click', 'a[data-toggle="ajax-modal"]', function (event) {
+    $(document).on('click', 'a[data-toggle="ajax-modal"]', function () {
         var url = $(this).data('url');
         $.get(url).done(function (data) {
             placeholderElement.html(data);
@@ -14,17 +14,17 @@ $(function () {
 
         var form = $(this).parents('.modal').find('form');
         var actionUrl = form.attr('action');
-        var dataToSend = form.serialize();
+        var dataToSend = new FormData(form.get(0));
 
-        $.post(actionUrl, dataToSend).done(function (data) {
+        $.ajax({ url: actionUrl, method: 'post', data: dataToSend, processData: false, contentType: false }).done(function (data) {
             var newBody = $('.modal-body', data);
             placeholderElement.find('.modal-body').replaceWith(newBody);
 
-            var isValid = newBody.find('[name="IsValid"]').val() == 'True';
+            var isValid = newBody.find('[name="IsValid"]').val() === 'True';
             if (isValid) {
-                $('#notification').text('Data saved successfully!');
                 placeholderElement.find('.modal').modal('hide');
+                location.reload();
             }
         });
     });
-}); 
+});

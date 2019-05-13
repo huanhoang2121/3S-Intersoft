@@ -1,4 +1,4 @@
-﻿@model StoreViewModel
+﻿@model StoreEditViewModel
 @{
     ViewBag.Title = Localizer.GetLocalizedString("btn_Edit");
     Layout = "_Layout";
@@ -21,54 +21,53 @@
 </div>
 <div class="container-fluid">
     <div class="row">
-        <div class="col-6">
+        <div class="col-12">
             <div class="card">
                 <div class="card-body">
                     <form asp-action="Edit">
                         <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                         <input type="hidden" asp-for="Id" />
-                        <div class="form-group">
-                            <label asp-for="StoreName"></label>
-                            <input asp-for="StoreName" class="form-control" />
-                            <span asp-validation-for="StoreName" class="text-danger"></span>
-                        </div>
-                        <div class="form-group">
-                            <label asp-for="Email"></label>
-                            <input asp-for="Email" class="form-control" readonly/>
-                            <span asp-validation-for="Email" class="text-danger"></span>
-                        </div>
-                        <div class="form-group">
-                            <label asp-for="Phone"></label>
-                            <input asp-for="Phone" type="number" class="form-control" />
-                            <span asp-validation-for="Phone" class="text-danger"></span>
-                        </div>
-                        <div class="form-group">
-                            <label asp-for="State"></label>
-                            <input asp-for="State" class="form-control" />
-                            <span asp-validation-for="State" class="text-danger"></span>
-                        </div>
-                        <div class="form-group">
-                            <label asp-for="City"></label>
-                            <input asp-for="City" class="form-control" />
-                            <span asp-validation-for="City" class="text-danger"></span>
-                        </div>
-                        <div class="form-group">
-                            <label asp-for="Street"></label>
-                            <input asp-for="Street" class="form-control" />
-                            <span asp-validation-for="Street" class="text-danger"></span>
-                        </div>
-                        <div class="form-group">
-                            <label asp-for="ZipCode"></label>
-                            <input asp-for="ZipCode" class="form-control" />
-                            <span asp-validation-for="ZipCode" class="text-danger"></span>
-                        </div>
-                        <div class="form-group">
-                            <button type="submit" class="btn btn-primary">@Localizer.GetLocalizedString("btn_Save")</button>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label asp-for="StoreName"></label>
+                                    <input asp-for="StoreName" class="form-control"/>
+                                    <span asp-validation-for="StoreName" class="text-danger"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="Phone"></label>
+                                    <input asp-for="Phone" type="number" class="form-control"/>
+                                    <span asp-validation-for="Phone" class="text-danger"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="State"></label>
+                                    <input asp-for="State" class="form-control" />
+                                    <span asp-validation-for="State" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label asp-for="City"></label>
+                                    <input asp-for="City" class="form-control" />
+                                    <span asp-validation-for="City" class="text-danger"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="Street"></label>
+                                    <input asp-for="Street" class="form-control" />
+                                    <span asp-validation-for="Street" class="text-danger"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="ZipCode"></label>
+                                    <input asp-for="ZipCode" class="form-control" />
+                                    <span asp-validation-for="ZipCode" class="text-danger"></span>
+                                </div>
+                                <div class="form-group">
+                                    <a href="javascript:history.go(-1)"><button type="button" class="btn btn-cyan"> @Localizer.GetLocalizedString("btn_Back")</button></a>
+                                    <button type="submit" class="btn btn-primary">@Localizer.GetLocalizedString("btn_Save")</button>
+                                </div>
+                            </div>
                         </div>
                     </form>
-                    <div>
-                        <a asp-action="Index">@Localizer.GetLocalizedString("btn_BackToList")</a>
-                    </div>
                 </div>
             </div>
         </div>

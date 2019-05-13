@@ -53,7 +53,7 @@ namespace LoggingCodefirst.Controllers
                     TempData["SuccessMessage"] = _localizer.GetLocalizedString("msg_CreateSuccess").ToString();
                     return RedirectToAction(nameof(Index));
                 }
-                TempData["ErrorMessage"] = _localizer.GetLocalizedString("err_CreateFail").ToString();
+                ViewData["ErrorMessage"] = _localizer.GetLocalizedString("err_CreateFail").ToString();
                 return View(categoryViewModel);
             }
             return View(categoryViewModel);
@@ -85,7 +85,7 @@ namespace LoggingCodefirst.Controllers
                     TempData["SuccessMessage"] = _localizer.GetLocalizedString("msg_EditSuccess").ToString();
                     return RedirectToAction(nameof(Index));
                 }
-                TempData["ErrorMessage"] = _localizer.GetLocalizedString("err_EditFail").ToString();
+                ViewData["ErrorMessage"] = _localizer.GetLocalizedString("err_EditFail").ToString();
                 return View(categoryViewModel);
             }
             return View(categoryViewModel);
