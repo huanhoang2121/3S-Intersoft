@@ -3,16 +3,16 @@ using System.Threading.Tasks;
 using LoggingCodefirst.Models;
 using LoggingCodefirst.ViewModels;
 
-namespace LoggingCodefirst.DependencyInjection.Interface
+namespace LoggingCodefirst.Services.Interface
 {
     public interface IBrandService
     {
-        IEnumerable<Brand> Brands { get; }
-        
+        IEnumerable<Brand> Brands();
         Task<List<BrandViewModel>> GetListBrandAsync();
         Task<bool> CreateBrandAsync(BrandViewModel brandViewModel);
-        Task<BrandViewModel> GetBrandEditAsync(int? id);
+        Task<BrandViewModel> GetBrandEditAsync(int id);
         Task<bool> EditBrandAsync(BrandViewModel brandViewModel);
-        Task<bool> DeleteBrandAsync(int? id);
+        Task<bool> DeleteBrandAsync(int id);
+        bool IsExistedName(int id, string name);
     }//end of interface
 }

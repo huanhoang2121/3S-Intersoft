@@ -1,7 +1,6 @@
 ﻿using FluentValidation;
 using LoggingCodefirst.Resources;
 using LoggingCodefirst.ViewModels;
-using LoggingCodefirst.ViewModels.User;
 
 namespace LoggingCodefirst.Validators.User
 {

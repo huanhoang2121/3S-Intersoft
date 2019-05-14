@@ -1,8 +1,7 @@
 ﻿using System.Threading.Tasks;
-using LoggingCodefirst.DependencyInjection.Interface;
 using LoggingCodefirst.Resources;
+using LoggingCodefirst.Services.Interface;
 using LoggingCodefirst.ViewModels;
-using LoggingCodefirst.ViewModels.User;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 
@@ -52,7 +51,7 @@ namespace LoggingCodefirst.Controllers
         [HttpGet]
         public IActionResult Create()
         {
-            ViewBag.StoreId = new SelectList(_storeService.Stores, "Id", "StoreName");
+            ViewBag.StoreId = new SelectList(_storeService.Stores(), "Id", "StoreName");
             return View();
         }
         
@@ -72,10 +71,10 @@ namespace LoggingCodefirst.Controllers
                     return RedirectToAction(nameof(Index));
                 }
                 ViewData["ErrorMessage"] = _localizer.GetLocalizedString("err_CreateFail").ToString();
-                ViewBag.StoreId = new SelectList(_storeService.Stores, "Id", "StoreName", createViewModel.StoreId);
+                ViewBag.StoreId = new SelectList(_storeService.Stores(), "Id", "StoreName", createViewModel.StoreId);
                 return View(createViewModel);
             }
-            ViewBag.StoreId = new SelectList(_storeService.Stores, "Id", "StoreName", createViewModel.StoreId);
+            ViewBag.StoreId = new SelectList(_storeService.Stores(), "Id", "StoreName", createViewModel.StoreId);
             return View(createViewModel);
         }
         
@@ -91,12 +90,12 @@ namespace LoggingCodefirst.Controllers
             {
                 return BadRequest();
             }
-            var user = await _userService.GetUserEditAsync(id);
+            var user = await _userService.GetUserEditAsync(id.Value);
             if (user == null)
             {
                 return BadRequest();
             }
-            ViewBag.StoreId = new SelectList(_storeService.Stores, "Id", "StoreName", user.StoreId);
+            ViewBag.StoreId = new SelectList(_storeService.Stores(), "Id", "StoreName", user.StoreId);
             return View(user);
         }
         
@@ -116,10 +115,10 @@ namespace LoggingCodefirst.Controllers
                     return RedirectToAction(nameof(Index));
                 }
                 ViewData["ErrorMessage"] = _localizer.GetLocalizedString("err_EditFail").ToString();
-                ViewBag.StoreId = new SelectList(_storeService.Stores, "Id", "StoreName", editViewModel.StoreId);
+                ViewBag.StoreId = new SelectList(_storeService.Stores(), "Id", "StoreName", editViewModel.StoreId);
                 return View(editViewModel);
             }
-            ViewBag.StoreId = new SelectList(_storeService.Stores, "Id", "StoreName", editViewModel.StoreId);
+            ViewBag.StoreId = new SelectList(_storeService.Stores(), "Id", "StoreName", editViewModel.StoreId);
             return View(editViewModel);
         }
         
@@ -135,7 +134,7 @@ namespace LoggingCodefirst.Controllers
             {
                 return BadRequest();
             }
-            var user = await _userService.GetChangePasswordAsync(id);
+            var user = await _userService.GetChangePasswordAsync(id.Value);
             if (user == null)
             {
                 return BadRequest();
@@ -166,48 +165,6 @@ namespace LoggingCodefirst.Controllers
         }
         
         /// <summary>
-        /// ChangeEmail User Get Function
-        /// </summary>
-        /// <param name="id"></param>
-        /// <returns>ChangeEmail</returns>
-        [HttpGet]
-        public async Task<IActionResult> ChangeEmail(int? id)
-        {
-            if (id == null)
-            {
-                return BadRequest();
-            }
-            var user = await _userService.GetChangeEmailAsync(id);
-            if (user == null)
-            {
-                return BadRequest();
-            }
-            return PartialView("_ChangeEmailPartial",user);  
-        }
-        
-        /// <summary>
-        /// ChangeEmail User Post Function
-        /// </summary>
-        /// <param name="changeEmailViewModel"></param>
-        /// <returns>Index User</returns>
-        [HttpPost]
-        public async Task<IActionResult> ChangeEmail(UserChangeEmailViewModel changeEmailViewModel)
-        {
-            if (ModelState.IsValid)
-            {
-                var user = await _userService.ChangeEmailAsync(changeEmailViewModel);
-                if (user)
-                {
-                    TempData["SuccessMessage"] = _localizer.GetLocalizedString("msg_ChangeEmailSuccess").ToString();
-                    return PartialView("_ChangeEmailPartial",changeEmailViewModel); 
-                }
-                TempData["ErrorMessage"] = _localizer.GetLocalizedString("err_ChangeEmailFail").ToString();
-                return PartialView("_ChangeEmailPartial",changeEmailViewModel); 
-            }
-            return PartialView("_ChangeEmailPartial",changeEmailViewModel);  
-        }
-        
-        /// <summary>
         /// Delete User Get Function
         /// </summary>
         /// <param name="id"></param>
@@ -219,7 +176,7 @@ namespace LoggingCodefirst.Controllers
             {
                 return BadRequest();
             }
-            if (await _userService.DeleteUserAsync(id))
+            if (await _userService.DeleteUserAsync(id.Value))
             {
                 TempData["SuccessMessage"] = _localizer.GetLocalizedString("msg_DeleteSuccess").ToString();
                 return RedirectToAction(nameof(Index));

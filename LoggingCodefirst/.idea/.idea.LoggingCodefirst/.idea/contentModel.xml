@@ -15,23 +15,8 @@
           <e p="StoreController.cs" t="Include" />
           <e p="UserController.cs" t="Include" />
         </e>
-        <e p="DependencyInjection" t="Include">
-          <e p="Implementation" t="Include">
-            <e p="BrandService.cs" t="Include" />
-            <e p="CategoryService.cs" t="Include" />
-            <e p="ProductService.cs" t="Include" />
-            <e p="StockService.cs" t="Include" />
-            <e p="StoreService.cs" t="Include" />
-            <e p="UserService.cs" t="Include" />
-          </e>
-          <e p="Interface" t="Include">
-            <e p="IBrandService.cs" t="Include" />
-            <e p="ICategoryService.cs" t="Include" />
-            <e p="IProductService.cs" t="Include" />
-            <e p="IStockService.cs" t="Include" />
-            <e p="IStoreService.cs" t="Include" />
-            <e p="IUserService.cs" t="Include" />
-          </e>
+        <e p="Filters" t="Include">
+          <e p="SampleActionFilter.cs" t="Include" />
         </e>
         <e p="Infrastructure" t="Include">
           <e p="SecurePasswordHasher.cs" t="Include" />
@@ -85,22 +70,35 @@
           <e p="ViewResource.en-US.resx" t="Include" />
           <e p="ViewResource.vi-VN.resx" t="Include" />
         </e>
+        <e p="Services" t="Include">
+          <e p="Implementation" t="Include">
+            <e p="BrandService.cs" t="Include" />
+            <e p="CategoryService.cs" t="Include" />
+            <e p="ProductService.cs" t="Include" />
+            <e p="StockService.cs" t="Include" />
+            <e p="StoreService.cs" t="Include" />
+            <e p="UserService.cs" t="Include" />
+          </e>
+          <e p="Interface" t="Include">
+            <e p="IBrandService.cs" t="Include" />
+            <e p="ICategoryService.cs" t="Include" />
+            <e p="IProductService.cs" t="Include" />
+            <e p="IStockService.cs" t="Include" />
+            <e p="IStoreService.cs" t="Include" />
+            <e p="IUserService.cs" t="Include" />
+          </e>
+        </e>
         <e p="Startup.cs" t="Include" />
         <e p="Validators" t="Include">
           <e p="BrandValidator.cs" t="Include" />
           <e p="CategoryValidator.cs" t="Include" />
           <e p="ProductValidator.cs" t="Include" />
           <e p="StockValidator.cs" t="Include" />
-          <e p="Store" t="Include">
-            <e p="ChangeEmailValidator.cs" t="Include" />
-            <e p="EditValidator.cs" t="Include" />
-            <e p="StoreValidator.cs" t="Include" />
-          </e>
+          <e p="StoreValidator.cs" t="Include" />
           <e p="User" t="Include">
-            <e p="ChangeEmailValidator.cs" t="Include" />
             <e p="ChangePasswordValidator.cs" t="Include" />
-            <e p="EditValidator.cs" t="Include" />
             <e p="LoginValidator.cs" t="Include" />
+            <e p="UserEditValidator.cs" t="Include" />
             <e p="UserValidator.cs" t="Include" />
           </e>
         </e>
@@ -108,21 +106,14 @@
           <e p="BrandViewModel.cs" t="Include" />
           <e p="CategoryViewModel.cs" t="Include" />
           <e p="ErrorViewModel.cs" t="Include" />
+          <e p="LoginViewModel.cs" t="Include" />
           <e p="MapProfile.cs" t="Include" />
           <e p="ProductViewModel.cs" t="Include" />
           <e p="StockViewModel.cs" t="Include" />
-          <e p="Store" t="Include">
-            <e p="ChangeEmailViewModel.cs" t="Include" />
-            <e p="EditViewModel.cs" t="Include" />
-            <e p="StoreViewModel.cs" t="Include" />
-          </e>
-          <e p="User" t="Include">
-            <e p="ChangeEmailViewModel.cs" t="Include" />
-            <e p="ChangePasswordViewModel.cs" t="Include" />
-            <e p="EditViewModel.cs" t="Include" />
-            <e p="LoginViewModel.cs" t="Include" />
-            <e p="UserViewModel.cs" t="Include" />
-          </e>
+          <e p="StoreViewModel.cs" t="Include" />
+          <e p="UserChangePasswordViewModel.cs" t="Include" />
+          <e p="UserEditViewModel.cs" t="Include" />
+          <e p="UserViewModel.cs" t="Include" />
         </e>
         <e p="Views" t="Include">
           <e p="Account" t="Include">
@@ -140,6 +131,7 @@
           </e>
           <e p="Error" t="Include">
             <e p="Error400.cshtml" t="Include" />
+            <e p="Error401.cshtml" t="Include" />
             <e p="Error403.cshtml" t="Include" />
             <e p="Error404.cshtml" t="Include" />
             <e p="Error405.cshtml" t="Include" />
@@ -174,13 +166,11 @@
             <e p="Create.cshtml" t="Include" />
             <e p="Edit.cshtml" t="Include" />
             <e p="Index.cshtml" t="Include" />
-            <e p="_ChangeEmailPartial.cshtml" t="Include" />
           </e>
           <e p="User" t="Include">
             <e p="Create.cshtml" t="Include" />
             <e p="Edit.cshtml" t="Include" />
             <e p="Index.cshtml" t="Include" />
-            <e p="_ChangeEmailPartial.cshtml" t="Include" />
             <e p="_ChangePasswordPartial.cshtml" t="Include" />
           </e>
           <e p="_ViewImports.cshtml" t="Include" />

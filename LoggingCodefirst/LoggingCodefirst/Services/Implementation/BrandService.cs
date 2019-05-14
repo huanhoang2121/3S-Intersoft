@@ -1,14 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
-using LoggingCodefirst.DependencyInjection.Interface;
 using LoggingCodefirst.Models;
 using LoggingCodefirst.Models.Data;
+using LoggingCodefirst.Services.Interface;
 using LoggingCodefirst.ViewModels;
 using Microsoft.EntityFrameworkCore;
 
-namespace LoggingCodefirst.DependencyInjection.Implementation
+namespace LoggingCodefirst.Services.Implementation
 {
     public class BrandService : IBrandService
     {
@@ -28,14 +29,13 @@ namespace LoggingCodefirst.DependencyInjection.Implementation
         }
         
         #endregion
-        
-        #region Public Properties
-
-        public IEnumerable<Brand> Brands => _context.Brands;
-        
-        #endregion
 
         #region Public Methods
+
+        public IEnumerable<Brand> Brands()
+        {
+            return _context.Brands;
+        }
 
         public async Task<List<BrandViewModel>> GetListBrandAsync()
         {
@@ -63,7 +63,7 @@ namespace LoggingCodefirst.DependencyInjection.Implementation
             }
         }
 
-        public async Task<BrandViewModel> GetBrandEditAsync(int? id)
+        public async Task<BrandViewModel> GetBrandEditAsync(int id)
         {
             var store = await _context.Brands.FindAsync(id);
             var viewModel = _mapper.Map<BrandViewModel>(store);
@@ -88,7 +88,7 @@ namespace LoggingCodefirst.DependencyInjection.Implementation
             }
         }
 
-        public async Task<bool> DeleteBrandAsync(int? id)
+        public async Task<bool> DeleteBrandAsync(int id)
         {
             try
             {
@@ -102,6 +102,11 @@ namespace LoggingCodefirst.DependencyInjection.Implementation
                 Console.WriteLine(e);
                 return false;
             }
+        }
+
+        public bool IsExistedName(int id, string name)
+        {
+            return _context.Brands.Any(b => b.BrandName == name && b.Id != id);
         }
         
         #endregion

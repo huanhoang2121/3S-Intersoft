@@ -3,15 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
-using LoggingCodefirst.DependencyInjection.Interface;
 using LoggingCodefirst.Infrastructure;
 using LoggingCodefirst.Models;
 using LoggingCodefirst.Models.Data;
+using LoggingCodefirst.Services.Interface;
 using LoggingCodefirst.ViewModels;
-using LoggingCodefirst.ViewModels.User;
 using Microsoft.EntityFrameworkCore;
 
-namespace LoggingCodefirst.DependencyInjection.Implementation
+namespace LoggingCodefirst.Services.Implementation
 {
     public class UserService : IUserService
     { 
@@ -31,14 +30,13 @@ namespace LoggingCodefirst.DependencyInjection.Implementation
         }
         
         #endregion
-        
-        #region Public Properties
-        
-        public IEnumerable<User> Users => _context.Users.Include(s => s.Store);
-        
-        #endregion
 
         #region Public Methods
+        
+        public IEnumerable<User> Users()
+        {
+            return _context.Users.Include(s => s.Store);
+        }
         
         public bool Login(LoginViewModel loginViewModel)
         {  
@@ -84,7 +82,7 @@ namespace LoggingCodefirst.DependencyInjection.Implementation
             }
         }
         
-        public async Task<UserEditViewModel> GetUserEditAsync(int? id)
+        public async Task<UserEditViewModel> GetUserEditAsync(int id)
         {
             var user = await _context.Users.FindAsync(id);
             var editViewModel = _mapper.Map<UserEditViewModel>(user);
@@ -101,6 +99,7 @@ namespace LoggingCodefirst.DependencyInjection.Implementation
                 user.Address = userEditViewModel.Address;
                 user.Phone = userEditViewModel.Phone;
                 user.StoreId = userEditViewModel.StoreId;
+                user.Email = userEditViewModel.Email;
             
                 _context.Users.Update(user);
                 await _context.SaveChangesAsync();
@@ -113,7 +112,7 @@ namespace LoggingCodefirst.DependencyInjection.Implementation
             }
         }
         
-        public async Task<bool> DeleteUserAsync(int? id)
+        public async Task<bool> DeleteUserAsync(int id)
         {
             try
             {
@@ -129,7 +128,7 @@ namespace LoggingCodefirst.DependencyInjection.Implementation
             }
         }
 
-        public async Task<UserChangePasswordViewModel> GetChangePasswordAsync(int? id)
+        public async Task<UserChangePasswordViewModel> GetChangePasswordAsync(int id)
         {
             var user = await _context.Users.FindAsync(id);
             var changePasswordViewModel = _mapper.Map<UserChangePasswordViewModel>(user);
@@ -153,31 +152,12 @@ namespace LoggingCodefirst.DependencyInjection.Implementation
                 return false;
             }
         }
-        
-        public async Task<UserChangeEmailViewModel> GetChangeEmailAsync(int? id)
+       
+        public bool IsExistedEmail(int id, string name)
         {
-            var user = await _context.Users.FindAsync(id);
-            var changeEmailViewModel = _mapper.Map<UserChangeEmailViewModel>(user);
-            return changeEmailViewModel;
+            return _context.Users.Any(b => b.Email == name && b.Id != id);
         }
-        
-        public async Task<bool> ChangeEmailAsync(UserChangeEmailViewModel changeEmailViewModel)
-        {
-            try
-            {
-                var user = await _context.Users.FindAsync(changeEmailViewModel.Id);
-                user.Email = changeEmailViewModel.Email;
-                    
-                _context.Users.Update(user);
-                await _context.SaveChangesAsync();
-                return true;
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e);
-                return false;
-            }
-        }
+
 
         #endregion
         

@@ -34,6 +34,11 @@
                                     <span asp-validation-for="Fullname" class="text-danger"></span>
                                 </div>
                                 <div class="form-group">
+                                    <label asp-for="Email"></label>
+                                    <input asp-for="Email" class="form-control" />
+                                    <span asp-validation-for="Email" class="text-danger"></span>
+                                </div>
+                                <div class="form-group">
                                     <label asp-for="StoreId"></label>
                                     <select asp-for="StoreId" class="form-control" asp-items="ViewBag.StoreId"></select>
                                     <span asp-validation-for="StoreId" class="text-danger"></span>
@@ -56,7 +61,7 @@
                                     <span asp-validation-for="Phone" class="text-danger"></span>
                                 </div>
                                 <div class="form-group">
-                                    <a href="javascript:history.go(-1)"><button type="button" class="btn btn-cyan"> @Localizer.GetLocalizedString("btn_Back")</button></a>
+                                    <a class="btn btn-cyan" asp-action="Index">@Localizer.GetLocalizedString("btn_Back")</a>
                                     <button type="submit" class="btn btn-primary">@Localizer.GetLocalizedString("btn_Save")</button>
                                 </div>
                             </div>

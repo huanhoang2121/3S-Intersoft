@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using AutoMapper;
-using LoggingCodefirst.DependencyInjection.Interface;
 using LoggingCodefirst.Models;
 using LoggingCodefirst.Models.Data;
+using LoggingCodefirst.Services.Interface;
 using LoggingCodefirst.ViewModels;
 using Microsoft.EntityFrameworkCore;
 
-namespace LoggingCodefirst.DependencyInjection.Implementation
+namespace LoggingCodefirst.Services.Implementation
 {
     public class StockService : IStockService
     {
@@ -28,14 +28,13 @@ namespace LoggingCodefirst.DependencyInjection.Implementation
         }
         
         #endregion
-        
-        #region Public Properties
-
-        public IEnumerable<Stock> Stocks => _context.Stocks;
-        
-        #endregion
 
         #region Public Methods
+        
+        public IEnumerable<Stock> Stocks()
+        {
+            return _context.Stocks;
+        }
         
         public async Task<List<StockViewModel>> GetListStockAsync()
         {
@@ -76,7 +75,7 @@ namespace LoggingCodefirst.DependencyInjection.Implementation
             }
         }
 
-        public async Task<StockViewModel> GetStockEditAsync(int? productid, int? storeid)
+        public async Task<StockViewModel> GetStockEditAsync(int productid, int storeid)
         {
             var stock = await _context.Stocks.FindAsync(productid, storeid);
             var viewModel = _mapper.Map<StockViewModel>(stock);
@@ -104,7 +103,7 @@ namespace LoggingCodefirst.DependencyInjection.Implementation
             }
         }
 
-        public async Task<bool> DeleteStockAsync(int? productid, int? storeid)
+        public async Task<bool> DeleteStockAsync(int productid, int storeid)
         {
             try
             {

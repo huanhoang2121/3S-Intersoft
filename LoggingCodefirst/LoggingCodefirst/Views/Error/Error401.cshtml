@@ -1,0 +1,12 @@
+﻿@{
+    ViewBag.Title = "401";
+    Layout = "_ErrorLayout";
+}
+
+<div class="error-box">
+    <div class="error-body text-center">
+        <h1 class="error-title text-danger">@ViewBag.Title</h1>
+        <h3 class="text-uppercase">@Localizer.GetLocalizedString("err_401_Title")</h3>
+        <p class="text-muted m-t-30 m-b-30">@Localizer.GetLocalizedString("err_401_Detail")</p>
+        <a asp-controller="Account" asp-action="Login" class="btn btn-danger btn-rounded waves-effect waves-light m-b-40">@Localizer.GetLocalizedString("btn_Login")</a> </div>
+</div>

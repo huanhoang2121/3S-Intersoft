@@ -66,9 +66,6 @@
                                         <a asp-action="Edit" asp-route-id="@item.Id">
                                             <i class="mdi mdi-grease-pencil" style="font-size: 24px; color: black"></i>
                                         </a>
-                                        <a data-toggle="ajax-modal" data-url="@Url.Action("ChangeEmail", new {id = item.Id})">
-                                            <i class="mdi mdi-email" style="font-size: 24px; color: black"></i>
-                                        </a>
                                         <a data-toggle="ajax-modal" data-url="@Url.Action("ChangePassword", new {id = item.Id})">
                                             <i class="mdi mdi-key-variant" style="font-size: 24px; color: black"></i>
                                         </a>

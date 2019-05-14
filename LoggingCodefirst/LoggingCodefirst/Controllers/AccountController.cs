@@ -1,8 +1,8 @@
 ﻿using System.Threading.Tasks;
-using LoggingCodefirst.DependencyInjection.Interface;
+using LoggingCodefirst.Filters;
 using LoggingCodefirst.Resources;
+using LoggingCodefirst.Services.Interface;
 using LoggingCodefirst.ViewModels;
-using LoggingCodefirst.ViewModels.User;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 

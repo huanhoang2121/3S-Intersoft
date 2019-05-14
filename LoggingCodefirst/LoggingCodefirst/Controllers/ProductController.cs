@@ -1,6 +1,6 @@
 using System.Threading.Tasks;
-using LoggingCodefirst.DependencyInjection.Interface;
 using LoggingCodefirst.Resources;
+using LoggingCodefirst.Services.Interface;
 using LoggingCodefirst.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -54,8 +54,8 @@ namespace LoggingCodefirst.Controllers
         [HttpGet]
         public IActionResult Create()
         {
-            ViewData["BrandId"] = new SelectList(_brandService.Brands, "Id", "BrandName");
-            ViewData["CategoryId"] = new SelectList(_categoryService.Categories, "Id", "CategoryName");
+            ViewData["BrandId"] = new SelectList(_brandService.Brands(), "Id", "BrandName");
+            ViewData["CategoryId"] = new SelectList(_categoryService.Categories(), "Id", "CategoryName");
             return View();
         }
 
@@ -75,12 +75,12 @@ namespace LoggingCodefirst.Controllers
                     return RedirectToAction(nameof(Index));
                 }
                 ViewData["ErrorMessage"] = _localizer.GetLocalizedString("err_CreateFail").ToString();
-                ViewData["BrandId"] = new SelectList(_brandService.Brands, "Id", "BrandName", createViewModel.BrandId);
-                ViewData["CategoryId"] = new SelectList(_categoryService.Categories, "Id", "CategoryName", createViewModel.CategoryId);
+                ViewData["BrandId"] = new SelectList(_brandService.Brands(), "Id", "BrandName", createViewModel.BrandId);
+                ViewData["CategoryId"] = new SelectList(_categoryService.Categories(), "Id", "CategoryName", createViewModel.CategoryId);
                 return View(createViewModel);
             }
-            ViewData["BrandId"] = new SelectList(_brandService.Brands, "Id", "BrandName", createViewModel.BrandId);
-            ViewData["CategoryId"] = new SelectList(_categoryService.Categories, "Id", "CategoryName", createViewModel.CategoryId);
+            ViewData["BrandId"] = new SelectList(_brandService.Brands(), "Id", "BrandName", createViewModel.BrandId);
+            ViewData["CategoryId"] = new SelectList(_categoryService.Categories(), "Id", "CategoryName", createViewModel.CategoryId);
             return View(createViewModel);
         }
 
@@ -96,14 +96,14 @@ namespace LoggingCodefirst.Controllers
                 return BadRequest();
             }
 
-            var product = await _productService.GetProductEditAsync(id);
+            var product = await _productService.GetProductEditAsync(id.Value);
             if (product == null)
             {
                 return BadRequest();
             }
 
-            ViewData["BrandId"] = new SelectList(_brandService.Brands, "Id", "BrandName", product.BrandId);
-            ViewData["CategoryId"] = new SelectList(_categoryService.Categories, "Id", "CategoryName", product.CategoryId);
+            ViewData["BrandId"] = new SelectList(_brandService.Brands(), "Id", "BrandName", product.BrandId);
+            ViewData["CategoryId"] = new SelectList(_categoryService.Categories(), "Id", "CategoryName", product.CategoryId);
             return View(product);
         }
 
@@ -123,12 +123,12 @@ namespace LoggingCodefirst.Controllers
                     return RedirectToAction(nameof(Index));
                 }
                 ViewData["ErrorMessage"] = _localizer.GetLocalizedString("err_EditFail").ToString();
-                ViewData["BrandId"] = new SelectList(_brandService.Brands, "Id", "BrandName", editViewModel.BrandId);
-                ViewData["CategoryId"] = new SelectList(_categoryService.Categories, "Id", "CategoryName", editViewModel.CategoryId);
+                ViewData["BrandId"] = new SelectList(_brandService.Brands(), "Id", "BrandName", editViewModel.BrandId);
+                ViewData["CategoryId"] = new SelectList(_categoryService.Categories(), "Id", "CategoryName", editViewModel.CategoryId);
                 return View(editViewModel);
             }
-            ViewData["BrandId"] = new SelectList(_brandService.Brands, "Id", "BrandName", editViewModel.BrandId);
-            ViewData["CategoryId"] = new SelectList(_categoryService.Categories, "Id", "CategoryName", editViewModel.CategoryId);
+            ViewData["BrandId"] = new SelectList(_brandService.Brands(), "Id", "BrandName", editViewModel.BrandId);
+            ViewData["CategoryId"] = new SelectList(_categoryService.Categories(), "Id", "CategoryName", editViewModel.CategoryId);
             return View(editViewModel);
         }
         
@@ -145,7 +145,7 @@ namespace LoggingCodefirst.Controllers
                 return BadRequest();
             }
             
-            if (await _productService.DeleteProductAsync(id))
+            if (await _productService.DeleteProductAsync(id.Value))
             {
                 TempData["SuccessMessage"] = _localizer.GetLocalizedString("msg_DeleteSuccess").ToString();
                 return RedirectToAction(nameof(Index));

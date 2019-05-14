@@ -1,14 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
-using LoggingCodefirst.DependencyInjection.Interface;
 using LoggingCodefirst.Models;
 using LoggingCodefirst.Models.Data;
-using LoggingCodefirst.ViewModels.Store;
+using LoggingCodefirst.Services.Interface;
+using LoggingCodefirst.ViewModels;
 using Microsoft.EntityFrameworkCore;
 
-namespace LoggingCodefirst.DependencyInjection.Implementation
+namespace LoggingCodefirst.Services.Implementation
 {
     public class StoreService : IStoreService
     {
@@ -28,14 +29,13 @@ namespace LoggingCodefirst.DependencyInjection.Implementation
         }
         
         #endregion
-        
-        #region Public Properties
-
-        public IEnumerable<Store> Stores => _context.Stores;
-        
-        #endregion
 
         #region Public Methods
+        
+        public IEnumerable<Store> Stores()
+        {
+            return _context.Stores;
+        }
 
         public async Task<List<StoreViewModel>> GetListStoreAsync()
         {
@@ -72,14 +72,14 @@ namespace LoggingCodefirst.DependencyInjection.Implementation
             }
         }
 
-        public async Task<StoreEditViewModel> GetStoreEditAsync(int? id)
+        public async Task<StoreViewModel> GetStoreEditAsync(int id)
         {
             var store = await _context.Stores.FindAsync(id);
-            var viewModel = _mapper.Map<StoreEditViewModel>(store);
+            var viewModel = _mapper.Map<StoreViewModel>(store);
             return viewModel;
         }
 
-        public async Task<bool> StoreEditAsync(StoreEditViewModel editViewModel)
+        public async Task<bool> StoreEditAsync(StoreViewModel editViewModel)
         {
             try
             {
@@ -103,7 +103,7 @@ namespace LoggingCodefirst.DependencyInjection.Implementation
             }
         }
 
-        public async Task<bool> DeleteStoreAsync(int? id)
+        public async Task<bool> DeleteStoreAsync(int id)
         {
             try
             {
@@ -118,32 +118,12 @@ namespace LoggingCodefirst.DependencyInjection.Implementation
                 return false;
             }
         }
-        
-        public async Task<StoreChangeEmailViewModel> GetChangeEmailAsync(int? id)
+       
+        public bool IsExistedEmail(int id, string name)
         {
-            var store = await _context.Stores.FindAsync(id);
-            var changeEmailViewModel = _mapper.Map<StoreChangeEmailViewModel>(store);
-            return changeEmailViewModel;
+            return _context.Stores.Any(b => b.Email == name && b.Id != id);
         }
-        
-        public async Task<bool> ChangeEmailAsync(StoreChangeEmailViewModel changeEmailViewModel)
-        {
-            try
-            {
-                var store = await _context.Stores.FindAsync(changeEmailViewModel.Id);
-                store.Email = changeEmailViewModel.Email;
-                    
-                _context.Stores.Update(store);
-                await _context.SaveChangesAsync();
-                return true;
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e);
-                return false;
-            }
-        }
-        
+
         #endregion
         
     }//end of class

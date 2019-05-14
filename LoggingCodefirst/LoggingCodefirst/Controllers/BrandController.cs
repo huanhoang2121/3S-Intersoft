@@ -1,6 +1,7 @@
 using System.Threading.Tasks;
-using LoggingCodefirst.DependencyInjection.Interface;
+using LoggingCodefirst.Filters;
 using LoggingCodefirst.Resources;
+using LoggingCodefirst.Services.Interface;
 using LoggingCodefirst.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 
@@ -34,6 +35,7 @@ namespace LoggingCodefirst.Controllers
         /// </summary>
         /// <returns>Brand Index View</returns>
         [HttpGet]
+        [ServiceFilter(typeof(SampleActionFilter))]
         public async Task<IActionResult> Index()
         {
             var brands = await _brandService.GetListBrandAsync();
@@ -82,7 +84,7 @@ namespace LoggingCodefirst.Controllers
                 return BadRequest();
             }
 
-            var brand = await _brandService.GetBrandEditAsync(id);
+            var brand = await _brandService.GetBrandEditAsync(id.Value);
             if (brand == null)
             {
                 return BadRequest();
@@ -122,7 +124,7 @@ namespace LoggingCodefirst.Controllers
                 return BadRequest();
             }
 
-            if (await _brandService.DeleteBrandAsync(id))
+            if (await _brandService.DeleteBrandAsync(id.Value))
             {
                 TempData["SuccessMessage"] = _localizer.GetLocalizedString("msg_DeleteSuccess").ToString();
                 return RedirectToAction(nameof(Index));

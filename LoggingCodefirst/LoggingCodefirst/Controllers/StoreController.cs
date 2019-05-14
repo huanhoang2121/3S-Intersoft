@@ -1,8 +1,7 @@
 ﻿using System.Threading.Tasks;
-using LoggingCodefirst.DependencyInjection.Interface;
 using LoggingCodefirst.Resources;
+using LoggingCodefirst.Services.Interface;
 using LoggingCodefirst.ViewModels;
-using LoggingCodefirst.ViewModels.Store;
 using Microsoft.AspNetCore.Mvc;
 
 namespace LoggingCodefirst.Controllers
@@ -85,7 +84,7 @@ namespace LoggingCodefirst.Controllers
                 return BadRequest();
             }
 
-            var store = await _storeService.GetStoreEditAsync(id);
+            var store = await _storeService.GetStoreEditAsync(id.Value);
             if (store == null)
             {
                 return BadRequest();
@@ -99,7 +98,7 @@ namespace LoggingCodefirst.Controllers
         /// <param name="editViewModel"></param>
         /// <returns>Index Store</returns>
         [HttpPost]
-        public async Task<IActionResult> Edit(StoreEditViewModel editViewModel)
+        public async Task<IActionResult> Edit(StoreViewModel editViewModel)
         {
             if (ModelState.IsValid)
             {
@@ -115,48 +114,6 @@ namespace LoggingCodefirst.Controllers
         }
         
         /// <summary>
-        /// ChangeEmail Store Get Function
-        /// </summary>
-        /// <param name="id"></param>
-        /// <returns>Change Email Store</returns>
-        [HttpGet]
-        public async Task<IActionResult> ChangeEmail(int? id)
-        {
-            if (id == null)
-            {
-                return BadRequest();
-            }
-            var store = await _storeService.GetChangeEmailAsync(id);
-            if (store == null)
-            {
-                return BadRequest();
-            }
-            return PartialView("_ChangeEmailPartial",store);  
-        }
-        
-        /// <summary>
-        /// ChangeEmail Store Post Function
-        /// </summary>
-        /// <param name="changeEmailViewModel"></param>
-        /// <returns>Index Store</returns>
-        [HttpPost]
-        public async Task<IActionResult> ChangeEmail(StoreChangeEmailViewModel changeEmailViewModel)
-        {
-            if (ModelState.IsValid)
-            {
-                var store = await _storeService.ChangeEmailAsync(changeEmailViewModel);
-                if (store)
-                {
-                    TempData["SuccessMessage"] = _localizer.GetLocalizedString("msg_ChangeEmailSuccess").ToString();
-                    return PartialView("_ChangeEmailPartial",changeEmailViewModel); 
-                }
-                TempData["ErrorMessage"] = _localizer.GetLocalizedString("err_ChangeEmailFail").ToString();
-                return PartialView("_ChangeEmailPartial",changeEmailViewModel); 
-            }
-            return PartialView("_ChangeEmailPartial",changeEmailViewModel);  
-        }
-        
-        /// <summary>
         /// Delete Store Get Function
         /// </summary>
         /// <param name="id"></param>
@@ -169,7 +126,7 @@ namespace LoggingCodefirst.Controllers
                 return BadRequest();
             }
             
-            if (await _storeService.DeleteStoreAsync(id))
+            if (await _storeService.DeleteStoreAsync(id.Value))
             {
                 TempData["SuccessMessage"] = _localizer.GetLocalizedString("msg_DeleteSuccess").ToString();
                 return RedirectToAction(nameof(Index));

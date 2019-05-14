@@ -59,7 +59,7 @@
                                     <span asp-validation-for="ImageFile" class="text-danger"></span>
                                 </div>
                                 <div class="form-group">
-                                    <a href="javascript:history.go(-1)"><button type="button" class="btn btn-cyan"> @Localizer.GetLocalizedString("btn_Back")</button></a>
+                                    <a class="btn btn-cyan" asp-action="Index">@Localizer.GetLocalizedString("btn_Back")</a>
                                     <button type="submit" class="btn btn-primary">@Localizer.GetLocalizedString("btn_Save")</button>
                                 </div>
                             </div>

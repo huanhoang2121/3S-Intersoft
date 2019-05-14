@@ -241,7 +241,7 @@
     <value>Xác nhận mật khẩu không chính xác!</value>
   </data>
   <data name="msg_vld_Exists" xml:space="preserve">
-    <value> đã tồn tại!</value>
+    <value>{0} đã tồn tại!</value>
   </data>
   <data name="msg_vld_ValidEmail" xml:space="preserve">
     <value>Nhập địa chỉ email hợp lệ!</value>
@@ -251,6 +251,9 @@
   </data>
   <data name="msg_vld_Password" xml:space="preserve">
     <value>{PropertyName} phải chứa cả chữ, số và không có kí tự đặc biệt!</value>
+  </data>
+  <data name="msg_vld_GreaterThanOrEqualTo1" xml:space="preserve">
+    <value>{PropertyName} phải lớn hơn hoặc bằng 1!</value>
   </data>
   <data name="ctr_Brand" xml:space="preserve">
     <value>Thương hiệu</value>

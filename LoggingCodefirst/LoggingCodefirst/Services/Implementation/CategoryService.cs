@@ -1,14 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
-using LoggingCodefirst.DependencyInjection.Interface;
 using LoggingCodefirst.Models;
 using LoggingCodefirst.Models.Data;
+using LoggingCodefirst.Services.Interface;
 using LoggingCodefirst.ViewModels;
 using Microsoft.EntityFrameworkCore;
 
-namespace LoggingCodefirst.DependencyInjection.Implementation
+namespace LoggingCodefirst.Services.Implementation
 {
     public class CategoryService : ICategoryService
     {
@@ -29,13 +30,12 @@ namespace LoggingCodefirst.DependencyInjection.Implementation
         
         #endregion
         
-        #region Public Properties
-
-        public IEnumerable<Category> Categories => _context.Categories;
-        
-        #endregion
-
         #region Public Methods
+        
+        public IEnumerable<Category> Categories()
+        {
+            return _context.Categories;
+        }
         
         public async Task<List<CategoryViewModel>> GetListCategoryAsync()
         {
@@ -63,7 +63,7 @@ namespace LoggingCodefirst.DependencyInjection.Implementation
             }
         }
 
-        public async Task<CategoryViewModel> GetCategoryEditAsync(int? id)
+        public async Task<CategoryViewModel> GetCategoryEditAsync(int id)
         {
             var store = await _context.Categories.FindAsync(id);
             var viewModel = _mapper.Map<CategoryViewModel>(store);
@@ -88,7 +88,7 @@ namespace LoggingCodefirst.DependencyInjection.Implementation
             }
         }
 
-        public async Task<bool> DeleteCategoryAsync(int? id)
+        public async Task<bool> DeleteCategoryAsync(int id)
         {
             try
             {
@@ -102,6 +102,11 @@ namespace LoggingCodefirst.DependencyInjection.Implementation
                 Console.WriteLine(e);
                 return false;
             }
+        }
+
+        public bool IsExistedName(int id, string name)
+        {
+            return _context.Categories.Any(b => b.CategoryName == name && b.Id != id);
         }
         
         #endregion

@@ -1,21 +1,19 @@
-﻿using FluentValidation;
-using LoggingCodefirst.DependencyInjection.Interface;
+﻿using System;
+using FluentValidation;
 using LoggingCodefirst.Resources;
-using LoggingCodefirst.ViewModels.Store;
+using LoggingCodefirst.Services.Interface;
+using LoggingCodefirst.ViewModels;
 
-namespace LoggingCodefirst.Validators.Store
+namespace LoggingCodefirst.Validators
 {
     public class StoreValidator: AbstractValidator<StoreViewModel>
     {
         public StoreValidator(LocalizationService localizer, IStoreService storeService)
         {
-            var stores = storeService.Stores;
-            foreach (var store in stores)
-            {
-                RuleFor(x => x.Email).NotEqual(store.Email).WithMessage(store.StoreName + localizer.GetLocalizedString("msg_vld_Exists"));
-            }
-            
-            RuleFor(x => x.Email).NotNull().WithMessage(localizer.GetLocalizedString("msg_vld_NotEmpty"))
+            RuleFor(x => x.Email)
+                .Must((reg, x) => !storeService.IsExistedEmail(reg.Id,reg.Email))
+                .WithMessage((reg, x) => String.Format(localizer.GetLocalizedString("msg_vld_Exists"), x))
+                .NotNull().WithMessage(localizer.GetLocalizedString("msg_vld_NotEmpty"))
                 .EmailAddress().WithMessage(localizer.GetLocalizedString("msg_vld_ValidEmail"));
             
             RuleFor(x => x.StoreName).NotNull().WithMessage(localizer.GetLocalizedString("msg_vld_NotEmpty"));

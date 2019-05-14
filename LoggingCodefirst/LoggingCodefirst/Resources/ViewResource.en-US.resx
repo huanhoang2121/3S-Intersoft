@@ -295,21 +295,24 @@
     <value>Use this page to detail your site's privacy policy.</value>
   </data>
   <data name="msg_vld_8Characters" xml:space="preserve">
-    <value>{PropertyName} cannot be less than 8 characters.</value>
+    <value>{PropertyName} cannot be less than 8 characters!</value>
   </data>
   <data name="msg_vld_ConfirmPassword" xml:space="preserve">
     <value>Incorrect confirm password!</value>
   </data>
   <data name="msg_vld_Exists" xml:space="preserve">
-    <value> already exists.</value>
+    <value>{0} already exists!</value>
   </data>
   <data name="msg_vld_ValidEmail" xml:space="preserve">
-    <value>Enter a valid email address.</value>
+    <value>Enter a valid email address!</value>
   </data>
   <data name="msg_vld_NotEmpty" xml:space="preserve">
-    <value>{PropertyName} must not be empty.</value>
+    <value>{PropertyName} must not be empty!</value>
   </data>
   <data name="msg_vld_Password" xml:space="preserve">
-    <value>{PropertyName} must contain both letters and numbers.</value>
+    <value>{PropertyName} must contain both letters and numbers!</value>
+  </data>
+  <data name="msg_vld_GreaterThanOrEqualTo1" xml:space="preserve">
+    <value>{PropertyName} must Greater Than Or Equal To 1!</value>
   </data>
 </root>

@@ -8,6 +8,10 @@ namespace LoggingCodefirst.Controllers
         public IActionResult Error400()
         {
             return View();
+        }[Route("Error/401")]
+        public IActionResult Error401()
+        {
+            return View();
         }
         [Route("Error/403")]
         public IActionResult Error403()

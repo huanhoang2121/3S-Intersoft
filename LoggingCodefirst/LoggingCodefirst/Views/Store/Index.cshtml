@@ -73,9 +73,6 @@
                                         <a asp-action="Edit" asp-route-id="@item.Id">
                                             <i class="mdi mdi-grease-pencil" style="font-size: 24px; color: black"></i>
                                         </a>
-                                        <a data-toggle="ajax-modal" data-url="@Url.Action("ChangeEmail", new {id = item.Id})">
-                                            <i class="mdi mdi-email" style="font-size: 24px; color: black"></i>
-                                        </a>
                                         <a asp-action="Delete" asp-route-id="@item.Id" 
                                            onclick="return confirm('@Localizer.GetLocalizedString("msg_del_Store")');">
                                             <i class="fa fa-trash" style="font-size: 24px; color: red; padding-left: 5px;"></i>

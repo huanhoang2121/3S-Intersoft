@@ -9,7 +9,7 @@ namespace LoggingCodefirst.Validators
         public StockValidator(LocalizationService localizer)
         {
             RuleFor(x => x.Quantity)
-                .NotNull().WithMessage(localizer.GetLocalizedString("msg_vld_NotEmpty"));
+                .GreaterThanOrEqualTo(1).WithMessage(localizer.GetLocalizedString("msg_vld_GreaterThanOrEqualTo1"));
         }
         
     }

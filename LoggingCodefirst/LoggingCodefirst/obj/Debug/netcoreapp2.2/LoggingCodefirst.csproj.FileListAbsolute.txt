@@ -231,11 +231,9 @@ G:/3S-Intersoft/LoggingCodefirst/LoggingCodefirst/obj/Debug/netcoreapp2.2/Loggin
 /home/local/3SI/huan.hv/3S-Intersoft/LoggingCodefirst/LoggingCodefirst/obj/Debug/netcoreapp2.2/Razor/Views/Store/Create.g.cshtml.cs
 /home/local/3SI/huan.hv/3S-Intersoft/LoggingCodefirst/LoggingCodefirst/obj/Debug/netcoreapp2.2/Razor/Views/Store/Edit.g.cshtml.cs
 /home/local/3SI/huan.hv/3S-Intersoft/LoggingCodefirst/LoggingCodefirst/obj/Debug/netcoreapp2.2/Razor/Views/Store/Index.g.cshtml.cs
-/home/local/3SI/huan.hv/3S-Intersoft/LoggingCodefirst/LoggingCodefirst/obj/Debug/netcoreapp2.2/Razor/Views/Store/_ChangeEmailPartial.g.cshtml.cs
 /home/local/3SI/huan.hv/3S-Intersoft/LoggingCodefirst/LoggingCodefirst/obj/Debug/netcoreapp2.2/Razor/Views/User/Create.g.cshtml.cs
 /home/local/3SI/huan.hv/3S-Intersoft/LoggingCodefirst/LoggingCodefirst/obj/Debug/netcoreapp2.2/Razor/Views/User/Edit.g.cshtml.cs
 /home/local/3SI/huan.hv/3S-Intersoft/LoggingCodefirst/LoggingCodefirst/obj/Debug/netcoreapp2.2/Razor/Views/User/Index.g.cshtml.cs
-/home/local/3SI/huan.hv/3S-Intersoft/LoggingCodefirst/LoggingCodefirst/obj/Debug/netcoreapp2.2/Razor/Views/User/_ChangeEmailPartial.g.cshtml.cs
 /home/local/3SI/huan.hv/3S-Intersoft/LoggingCodefirst/LoggingCodefirst/obj/Debug/netcoreapp2.2/Razor/Views/User/_ChangePasswordPartial.g.cshtml.cs
 /home/local/3SI/huan.hv/3S-Intersoft/LoggingCodefirst/LoggingCodefirst/obj/Debug/netcoreapp2.2/Razor/Views/_ViewImports.g.cshtml.cs
 /home/local/3SI/huan.hv/3S-Intersoft/LoggingCodefirst/LoggingCodefirst/obj/Debug/netcoreapp2.2/Razor/Views/_ViewStart.g.cshtml.cs
@@ -245,3 +243,4 @@ G:/3S-Intersoft/LoggingCodefirst/LoggingCodefirst/obj/Debug/netcoreapp2.2/Loggin
 /home/local/3SI/huan.hv/3S-Intersoft/LoggingCodefirst/LoggingCodefirst/obj/Debug/netcoreapp2.2/LoggingCodefirst.dll
 /home/local/3SI/huan.hv/3S-Intersoft/LoggingCodefirst/LoggingCodefirst/obj/Debug/netcoreapp2.2/LoggingCodefirst.pdb
 /home/local/3SI/huan.hv/3S-Intersoft/LoggingCodefirst/LoggingCodefirst/obj/Debug/netcoreapp2.2/LoggingCodefirst.csproj.CopyComplete
+/home/local/3SI/huan.hv/3S-Intersoft/LoggingCodefirst/LoggingCodefirst/obj/Debug/netcoreapp2.2/Razor/Views/Error/Error401.g.cshtml.cs

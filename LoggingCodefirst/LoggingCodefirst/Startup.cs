@@ -3,11 +3,11 @@ using System.Globalization;
 using System.Reflection;
 using AutoMapper;
 using FluentValidation.AspNetCore;
-using LoggingCodefirst.DependencyInjection.Implementation;
-using LoggingCodefirst.DependencyInjection.Interface;
+using LoggingCodefirst.Filters;
 using LoggingCodefirst.Models.Data;
 using LoggingCodefirst.Resources;
-using LoggingCodefirst.Validators;
+using LoggingCodefirst.Services.Implementation;
+using LoggingCodefirst.Services.Interface;
 using LoggingCodefirst.Validators.User;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -49,11 +49,15 @@ namespace LoggingCodefirst
             services.AddScoped<IStockService, StockService>();
             
             services.AddSession();
+            services.AddHttpContextAccessor();
+
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 //            validate
             services.AddMvc().AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<LoginValidator>());
             
             services.AddDbContext<DataContext>(item => item.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+            
+            services.AddScoped<SampleActionFilter>();
             
             #region Resources
             
@@ -104,31 +108,30 @@ namespace LoggingCodefirst
             app.Use(async (context, next) =>
             {
                 await next();
-                if (!context.Response.HasStarted)
+                if (!context.Response.HasStarted && context.Response.StatusCode != StatusCodes.Status200OK)
                 {
                     switch (context.Response.StatusCode)
                     {
                         case StatusCodes.Status400BadRequest :
                             context.Request.Path ="/Error/400";
-                            await next();
+                            break;
+                        case StatusCodes.Status401Unauthorized:
+                            context.Request.Path ="/Error/401";
                             break;
                         case StatusCodes.Status403Forbidden :
                             context.Request.Path ="/Error/403";
-                            await next();
                             break;
                         case StatusCodes.Status404NotFound :
                             context.Request.Path ="/Error/404";
-                            await next();
                             break;
                         case StatusCodes.Status405MethodNotAllowed :
                             context.Request.Path ="/Error/405";
-                            await next();
                             break;
                         case StatusCodes.Status500InternalServerError:
                             context.Request.Path ="/Error/500";
-                            await next();
                             break;
                     }
+                    await next();
                 }
             });
             

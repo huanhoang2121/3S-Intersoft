@@ -1,6 +1,6 @@
 using System.Threading.Tasks;
-using LoggingCodefirst.DependencyInjection.Interface;
 using LoggingCodefirst.Resources;
+using LoggingCodefirst.Services.Interface;
 using LoggingCodefirst.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 
@@ -82,7 +82,7 @@ namespace LoggingCodefirst.Controllers
                 return BadRequest();
             }
 
-            var category = await _categoryService.GetCategoryEditAsync(id);
+            var category = await _categoryService.GetCategoryEditAsync(id.Value);
             if (category == null)
             {
                 return BadRequest();
@@ -120,7 +120,7 @@ namespace LoggingCodefirst.Controllers
             {
                 return BadRequest();
             }
-            if (await _categoryService.DeleteCategoryAsync(id))
+            if (await _categoryService.DeleteCategoryAsync(id.Value))
             {
                 TempData["SuccessMessage"] = _localizer.GetLocalizedString("msg_DeleteSuccess").ToString();
                 return RedirectToAction(nameof(Index));

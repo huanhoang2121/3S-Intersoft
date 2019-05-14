@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
 using AutoMapper;
-using LoggingCodefirst.DependencyInjection.Interface;
 using LoggingCodefirst.Models;
 using LoggingCodefirst.Models.Data;
+using LoggingCodefirst.Services.Interface;
 using LoggingCodefirst.ViewModels;
 using Microsoft.EntityFrameworkCore;
 
-namespace LoggingCodefirst.DependencyInjection.Implementation
+namespace LoggingCodefirst.Services.Implementation
 {
     public class ProductService : IProductService
     {
@@ -29,14 +29,13 @@ namespace LoggingCodefirst.DependencyInjection.Implementation
         }
         
         #endregion
-        
-        #region Public Properties
-        
-        public IEnumerable<Product> Products => _context.Products;
-        
-        #endregion
 
         #region Public Methods
+        
+        public IEnumerable<Product> Products()
+        {
+            return _context.Products;
+        }
 
         public async Task<List<ProductViewModel>> GetListProductAsync()
         {
@@ -86,7 +85,7 @@ namespace LoggingCodefirst.DependencyInjection.Implementation
             }
         }
 
-        public async Task<ProductViewModel> GetProductEditAsync(int? id)
+        public async Task<ProductViewModel> GetProductEditAsync(int id)
         {
             var product = await _context.Products.FindAsync(id);
             var viewModel = _mapper.Map<ProductViewModel>(product);
@@ -127,7 +126,7 @@ namespace LoggingCodefirst.DependencyInjection.Implementation
             }
         }
 
-        public async Task<bool> DeleteProductAsync(int? id)
+        public async Task<bool> DeleteProductAsync(int id)
         {
             try
             {

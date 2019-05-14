@@ -1,6 +1,7 @@
-﻿using FluentValidation;
-using LoggingCodefirst.DependencyInjection.Interface;
+﻿using System;
+using FluentValidation;
 using LoggingCodefirst.Resources;
+using LoggingCodefirst.Services.Interface;
 using LoggingCodefirst.ViewModels;
 
 namespace LoggingCodefirst.Validators
@@ -9,12 +10,9 @@ namespace LoggingCodefirst.Validators
     {
         public BrandValidator(LocalizationService localizer, IBrandService brandService)
         {
-            var brands = brandService.Brands;
-            foreach (var brand in brands)
-            {
-                RuleFor(x => x.BrandName)
-                    .NotEqual(brand.BrandName).WithMessage(brand.BrandName + localizer.GetLocalizedString("msg_vld_Exists"));
-            }
+            RuleFor(x => x.BrandName)
+                .Must((reg, x) => !brandService.IsExistedName(reg.Id,reg.BrandName))
+                .WithMessage((reg, x) => String.Format(localizer.GetLocalizedString("msg_vld_Exists"), x));
             RuleFor(x => x.BrandName)
                 .NotNull().WithMessage(localizer.GetLocalizedString("msg_vld_NotEmpty"));
         }

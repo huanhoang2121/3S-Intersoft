@@ -23,28 +23,18 @@ using LoggingCodefirst.ViewModels;
 
 #line default
 #line hidden
-#line 3 "/home/local/3SI/huan.hv/3S-Intersoft/LoggingCodefirst/LoggingCodefirst/Views/_ViewImports.cshtml"
-using LoggingCodefirst.ViewModels.User;
-
-#line default
-#line hidden
-#line 4 "/home/local/3SI/huan.hv/3S-Intersoft/LoggingCodefirst/LoggingCodefirst/Views/_ViewImports.cshtml"
-using LoggingCodefirst.ViewModels.Store;
-
-#line default
-#line hidden
-#line 7 "/home/local/3SI/huan.hv/3S-Intersoft/LoggingCodefirst/LoggingCodefirst/Views/_ViewImports.cshtml"
+#line 5 "/home/local/3SI/huan.hv/3S-Intersoft/LoggingCodefirst/LoggingCodefirst/Views/_ViewImports.cshtml"
 using Microsoft.AspNetCore.Http;
 
 #line default
 #line hidden
-#line 9 "/home/local/3SI/huan.hv/3S-Intersoft/LoggingCodefirst/LoggingCodefirst/Views/_ViewImports.cshtml"
+#line 7 "/home/local/3SI/huan.hv/3S-Intersoft/LoggingCodefirst/LoggingCodefirst/Views/_ViewImports.cshtml"
 using LoggingCodefirst.Resources;
 
 #line default
 #line hidden
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"f3f05d54d9fd3b097631b3fd401ec9f65d0c2ba5", @"/Views/Shared/_NavigationPartial.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"081014135f66f168ee55558f505550d71e6a11bb", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"72dfe52bb0fb0b3dd49171557972a40c8c37085d", @"/Views/_ViewImports.cshtml")]
     public class Views_Shared__NavigationPartial : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("class", new global::Microsoft.AspNetCore.Html.HtmlString("sidebar-link waves-effect sidebar-link"), global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -85,7 +75,7 @@ using LoggingCodefirst.Resources;
             WriteLiteral("<div class=\"scroll-sidebar\">\r\n    <!-- Sidebar navigation-->\r\n    <nav class=\"sidebar-nav\">\r\n        <ul id=\"sidebarnav\" class=\"p-t-30\">\r\n            <li class=\"sidebar-item\"> \r\n                ");
             EndContext();
             BeginContext(194, 267, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f3f05d54d9fd3b097631b3fd401ec9f65d0c2ba58017", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f3f05d54d9fd3b097631b3fd401ec9f65d0c2ba57666", async() => {
                 BeginContext(307, 84, true);
                 WriteLiteral("\r\n                    <i class=\"mdi mdi-view-dashboard\"></i><span class=\"hide-menu\">");
                 EndContext();
@@ -121,7 +111,7 @@ using LoggingCodefirst.Resources;
             WriteLiteral("\r\n            </li>\r\n            <li class=\"sidebar-item\"> \r\n                ");
             EndContext();
             BeginContext(538, 263, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f3f05d54d9fd3b097631b3fd401ec9f65d0c2ba510386", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f3f05d54d9fd3b097631b3fd401ec9f65d0c2ba510035", async() => {
                 BeginContext(654, 74, true);
                 WriteLiteral("\r\n                    <i class=\"mdi mdi-lock\"></i><span class=\"hide-menu\">");
                 EndContext();
@@ -157,7 +147,7 @@ using LoggingCodefirst.Resources;
             WriteLiteral("\r\n            </li>\r\n            <li class=\"sidebar-item\"> \r\n                ");
             EndContext();
             BeginContext(878, 261, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f3f05d54d9fd3b097631b3fd401ec9f65d0c2ba512740", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f3f05d54d9fd3b097631b3fd401ec9f65d0c2ba512389", async() => {
                 BeginContext(992, 77, true);
                 WriteLiteral("\r\n                    <i class=\"mdi mdi-account\"></i><span class=\"hide-menu\">");
                 EndContext();
@@ -193,7 +183,7 @@ using LoggingCodefirst.Resources;
             WriteLiteral("\r\n            </li>\r\n            <li class=\"sidebar-item\"> \r\n                ");
             EndContext();
             BeginContext(1216, 261, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f3f05d54d9fd3b097631b3fd401ec9f65d0c2ba515101", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f3f05d54d9fd3b097631b3fd401ec9f65d0c2ba514750", async() => {
                 BeginContext(1331, 75, true);
                 WriteLiteral("\r\n                    <i class=\"mdi mdi-store\"></i><span class=\"hide-menu\">");
                 EndContext();
@@ -229,7 +219,7 @@ using LoggingCodefirst.Resources;
             WriteLiteral("\r\n            </li>\r\n            <li class=\"sidebar-item\"> \r\n                ");
             EndContext();
             BeginContext(1554, 269, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f3f05d54d9fd3b097631b3fd401ec9f65d0c2ba517460", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f3f05d54d9fd3b097631b3fd401ec9f65d0c2ba517109", async() => {
                 BeginContext(1669, 83, true);
                 WriteLiteral("\r\n                    <i class=\"mdi mdi-source-branch\"></i><span class=\"hide-menu\">");
                 EndContext();
@@ -265,7 +255,7 @@ using LoggingCodefirst.Resources;
             WriteLiteral("\r\n            </li>\r\n            <li class=\"sidebar-item\"> \r\n                ");
             EndContext();
             BeginContext(1900, 287, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f3f05d54d9fd3b097631b3fd401ec9f65d0c2ba519835", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f3f05d54d9fd3b097631b3fd401ec9f65d0c2ba519484", async() => {
                 BeginContext(2018, 95, true);
                 WriteLiteral("\r\n                    <i class=\"mdi mdi-format-list-bulleted-type\"></i><span class=\"hide-menu\">");
                 EndContext();
@@ -301,7 +291,7 @@ using LoggingCodefirst.Resources;
             WriteLiteral("\r\n            </li>\r\n            <li class=\"sidebar-item\"> \r\n                ");
             EndContext();
             BeginContext(2264, 271, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f3f05d54d9fd3b097631b3fd401ec9f65d0c2ba522237", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f3f05d54d9fd3b097631b3fd401ec9f65d0c2ba521886", async() => {
                 BeginContext(2381, 81, true);
                 WriteLiteral("\r\n                    <i class=\"mdi mdi-tshirt-crew\"></i><span class=\"hide-menu\">");
                 EndContext();
@@ -337,7 +327,7 @@ using LoggingCodefirst.Resources;
             WriteLiteral("\r\n            </li>\r\n            <li class=\"sidebar-item\"> \r\n                ");
             EndContext();
             BeginContext(2612, 269, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f3f05d54d9fd3b097631b3fd401ec9f65d0c2ba524612", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f3f05d54d9fd3b097631b3fd401ec9f65d0c2ba524261", async() => {
                 BeginContext(2727, 83, true);
                 WriteLiteral("\r\n                    <i class=\"mdi mdi-store-24-hour\"></i><span class=\"hide-menu\">");
                 EndContext();
