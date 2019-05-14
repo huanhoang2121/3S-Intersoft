@@ -8,6 +8,7 @@ using LoggingCodefirst.DependencyInjection.Interface;
 using LoggingCodefirst.Models.Data;
 using LoggingCodefirst.Resources;
 using LoggingCodefirst.Validators;
+using LoggingCodefirst.Validators.User;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;

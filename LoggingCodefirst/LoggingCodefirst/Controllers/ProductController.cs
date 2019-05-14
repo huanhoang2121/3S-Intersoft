@@ -36,6 +36,10 @@ namespace LoggingCodefirst.Controllers
 
         #region Public Methods
 
+        /// <summary>
+        /// Index Product Get Function
+        /// </summary>
+        /// <returns>Index Product</returns>
         [HttpGet]
         public async Task<IActionResult> Index()
         {
@@ -43,6 +47,10 @@ namespace LoggingCodefirst.Controllers
             return View(products);
         }
 
+        /// <summary>
+        /// Create Product Get Function
+        /// </summary>
+        /// <returns>Create Product</returns>
         [HttpGet]
         public IActionResult Create()
         {
@@ -51,6 +59,11 @@ namespace LoggingCodefirst.Controllers
             return View();
         }
 
+        /// <summary>
+        /// Create Product Post Function
+        /// </summary>
+        /// <param name="createViewModel"></param>
+        /// <returns>Index Product</returns>
         [HttpPost]
         public async Task<IActionResult> Create(ProductViewModel createViewModel)
         {
@@ -71,6 +84,10 @@ namespace LoggingCodefirst.Controllers
             return View(createViewModel);
         }
 
+        /// <summary>
+        /// Edit Product Get Function
+        /// </summary>
+        /// <returns>Edit Product</returns>
         [HttpGet]
         public async Task<IActionResult> Edit(int? id)
         {
@@ -90,6 +107,11 @@ namespace LoggingCodefirst.Controllers
             return View(product);
         }
 
+        /// <summary>
+        /// Edit Product Post Function
+        /// </summary>
+        /// <param name="editViewModel"></param>
+        /// <returns>Index Product</returns>
         [HttpPost]
         public async Task<IActionResult> Edit(ProductViewModel editViewModel)
         {
@@ -110,6 +132,11 @@ namespace LoggingCodefirst.Controllers
             return View(editViewModel);
         }
         
+        /// <summary>
+        /// Delete Product Post Function
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns>Index Product</returns>
         [HttpGet]
         public async Task<IActionResult> Delete(int? id)
         {

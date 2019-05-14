@@ -25,6 +25,12 @@ namespace LoggingCodefirst.Controllers
             return View(new ErrorViewModel {RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier});
         }
 
+        /// <summary>
+        /// Set Culture Function
+        /// </summary>
+        /// <param name="culture"></param>
+        /// <param name="returnUrl"></param>
+        /// <returns></returns>
         public IActionResult SetCulture(string culture, string returnUrl)
         {
             Response.Cookies.Append(

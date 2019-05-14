@@ -1,14 +1,13 @@
 ﻿using FluentValidation;
 using LoggingCodefirst.DependencyInjection.Interface;
 using LoggingCodefirst.Resources;
-using LoggingCodefirst.ViewModels;
 using LoggingCodefirst.ViewModels.User;
 
-namespace LoggingCodefirst.Validators
+namespace LoggingCodefirst.Validators.User
 {
-    public class UserChangeEmailValidator: AbstractValidator<UserChangeEmailViewModel>
+    public class ChangeEmailValidator: AbstractValidator<UserChangeEmailViewModel>
     {
-        public UserChangeEmailValidator(LocalizationService localizer, IUserService userService)
+        public ChangeEmailValidator(LocalizationService localizer, IUserService userService)
         {
             var users = userService.Users;
             RuleFor(x => x.Email)

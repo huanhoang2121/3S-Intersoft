@@ -29,6 +29,10 @@ namespace LoggingCodefirst.Controllers
 
         #region Public Methods
 
+        /// <summary>
+        /// Index Brand function
+        /// </summary>
+        /// <returns>Brand Index View</returns>
         [HttpGet]
         public async Task<IActionResult> Index()
         {
@@ -36,12 +40,20 @@ namespace LoggingCodefirst.Controllers
             return View(brands);
         }
 
+        /// <summary>
+        /// Create Brand Get Function
+        /// </summary>
+        /// <returns>Brand Create View</returns>
         [HttpGet]
         public IActionResult Create()
         {
             return View();
         }
 
+        /// <summary>
+        /// Create Brand Post Function
+        /// </summary>
+        /// <returns>Brand Index View</returns>
         [HttpPost]
         public async Task<IActionResult> Create(BrandViewModel brandViewModel)
         {
@@ -58,6 +70,10 @@ namespace LoggingCodefirst.Controllers
             return View(brandViewModel);
         }
 
+        /// <summary>
+        /// Edit Brand Get Function
+        /// </summary>
+        /// <returns>Brand Edit View</returns>
         [HttpGet]        
         public async Task<IActionResult> Edit(int? id)
         {
@@ -74,6 +90,10 @@ namespace LoggingCodefirst.Controllers
             return View(brand);
         }
 
+        /// <summary>
+        /// Edit Brand Post Function
+        /// </summary>
+        /// <returns>Brand Index View</returns>
         [HttpPost]
         public async Task<IActionResult> Edit(BrandViewModel brandViewModel)
         {
@@ -90,6 +110,10 @@ namespace LoggingCodefirst.Controllers
             return View(brandViewModel);
         }
 
+        /// <summary>
+        /// Delete Brand Get Function
+        /// </summary>
+        /// <returns>Brand Index View</returns>
         [HttpGet]  
         public async Task<IActionResult> Delete(int? id)
         {

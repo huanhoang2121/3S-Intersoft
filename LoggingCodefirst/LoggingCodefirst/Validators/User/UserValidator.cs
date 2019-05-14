@@ -1,10 +1,9 @@
 ﻿using FluentValidation;
 using LoggingCodefirst.DependencyInjection.Interface;
 using LoggingCodefirst.Resources;
-using LoggingCodefirst.ViewModels;
 using LoggingCodefirst.ViewModels.User;
 
-namespace LoggingCodefirst.Validators
+namespace LoggingCodefirst.Validators.User
 {
     public class UserValidator : AbstractValidator<UserViewModel>
     {

@@ -2,7 +2,7 @@
 using LoggingCodefirst.Resources;
 using LoggingCodefirst.ViewModels;
 
-namespace LoggingCodefirst.Validators
+namespace LoggingCodefirst.Validators.User
 {
     public class LoginValidator : AbstractValidator<LoginViewModel>
     { 

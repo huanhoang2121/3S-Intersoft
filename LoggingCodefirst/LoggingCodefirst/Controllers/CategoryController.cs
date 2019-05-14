@@ -29,7 +29,10 @@ namespace LoggingCodefirst.Controllers
 
         #region Public Methods
 
-
+        /// <summary>
+        /// Index Category Get Function
+        /// </summary>
+        /// <returns>Category Index View</returns>
         [HttpGet]
         public async Task<IActionResult> Index()
         {
@@ -37,12 +40,20 @@ namespace LoggingCodefirst.Controllers
             return View(categories);
         }
 
+        /// <summary>
+        /// Create Category Get Function
+        /// </summary>
+        /// <returns>Category Create View</returns>
         [HttpGet]
         public IActionResult Create()
         {
             return View();
         }
 
+        /// <summary>
+        /// Create Category Post Function
+        /// </summary>
+        /// <returns>Category Index View</returns>
         [HttpPost]
         public async Task<IActionResult> Create(CategoryViewModel categoryViewModel)
         {
@@ -59,6 +70,10 @@ namespace LoggingCodefirst.Controllers
             return View(categoryViewModel);
         }
 
+        /// <summary>
+        /// Edit Category Get Function
+        /// </summary>
+        /// <returns>Category Edit View</returns>
         [HttpGet]        
         public async Task<IActionResult> Edit(int? id)
         {
@@ -75,6 +90,10 @@ namespace LoggingCodefirst.Controllers
             return View(category);
         }
 
+        /// <summary>
+        /// Edit Category Post Function
+        /// </summary>
+        /// <returns>Category Index View</returns>
         [HttpPost]
         public async Task<IActionResult> Edit(CategoryViewModel categoryViewModel)
         {
@@ -91,7 +110,10 @@ namespace LoggingCodefirst.Controllers
             return View(categoryViewModel);
         }
 
-        
+        /// <summary>
+        /// Delete Category Get Function
+        /// </summary>
+        /// <returns>Category Index View</returns>
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)

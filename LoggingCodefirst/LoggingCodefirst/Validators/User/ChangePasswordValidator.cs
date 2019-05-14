@@ -1,13 +1,12 @@
 ﻿using FluentValidation;
 using LoggingCodefirst.Resources;
-using LoggingCodefirst.ViewModels;
 using LoggingCodefirst.ViewModels.User;
 
-namespace LoggingCodefirst.Validators
+namespace LoggingCodefirst.Validators.User
 {
-    public class UserChangePasswordValidator: AbstractValidator<UserChangePasswordViewModel>
+    public class ChangePasswordValidator: AbstractValidator<UserChangePasswordViewModel>
     {
-        public UserChangePasswordValidator(LocalizationService localizer)
+        public ChangePasswordValidator(LocalizationService localizer)
         {
             RuleFor(x => x.NewPassword).NotNull().WithMessage(localizer.GetLocalizedString("msg_vld_NotEmpty"))
                 .MinimumLength(8).WithMessage(localizer.GetLocalizedString("msg_vld_8Characters"))

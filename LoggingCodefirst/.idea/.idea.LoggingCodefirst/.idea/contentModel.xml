@@ -91,16 +91,20 @@
         <e p="Validators" t="Include">
           <e p="BrandValidator.cs" t="Include" />
           <e p="CategoryValidator.cs" t="Include" />
-          <e p="LoginValidator.cs" t="Include" />
           <e p="ProductValidator.cs" t="Include" />
           <e p="StockValidator.cs" t="Include" />
-          <e p="StoreChangeEmailValidator.cs" t="Include" />
-          <e p="StoreEditValidator.cs" t="Include" />
-          <e p="StoreValidator.cs" t="Include" />
-          <e p="UserChangeEmailValidator.cs" t="Include" />
-          <e p="UserChangePasswordValidator.cs" t="Include" />
-          <e p="UserEditValidator.cs" t="Include" />
-          <e p="UserValidator.cs" t="Include" />
+          <e p="Store" t="Include">
+            <e p="ChangeEmailValidator.cs" t="Include" />
+            <e p="EditValidator.cs" t="Include" />
+            <e p="StoreValidator.cs" t="Include" />
+          </e>
+          <e p="User" t="Include">
+            <e p="ChangeEmailValidator.cs" t="Include" />
+            <e p="ChangePasswordValidator.cs" t="Include" />
+            <e p="EditValidator.cs" t="Include" />
+            <e p="LoginValidator.cs" t="Include" />
+            <e p="UserValidator.cs" t="Include" />
+          </e>
         </e>
         <e p="ViewModels" t="Include">
           <e p="BrandViewModel.cs" t="Include" />
@@ -111,14 +115,14 @@
           <e p="ProductViewModel.cs" t="Include" />
           <e p="StockViewModel.cs" t="Include" />
           <e p="Store" t="Include">
-            <e p="StoreChangeEmailViewModel.cs" t="Include" />
-            <e p="StoreEditViewModel.cs" t="Include" />
+            <e p="ChangeEmailViewModel.cs" t="Include" />
+            <e p="EditViewModel.cs" t="Include" />
             <e p="StoreViewModel.cs" t="Include" />
           </e>
           <e p="User" t="Include">
-            <e p="UserChangeEmailViewModel.cs" t="Include" />
-            <e p="UserChangePasswordViewModel.cs" t="Include" />
-            <e p="UserEditViewModel.cs" t="Include" />
+            <e p="ChangeEmailViewModel.cs" t="Include" />
+            <e p="ChangePasswordViewModel.cs" t="Include" />
+            <e p="EditViewModel.cs" t="Include" />
             <e p="UserViewModel.cs" t="Include" />
           </e>
         </e>

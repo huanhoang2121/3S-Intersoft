@@ -1,14 +1,12 @@
 ﻿using FluentValidation;
-using LoggingCodefirst.DependencyInjection.Interface;
 using LoggingCodefirst.Resources;
-using LoggingCodefirst.ViewModels;
 using LoggingCodefirst.ViewModels.User;
 
-namespace LoggingCodefirst.Validators
+namespace LoggingCodefirst.Validators.User
 {
-    public class UserEditValidator : AbstractValidator<UserEditViewModel>
+    public class EditValidator : AbstractValidator<UserEditViewModel>
     {
-        public UserEditValidator(LocalizationService localizer)
+        public EditValidator(LocalizationService localizer)
         {
             RuleFor(x => x.Fullname)
                 .NotNull().WithMessage(localizer.GetLocalizedString("msg_vld_NotEmpty"))

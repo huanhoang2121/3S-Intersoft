@@ -1,14 +1,13 @@
 ﻿using FluentValidation;
 using LoggingCodefirst.DependencyInjection.Interface;
 using LoggingCodefirst.Resources;
-using LoggingCodefirst.ViewModels;
 using LoggingCodefirst.ViewModels.Store;
 
-namespace LoggingCodefirst.Validators
+namespace LoggingCodefirst.Validators.Store
 {
-    public class StoreChangeEmailValidator: AbstractValidator<StoreChangeEmailViewModel>
+    public class ChangeEmailValidator: AbstractValidator<StoreChangeEmailViewModel>
     {
-        public StoreChangeEmailValidator(LocalizationService localizer, IStoreService storeService)
+        public ChangeEmailValidator(LocalizationService localizer, IStoreService storeService)
         {
             var stores = storeService.Stores;
             RuleFor(x => x.Email)

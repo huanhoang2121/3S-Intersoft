@@ -30,6 +30,10 @@ namespace LoggingCodefirst.Controllers
 
         #region Public Methods
         
+        /// <summary>
+        /// Index Store Get Function
+        /// </summary>
+        /// <returns>Index Store</returns>
         [HttpGet]
         public async Task<IActionResult> Index()
         {
@@ -37,12 +41,21 @@ namespace LoggingCodefirst.Controllers
             return View(stores);
         }
 
+        /// <summary>
+        /// Create Store Get Function
+        /// </summary>
+        /// <returns>Create Store</returns>
         [HttpGet]
         public IActionResult Create()
         {
             return View();
         }
         
+        /// <summary>
+        /// Create Store Post Function
+        /// </summary>
+        /// <param name="createViewModel"></param>
+        /// <returns>Index Store</returns>
         [HttpPost]
         public async Task<IActionResult> Create(StoreViewModel createViewModel)
         {
@@ -59,6 +72,11 @@ namespace LoggingCodefirst.Controllers
             return View(createViewModel);
         }
 
+        /// <summary>
+        /// Edit Store Get Function
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns>Edit Store</returns>
         [HttpGet]
         public async Task<IActionResult> Edit(int? id)
         {
@@ -74,7 +92,12 @@ namespace LoggingCodefirst.Controllers
             }
             return View(store);
         }
-                
+           
+        /// <summary>
+        /// Edit Store Post Function
+        /// </summary>
+        /// <param name="editViewModel"></param>
+        /// <returns>Index Store</returns>
         [HttpPost]
         public async Task<IActionResult> Edit(StoreEditViewModel editViewModel)
         {
@@ -91,6 +114,11 @@ namespace LoggingCodefirst.Controllers
             return View(editViewModel);
         }
         
+        /// <summary>
+        /// ChangeEmail Store Get Function
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns>Change Email Store</returns>
         [HttpGet]
         public async Task<IActionResult> ChangeEmail(int? id)
         {
@@ -106,6 +134,11 @@ namespace LoggingCodefirst.Controllers
             return PartialView("_ChangeEmailPartial",store);  
         }
         
+        /// <summary>
+        /// ChangeEmail Store Post Function
+        /// </summary>
+        /// <param name="changeEmailViewModel"></param>
+        /// <returns>Index Store</returns>
         [HttpPost]
         public async Task<IActionResult> ChangeEmail(StoreChangeEmailViewModel changeEmailViewModel)
         {
@@ -123,6 +156,11 @@ namespace LoggingCodefirst.Controllers
             return PartialView("_ChangeEmailPartial",changeEmailViewModel);  
         }
         
+        /// <summary>
+        /// Delete Store Get Function
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns>Index Store</returns>
         [HttpGet]
         public async Task<IActionResult> Delete(int? id)
         {

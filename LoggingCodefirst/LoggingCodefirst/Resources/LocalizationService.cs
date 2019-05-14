@@ -9,9 +9,8 @@ namespace LoggingCodefirst.Resources
  
         public LocalizationService(IStringLocalizerFactory factory)
         {
-            var type = typeof(PropertyResource);
+            var type = typeof(ViewResource);
             var assemblyName = new AssemblyName(type.GetTypeInfo().Assembly.FullName);
-            _localizer = factory.Create("PropertyResource", assemblyName.Name);
             _localizer = factory.Create("ViewResource", assemblyName.Name);
         }
  
@@ -19,6 +18,10 @@ namespace LoggingCodefirst.Resources
         {
             return _localizer[key];
         }
+    }
+    // dummy class for grouping localizarion resources
+    public class ViewResource
+    {
     }
     // dummy class for grouping localizarion resources
     public class PropertyResource
