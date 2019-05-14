@@ -47,7 +47,7 @@ namespace LoggingCodefirst.Controllers
         [HttpGet]
         public IActionResult Create()
         {
-            return View();
+            return PartialView("_CreatePartial");
         }
 
         /// <summary>
@@ -62,12 +62,12 @@ namespace LoggingCodefirst.Controllers
                 if (await _categoryService.CreateCategoryAsync(categoryViewModel))
                 {
                     TempData["SuccessMessage"] = _localizer.GetLocalizedString("msg_CreateSuccess").ToString();
-                    return RedirectToAction(nameof(Index));
+                    return PartialView("_CreatePartial",categoryViewModel); 
                 }
                 ViewData["ErrorMessage"] = _localizer.GetLocalizedString("err_CreateFail").ToString();
-                return View(categoryViewModel);
+                return PartialView("_CreatePartial", categoryViewModel);
             }
-            return View(categoryViewModel);
+            return PartialView("_CreatePartial", categoryViewModel);
         }
 
         /// <summary>
@@ -87,7 +87,7 @@ namespace LoggingCodefirst.Controllers
             {
                 return BadRequest();
             }
-            return View(category);
+            return PartialView("_EditPartial", category);
         }
 
         /// <summary>
@@ -101,13 +101,13 @@ namespace LoggingCodefirst.Controllers
             {
                 if (await _categoryService.EditCategoryAsync(categoryViewModel))
                 {
-                    TempData["SuccessMessage"] = _localizer.GetLocalizedString("msg_EditSuccess").ToString();
-                    return RedirectToAction(nameof(Index));
+                    TempData["SuccessMessage"] = _localizer.GetLocalizedString("msg_CreateSuccess").ToString();
+                    return PartialView("_CreatePartial",categoryViewModel); 
                 }
-                ViewData["ErrorMessage"] = _localizer.GetLocalizedString("err_EditFail").ToString();
-                return View(categoryViewModel);
+                ViewData["ErrorMessage"] = _localizer.GetLocalizedString("err_CreateFail").ToString();
+                return PartialView("_CreatePartial", categoryViewModel);
             }
-            return View(categoryViewModel);
+            return PartialView("_CreatePartial", categoryViewModel);
         }
 
         /// <summary>

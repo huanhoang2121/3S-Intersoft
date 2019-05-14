@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel;
 
-namespace LoggingCodefirst.ViewModels
+namespace LoggingCodefirst.ViewModels.User
 {
     public class LoginViewModel
     {  

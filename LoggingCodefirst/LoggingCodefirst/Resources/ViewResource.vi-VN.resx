@@ -223,7 +223,7 @@
     <value>Tìm hiểu về</value>
   </data>
   <data name="msg_Home_Detail2" xml:space="preserve">
-    <value>xây dựng ứng dụng web với ASP.NET Core</value>
+    <value> xây dựng ứng dụng web với ASP.NET Core</value>
   </data>
   <data name="msg_Home_Title" xml:space="preserve">
     <value>Xin chào</value>

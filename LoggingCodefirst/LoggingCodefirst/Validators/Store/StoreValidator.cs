@@ -1,10 +1,9 @@
 ﻿using FluentValidation;
 using LoggingCodefirst.DependencyInjection.Interface;
 using LoggingCodefirst.Resources;
-using LoggingCodefirst.ViewModels;
 using LoggingCodefirst.ViewModels.Store;
 
-namespace LoggingCodefirst.Validators
+namespace LoggingCodefirst.Validators.Store
 {
     public class StoreValidator: AbstractValidator<StoreViewModel>
     {

@@ -2,6 +2,7 @@
 using LoggingCodefirst.DependencyInjection.Interface;
 using LoggingCodefirst.Resources;
 using LoggingCodefirst.ViewModels;
+using LoggingCodefirst.ViewModels.User;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 

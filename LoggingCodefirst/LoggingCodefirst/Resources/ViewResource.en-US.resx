@@ -286,7 +286,7 @@
     <value>Learn about</value>
   </data>
   <data name="msg_Home_Detail2" xml:space="preserve">
-    <value>building Web apps with ASP.NET Core</value>
+    <value> building Web apps with ASP.NET Core</value>
   </data>
   <data name="msg_Home_Title" xml:space="preserve">
     <value>Welcome</value>
@@ -297,13 +297,13 @@
   <data name="msg_vld_8Characters" xml:space="preserve">
     <value>{PropertyName} cannot be less than 8 characters.</value>
   </data>
-  <data name="msg_vld_ ConfirmPassword" xml:space="preserve">
+  <data name="msg_vld_ConfirmPassword" xml:space="preserve">
     <value>Incorrect confirm password!</value>
   </data>
-  <data name="msg_vld_ Exists" xml:space="preserve">
-    <value>already exists.</value>
+  <data name="msg_vld_Exists" xml:space="preserve">
+    <value> already exists.</value>
   </data>
-  <data name="msg_vld_ ValidEmail" xml:space="preserve">
+  <data name="msg_vld_ValidEmail" xml:space="preserve">
     <value>Enter a valid email address.</value>
   </data>
   <data name="msg_vld_NotEmpty" xml:space="preserve">

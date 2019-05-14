@@ -47,7 +47,7 @@ namespace LoggingCodefirst.Controllers
         [HttpGet]
         public IActionResult Create()
         {
-            return View();
+            return PartialView("_CreatePartial");
         }
 
         /// <summary>
@@ -62,12 +62,12 @@ namespace LoggingCodefirst.Controllers
                 if (await _brandService.CreateBrandAsync(brandViewModel))
                 {
                     TempData["SuccessMessage"] = _localizer.GetLocalizedString("msg_CreateSuccess").ToString();
-                    return RedirectToAction(nameof(Index));
+                    return PartialView("_CreatePartial",brandViewModel); 
                 }
                 ViewData["ErrorMessage"] = _localizer.GetLocalizedString("err_CreateFail").ToString();
-                return View(brandViewModel);
+                return PartialView("_CreatePartial", brandViewModel);
             }
-            return View(brandViewModel);
+            return PartialView("_CreatePartial", brandViewModel);
         }
 
         /// <summary>
@@ -87,7 +87,7 @@ namespace LoggingCodefirst.Controllers
             {
                 return BadRequest();
             }
-            return View(brand);
+            return PartialView("_EditPartial", brand);
         }
 
         /// <summary>
@@ -102,12 +102,12 @@ namespace LoggingCodefirst.Controllers
                 if (await _brandService.EditBrandAsync(brandViewModel))
                 {
                     TempData["SuccessMessage"] = _localizer.GetLocalizedString("msg_EditSuccess").ToString();
-                    return RedirectToAction(nameof(Index));
+                    return PartialView("_EditPartial", brandViewModel);
                 }
                 ViewData["ErrorMessage"] = _localizer.GetLocalizedString("err_EditFail").ToString();
-                return View(brandViewModel);
+                return PartialView("_EditPartial", brandViewModel);
             }
-            return View(brandViewModel);
+            return PartialView("_EditPartial", brandViewModel);
         }
 
         /// <summary>

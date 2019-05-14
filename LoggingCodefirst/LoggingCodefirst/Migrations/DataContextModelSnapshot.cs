@@ -247,7 +247,7 @@ namespace LoggingCodefirst.Migrations
                             Email = "huan.hv@3si.com.vn",
                             Fullname = "Hoàng Văn Huấn",
                             IsActive = true,
-                            Password = "10000:7WGAlsKwm/65VBDm/cI2a1v+XgPr9bCNr55XuDpkj44SIECd",
+                            Password = "10000:WQlkvGDAvT/Ri+bdJhmZgvO7CLsgbHmt9mvFod7m1Xtx0k1J",
                             Phone = "0964973404",
                             StoreId = 2
                         });

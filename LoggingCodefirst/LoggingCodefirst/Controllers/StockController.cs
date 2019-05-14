@@ -56,7 +56,7 @@ namespace LoggingCodefirst.Controllers
         {
             ViewData["ProductId"] = new SelectList(_productService.Products, "Id", "ProductName");
             ViewData["StoreId"] = new SelectList(_storeService.Stores, "Id", "StoreName");
-            return View();
+            return PartialView("_CreatePartial");
         }
 
         /// <summary>
@@ -72,16 +72,16 @@ namespace LoggingCodefirst.Controllers
                 if (await _stockService.CreateStockAsync(createViewModel))
                 {
                     TempData["SuccessMessage"] = _localizer.GetLocalizedString("msg_CreateSuccess").ToString();
-                    return RedirectToAction(nameof(Index));
+                    return PartialView("_CreatePartial", createViewModel);
                 }
                 ViewData["ErrorMessage"] = _localizer.GetLocalizedString("err_CreateFail").ToString();
                 ViewData["ProductId"] = new SelectList(_productService.Products, "Id", "ProductName", createViewModel.ProductId);
                 ViewData["StoreId"] = new SelectList(_storeService.Stores, "Id", "StoreName", createViewModel.StoreId);
-                return View(createViewModel);
+                return PartialView("_CreatePartial", createViewModel);
             }
             ViewData["ProductId"] = new SelectList(_productService.Products, "Id", "ProductName", createViewModel.ProductId);
             ViewData["StoreId"] = new SelectList(_storeService.Stores, "Id", "StoreName", createViewModel.StoreId);
-            return View(createViewModel);
+            return PartialView("_CreatePartial", createViewModel);
         }
 
         /// <summary>
@@ -105,7 +105,7 @@ namespace LoggingCodefirst.Controllers
             }
             ViewData["ProductId"] = new SelectList(_productService.Products, "Id", "ProductName", stock.ProductId);
             ViewData["StoreId"] = new SelectList(_storeService.Stores, "Id", "StoreName", stock.StoreId);
-            return View(stock);
+            return PartialView("_EditPartial", stock);
         }
 
         /// <summary>
@@ -121,16 +121,16 @@ namespace LoggingCodefirst.Controllers
                 if (await _stockService.EditStockAsync(editViewModel))
                 {
                     TempData["SuccessMessage"] = _localizer.GetLocalizedString("msg_EditSuccess").ToString();
-                    return RedirectToAction(nameof(Index));
+                    return PartialView("_EditPartial", editViewModel);
                 }
                 ViewData["ErrorMessage"] = _localizer.GetLocalizedString("err_EditFail").ToString();
                 ViewData["ProductId"] = new SelectList(_productService.Products, "Id", "ProductName", editViewModel.ProductId);
                 ViewData["StoreId"] = new SelectList(_storeService.Stores, "Id", "StoreName", editViewModel.StoreId);
-                return View(editViewModel);
+                return PartialView("_EditPartial", editViewModel);
             }
             ViewData["ProductId"] = new SelectList(_productService.Products, "Id", "ProductName", editViewModel.ProductId);
             ViewData["StoreId"] = new SelectList(_storeService.Stores, "Id", "StoreName", editViewModel.StoreId);
-            return View(editViewModel);
+            return PartialView("_EditPartial", editViewModel);
         }
 
         /// <summary>

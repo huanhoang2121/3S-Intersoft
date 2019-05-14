@@ -11,6 +11,7 @@ namespace LoggingCodefirst.ViewModels
         public int ProductId { get; set; }
         [DisplayName("Quantity")] 
         public int Quantity { get; set; }
+        
         [DisplayName("Store Name")] 
         public Models.Store Store { get; set; }
         [DisplayName("Product Name")] 

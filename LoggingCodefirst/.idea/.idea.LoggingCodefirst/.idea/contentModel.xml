@@ -54,8 +54,6 @@
           <e p="20190503025527_UpdateSeedData.cs" t="Include" />
           <e p="20190506035152_UpdateProductImagePath.Designer.cs" t="Include" />
           <e p="20190506035152_UpdateProductImagePath.cs" t="Include" />
-          <e p="20190509084758_UpdateProImg.Designer.cs" t="Include" />
-          <e p="20190509084758_UpdateProImg.cs" t="Include" />
           <e p="20190512144342_UpdateStock3.Designer.cs" t="Include" />
           <e p="20190512144342_UpdateStock3.cs" t="Include" />
           <e p="DataContextModelSnapshot.cs" t="Include" />
@@ -110,7 +108,6 @@
           <e p="BrandViewModel.cs" t="Include" />
           <e p="CategoryViewModel.cs" t="Include" />
           <e p="ErrorViewModel.cs" t="Include" />
-          <e p="LoginViewModel.cs" t="Include" />
           <e p="MapProfile.cs" t="Include" />
           <e p="ProductViewModel.cs" t="Include" />
           <e p="StockViewModel.cs" t="Include" />
@@ -123,6 +120,7 @@
             <e p="ChangeEmailViewModel.cs" t="Include" />
             <e p="ChangePasswordViewModel.cs" t="Include" />
             <e p="EditViewModel.cs" t="Include" />
+            <e p="LoginViewModel.cs" t="Include" />
             <e p="UserViewModel.cs" t="Include" />
           </e>
         </e>
@@ -131,14 +129,14 @@
             <e p="Login.cshtml" t="Include" />
           </e>
           <e p="Brand" t="Include">
-            <e p="Create.cshtml" t="Include" />
-            <e p="Edit.cshtml" t="Include" />
             <e p="Index.cshtml" t="Include" />
+            <e p="_CreatePartial.cshtml" t="Include" />
+            <e p="_EditPartial.cshtml" t="Include" />
           </e>
           <e p="Category" t="Include">
-            <e p="Create.cshtml" t="Include" />
-            <e p="Edit.cshtml" t="Include" />
             <e p="Index.cshtml" t="Include" />
+            <e p="_CreatePartial.cshtml" t="Include" />
+            <e p="_EditPartial.cshtml" t="Include" />
           </e>
           <e p="Error" t="Include">
             <e p="Error400.cshtml" t="Include" />
@@ -168,9 +166,9 @@
             <e p="_ValidationScriptsPartial.cshtml" t="Include" />
           </e>
           <e p="Stock" t="Include">
-            <e p="Create.cshtml" t="Include" />
-            <e p="Edit.cshtml" t="Include" />
             <e p="Index.cshtml" t="Include" />
+            <e p="_CreatePartial.cshtml" t="Include" />
+            <e p="_EditPartial.cshtml" t="Include" />
           </e>
           <e p="Store" t="Include">
             <e p="Create.cshtml" t="Include" />

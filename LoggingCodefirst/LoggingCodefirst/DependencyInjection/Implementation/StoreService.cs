@@ -5,7 +5,6 @@ using AutoMapper;
 using LoggingCodefirst.DependencyInjection.Interface;
 using LoggingCodefirst.Models;
 using LoggingCodefirst.Models.Data;
-using LoggingCodefirst.ViewModels;
 using LoggingCodefirst.ViewModels.Store;
 using Microsoft.EntityFrameworkCore;
 
