@@ -117,50 +117,17 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="btn_Back" xml:space="preserve">
-    <value>Trở về</value>
-  </data>
-  <data name="btn_Close" xml:space="preserve">
-    <value>Đóng</value>
-  </data>
-  <data name="btn_Create" xml:space="preserve">
-    <value>Thêm</value>
-  </data>
-  <data name="btn_Edit" xml:space="preserve">
-    <value>Sửa</value>
-  </data>
-  <data name="btn_ForgotPassword" xml:space="preserve">
-    <value>Quên mật khẩu?</value>
-  </data>
-  <data name="btn_Language" xml:space="preserve">
-    <value>Ngôn ngữ</value>
-  </data>
-  <data name="btn_Login" xml:space="preserve">
-    <value>Đăng nhập</value>
-  </data>
-  <data name="btn_Logout" xml:space="preserve">
-    <value>Đăng xuất</value>
-  </data>
-  <data name="btn_Save" xml:space="preserve">
-    <value>Lưu</value>
-  </data>
-  <data name="btn_Setting" xml:space="preserve">
-    <value>Cài đặt</value>
-  </data>
-  <data name="lbl_Action" xml:space="preserve">
-    <value>Hành động</value>
-  </data>
-  <data name="lbl_Address" xml:space="preserve">
-    <value>Địa chỉ</value>
-  </data>
-  <data name="lbl_No" xml:space="preserve">
-    <value>Stt</value>
-  </data>
   <data name="err_400_Detail" xml:space="preserve">
     <value>Máy chủ không thể nhận dạng được yêu cầu.</value>
   </data>
   <data name="err_400_Title" xml:space="preserve">
     <value>Yêu cầu này bị lỗi!</value>
+  </data>
+  <data name="err_401_Detail" xml:space="preserve">
+    <value>Bạn không có quyền truy cập vào trang này!</value>
+  </data>
+  <data name="err_401_Title" xml:space="preserve">
+    <value>Không được phép!</value>
   </data>
   <data name="err_403_Detail" xml:space="preserve">
     <value>Máy chủ hiểu yêu cầu nhưng không muốn cho máy con nhận thông tin.</value>
@@ -186,117 +153,12 @@
   <data name="err_500_Title" xml:space="preserve">
     <value>Phương thức không được phép!</value>
   </data>
-  <data name="err_ChangePasswordFail" xml:space="preserve">
-    <value>Thay đổi mật khẩu lỗi!</value>
-  </data>
-  <data name="err_ChangeEmailFail" xml:space="preserve">
-    <value>Thay đổi Email lỗi!</value>
-  </data>
-  <data name="err_CreateFail" xml:space="preserve">
-    <value>Thêm lỗi!</value>
-  </data>
-  <data name="err_DeleteFail" xml:space="preserve">
-    <value>Xóa lỗi!</value>
-  </data>
-  <data name="err_EditFail" xml:space="preserve">
-    <value>Sửa lỗi!</value>
-  </data>
-  <data name="err_LoginFail" xml:space="preserve">
-    <value>Đăng nhập lỗi! Email hoặc password không đúng!</value>
-  </data>
-  <data name="msg_ChangePasswordSuccess" xml:space="preserve">
-    <value>Thay đổi mật khẩu thành công!</value>
-  </data>
-  <data name="msg_ChangeEmailSuccess" xml:space="preserve">
-    <value>Thay đổi Email thành công!</value>
-  </data>
-  <data name="msg_CreateSuccess" xml:space="preserve">
-    <value>Thêm mới thành công!</value>
-  </data>
-  <data name="msg_DeleteSuccess" xml:space="preserve">
-    <value>Xóa thành công!</value>
-  </data>
-  <data name="msg_EditSuccess" xml:space="preserve">
-    <value>Sửa thành công!</value>
-  </data>
-  <data name="msg_Home_Detail1" xml:space="preserve">
-    <value>Tìm hiểu về</value>
-  </data>
-  <data name="msg_Home_Detail2" xml:space="preserve">
-    <value> xây dựng ứng dụng web với ASP.NET Core</value>
-  </data>
-  <data name="msg_Home_Title" xml:space="preserve">
-    <value>Xin chào</value>
-  </data>
-  <data name="msg_LoginSuccess" xml:space="preserve">
-    <value>Đăng nhập thành công!</value>
-  </data>
-  <data name="msg_Privacy_Detail" xml:space="preserve">
-    <value>Sử dụng trang này để chi tiết chính sách bảo mật của trang web của bạn.</value>
-  </data>
-  <data name="msg_vld_8Characters" xml:space="preserve">
-    <value>{PropertyName} không thể ít hơn 8 ký tự.</value>
-  </data>
-  <data name="msg_vld_ConfirmPassword" xml:space="preserve">
-    <value>Xác nhận mật khẩu không chính xác!</value>
-  </data>
-  <data name="msg_vld_Exists" xml:space="preserve">
-    <value>{0} đã tồn tại!</value>
-  </data>
-  <data name="msg_vld_ValidEmail" xml:space="preserve">
-    <value>Nhập địa chỉ email hợp lệ!</value>
-  </data>
-  <data name="msg_vld_NotEmpty" xml:space="preserve">
-    <value>{PropertyName} không được để trống!</value>
-  </data>
-  <data name="msg_vld_Password" xml:space="preserve">
-    <value>{PropertyName} phải chứa cả chữ, số và không có kí tự đặc biệt!</value>
-  </data>
+  
+ 
   <data name="msg_vld_GreaterThanOrEqualTo1" xml:space="preserve">
     <value>{PropertyName} phải lớn hơn hoặc bằng 1!</value>
   </data>
-  <data name="ctr_Brand" xml:space="preserve">
-    <value>Thương hiệu</value>
-  </data>
-  <data name="ctr_Category" xml:space="preserve">
-    <value>Danh mục</value>
-  </data>
-  <data name="msg_Hello" xml:space="preserve">
-    <value>Xin chào</value>
-  </data>
-  <data name="ctr_Home" xml:space="preserve">
-    <value>Trang chủ</value>
-  </data>
-  <data name="act_Index" xml:space="preserve">
-    <value>Danh sách</value>
-  </data>
-  <data name="msg_Welcome" xml:space="preserve">
-    <value>Chào mừng</value>
-  </data>
-  <data name="act_Privacy" xml:space="preserve">
-    <value>Bảo mật</value>
-  </data>
-  <data name="ctr_Product" xml:space="preserve">
-    <value>Sản phẩm</value>
-  </data>
-  <data name="ctr_Stock" xml:space="preserve">
-    <value>Kho hàng</value>
-  </data>
-  <data name="ctr_Store" xml:space="preserve">
-    <value>Cửa hàng</value>
-  </data>
-  <data name="ctr_User" xml:space="preserve">
-    <value>Người dùng</value>
-  </data>
-  <data name="btn_AccountSetting" xml:space="preserve">
-    <value>Cài đặt tài khoản</value>
-  </data>
-  <data name="act_ChangePassword" xml:space="preserve">
-    <value>Thay đổi mật khẩu</value>
-  </data>
-  <data name="act_ChangeEmail" xml:space="preserve">
-    <value>Thay đổi Email</value>
-  </data>
+  
   <data name="msg_del_Brand" xml:space="preserve">
     <value>Khi bạn xóa thương hiệu này, các sản phẩm liên quan sẽ bị xóa! Bạn có chắc chắn muốn xóa?</value>
   </data>

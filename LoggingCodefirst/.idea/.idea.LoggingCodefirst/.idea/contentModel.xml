@@ -16,7 +16,7 @@
           <e p="UserController.cs" t="Include" />
         </e>
         <e p="Filters" t="Include">
-          <e p="SampleActionFilter.cs" t="Include" />
+          <e p="AuthorizedActionFilter.cs" t="Include" />
         </e>
         <e p="Infrastructure" t="Include">
           <e p="SecurePasswordHasher.cs" t="Include" />
@@ -64,29 +64,33 @@
           <e p="launchSettings.json" t="Include" />
         </e>
         <e p="Resources" t="Include">
-          <e p="LocalizationService.cs" t="Include" />
+          <e p="BrandResource.en-US.resx" t="Include" />
+          <e p="BrandResource.vi-VN.resx" t="Include" />
+          <e p="CommonResource.en-US.resx" t="Include" />
+          <e p="CommonResource.vi-VN.resx" t="Include" />
+          <e p="HomeResource.en-US.resx" t="Include" />
+          <e p="HomeResource.vi-VN.resx" t="Include" />
           <e p="PropertyResource.en-US.resx" t="Include" />
           <e p="PropertyResource.vi-VN.resx" t="Include" />
+          <e p="UserResource.en-US.resx" t="Include" />
+          <e p="UserResource.vi-VN.resx" t="Include" />
           <e p="ViewResource.en-US.resx" t="Include" />
           <e p="ViewResource.vi-VN.resx" t="Include" />
         </e>
         <e p="Services" t="Include">
-          <e p="Implementation" t="Include">
-            <e p="BrandService.cs" t="Include" />
-            <e p="CategoryService.cs" t="Include" />
-            <e p="ProductService.cs" t="Include" />
-            <e p="StockService.cs" t="Include" />
-            <e p="StoreService.cs" t="Include" />
-            <e p="UserService.cs" t="Include" />
-          </e>
-          <e p="Interface" t="Include">
-            <e p="IBrandService.cs" t="Include" />
-            <e p="ICategoryService.cs" t="Include" />
-            <e p="IProductService.cs" t="Include" />
-            <e p="IStockService.cs" t="Include" />
-            <e p="IStoreService.cs" t="Include" />
-            <e p="IUserService.cs" t="Include" />
-          </e>
+          <e p="BrandService.cs" t="Include" />
+          <e p="CategoryService.cs" t="Include" />
+          <e p="IBrandService.cs" t="Include" />
+          <e p="ICategoryService.cs" t="Include" />
+          <e p="IProductService.cs" t="Include" />
+          <e p="IStockService.cs" t="Include" />
+          <e p="IStoreService.cs" t="Include" />
+          <e p="IUserService.cs" t="Include" />
+          <e p="LocalizationService.cs" t="Include" />
+          <e p="ProductService.cs" t="Include" />
+          <e p="StockService.cs" t="Include" />
+          <e p="StoreService.cs" t="Include" />
+          <e p="UserService.cs" t="Include" />
         </e>
         <e p="Startup.cs" t="Include" />
         <e p="Validators" t="Include">

@@ -1,14 +1,14 @@
 ﻿using System;
 using FluentValidation;
 using LoggingCodefirst.Resources;
-using LoggingCodefirst.Services.Interface;
+using LoggingCodefirst.Services;
 using LoggingCodefirst.ViewModels;
 
 namespace LoggingCodefirst.Validators
 {
     public class CategoryValidator: AbstractValidator<CategoryViewModel>
     {
-        public CategoryValidator(LocalizationService localizer, ICategoryService categoryService)
+        public CategoryValidator(LocalizationService<ViewResource> localizer, ICategoryService categoryService)
         {
             RuleFor(x => x.CategoryName)
                 .Must((reg, x) => !categoryService.IsExistedName(reg.Id,reg.CategoryName))

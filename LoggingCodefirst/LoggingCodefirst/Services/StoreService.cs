@@ -5,11 +5,10 @@ using System.Threading.Tasks;
 using AutoMapper;
 using LoggingCodefirst.Models;
 using LoggingCodefirst.Models.Data;
-using LoggingCodefirst.Services.Interface;
 using LoggingCodefirst.ViewModels;
 using Microsoft.EntityFrameworkCore;
 
-namespace LoggingCodefirst.Services.Implementation
+namespace LoggingCodefirst.Services
 {
     public class StoreService : IStoreService
     {
@@ -119,9 +118,9 @@ namespace LoggingCodefirst.Services.Implementation
             }
         }
        
-        public bool IsExistedEmail(int id, string name)
+        public bool IsExistedEmail(int id, string email)
         {
-            return _context.Stores.Any(b => b.Email == name && b.Id != id);
+            return _context.Stores.Any(b => b.Email == email && b.Id != id);
         }
 
         #endregion

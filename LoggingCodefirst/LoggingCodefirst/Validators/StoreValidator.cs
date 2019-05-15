@@ -1,14 +1,14 @@
 ﻿using System;
 using FluentValidation;
 using LoggingCodefirst.Resources;
-using LoggingCodefirst.Services.Interface;
+using LoggingCodefirst.Services;
 using LoggingCodefirst.ViewModels;
 
 namespace LoggingCodefirst.Validators
 {
     public class StoreValidator: AbstractValidator<StoreViewModel>
     {
-        public StoreValidator(LocalizationService localizer, IStoreService storeService)
+        public StoreValidator(LocalizationService<ViewResource> localizer, IStoreService storeService)
         {
             RuleFor(x => x.Email)
                 .Must((reg, x) => !storeService.IsExistedEmail(reg.Id,reg.Email))

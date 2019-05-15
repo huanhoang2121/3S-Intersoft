@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 using LoggingCodefirst.Models;
 using LoggingCodefirst.ViewModels;
 
-namespace LoggingCodefirst.Services.Interface
+namespace LoggingCodefirst.Services
 {
     public interface IProductService
     {

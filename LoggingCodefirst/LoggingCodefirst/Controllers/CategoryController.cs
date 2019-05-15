@@ -1,17 +1,19 @@
 using System.Threading.Tasks;
+using LoggingCodefirst.Filters;
 using LoggingCodefirst.Resources;
-using LoggingCodefirst.Services.Interface;
+using LoggingCodefirst.Services;
 using LoggingCodefirst.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 
 namespace LoggingCodefirst.Controllers
 {
+    [ServiceFilter(typeof(AuthorizedActionFilter))]
     public class CategoryController : Controller
     {
         #region Private Members
 
         private readonly ICategoryService _categoryService;
-        private readonly LocalizationService _localizer;
+        private readonly LocalizationService<ViewResource> _localizer;
 
         #endregion
         
@@ -19,7 +21,7 @@ namespace LoggingCodefirst.Controllers
 
         public CategoryController(
             ICategoryService categoryService, 
-            LocalizationService localizer)
+            LocalizationService<ViewResource> localizer)
         {
             _localizer = localizer;
             _categoryService = categoryService;

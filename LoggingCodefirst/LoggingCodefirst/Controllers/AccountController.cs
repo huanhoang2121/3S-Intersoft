@@ -1,7 +1,6 @@
 ﻿using System.Threading.Tasks;
-using LoggingCodefirst.Filters;
 using LoggingCodefirst.Resources;
-using LoggingCodefirst.Services.Interface;
+using LoggingCodefirst.Services;
 using LoggingCodefirst.ViewModels;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -13,13 +12,13 @@ namespace LoggingCodefirst.Controllers
         #region Private Members
         
         private readonly IUserService _userService;
-        private readonly LocalizationService _localizer;
+        private readonly LocalizationService<UserResource> _localizer;
          
         #endregion
         
         #region Constructors
         
-        public AccountController(IUserService userService, LocalizationService localizer)
+        public AccountController(IUserService userService, LocalizationService<UserResource> localizer)
         {
             _userService = userService;
             _localizer = localizer;

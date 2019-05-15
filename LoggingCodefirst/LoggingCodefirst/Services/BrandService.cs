@@ -5,13 +5,12 @@ using System.Threading.Tasks;
 using AutoMapper;
 using LoggingCodefirst.Models;
 using LoggingCodefirst.Models.Data;
-using LoggingCodefirst.Services.Interface;
 using LoggingCodefirst.ViewModels;
 using Microsoft.EntityFrameworkCore;
 
-namespace LoggingCodefirst.Services.Implementation
+namespace LoggingCodefirst.Services
 {
-    public class CategoryService : ICategoryService
+    public class BrandService : IBrandService
     {
         #region Private Members
         
@@ -20,39 +19,39 @@ namespace LoggingCodefirst.Services.Implementation
         
         #endregion
         
-        public CategoryService(DataContext context, IMapper mapper)
+        #region Constructors
+
+        public BrandService(DataContext context, IMapper mapper)
         {
             _mapper = mapper;
             _context = context;
         }
         
-        #region Constructors
-        
         #endregion
-        
+
         #region Public Methods
-        
-        public IEnumerable<Category> Categories()
+
+        public IEnumerable<Brand> Brands()
         {
-            return _context.Categories;
+            return _context.Brands;
         }
-        
-        public async Task<List<CategoryViewModel>> GetListCategoryAsync()
+
+        public async Task<List<BrandViewModel>> GetListBrandAsync()
         {
-            var categories = await _context.Categories.ToListAsync();
-            var viewModels = _mapper.Map<List<CategoryViewModel>>(categories);
+            var brands = await _context.Brands.ToListAsync();
+            var viewModels = _mapper.Map<List<BrandViewModel>>(brands);
             return viewModels;
         }
 
-        public async Task<bool> CreateCategoryAsync(CategoryViewModel createViewModel)
+        public async Task<bool> CreateBrandAsync(BrandViewModel brandViewModel)
         {
             try
             {
-                var category = new Category
+                var brand = new Brand
                 {
-                    CategoryName = createViewModel.CategoryName,
+                    BrandName = brandViewModel.BrandName,
                 };
-                _context.Categories.Add(category);
+                _context.Brands.Add(brand);
                 await _context.SaveChangesAsync();
                 return true;
             }
@@ -63,21 +62,21 @@ namespace LoggingCodefirst.Services.Implementation
             }
         }
 
-        public async Task<CategoryViewModel> GetCategoryEditAsync(int id)
+        public async Task<BrandViewModel> GetBrandEditAsync(int id)
         {
-            var store = await _context.Categories.FindAsync(id);
-            var viewModel = _mapper.Map<CategoryViewModel>(store);
+            var store = await _context.Brands.FindAsync(id);
+            var viewModel = _mapper.Map<BrandViewModel>(store);
             return viewModel;
         }
 
-        public async Task<bool> EditCategoryAsync(CategoryViewModel categoryEditViewModel)
+        public async Task<bool> EditBrandAsync(BrandViewModel brandViewModel)
         {
             try
             {
-                var category = await _context.Categories.FirstOrDefaultAsync(u => u.Id == categoryEditViewModel.Id);
-                category.CategoryName = categoryEditViewModel.CategoryName;
+                var brand = await _context.Brands.FindAsync(brandViewModel.Id);
+                brand.BrandName = brandViewModel.BrandName;
             
-                _context.Categories.Update(category);
+                _context.Brands.Update(brand);
                 await _context.SaveChangesAsync();
                 return true;
             }
@@ -88,12 +87,12 @@ namespace LoggingCodefirst.Services.Implementation
             }
         }
 
-        public async Task<bool> DeleteCategoryAsync(int id)
+        public async Task<bool> DeleteBrandAsync(int id)
         {
             try
             {
-                var category = await _context.Categories.FindAsync(id);
-                _context.Categories.Remove(category);
+                var brand = await _context.Brands.FindAsync(id);
+                _context.Brands.Remove(brand);
                 await _context.SaveChangesAsync();
                 return true;
             }
@@ -106,10 +105,10 @@ namespace LoggingCodefirst.Services.Implementation
 
         public bool IsExistedName(int id, string name)
         {
-            return _context.Categories.Any(b => b.CategoryName == name && b.Id != id);
+            return _context.Brands.Any(b => b.BrandName == name && b.Id != id);
         }
         
         #endregion
         
-    }//end
+    }//end of class
 }

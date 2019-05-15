@@ -6,11 +6,10 @@ using AutoMapper;
 using LoggingCodefirst.Infrastructure;
 using LoggingCodefirst.Models;
 using LoggingCodefirst.Models.Data;
-using LoggingCodefirst.Services.Interface;
 using LoggingCodefirst.ViewModels;
 using Microsoft.EntityFrameworkCore;
 
-namespace LoggingCodefirst.Services.Implementation
+namespace LoggingCodefirst.Services
 {
     public class UserService : IUserService
     { 

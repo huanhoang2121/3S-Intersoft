@@ -1,18 +1,19 @@
 using System.Threading.Tasks;
 using LoggingCodefirst.Filters;
 using LoggingCodefirst.Resources;
-using LoggingCodefirst.Services.Interface;
+using LoggingCodefirst.Services;
 using LoggingCodefirst.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 
 namespace LoggingCodefirst.Controllers
 {
+    [ServiceFilter(typeof(AuthorizedActionFilter))]
     public class BrandController : Controller
     {
         #region Private Members
 
         private readonly IBrandService _brandService;
-        private readonly LocalizationService _localizer;
+        private readonly LocalizationService<ViewResource> _localizer;
 
         #endregion
         
@@ -20,7 +21,7 @@ namespace LoggingCodefirst.Controllers
 
         public BrandController(
             IBrandService brandService, 
-            LocalizationService localizer)
+            LocalizationService<ViewResource> localizer)
         {
             _localizer = localizer;
             _brandService = brandService;
@@ -35,7 +36,6 @@ namespace LoggingCodefirst.Controllers
         /// </summary>
         /// <returns>Brand Index View</returns>
         [HttpGet]
-        [ServiceFilter(typeof(SampleActionFilter))]
         public async Task<IActionResult> Index()
         {
             var brands = await _brandService.GetListBrandAsync();

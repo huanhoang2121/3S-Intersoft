@@ -1,19 +1,21 @@
 ﻿using System.Threading.Tasks;
+using LoggingCodefirst.Filters;
 using LoggingCodefirst.Resources;
-using LoggingCodefirst.Services.Interface;
+using LoggingCodefirst.Services;
 using LoggingCodefirst.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace LoggingCodefirst.Controllers
 {
+    [ServiceFilter(typeof(AuthorizedActionFilter))]
     public class UserController : Controller
     {
         #region Private Members
 
         private readonly IUserService _userService;
         private readonly IStoreService _storeService;
-        private readonly LocalizationService _localizer;
+        private readonly LocalizationService<UserResource> _localizer;
 
         #endregion
         
@@ -22,7 +24,7 @@ namespace LoggingCodefirst.Controllers
         public UserController(
             IUserService userService, 
             IStoreService storeService, 
-            LocalizationService localizer)
+            LocalizationService<UserResource> localizer)
         {
             _localizer = localizer;
             _userService = userService;
@@ -67,10 +69,10 @@ namespace LoggingCodefirst.Controllers
             {
                 if (await _userService.CreateUserAsync(createViewModel))
                 {
-                    TempData["SuccessMessage"] = _localizer.GetLocalizedString("msg_CreateSuccess").ToString();
+                    TempData["SuccessMessage"] = _localizer.GetLocalizedString("msg_CreateUserSuccess").ToString();
                     return RedirectToAction(nameof(Index));
                 }
-                ViewData["ErrorMessage"] = _localizer.GetLocalizedString("err_CreateFail").ToString();
+                ViewData["ErrorMessage"] = _localizer.GetLocalizedString("err_CreateUser").ToString();
                 ViewBag.StoreId = new SelectList(_storeService.Stores(), "Id", "StoreName", createViewModel.StoreId);
                 return View(createViewModel);
             }
@@ -111,10 +113,10 @@ namespace LoggingCodefirst.Controllers
             {
                 if (await _userService.EditUserAsync(editViewModel))
                 {
-                    TempData["SuccessMessage"] = _localizer.GetLocalizedString("msg_EditSuccess").ToString();
+                    TempData["SuccessMessage"] = _localizer.GetLocalizedString("msg_EditUserSuccess").ToString();
                     return RedirectToAction(nameof(Index));
                 }
-                ViewData["ErrorMessage"] = _localizer.GetLocalizedString("err_EditFail").ToString();
+                ViewData["ErrorMessage"] = _localizer.GetLocalizedString("err_EditUser").ToString();
                 ViewBag.StoreId = new SelectList(_storeService.Stores(), "Id", "StoreName", editViewModel.StoreId);
                 return View(editViewModel);
             }
@@ -158,7 +160,7 @@ namespace LoggingCodefirst.Controllers
                     TempData["SuccessMessage"] = _localizer.GetLocalizedString("msg_ChangePasswordSuccess").ToString();
                     return PartialView("_ChangePasswordPartial",changePasswordModel); 
                 }
-                TempData["ErrorMessage"] = _localizer.GetLocalizedString("err_ChangePasswordFail").ToString();
+                TempData["ErrorMessage"] = _localizer.GetLocalizedString("err_ChangePassword").ToString();
                 return PartialView("_ChangePasswordPartial",changePasswordModel); 
             }
             return PartialView("_ChangePasswordPartial",changePasswordModel);  
@@ -178,10 +180,10 @@ namespace LoggingCodefirst.Controllers
             }
             if (await _userService.DeleteUserAsync(id.Value))
             {
-                TempData["SuccessMessage"] = _localizer.GetLocalizedString("msg_DeleteSuccess").ToString();
+                TempData["SuccessMessage"] = _localizer.GetLocalizedString("msg_DeleteUserSuccess").ToString();
                 return RedirectToAction(nameof(Index));
             }
-            TempData["ErrorMessage"] = _localizer.GetLocalizedString("err_DeleteFail").ToString();
+            TempData["ErrorMessage"] = _localizer.GetLocalizedString("err_DeleteUser").ToString();
             return RedirectToAction(nameof(Index));
         }
         

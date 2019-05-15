@@ -1,6 +1,6 @@
 ﻿@model UserViewModel
 @{
-    ViewBag.Title = Localizer.GetLocalizedString("btn_Create");
+    ViewBag.Title = UserLocalizer.GetLocalizedString("lbl_CreateUser");
     Layout = "_Layout";
 }
 
@@ -11,8 +11,8 @@
             <div class="ml-auto text-right">
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a asp-controller="User" asp-action="Index">@Localizer.GetLocalizedString("ctr_User")</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">@ViewBag.Title</li>
+                        <li class="breadcrumb-item"><a asp-controller="User" asp-action="Index">@Localizer.GetLocalizedString("btn_User")</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">@Localizer.GetLocalizedString("btn_Create")</li>
                     </ol>
                 </nav>
             </div>

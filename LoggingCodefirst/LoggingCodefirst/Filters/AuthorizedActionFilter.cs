@@ -4,11 +4,11 @@ using Microsoft.AspNetCore.Mvc.Filters;
 
 namespace LoggingCodefirst.Filters
 {
-    public class SampleActionFilter : IActionFilter
+    public class AuthorizedActionFilter : IActionFilter
     {
         private readonly IHttpContextAccessor _accessor;
         
-        public SampleActionFilter(IHttpContextAccessor accessor) {
+        public AuthorizedActionFilter(IHttpContextAccessor accessor) {
             _accessor = accessor;
         }
         

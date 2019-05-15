@@ -1,17 +1,18 @@
 ﻿using FluentValidation;
 using LoggingCodefirst.Resources;
+using LoggingCodefirst.Services;
 using LoggingCodefirst.ViewModels;
 
 namespace LoggingCodefirst.Validators.User
 {
     public class LoginValidator : AbstractValidator<LoginViewModel>
     { 
-        public LoginValidator(LocalizationService localizer)
+        public LoginValidator(LocalizationService<UserResource> localizer)
         {
-            RuleFor(x => x.Email).NotNull().WithMessage(localizer.GetLocalizedString("msg_vld_NotEmpty"))
-                .EmailAddress().WithMessage(localizer.GetLocalizedString("msg_vld_ValidEmail"));
-            RuleFor(x => x.Password).NotNull().WithMessage(localizer.GetLocalizedString("msg_vld_NotEmpty"))
-                .MinimumLength(8).WithMessage(localizer.GetLocalizedString("msg_vld_8Characters"));
+            RuleFor(x => x.Email).NotNull().WithMessage(localizer.GetLocalizedString("msg_NotEmpty"))
+                .EmailAddress().WithMessage(localizer.GetLocalizedString("msg_ValidEmail"));
+            RuleFor(x => x.Password).NotNull().WithMessage(localizer.GetLocalizedString("msg_NotEmpty"))
+                .MinimumLength(8).WithMessage(localizer.GetLocalizedString("msg_8Characters"));
         }
     }
 }

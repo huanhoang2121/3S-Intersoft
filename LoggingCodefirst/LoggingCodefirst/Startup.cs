@@ -1,13 +1,11 @@
 ﻿using System.Collections.Generic;
 using System.Globalization;
-using System.Reflection;
 using AutoMapper;
 using FluentValidation.AspNetCore;
 using LoggingCodefirst.Filters;
 using LoggingCodefirst.Models.Data;
 using LoggingCodefirst.Resources;
-using LoggingCodefirst.Services.Implementation;
-using LoggingCodefirst.Services.Interface;
+using LoggingCodefirst.Services;
 using LoggingCodefirst.Validators.User;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -57,24 +55,28 @@ namespace LoggingCodefirst
             
             services.AddDbContext<DataContext>(item => item.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
             
-            services.AddScoped<SampleActionFilter>();
+            services.AddScoped<AuthorizedActionFilter>();
             
             #region Resources
             
-            services.AddSingleton<LocalizationService>();
             services.AddLocalization(options => options.ResourcesPath = "Resources");
+
+            services.AddSingleton<LocalizationService<CommonResource>>();
+            services.AddSingleton<LocalizationService<HomeResource>>();
+            services.AddSingleton<LocalizationService<ViewResource>>();
+            services.AddSingleton<LocalizationService<UserResource>>();
             
-            services.AddMvc()
-                .AddViewLocalization()
-                .AddDataAnnotationsLocalization(options =>
-                {
-                    options.DataAnnotationLocalizerProvider = (type, factory) =>
-                    {
-                        var assemblyName = new AssemblyName(typeof(PropertyResource).GetTypeInfo().Assembly.FullName);
-                        return factory.Create("PropertyResource", assemblyName.Name);
-                    };
-                });
-            
+//            services.AddMvc()
+//                .AddViewLocalization()
+//                .AddDataAnnotationsLocalization(options =>
+//                {
+//                    options.DataAnnotationLocalizerProvider = (type, factory) =>
+//                    {
+//                        var assemblyName = new AssemblyName(typeof(PropertyResource).GetTypeInfo().Assembly.FullName);
+//                        return factory.Create("PropertyResource", assemblyName.Name);
+//                    };
+//                });
+//            
             services.Configure<RequestLocalizationOptions>(options =>
             {
                 var supportedCultures = new List<CultureInfo>

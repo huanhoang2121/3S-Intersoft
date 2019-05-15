@@ -1,12 +1,14 @@
 using System.Threading.Tasks;
+using LoggingCodefirst.Filters;
 using LoggingCodefirst.Resources;
-using LoggingCodefirst.Services.Interface;
+using LoggingCodefirst.Services;
 using LoggingCodefirst.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace LoggingCodefirst.Controllers
 {
+    [ServiceFilter(typeof(AuthorizedActionFilter))]
     public class ProductController : Controller
     {
         #region Private Members
@@ -14,7 +16,7 @@ namespace LoggingCodefirst.Controllers
         private readonly IProductService _productService;
         private readonly IBrandService _brandService;
         private readonly ICategoryService _categoryService;
-        private readonly LocalizationService _localizer;
+        private readonly LocalizationService<ViewResource> _localizer;
 
         #endregion
         
@@ -24,7 +26,7 @@ namespace LoggingCodefirst.Controllers
             IProductService productService,
             IBrandService brandService, 
             ICategoryService categoryService, 
-            LocalizationService localizer)
+            LocalizationService<ViewResource> localizer)
         {
             _localizer = localizer;
             _productService = productService;

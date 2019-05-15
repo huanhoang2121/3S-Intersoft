@@ -1,14 +1,14 @@
 ﻿using System;
 using FluentValidation;
 using LoggingCodefirst.Resources;
-using LoggingCodefirst.Services.Interface;
+using LoggingCodefirst.Services;
 using LoggingCodefirst.ViewModels;
 
 namespace LoggingCodefirst.Validators
 {
     public class BrandValidator: AbstractValidator<BrandViewModel>
     {
-        public BrandValidator(LocalizationService localizer, IBrandService brandService)
+        public BrandValidator(LocalizationService<ViewResource> localizer, IBrandService brandService)
         {
             RuleFor(x => x.BrandName)
                 .Must((reg, x) => !brandService.IsExistedName(reg.Id,reg.BrandName))
