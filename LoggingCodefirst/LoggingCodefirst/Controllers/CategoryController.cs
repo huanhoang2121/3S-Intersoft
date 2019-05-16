@@ -12,7 +12,7 @@ namespace LoggingCodefirst.Controllers
         #region Private Members
 
         private readonly ICategoryService _categoryService;
-        private readonly LocalizationService<ViewResource> _localizer;
+        private readonly LocalizationService<CategoryResource> _localizer;
 
         #endregion
         
@@ -20,7 +20,7 @@ namespace LoggingCodefirst.Controllers
 
         public CategoryController(
             ICategoryService categoryService, 
-            LocalizationService<ViewResource> localizer)
+            LocalizationService<CategoryResource> localizer)
         {
             _localizer = localizer;
             _categoryService = categoryService;
@@ -62,10 +62,10 @@ namespace LoggingCodefirst.Controllers
             {
                 if (await _categoryService.CreateCategoryAsync(categoryViewModel))
                 {
-                    TempData["SuccessMessage"] = _localizer.GetLocalizedString("msg_CreateSuccess").ToString();
+                    TempData["SuccessMessage"] = _localizer.GetLocalizedString("msg_CreateCategorySuccess").ToString();
                     return PartialView("_CreatePartial",categoryViewModel); 
                 }
-                ViewData["ErrorMessage"] = _localizer.GetLocalizedString("err_CreateFail").ToString();
+                ViewData["ErrorMessage"] = _localizer.GetLocalizedString("err_CreateCategory").ToString();
                 return PartialView("_CreatePartial", categoryViewModel);
             }
             return PartialView("_CreatePartial", categoryViewModel);
@@ -102,10 +102,10 @@ namespace LoggingCodefirst.Controllers
             {
                 if (await _categoryService.EditCategoryAsync(categoryViewModel))
                 {
-                    TempData["SuccessMessage"] = _localizer.GetLocalizedString("msg_CreateSuccess").ToString();
+                    TempData["SuccessMessage"] = _localizer.GetLocalizedString("msg_EditCategorySuccess").ToString();
                     return PartialView("_CreatePartial",categoryViewModel); 
                 }
-                ViewData["ErrorMessage"] = _localizer.GetLocalizedString("err_CreateFail").ToString();
+                ViewData["ErrorMessage"] = _localizer.GetLocalizedString("err_EditCategory").ToString();
                 return PartialView("_CreatePartial", categoryViewModel);
             }
             return PartialView("_CreatePartial", categoryViewModel);
@@ -115,6 +115,7 @@ namespace LoggingCodefirst.Controllers
         /// Delete Category Get Function
         /// </summary>
         /// <returns>Category Index View</returns>
+        [HttpGet]        
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -123,10 +124,10 @@ namespace LoggingCodefirst.Controllers
             }
             if (await _categoryService.DeleteCategoryAsync(id.Value))
             {
-                TempData["SuccessMessage"] = _localizer.GetLocalizedString("msg_DeleteSuccess").ToString();
+                TempData["SuccessMessage"] = _localizer.GetLocalizedString("msg_DeleteCategorySuccess").ToString();
                 return RedirectToAction(nameof(Index));
             }
-            TempData["ErrorMessage"] = _localizer.GetLocalizedString("err_DeleteFail").ToString();
+            TempData["ErrorMessage"] = _localizer.GetLocalizedString("err_DeleteCategory").ToString();
             return RedirectToAction(nameof(Index));
         }
         

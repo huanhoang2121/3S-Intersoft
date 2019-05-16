@@ -39,6 +39,10 @@ namespace LoggingCodefirst.Services
     /// dummy class for grouping localizarion Brand Resource
     /// </summary>
     public class BrandResource{ }
+    /// <summary>
+    /// dummy class for grouping localizarion Category Resource
+    /// </summary>
+    public class CategoryResource{ }
     
     /// <summary>
     /// dummy class for grouping localizarion View Resource

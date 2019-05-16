@@ -66,6 +66,8 @@
         <e p="Resources" t="Include">
           <e p="BrandResource.en-US.resx" t="Include" />
           <e p="BrandResource.vi-VN.resx" t="Include" />
+          <e p="CategoryResource.en-US.resx" t="Include" />
+          <e p="CategoryResource.vi-VN.resx" t="Include" />
           <e p="CommonResource.en-US.resx" t="Include" />
           <e p="CommonResource.vi-VN.resx" t="Include" />
           <e p="HomeResource.en-US.resx" t="Include" />
