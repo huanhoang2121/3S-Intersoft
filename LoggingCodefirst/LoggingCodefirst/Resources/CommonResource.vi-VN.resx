@@ -197,4 +197,10 @@
     <value>Ngôn ngữ</value>
   </data>
   
+  <data name="msg_Success" xml:space="preserve">
+    <value>Thành công:</value>
+  </data>
+  <data name="msg_Error" xml:space="preserve">
+    <value>Lỗi:</value>
+  </data>
 </root>

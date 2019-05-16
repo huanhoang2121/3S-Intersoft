@@ -17,7 +17,7 @@
                     <input name="IsValid" type="hidden" value="@ViewData.ModelState.IsValid.ToString()" />
                     <div class="form-group" style="text-align: left">
                         <label asp-for="BrandName">@BrandLocalizer.GetLocalizedString("lbl_BrandName")</label>
-                        <input asp-for="BrandName" class="form-control"/>
+                        <input asp-for="BrandName" class="form-control"autofocus/>
                         <span asp-validation-for="BrandName" class="text-danger"></span>
                     </div>
                 </form>

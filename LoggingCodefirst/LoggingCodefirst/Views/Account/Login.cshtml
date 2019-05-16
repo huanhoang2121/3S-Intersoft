@@ -15,7 +15,7 @@
 {
     <script type="text/javascript">
         window.onload = function () {
-            toastr.error("@ViewData["ErrorMessage"]","Error");
+            toastr.error("@ViewData["ErrorMessage"]","@Localizer.GetLocalizedString("msg_Error")");
         };
     </script>
 }
@@ -30,15 +30,20 @@
                 <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                 <div class="row p-b-30">
                     <div class="col-12">
+                        @if (ViewBag.ReturnUrl != null)
+                        {
+                            <input asp-for="ReturnUrl" type="hidden" value="@ViewBag.ReturnUrl">
+                        }
+                        else
+                        {
+                            <input asp-for="ReturnUrl" type="hidden">
+                        }
+                        
                         <div class="input-group mb-3">
                             <div class="input-group-prepend">
                                 <span class="input-group-text bg-success text-white"><i class="ti-user"></i></span>
                             </div>
-                            <input
-                                asp-for="Email"
-                                type="text"
-                                class="form-control form-control-lg"
-                                placeholder="@Localizer.GetLocalizedString("lbl_EmailAddress")">
+                            <input asp-for="Email" type="text" class="form-control form-control-lg" placeholder="@Localizer.GetLocalizedString("lbl_EmailAddress")" autofocus>
                         </div>
                         <div class="input-group mb-3">
                             <span class="text-danger" asp-validation-for="Email"></span>
@@ -47,11 +52,7 @@
                             <div class="input-group-prepend">
                                 <span class="input-group-text bg-warning text-white"><i class="ti-pencil"></i></span>
                             </div>
-                            <input
-                                asp-for="Password"
-                                type="password"
-                                class="form-control form-control-lg"
-                                placeholder="@Localizer.GetLocalizedString("lbl_Password")">
+                            <input asp-for="Password" type="password" class="form-control form-control-lg" placeholder="@Localizer.GetLocalizedString("lbl_Password")">
                         </div>
                         <div class="input-group mb-3">
                             <span class="text-danger" asp-validation-for="Password"></span>

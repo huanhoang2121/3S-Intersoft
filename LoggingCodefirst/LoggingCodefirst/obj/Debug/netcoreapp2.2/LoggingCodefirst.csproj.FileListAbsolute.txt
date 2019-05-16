@@ -190,8 +190,6 @@ G:/3S-Intersoft/LoggingCodefirst/LoggingCodefirst/obj/Debug/netcoreapp2.2/Loggin
 /home/local/3SI/huan.hv/3S-Intersoft/LoggingCodefirst/LoggingCodefirst/obj/Debug/netcoreapp2.2/LoggingCodefirst.Resources.CommonResource.vi-VN.resources
 /home/local/3SI/huan.hv/3S-Intersoft/LoggingCodefirst/LoggingCodefirst/obj/Debug/netcoreapp2.2/LoggingCodefirst.Resources.HomeResource.en-US.resources
 /home/local/3SI/huan.hv/3S-Intersoft/LoggingCodefirst/LoggingCodefirst/obj/Debug/netcoreapp2.2/LoggingCodefirst.Resources.HomeResource.vi-VN.resources
-/home/local/3SI/huan.hv/3S-Intersoft/LoggingCodefirst/LoggingCodefirst/obj/Debug/netcoreapp2.2/LoggingCodefirst.Resources.PropertyResource.en-US.resources
-/home/local/3SI/huan.hv/3S-Intersoft/LoggingCodefirst/LoggingCodefirst/obj/Debug/netcoreapp2.2/LoggingCodefirst.Resources.PropertyResource.vi-VN.resources
 /home/local/3SI/huan.hv/3S-Intersoft/LoggingCodefirst/LoggingCodefirst/obj/Debug/netcoreapp2.2/LoggingCodefirst.Resources.UserResource.en-US.resources
 /home/local/3SI/huan.hv/3S-Intersoft/LoggingCodefirst/LoggingCodefirst/obj/Debug/netcoreapp2.2/LoggingCodefirst.Resources.UserResource.vi-VN.resources
 /home/local/3SI/huan.hv/3S-Intersoft/LoggingCodefirst/LoggingCodefirst/obj/Debug/netcoreapp2.2/LoggingCodefirst.csproj.GenerateResource.cache

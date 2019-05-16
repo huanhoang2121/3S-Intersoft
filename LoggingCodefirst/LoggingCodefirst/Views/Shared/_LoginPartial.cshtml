@@ -30,7 +30,7 @@
             @if (string.IsNullOrEmpty(Context.Session.GetString("username")))
             {
                 <li class="nav-item">
-                    <a class="nav-link" asp-area="" asp-controller="Account" asp-action="Login">
+                    <a class="nav-link" asp-area="" asp-controller="Account" asp-action="Login" asp-route-returnUrl="@Context.Request.Path">
                         <i class="ti-shift-right m-r-5 m-l-5"></i> @Localizer.GetLocalizedString("btn_Login")
                     </a>
                 </li>
@@ -116,7 +116,7 @@
                     <a class="dropdown-item" asp-controller="User" asp-action="Edit" asp-route-id="@Context.Session.GetString("userid")">
                         <i class="ti-settings m-r-5 m-l-5"></i> @Localizer.GetLocalizedString("btn_AccountSetting")
                     </a>
-                    <a class="dropdown-item" data-toggle="ajax-modal" style="color: #212529;" data-url="@Url.Action("ChangePassword","User", new {id = Context.Session.GetString("userid")})">
+                    <a class="dropdown-item" data-toggle="ajax-modal" style="color: #212529;" href="#" data-url="@Url.Action("ChangePassword","User", new {id = Context.Session.GetString("userid")})">
                         <i class="ti-key m-r-5 m-l-5"></i> @Localizer.GetLocalizedString("btn_ChangePassword")
                     </a>
                     <a class="dropdown-item" asp-controller="Account" asp-action="Logout">

@@ -7,6 +7,8 @@ namespace LoggingCodefirst.Filters
     public class AuthorizedActionFilter : IActionFilter
     {
         private readonly IHttpContextAccessor _accessor;
+
+        public static string Returnurl { get; set; }
         
         public AuthorizedActionFilter(IHttpContextAccessor accessor) {
             _accessor = accessor;
@@ -16,6 +18,7 @@ namespace LoggingCodefirst.Filters
         {
             // do something before the action executes
             var httpContext = _accessor.HttpContext;
+            Returnurl = httpContext.Request.Path;
             if (httpContext.Session.GetString("username") == null)
             {
                 context.Result = new UnauthorizedResult();

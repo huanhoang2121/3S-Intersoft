@@ -8,5 +8,7 @@
         <h1 class="error-title text-danger">@ViewBag.Title</h1>
         <h3 class="text-uppercase">@ErrorLocalizer.GetLocalizedString("lbl_401Title")</h3>
         <p class="text-muted m-t-30 m-b-30">@ErrorLocalizer.GetLocalizedString("lbl_401Detail")</p>
-        <a asp-controller="Account" asp-action="Login" class="btn btn-danger btn-rounded waves-effect waves-light m-b-40">@Localizer.GetLocalizedString("btn_Login")</a> </div>
+        <a class="btn btn-danger btn-rounded waves-effect waves-light m-b-40" asp-controller="Account" asp-action="Login" asp-route-url="">
+            @Localizer.GetLocalizedString("btn_Login")
+        </a> </div>
 </div>

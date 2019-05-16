@@ -121,8 +121,8 @@
   <data name="msg_LoginSuccess" xml:space="preserve">
     <value>Đăng nhập thành công!</value>
   </data>
-  <data name="err_LoginFail" xml:space="preserve">
-    <value>Đăng nhập lỗi! Email hoặc password không đúng!</value>
+  <data name="err_Login" xml:space="preserve">
+    <value>Email hoặc mật khẩu không đúng!</value>
   </data>
   <data name="msg_CreateUserSuccess" xml:space="preserve">
     <value>Thêm mới người dùng thành công!</value>

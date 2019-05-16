@@ -1,4 +1,5 @@
 ﻿using System.Threading.Tasks;
+using LoggingCodefirst.Filters;
 using LoggingCodefirst.Services;
 using LoggingCodefirst.ViewModels;
 using Microsoft.AspNetCore.Http;
@@ -31,9 +32,23 @@ namespace LoggingCodefirst.Controllers
         /// Get Login User Function
         /// </summary>
         /// <returns>User Login</returns>
+        
+//        [HttpGet]
+//        public IActionResult Login(string returnUrl)
+//        {
+//            if (returnUrl == null)
+//            {
+//                var loginViewModel = new LoginViewModel {ReturnUrl = AuthorizedActionFilter.Returnurl};
+//                return View();
+//            }
+//            return View();
+//        }
+        
         [HttpGet]
-        public IActionResult Login()
+        public IActionResult Login(string returnUrl)
         {
+            if (returnUrl != null) return View();
+            ViewBag.ReturnUrl = AuthorizedActionFilter.Returnurl;
             return View();
         }
         
@@ -54,9 +69,9 @@ namespace LoggingCodefirst.Controllers
                     HttpContext.Session.SetString("username", user.Fullname);
                         
                     TempData["SuccessMessage"] = _localizer.GetLocalizedString("msg_LoginSuccess").ToString();
-                    return RedirectToAction("Index", "User");
+                    return Redirect(loginViewModel.ReturnUrl ?? "/");
                 }
-                ViewData["ErrorMessage"] = _localizer.GetLocalizedString("err_LoginFail");
+                ViewData["ErrorMessage"] = _localizer.GetLocalizedString("err_Login");
                 return View();
             }
             return View(loginViewModel);

@@ -196,4 +196,11 @@
   <data name="btn_Language" xml:space="preserve">
     <value>Language</value>
   </data>
+  
+  <data name="msg_Success" xml:space="preserve">
+    <value>Success:</value>
+  </data>
+  <data name="msg_Error" xml:space="preserve">
+    <value>Error:</value>
+  </data>
 </root>
