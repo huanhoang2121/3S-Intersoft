@@ -12,7 +12,7 @@ namespace LoggingCodefirst.Controllers
         #region Private Members
 
         private readonly IStoreService _storeService;
-        private readonly LocalizationService<ViewResource> _localizer;
+        private readonly LocalizationService<StoreResource> _localizer;
 
         #endregion
         
@@ -20,7 +20,7 @@ namespace LoggingCodefirst.Controllers
         
         public StoreController(
             IStoreService storeService, 
-            LocalizationService<ViewResource> localizer)
+            LocalizationService<StoreResource> localizer)
         {
             _localizer = localizer;
             _storeService = storeService;
@@ -63,10 +63,10 @@ namespace LoggingCodefirst.Controllers
             {
                 if (await _storeService.CreateStoreAsync(createViewModel))
                 {
-                    TempData["SuccessMessage"] = _localizer.GetLocalizedString("msg_CreateSuccess").ToString();
+                    TempData["SuccessMessage"] = _localizer.GetLocalizedString("msg_CreateStoreSuccess").ToString();
                     return RedirectToAction(nameof(Index));
                 }
-                ViewData["ErrorMessage"] = _localizer.GetLocalizedString("err_CreateFail").ToString();
+                ViewData["ErrorMessage"] = _localizer.GetLocalizedString("err_CreateStore").ToString();
                 return View(createViewModel);
             }
             return View(createViewModel);
@@ -105,10 +105,10 @@ namespace LoggingCodefirst.Controllers
             {
                 if (await _storeService.StoreEditAsync(editViewModel))
                 {
-                    TempData["SuccessMessage"] = _localizer.GetLocalizedString("msg_EditSuccess").ToString();
+                    TempData["SuccessMessage"] = _localizer.GetLocalizedString("msg_EditStoreSuccess").ToString();
                     return RedirectToAction(nameof(Index));
                 }
-                ViewData["ErrorMessage"] = _localizer.GetLocalizedString("err_EditFail").ToString();
+                ViewData["ErrorMessage"] = _localizer.GetLocalizedString("err_EditStore").ToString();
                 return View(editViewModel);
             }
             return View(editViewModel);
@@ -129,10 +129,10 @@ namespace LoggingCodefirst.Controllers
             
             if (await _storeService.DeleteStoreAsync(id.Value))
             {
-                TempData["SuccessMessage"] = _localizer.GetLocalizedString("msg_DeleteSuccess").ToString();
+                TempData["SuccessMessage"] = _localizer.GetLocalizedString("msg_DeleteStoreSuccess").ToString();
                 return RedirectToAction(nameof(Index));
             }
-            TempData["ErrorMessage"] = _localizer.GetLocalizedString("err_DeleteFail").ToString();
+            TempData["ErrorMessage"] = _localizer.GetLocalizedString("err_DeleteStore").ToString();
             return RedirectToAction(nameof(Index));
         }
         

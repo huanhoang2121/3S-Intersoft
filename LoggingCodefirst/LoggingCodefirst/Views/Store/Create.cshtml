@@ -1,7 +1,6 @@
-﻿@using LoggingCodefirst.Services
-@model StoreViewModel
+﻿@model StoreViewModel
 @{
-    ViewBag.Title = Localizer.GetLocalizedString("btn_Create");
+    ViewBag.Title = StoreLocalizer.GetLocalizedString("lbl_CreateStore");
     Layout = "_Layout";
 }
 
@@ -12,8 +11,8 @@
             <div class="ml-auto text-right">
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a asp-controller="Store" asp-action="Index">@Localizer.GetLocalizedString("ctr_Store")</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">@ViewBag.Title</li>
+                        <li class="breadcrumb-item"><a asp-controller="Store" asp-action="Index">@Localizer.GetLocalizedString("btn_Store")</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">@Localizer.GetLocalizedString("btn_Create")</li>
                     </ol>
                 </nav>
             </div>
@@ -30,39 +29,39 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label asp-for="StoreName"></label>
+                                    <label asp-for="StoreName">@StoreLocalizer.GetLocalizedString("lbl_StoreName")</label>
                                     <input asp-for="StoreName" class="form-control"/>
                                     <span asp-validation-for="StoreName" class="text-danger"></span>
                                 </div>
                                 <div class="form-group">
-                                    <label asp-for="Email"></label>
+                                    <label asp-for="Email">@StoreLocalizer.GetLocalizedString("lbl_Email")</label>
                                     <input asp-for="Email" class="form-control"/>
                                     <span asp-validation-for="Email" class="text-danger"></span>
                                 </div>
                                 <div class="form-group">
-                                    <label asp-for="Phone"></label>
+                                    <label asp-for="Phone">@StoreLocalizer.GetLocalizedString("lbl_Phone")</label>
                                     <input asp-for="Phone" type="number" class="form-control"/>
                                     <span asp-validation-for="Phone" class="text-danger"></span>
                                 </div>
                                 <div class="form-group">
-                                    <label asp-for="State"></label>
+                                    <label asp-for="State">@StoreLocalizer.GetLocalizedString("lbl_State")</label>
                                     <input asp-for="State" class="form-control" />
                                     <span asp-validation-for="State" class="text-danger"></span>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label asp-for="City"></label>
+                                    <label asp-for="City">@StoreLocalizer.GetLocalizedString("lbl_City")</label>
                                     <input asp-for="City" class="form-control" />
                                     <span asp-validation-for="City" class="text-danger"></span>
                                 </div>
                                 <div class="form-group">
-                                    <label asp-for="Street"></label>
+                                    <label asp-for="Street">@StoreLocalizer.GetLocalizedString("lbl_Street")</label>
                                     <input asp-for="Street" class="form-control" />
                                     <span asp-validation-for="Street" class="text-danger"></span>
                                 </div>
                                 <div class="form-group">
-                                    <label asp-for="ZipCode"></label>
+                                    <label asp-for="ZipCode">@StoreLocalizer.GetLocalizedString("lbl_ZipCode")</label>
                                     <input asp-for="ZipCode" class="form-control" />
                                     <span asp-validation-for="ZipCode" class="text-danger"></span>
                                 </div>
