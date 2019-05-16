@@ -6,10 +6,10 @@ namespace LoggingCodefirst.Validators
 {
     public class StockValidator: AbstractValidator<StockViewModel>
     {
-        public StockValidator(LocalizationService<ViewResource> localizer)
+        public StockValidator(LocalizationService<StockResource> localizer)
         {
             RuleFor(x => x.Quantity)
-                .GreaterThanOrEqualTo(1).WithMessage(localizer.GetLocalizedString("msg_vld_GreaterThanOrEqualTo1"));
+                .GreaterThanOrEqualTo(1).WithMessage(localizer.GetLocalizedString("msg_GreaterThanOrEqualTo1"));
         }
         
     }

@@ -117,48 +117,57 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="err_400_Detail" xml:space="preserve">
-    <value>Máy chủ không thể nhận dạng được yêu cầu.</value>
+  
+  <data name="msg_CreateStockSuccess" xml:space="preserve">
+    <value>Thêm mới kho hàng thành công!</value>
   </data>
-  <data name="err_400_Title" xml:space="preserve">
-    <value>Yêu cầu này bị lỗi!</value>
+  <data name="err_CreateStock" xml:space="preserve">
+    <value>Thêm mới kho hàng lỗi!</value>
   </data>
-  <data name="err_401_Detail" xml:space="preserve">
-    <value>Bạn không có quyền truy cập vào trang này!</value>
+  <data name="msg_EditStockSuccess" xml:space="preserve">
+    <value>Sửa thông tin kho hàng thành công!</value>
   </data>
-  <data name="err_401_Title" xml:space="preserve">
-    <value>Không được phép!</value>
+  <data name="err_EditStock" xml:space="preserve">
+    <value>Sửa thông tin kho hàng lỗi!</value>
   </data>
-  <data name="err_403_Detail" xml:space="preserve">
-    <value>Máy chủ hiểu yêu cầu nhưng không muốn cho máy con nhận thông tin.</value>
+  <data name="msg_DeleteStockSuccess" xml:space="preserve">
+    <value>Xóa kho hàng thành công!</value>
   </data>
-  <data name="err_403_Title" xml:space="preserve">
-    <value>Bị cấm truy cập!</value>
+  <data name="err_DeleteStock" xml:space="preserve">
+    <value>Xóa kho hàng lỗi!</value>
   </data>
-  <data name="err_404_Detail" xml:space="preserve">
-    <value>Trang web tạm thời không sẵn sàng hoặc website đã bị thay đổi.</value>
-  </data>
-  <data name="err_404_Title" xml:space="preserve">
-    <value>Không tìm thấy!</value>
-  </data>
-  <data name="err_405_Detail" xml:space="preserve">
-    <value>Phương thức yêu cầu đã sử dụng không được chấp nhận ở server này.</value>
-  </data>
-  <data name="err_405_Title" xml:space="preserve">
-    <value>Phương thức không được phép!</value>
-  </data>
-  <data name="err_500_Detail" xml:space="preserve">
-    <value>Máy chủ bất ngờ bị lỗi, không thể hoàn thành yêu cầu.</value>
-  </data>
-  <data name="err_500_Title" xml:space="preserve">
-    <value>Phương thức không được phép!</value>
+  <data name="msg_DeleteStock" xml:space="preserve">
+    <value>Bạn có chắc chắn muốn xóa kho hàng này?</value>
   </data>
   
- 
-  <data name="msg_del_Store" xml:space="preserve">
-    <value>Khi bạn xóa cửa hàng này, những người dùng liên quan sẽ bị xóa! Bạn có chắc chắn muốn xóa?</value>
+  <data name="lbl_Stock" xml:space="preserve">
+    <value>Kho hàng</value>
   </data>
-  <data name="msg_del_User" xml:space="preserve">
-    <value>Bạn có chắc chắn muốn xóa người dùng này?</value>
+  <data name="lbl_CreateStock" xml:space="preserve">
+    <value>Thêm kho hàng</value>
   </data>
+  <data name="lbl_EditStock" xml:space="preserve">
+    <value>Thay đổi thông tin kho hàng</value>
+  </data>
+  
+  <data name="lbl_No" xml:space="preserve">
+    <value>Stt</value>
+  </data>
+  <data name="lbl_Store" xml:space="preserve">
+    <value>Cửa hàng</value>
+  </data>
+  <data name="lbl_Product" xml:space="preserve">
+    <value>Sản phẩm</value>
+  </data>
+  <data name="lbl_Quantity" xml:space="preserve">
+    <value>Số lượng</value>
+  </data>
+  <data name="lbl_Action" xml:space="preserve">
+    <value>Hành động</value>
+  </data>
+  
+  <data name="msg_GreaterThanOrEqualTo1" xml:space="preserve">
+    <value>Số lượng phải lớn hơn hoặc bằng 1!</value>
+  </data>
+  
 </root>

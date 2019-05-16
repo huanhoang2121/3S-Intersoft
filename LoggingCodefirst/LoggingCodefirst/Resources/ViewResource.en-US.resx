@@ -160,12 +160,6 @@
     <value>No</value>
   </data>
   
-  <data name="msg_del_Product" xml:space="preserve">
-    <value>Are you sure you want to delete this product?</value>
-  </data>
-  <data name="msg_del_Stock" xml:space="preserve">
-    <value>Are you sure you want to delete this stock?</value>
-  </data>
   <data name="msg_del_Store" xml:space="preserve">
     <value>When you delete this store, the related users will be deleted! Are you sure you want to delete?</value>
   </data>

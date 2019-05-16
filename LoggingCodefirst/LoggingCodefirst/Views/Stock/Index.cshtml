@@ -1,7 +1,6 @@
-@using LoggingCodefirst.Services
 @model IEnumerable<StockViewModel>
 @{
-    ViewBag.Title = Localizer.GetLocalizedString("ctr_Stock");
+    ViewBag.Title = StockLocalizer.GetLocalizedString("lbl_Stock");
     Layout = "_Layout";
 }
 
@@ -13,7 +12,7 @@
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a asp-controller="Stock" asp-action="Index">@ViewBag.Title</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">@Localizer.GetLocalizedString("act_Index")</li>
+                        <li class="breadcrumb-item active" aria-current="page">@Localizer.GetLocalizedString("btn_Index")</li>
                     </ol>
                 </nav>
             </div>
@@ -32,11 +31,11 @@
                         <table id="zero_config" class="table table-hover table-striped">
                             <thead class="thead-dark">
                             <tr>
-                                <th style="text-align: center;">@Localizer.GetLocalizedString("lbl_No")</th>
-                                <th style="text-align: center;">@Html.DisplayNameFor(model => model.Store)</th>
-                                <th style="text-align: center;">@Html.DisplayNameFor(model => model.Product)</th>
-                                <th style="text-align: center;">@Html.DisplayNameFor(model => model.Quantity)</th>
-                                <th style="text-align: center;">@Localizer.GetLocalizedString("lbl_Action")</th>
+                                <th style="text-align: center;">@StockLocalizer.GetLocalizedString("lbl_No")</th>
+                                <th style="text-align: center;">@StockLocalizer.GetLocalizedString("lbl_Store")</th>
+                                <th style="text-align: center;">@StockLocalizer.GetLocalizedString("lbl_Product")</th>
+                                <th style="text-align: center;">@StockLocalizer.GetLocalizedString("lbl_Quantity")</th>
+                                <th style="text-align: center;">@StockLocalizer.GetLocalizedString("lbl_Action")</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -62,7 +61,7 @@
                                             <i class="mdi mdi-grease-pencil" style="font-size: 24px; color: black"></i>
                                         </a>
                                         <a asp-action="Delete" asp-route-productid="@item.ProductId" asp-route-storeid="@item.StoreId"
-                                           onclick="return confirm('@Localizer.GetLocalizedString("msg_del_Stock")');">
+                                           onclick="return confirm('@StockLocalizer.GetLocalizedString("msg_DeleteStock")');">
                                             <i class="fa fa-trash" style="font-size: 24px; color: red"></i>
                                         </a>
                                     </td>

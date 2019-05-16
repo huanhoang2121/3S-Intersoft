@@ -76,6 +76,8 @@
           <e p="ProductResource.vi-VN.resx" t="Include" />
           <e p="PropertyResource.en-US.resx" t="Include" />
           <e p="PropertyResource.vi-VN.resx" t="Include" />
+          <e p="StockResource.en-US.resx" t="Include" />
+          <e p="StockResource.vi-VN.resx" t="Include" />
           <e p="UserResource.en-US.resx" t="Include" />
           <e p="UserResource.vi-VN.resx" t="Include" />
           <e p="ViewResource.en-US.resx" t="Include" />

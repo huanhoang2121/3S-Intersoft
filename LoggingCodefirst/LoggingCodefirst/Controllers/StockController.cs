@@ -15,7 +15,7 @@ namespace LoggingCodefirst.Controllers
         private readonly IStockService _stockService;
         private readonly IProductService _productService;
         private readonly IStoreService _storeService;
-        private readonly LocalizationService<ViewResource> _localizer;
+        private readonly LocalizationService<StockResource> _localizer;
 
         #endregion
         
@@ -25,7 +25,7 @@ namespace LoggingCodefirst.Controllers
             IStockService stockService, 
             IProductService productService, 
             IStoreService storeService, 
-            LocalizationService<ViewResource> localizer)
+            LocalizationService<StockResource> localizer)
         {
             _localizer = localizer;
             _stockService = stockService;
@@ -72,10 +72,10 @@ namespace LoggingCodefirst.Controllers
             {
                 if (await _stockService.CreateStockAsync(createViewModel))
                 {
-                    TempData["SuccessMessage"] = _localizer.GetLocalizedString("msg_CreateSuccess").ToString();
+                    TempData["SuccessMessage"] = _localizer.GetLocalizedString("msg_CreateStockSuccess").ToString();
                     return PartialView("_CreatePartial", createViewModel);
                 }
-                ViewData["ErrorMessage"] = _localizer.GetLocalizedString("err_CreateFail").ToString();
+                ViewData["ErrorMessage"] = _localizer.GetLocalizedString("err_CreateStock").ToString();
                 ViewData["ProductId"] = new SelectList(_productService.Products(), "Id", "ProductName", createViewModel.ProductId);
                 ViewData["StoreId"] = new SelectList(_storeService.Stores(), "Id", "StoreName", createViewModel.StoreId);
                 return PartialView("_CreatePartial", createViewModel);
@@ -121,10 +121,10 @@ namespace LoggingCodefirst.Controllers
             {
                 if (await _stockService.EditStockAsync(editViewModel))
                 {
-                    TempData["SuccessMessage"] = _localizer.GetLocalizedString("msg_EditSuccess").ToString();
+                    TempData["SuccessMessage"] = _localizer.GetLocalizedString("msg_EditStockSuccess").ToString();
                     return PartialView("_EditPartial", editViewModel);
                 }
-                ViewData["ErrorMessage"] = _localizer.GetLocalizedString("err_EditFail").ToString();
+                ViewData["ErrorMessage"] = _localizer.GetLocalizedString("err_EditStock").ToString();
                 ViewData["ProductId"] = new SelectList(_productService.Products(), "Id", "ProductName", editViewModel.ProductId);
                 ViewData["StoreId"] = new SelectList(_storeService.Stores(), "Id", "StoreName", editViewModel.StoreId);
                 return PartialView("_EditPartial", editViewModel);
@@ -149,10 +149,10 @@ namespace LoggingCodefirst.Controllers
             }
             if (await _stockService.DeleteStockAsync(productid.Value,storeid.Value))
             {
-                TempData["SuccessMessage"] = _localizer.GetLocalizedString("msg_DeleteSuccess").ToString();
+                TempData["SuccessMessage"] = _localizer.GetLocalizedString("msg_DeleteStockSuccess").ToString();
                 return RedirectToAction(nameof(Index));
             }
-            TempData["ErrorMessage"] = _localizer.GetLocalizedString("err_DeleteFail").ToString();
+            TempData["ErrorMessage"] = _localizer.GetLocalizedString("err_DeleteStock").ToString();
             return RedirectToAction(nameof(Index));
         }
         

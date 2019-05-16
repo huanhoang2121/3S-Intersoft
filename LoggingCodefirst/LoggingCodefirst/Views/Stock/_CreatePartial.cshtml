@@ -1,12 +1,11 @@
-﻿@using LoggingCodefirst.Services
-@model StockViewModel
+﻿@model StockViewModel
 
 <!-- Modal -->
 <div class="modal fade" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title">@Localizer.GetLocalizedString("btn_Create")</h5>
+                <h5 class="modal-title">@StockLocalizer.GetLocalizedString("lbl_CreateStock")</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -15,15 +14,15 @@
                 <form id="changepassword" asp-action="Create" enctype="multipart/form-data">
                     <input name="IsValid" type="hidden" value="@ViewData.ModelState.IsValid.ToString()" />
                     <div class="form-group">
-                        <label asp-for="StoreId"></label>
+                        <label asp-for="StoreId">@StockLocalizer.GetLocalizedString("lbl_Store")</label>
                         <select asp-for="StoreId" class ="form-control" asp-items="ViewBag.StoreId"></select>
                     </div>
                     <div class="form-group">
-                        <label asp-for="ProductId"></label>
+                        <label asp-for="ProductId">@StockLocalizer.GetLocalizedString("lbl_Product")</label>
                         <select asp-for="ProductId" class ="form-control" asp-items="ViewBag.ProductId"></select>
                     </div>
                     <div class="form-group" style="text-align: left">
-                        <label asp-for="Quantity"></label>
+                        <label asp-for="Quantity">@StockLocalizer.GetLocalizedString("lbl_Quantity")</label>
                         <input asp-for="Quantity" class="form-control"/>
                         <span asp-validation-for="Quantity" class="text-danger"></span>
                     </div>
