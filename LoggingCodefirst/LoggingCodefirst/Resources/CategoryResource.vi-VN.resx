@@ -137,7 +137,7 @@
     <value>Xóa danh mục lỗi!</value>
   </data>
   <data name="msg_DeleteCategory" xml:space="preserve">
-    <value>Bạn có chắc chắn muốn xóa danh mục này?</value>
+    <value>Khi bạn xóa danh mục này, các sản phẩm liên quan sẽ bị xóa! Bạn có chắc chắn muốn xóa?</value>
   </data>
   
   <data name="lbl_Category" xml:space="preserve">

@@ -65,6 +65,7 @@ namespace LoggingCodefirst
             services.AddSingleton<LocalizationService<UserResource>>();
             services.AddSingleton<LocalizationService<BrandResource>>();
             services.AddSingleton<LocalizationService<CategoryResource>>();
+            services.AddSingleton<LocalizationService<ProductResource>>();
  
             services.Configure<RequestLocalizationOptions>(options =>
             {

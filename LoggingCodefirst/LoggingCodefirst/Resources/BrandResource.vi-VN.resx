@@ -137,7 +137,7 @@
     <value>Xóa nhãn hiệu lỗi!</value>
   </data>
   <data name="msg_DeleteBrand" xml:space="preserve">
-    <value>Bạn có chắc chắn muốn xóa nhãn hiệu này?</value>
+    <value>Khi bạn xóa nhãn hiệu này, các sản phẩm liên quan sẽ bị xóa! Bạn có chắc chắn muốn xóa?</value>
   </data>
   
   <data name="lbl_Brand" xml:space="preserve">

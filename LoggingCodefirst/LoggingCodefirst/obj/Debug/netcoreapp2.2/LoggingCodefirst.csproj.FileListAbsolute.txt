@@ -254,3 +254,5 @@ G:/3S-Intersoft/LoggingCodefirst/LoggingCodefirst/obj/Debug/netcoreapp2.2/Loggin
 /home/local/3SI/huan.hv/3S-Intersoft/LoggingCodefirst/LoggingCodefirst/obj/Debug/netcoreapp2.2/LoggingCodefirst.dll
 /home/local/3SI/huan.hv/3S-Intersoft/LoggingCodefirst/LoggingCodefirst/obj/Debug/netcoreapp2.2/LoggingCodefirst.pdb
 /home/local/3SI/huan.hv/3S-Intersoft/LoggingCodefirst/LoggingCodefirst/obj/Debug/netcoreapp2.2/LoggingCodefirst.csproj.CopyComplete
+/home/local/3SI/huan.hv/3S-Intersoft/LoggingCodefirst/LoggingCodefirst/obj/Debug/netcoreapp2.2/LoggingCodefirst.Resources.ProductResource.en-US.resources
+/home/local/3SI/huan.hv/3S-Intersoft/LoggingCodefirst/LoggingCodefirst/obj/Debug/netcoreapp2.2/LoggingCodefirst.Resources.ProductResource.vi-VN.resources

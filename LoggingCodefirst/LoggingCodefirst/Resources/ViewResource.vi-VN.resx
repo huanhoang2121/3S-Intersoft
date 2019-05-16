@@ -159,12 +159,6 @@
     <value>{PropertyName} phải lớn hơn hoặc bằng 1!</value>
   </data>
   
-  <data name="msg_del_Brand" xml:space="preserve">
-    <value>Khi bạn xóa thương hiệu này, các sản phẩm liên quan sẽ bị xóa! Bạn có chắc chắn muốn xóa?</value>
-  </data>
-  <data name="msg_del_Category" xml:space="preserve">
-    <value>Khi bạn xóa danh mục này, các sản phẩm liên quan sẽ bị xóa! Bạn có chắc chắn muốn xóa?</value>
-  </data>
   <data name="msg_del_Product" xml:space="preserve">
     <value>Bạn có chắc chắn muốn xóa sản phẩm này?</value>
   </data>

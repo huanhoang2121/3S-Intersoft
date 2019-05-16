@@ -15,7 +15,7 @@ namespace LoggingCodefirst.Controllers
         private readonly IProductService _productService;
         private readonly IBrandService _brandService;
         private readonly ICategoryService _categoryService;
-        private readonly LocalizationService<ViewResource> _localizer;
+        private readonly LocalizationService<ProductResource> _localizer;
 
         #endregion
         
@@ -25,7 +25,7 @@ namespace LoggingCodefirst.Controllers
             IProductService productService,
             IBrandService brandService, 
             ICategoryService categoryService, 
-            LocalizationService<ViewResource> localizer)
+            LocalizationService<ProductResource> localizer)
         {
             _localizer = localizer;
             _productService = productService;
@@ -72,10 +72,10 @@ namespace LoggingCodefirst.Controllers
             {
                 if (await _productService.CreateProductAsync(createViewModel))
                 {
-                    TempData["SuccessMessage"] = _localizer.GetLocalizedString("msg_CreateSuccess").ToString();
+                    TempData["SuccessMessage"] = _localizer.GetLocalizedString("msg_CreateProductSuccess").ToString();
                     return RedirectToAction(nameof(Index));
                 }
-                ViewData["ErrorMessage"] = _localizer.GetLocalizedString("err_CreateFail").ToString();
+                ViewData["ErrorMessage"] = _localizer.GetLocalizedString("err_CreateProduct").ToString();
                 ViewData["BrandId"] = new SelectList(_brandService.Brands(), "Id", "BrandName", createViewModel.BrandId);
                 ViewData["CategoryId"] = new SelectList(_categoryService.Categories(), "Id", "CategoryName", createViewModel.CategoryId);
                 return View(createViewModel);
@@ -120,10 +120,10 @@ namespace LoggingCodefirst.Controllers
             {
                 if (await _productService.EditProductAsync(editViewModel))
                 {
-                    TempData["SuccessMessage"] = _localizer.GetLocalizedString("msg_EditSuccess").ToString();
+                    TempData["SuccessMessage"] = _localizer.GetLocalizedString("msg_EditProductSuccess").ToString();
                     return RedirectToAction(nameof(Index));
                 }
-                ViewData["ErrorMessage"] = _localizer.GetLocalizedString("err_EditFail").ToString();
+                ViewData["ErrorMessage"] = _localizer.GetLocalizedString("err_EditProduct").ToString();
                 ViewData["BrandId"] = new SelectList(_brandService.Brands(), "Id", "BrandName", editViewModel.BrandId);
                 ViewData["CategoryId"] = new SelectList(_categoryService.Categories(), "Id", "CategoryName", editViewModel.CategoryId);
                 return View(editViewModel);
@@ -148,10 +148,10 @@ namespace LoggingCodefirst.Controllers
             
             if (await _productService.DeleteProductAsync(id.Value))
             {
-                TempData["SuccessMessage"] = _localizer.GetLocalizedString("msg_DeleteSuccess").ToString();
+                TempData["SuccessMessage"] = _localizer.GetLocalizedString("msg_DeleteProductSuccess").ToString();
                 return RedirectToAction(nameof(Index));
             }
-            TempData["ErrorMessage"] = _localizer.GetLocalizedString("err_DeleteFail").ToString();
+            TempData["ErrorMessage"] = _localizer.GetLocalizedString("err_DeleteProduct").ToString();
             return RedirectToAction(nameof(Index));
         }
         

@@ -72,6 +72,8 @@
           <e p="CommonResource.vi-VN.resx" t="Include" />
           <e p="HomeResource.en-US.resx" t="Include" />
           <e p="HomeResource.vi-VN.resx" t="Include" />
+          <e p="ProductResource.en-US.resx" t="Include" />
+          <e p="ProductResource.vi-VN.resx" t="Include" />
           <e p="PropertyResource.en-US.resx" t="Include" />
           <e p="PropertyResource.vi-VN.resx" t="Include" />
           <e p="UserResource.en-US.resx" t="Include" />
@@ -1461,6 +1463,8 @@
             <e p="05092019154638tai_xuong_7a45fb79-6c1b-412a-7670-b7962538ff4f_large.jpg" t="Include" />
             <e p="05092019155700tai_xuong__1__1d1f2ab4-3330-491f-77e3-2725057f69a6_large.jpg" t="Include" />
             <e p="05102019130507tai_xuong__1__1d1f2ab4-3330-491f-77e3-2725057f69a6_large.jpg" t="Include" />
+            <e p="0516201910515720190420_111947.jpg" t="Include" />
+            <e p="05162019105359quan.jpg" t="Include" />
             <e p="05_06_2019_09_12_40ao-adidas-trang-1492535561-2298159-1492535561.jpeg" t="Include" />
             <e p="05_06_2019_11_12_24quan.jpg" t="Include" />
             <e p="05_06_2019_11_12_39quan.jpg" t="Include" />
