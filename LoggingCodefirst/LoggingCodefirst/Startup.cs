@@ -62,20 +62,9 @@ namespace LoggingCodefirst
 
             services.AddSingleton<LocalizationService<CommonResource>>();
             services.AddSingleton<LocalizationService<HomeResource>>();
-            services.AddSingleton<LocalizationService<ViewResource>>();
             services.AddSingleton<LocalizationService<UserResource>>();
-            
-//            services.AddMvc()
-//                .AddViewLocalization()
-//                .AddDataAnnotationsLocalization(options =>
-//                {
-//                    options.DataAnnotationLocalizerProvider = (type, factory) =>
-//                    {
-//                        var assemblyName = new AssemblyName(typeof(PropertyResource).GetTypeInfo().Assembly.FullName);
-//                        return factory.Create("PropertyResource", assemblyName.Name);
-//                    };
-//                });
-//            
+            services.AddSingleton<LocalizationService<BrandResource>>();
+ 
             services.Configure<RequestLocalizationOptions>(options =>
             {
                 var supportedCultures = new List<CultureInfo>

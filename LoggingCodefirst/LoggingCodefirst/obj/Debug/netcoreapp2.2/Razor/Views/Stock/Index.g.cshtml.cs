@@ -34,7 +34,7 @@ using LoggingCodefirst.Services;
 #line default
 #line hidden
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"3f1ffdc4126cf11e30ce07db9fbdc62b3d24e1f1", @"/Views/Stock/Index.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"5ab4dd25a059a42470c66f7da39473d40e700bea", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"56a46351eb91be72e4a8f6bdc7ca59f396d6bcba", @"/Views/_ViewImports.cshtml")]
     public class Views_Stock_Index : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<IEnumerable<StockViewModel>>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("asp-controller", "Stock", global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -340,6 +340,8 @@ AddHtmlAttributeValue("", 3674, Localizer.GetLocalizedString("msg_del_Stock"), 3
             EndContext();
         }
         #pragma warning restore 1998
+        [global::Microsoft.AspNetCore.Mvc.Razor.Internal.RazorInjectAttribute]
+        public LocalizationService<BrandResource> BrandLocalizer { get; private set; }
         [global::Microsoft.AspNetCore.Mvc.Razor.Internal.RazorInjectAttribute]
         public LocalizationService<UserResource> UserLocalizer { get; private set; }
         [global::Microsoft.AspNetCore.Mvc.Razor.Internal.RazorInjectAttribute]

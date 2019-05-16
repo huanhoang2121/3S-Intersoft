@@ -20,24 +20,28 @@ namespace LoggingCodefirst.Services
             return _localizer[key];
         }
     }
-    // dummy class for grouping localizarion resources
-    public class BrandResource
-    {  
-    }// dummy class for grouping localizarion resources
-    public class CommonResource
-    {
-        
-    }// dummy class for grouping localizarion resources
-    public class HomeResource
-    {  
-    }public class PropertyResource
-    {  
-    }// dummy class for grouping localizarion resources
-    public class UserResource
-    {  
-    }// dummy class for grouping localizarion resources
-    public class ViewResource
-    {
-        
-    }
+    /// <summary>
+    /// dummy class for grouping localizarion Common Resource
+    /// </summary> 
+    public class CommonResource{ }
+    
+    /// <summary>
+    /// dummy class for grouping localizarion Brand Resource
+    /// </summary>
+    public class HomeResource{ }
+    
+    /// <summary>
+    /// dummy class for grouping localizarion Brand Resource
+    /// </summary>
+    public class UserResource{ }
+    
+    /// <summary>
+    /// dummy class for grouping localizarion Brand Resource
+    /// </summary>
+    public class BrandResource{ }
+    
+    /// <summary>
+    /// dummy class for grouping localizarion View Resource
+    /// </summary>    public class UserResource{ }
+    public class ViewResource{ }
 }

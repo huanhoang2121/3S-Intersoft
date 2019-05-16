@@ -155,9 +155,6 @@
   <data name="lbl_User" xml:space="preserve">
     <value>Người dùng</value>
   </data>
-  <data name="lbl_Index" xml:space="preserve">
-    <value>Danh sách</value>
-  </data>
   <data name="lbl_CreateUser" xml:space="preserve">
     <value>Thêm người dùng</value>
   </data>

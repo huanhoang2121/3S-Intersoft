@@ -118,6 +118,53 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   
+  <data name="msg_CreateBrandSuccess" xml:space="preserve">
+    <value>Thêm mới nhãn hiệu thành công!</value>
+  </data>
+  <data name="err_CreateBrand" xml:space="preserve">
+    <value>Thêm mới nhãn hiệu lỗi!</value>
+  </data>
+  <data name="msg_EditBrandSuccess" xml:space="preserve">
+    <value>Sửa thông tin nhãn hiệu thành công!</value>
+  </data>
+  <data name="err_EditBrand" xml:space="preserve">
+    <value>Sửa thông tin nhãn hiệu lỗi!</value>
+  </data>
+  <data name="msg_DeleteBrandSuccess" xml:space="preserve">
+    <value>Xóa nhãn hiệu thành công!</value>
+  </data>
+  <data name="err_DeleteBrand" xml:space="preserve">
+    <value>Xóa nhãn hiệu lỗi!</value>
+  </data>
+  <data name="msg_DeleteBrand" xml:space="preserve">
+    <value>Bạn có chắc chắn muốn xóa nhãn hiệu này?</value>
+  </data>
   
+  <data name="lbl_Brand" xml:space="preserve">
+    <value>Nhãn hiệu</value>
+  </data>
+  <data name="lbl_CreateBrand" xml:space="preserve">
+    <value>Thêm nhãn hiệu</value>
+  </data>
+  <data name="lbl_EditBrand" xml:space="preserve">
+    <value>Thay đổi thông tin nhãn hiệu</value>
+  </data>
+  
+  <data name="lbl_No" xml:space="preserve">
+    <value>Stt</value>
+  </data>
+  <data name="lbl_BrandName" xml:space="preserve">
+    <value>Tên nhãn hiệu</value>
+  </data>
+  <data name="lbl_Action" xml:space="preserve">
+    <value>Hành động</value>
+  </data>
+  
+  <data name="msg_NotEmpty" xml:space="preserve">
+    <value>Tên Nhãn hiệu không được để trống!</value>
+  </data>
+  <data name="msg_Exists" xml:space="preserve">
+    <value>{0} đã tồn tại!</value>
+  </data>
   
 </root>

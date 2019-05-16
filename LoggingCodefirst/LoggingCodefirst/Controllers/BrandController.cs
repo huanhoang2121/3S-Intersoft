@@ -12,7 +12,7 @@ namespace LoggingCodefirst.Controllers
         #region Private Members
 
         private readonly IBrandService _brandService;
-        private readonly LocalizationService<ViewResource> _localizer;
+        private readonly LocalizationService<BrandResource> _localizer;
 
         #endregion
         
@@ -20,7 +20,7 @@ namespace LoggingCodefirst.Controllers
 
         public BrandController(
             IBrandService brandService, 
-            LocalizationService<ViewResource> localizer)
+            LocalizationService<BrandResource> localizer)
         {
             _localizer = localizer;
             _brandService = brandService;
@@ -62,10 +62,10 @@ namespace LoggingCodefirst.Controllers
             {
                 if (await _brandService.CreateBrandAsync(brandViewModel))
                 {
-                    TempData["SuccessMessage"] = _localizer.GetLocalizedString("msg_CreateSuccess").ToString();
+                    TempData["SuccessMessage"] = _localizer.GetLocalizedString("msg_CreateBrandSuccess").ToString();
                     return PartialView("_CreatePartial",brandViewModel); 
                 }
-                ViewData["ErrorMessage"] = _localizer.GetLocalizedString("err_CreateFail").ToString();
+                ViewData["ErrorMessage"] = _localizer.GetLocalizedString("err_CreateBrand").ToString();
                 return PartialView("_CreatePartial", brandViewModel);
             }
             return PartialView("_CreatePartial", brandViewModel);
@@ -102,10 +102,10 @@ namespace LoggingCodefirst.Controllers
             {
                 if (await _brandService.EditBrandAsync(brandViewModel))
                 {
-                    TempData["SuccessMessage"] = _localizer.GetLocalizedString("msg_EditSuccess").ToString();
+                    TempData["SuccessMessage"] = _localizer.GetLocalizedString("msg_EditBrandSuccess").ToString();
                     return PartialView("_EditPartial", brandViewModel);
                 }
-                ViewData["ErrorMessage"] = _localizer.GetLocalizedString("err_EditFail").ToString();
+                ViewData["ErrorMessage"] = _localizer.GetLocalizedString("err_EditBrand").ToString();
                 return PartialView("_EditPartial", brandViewModel);
             }
             return PartialView("_EditPartial", brandViewModel);
@@ -125,10 +125,10 @@ namespace LoggingCodefirst.Controllers
 
             if (await _brandService.DeleteBrandAsync(id.Value))
             {
-                TempData["SuccessMessage"] = _localizer.GetLocalizedString("msg_DeleteSuccess").ToString();
+                TempData["SuccessMessage"] = _localizer.GetLocalizedString("msg_DeleteBrandSuccess").ToString();
                 return RedirectToAction(nameof(Index));
             }
-            TempData["ErrorMessage"] = _localizer.GetLocalizedString("err_DeleteFail").ToString();
+            TempData["ErrorMessage"] = _localizer.GetLocalizedString("err_DeleteBrand").ToString();
             return RedirectToAction(nameof(Index));
         }
         

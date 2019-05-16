@@ -1,6 +1,6 @@
 @model IEnumerable<BrandViewModel>
 @{
-    ViewBag.Title = Localizer.GetLocalizedString("ctr_Brand");
+    ViewBag.Title = BrandLocalizer.GetLocalizedString("lbl_Brand");
     Layout = "_Layout";
 }
 
@@ -12,7 +12,7 @@
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a asp-controller="Brand" asp-action="Index">@ViewBag.Title</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">@Localizer.GetLocalizedString("act_Index")</li>
+                        <li class="breadcrumb-item active" aria-current="page">@Localizer.GetLocalizedString("btn_Index")</li>
                     </ol>
                 </nav>
             </div>
@@ -25,18 +25,15 @@
             <div class="card">
                 <div class="card-body">
                     <a data-toggle="ajax-modal" data-url="@Url.Action("Create")">
-                        <i class="mdi mdi-library-plus" style="font-size: 24px; color: black"></i>
-                        @Localizer.GetLocalizedString("btn_Create")
+                        <i class="mdi mdi-library-plus" style="font-size: 24px; color: black"></i>@Localizer.GetLocalizedString("btn_Create")
                     </a>
                     <div class="table-responsive">
                         <table id="zero_config" class="table table-hover table-striped">
                             <thead class="thead-dark">
                             <tr>
-                                <th style="text-align: center;">@Localizer.GetLocalizedString("lbl_No")</th>
-                                <th style="text-align: center;">
-                                    @Html.DisplayNameFor(model => model.BrandName)
-                                </th>
-                                <th style="text-align: center;">@Localizer.GetLocalizedString("lbl_Action")</th>
+                                <th style="text-align: center;">@BrandLocalizer.GetLocalizedString("lbl_No")</th>
+                                <th style="text-align: center;">@BrandLocalizer.GetLocalizedString("lbl_BrandName")</th>
+                                <th style="text-align: center;">@BrandLocalizer.GetLocalizedString("lbl_Action")</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -56,7 +53,7 @@
                                             <i class="mdi mdi-grease-pencil" style="font-size: 24px; color: black"></i>
                                         </a>
                                         <a asp-action="Delete" asp-route-id="@item.Id"
-                                           onclick="return confirm('@Localizer.GetLocalizedString("msg_del_Brand")');">
+                                           onclick="return confirm('@BrandLocalizer.GetLocalizedString("msg_DeleteBrand")');">
                                             <i class="fa fa-trash" style="font-size: 24px; color: red; padding-left: 5px;"></i>
                                         </a>
                                     </td>

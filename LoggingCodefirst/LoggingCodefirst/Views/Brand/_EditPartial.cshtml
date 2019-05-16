@@ -6,7 +6,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title">
-                    @Localizer.GetLocalizedString("btn_Edit")
+                    @BrandLocalizer.GetLocalizedString("lbl_EditBrand")
                 </h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
@@ -17,7 +17,7 @@
                     <input name="IsValid" type="hidden" value="@ViewData.ModelState.IsValid.ToString()" />
                     <input type="hidden" asp-for="Id" />
                     <div class="form-group" style="text-align: left">
-                        <label asp-for="BrandName"></label>
+                        <label asp-for="BrandName">@BrandLocalizer.GetLocalizedString("lbl_BrandName")</label>
                         <input asp-for="BrandName" class="form-control"/>
                         <span asp-validation-for="BrandName" class="text-danger"></span>
                     </div>

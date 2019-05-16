@@ -155,9 +155,6 @@
   <data name="lbl_User" xml:space="preserve">
     <value>User</value>
   </data>
-  <data name="lbl_Index" xml:space="preserve">
-    <value>Index</value>
-  </data>
   <data name="lbl_CreateUser" xml:space="preserve">
     <value>Create User</value>
   </data>
@@ -220,5 +217,4 @@
   <data name="msg_ValidPassword" xml:space="preserve">
     <value>Password must contain both letters and numbers!</value>
   </data>
-  
 </root>
