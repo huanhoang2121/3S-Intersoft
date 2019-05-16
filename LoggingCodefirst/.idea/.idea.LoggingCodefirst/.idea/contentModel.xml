@@ -70,6 +70,8 @@
           <e p="CategoryResource.vi-VN.resx" t="Include" />
           <e p="CommonResource.en-US.resx" t="Include" />
           <e p="CommonResource.vi-VN.resx" t="Include" />
+          <e p="ErrorResource.en-US.resx" t="Include" />
+          <e p="ErrorResource.vi-VN.resx" t="Include" />
           <e p="HomeResource.en-US.resx" t="Include" />
           <e p="HomeResource.vi-VN.resx" t="Include" />
           <e p="ProductResource.en-US.resx" t="Include" />

@@ -117,13 +117,42 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  
-  
- 
-  <data name="msg_del_Store" xml:space="preserve">
-    <value>Khi bạn xóa cửa hàng này, những người dùng liên quan sẽ bị xóa! Bạn có chắc chắn muốn xóa?</value>
+
+  <data name="lbl_400Detail" xml:space="preserve">
+    <value>Máy chủ không thể nhận dạng được yêu cầu.</value>
   </data>
-  <data name="msg_del_User" xml:space="preserve">
-    <value>Bạn có chắc chắn muốn xóa người dùng này?</value>
+  <data name="lbl_400Title" xml:space="preserve">
+    <value>Yêu cầu này bị lỗi!</value>
   </data>
+  <data name="lbl_401Detail" xml:space="preserve">
+    <value>Bạn không có quyền truy cập vào trang này!</value>
+  </data>
+  <data name="lbl_401Title" xml:space="preserve">
+    <value>Không được phép!</value>
+  </data>
+  <data name="lbl_403Detail" xml:space="preserve">
+    <value>Máy chủ hiểu yêu cầu nhưng không muốn cho máy con nhận thông tin.</value>
+  </data>
+  <data name="lbl_403Title" xml:space="preserve">
+    <value>Bị cấm truy cập!</value>
+  </data>
+  <data name="lbl_404Detail" xml:space="preserve">
+    <value>Trang web tạm thời không sẵn sàng hoặc website đã bị thay đổi.</value>
+  </data>
+  <data name="lbl_404Title" xml:space="preserve">
+    <value>Không tìm thấy!</value>
+  </data>
+  <data name="lbl_405Detail" xml:space="preserve">
+    <value>Phương thức yêu cầu đã sử dụng không được chấp nhận ở server này.</value>
+  </data>
+  <data name="lbl_405Title" xml:space="preserve">
+    <value>Phương thức không được phép!</value>
+  </data>
+  <data name="lbl_500Detail" xml:space="preserve">
+    <value>Máy chủ bất ngờ bị lỗi, không thể hoàn thành yêu cầu.</value>
+  </data>
+  <data name="lbl_500Title" xml:space="preserve">
+    <value>Lỗi máy chủ nội bộ!</value>
+  </data>
+  
 </root>

@@ -117,13 +117,41 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  
-  
- 
-  <data name="msg_del_Store" xml:space="preserve">
-    <value>Khi bạn xóa cửa hàng này, những người dùng liên quan sẽ bị xóa! Bạn có chắc chắn muốn xóa?</value>
+
+  <data name="lbl_400Detail" xml:space="preserve">
+    <value>Unrecognized server is required.</value>
   </data>
-  <data name="msg_del_User" xml:space="preserve">
-    <value>Bạn có chắc chắn muốn xóa người dùng này?</value>
+  <data name="lbl_400Title" xml:space="preserve">
+    <value>Bad request!</value>
+  </data>
+  <data name="lbl_401Detail" xml:space="preserve">
+    <value>You do not have access to this page!</value>
+  </data>
+  <data name="lbl_401Title" xml:space="preserve">
+    <value>Unauthorized!</value>
+  </data>
+  <data name="lbl_403Detail" xml:space="preserve">
+    <value>The server understands the request but does not want the child to receive the information.</value>
+  </data>
+  <data name="lbl_403Title" xml:space="preserve">
+    <value>Forbidden!</value>
+  </data>
+  <data name="lbl_404Detail" xml:space="preserve">
+    <value>The website is temporarily unavailable or the website has been changed.</value>
+  </data>
+  <data name="lbl_404Title" xml:space="preserve">
+    <value>Not found!</value>
+  </data>
+  <data name="lbl_405Detail" xml:space="preserve">
+    <value>The requested request method is not accepted on this server.</value>
+  </data>
+  <data name="lbl_405Title" xml:space="preserve">
+    <value>Method not allowed!</value>
+  </data>
+  <data name="lbl_500Detail" xml:space="preserve">
+    <value>The server unexpectedly failed, unable to complete the request.</value>
+  </data>
+  <data name="lbl_500Title" xml:space="preserve">
+    <value>Internal server error!</value>
   </data>
 </root>

@@ -32,6 +32,11 @@ namespace LoggingCodefirst.Services
     public class HomeResource{ }
     
     /// <summary>
+    /// Dummy class for grouping localizarion Error Resource
+    /// </summary>
+    public class ErrorResource{ }
+    
+    /// <summary>
     /// Dummy class for grouping localizarion Brand Resource
     /// </summary>
     public class UserResource{ }
