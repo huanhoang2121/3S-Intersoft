@@ -16,6 +16,7 @@
     <link href="~/dist/css/style.min.css" rel="stylesheet">
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <link href="~/assets/libs/toastr/build/toastr.min.css" rel="stylesheet">
 </head>
 
 <body>
@@ -38,21 +39,19 @@
         
         @if (TempData["SuccessMessage"] != null)
         {
-            <div class="alert alert-success" style="margin: 0 20px; margin-bottom: 20px; top: 20px">
-                <strong>@TempData["SuccessMessage"]</strong> 
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                    <span aria-hidden="true" style="font-size:20px">×</span>
-                </button>
-            </div>
+            <script type="text/javascript">
+                window.onload = function () {
+                    toastr.success("@TempData["SuccessMessage"]");
+                };
+            </script>
         }
         @if (TempData["ErrorMessage"] != null)
         {
-            <div class="alert alert-danger" style="margin: 0 20px; margin-bottom: 20px; top: 20px">
-                <strong>@TempData["ErrorMessage"]</strong> 
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                    <span aria-hidden="true" style="font-size:20px">×</span>
-                </button>
-            </div>
+            <script type="text/javascript">
+                window.onload = function () {
+                    toastr.error("@TempData["ErrorMessage"]");
+                };
+            </script>
         }
         
         @RenderBody()
@@ -89,6 +88,7 @@
 <script src="~/assets/extra-libs/multicheck/datatable-checkbox-init.js"></script>
 <script src="~/assets/extra-libs/multicheck/jquery.multicheck.js"></script>
 <script src="~/assets/extra-libs/DataTables/datatables.min.js"></script>
+<script src="~/assets/libs/toastr/build/toastr.min.js"></script>
 <!-- Custom js -->
 <script src="~/lib/js/site.js"></script>
 <script>

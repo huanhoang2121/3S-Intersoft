@@ -107,26 +107,31 @@ namespace LoggingCodefirst
                 {
                     switch (context.Response.StatusCode)
                     {
-                        case StatusCodes.Status400BadRequest :
+                        case StatusCodes.Status400BadRequest:
                             context.Request.Path ="/Error/400";
+                            await next();
                             break;
                         case StatusCodes.Status401Unauthorized:
                             context.Request.Path ="/Error/401";
+                            await next();
                             break;
                         case StatusCodes.Status403Forbidden :
                             context.Request.Path ="/Error/403";
+                            await next();
                             break;
                         case StatusCodes.Status404NotFound :
                             context.Request.Path ="/Error/404";
+                            await next();
                             break;
                         case StatusCodes.Status405MethodNotAllowed :
                             context.Request.Path ="/Error/405";
+                            await next();
                             break;
                         case StatusCodes.Status500InternalServerError:
                             context.Request.Path ="/Error/500";
+                            await next();
                             break;
                     }
-                    await next();
                 }
             });
             

@@ -10,23 +10,21 @@
         <div class="lds-pos"></div>
         <div class="lds-pos"></div>
     </div>
-</div>
+</div>           
+@if (ViewData["ErrorMessage"] != null)
+{
+    <script type="text/javascript">
+        window.onload = function () {
+            toastr.error("@ViewData["ErrorMessage"]","Error");
+        };
+    </script>
+}
 <div class="auth-wrapper d-flex justify-content-center align-items-center bg-dark">
     <div class="auth-box bg-dark border-top border-secondary">
         <div id="loginform">
             <div class="text-center p-t-20 p-b-20">
                 <span><img src="~/assets/images/logo.png" alt="logo" /></span>
             </div>
-            
-            @if (ViewData["ErrorMessage"] != null)
-            {
-                <div class="alert alert-danger" style="width: 100%; padding-left: 25px;">
-                    <strong>@ViewData["ErrorMessage"]</strong>
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                        <span aria-hidden="true" style="font-size: 20px">×</span>
-                    </button>
-                </div>
-            }
             <!-- Form -->
             <form class="m-t-20" asp-controller="Account" asp-action="Login" method="post">
                 <div asp-validation-summary="ModelOnly" class="text-danger"></div>
