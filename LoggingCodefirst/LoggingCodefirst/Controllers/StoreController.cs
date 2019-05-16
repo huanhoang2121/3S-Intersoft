@@ -1,6 +1,5 @@
 ﻿using System.Threading.Tasks;
 using LoggingCodefirst.Filters;
-using LoggingCodefirst.Resources;
 using LoggingCodefirst.Services;
 using LoggingCodefirst.ViewModels;
 using Microsoft.AspNetCore.Mvc;

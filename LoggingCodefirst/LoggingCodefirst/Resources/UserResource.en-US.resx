@@ -164,6 +164,9 @@
   <data name="lbl_EditUser" xml:space="preserve">
     <value>Edit User</value>
   </data>
+  <data name="lbl_ChangePassword" xml:space="preserve">
+    <value>Change Password</value>
+  </data>
   
   <data name="lbl_No" xml:space="preserve">
     <value>No</value>
@@ -188,6 +191,15 @@
   </data>
   <data name="lbl_Action" xml:space="preserve">
     <value>Action</value>
+  </data>
+  <data name="lbl_Password" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="lbl_NewPassword" xml:space="preserve">
+    <value>New Password</value>
+  </data>
+  <data name="lbl_ConfirmPassword" xml:space="preserve">
+    <value>Confirm Password</value>
   </data>
   
   <data name="msg_NotEmpty" xml:space="preserve">

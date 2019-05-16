@@ -4,7 +4,6 @@ using AutoMapper;
 using FluentValidation.AspNetCore;
 using LoggingCodefirst.Filters;
 using LoggingCodefirst.Models.Data;
-using LoggingCodefirst.Resources;
 using LoggingCodefirst.Services;
 using LoggingCodefirst.Validators.User;
 using Microsoft.AspNetCore.Builder;

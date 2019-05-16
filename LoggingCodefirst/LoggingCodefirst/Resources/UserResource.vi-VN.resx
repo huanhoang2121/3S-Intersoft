@@ -164,6 +164,9 @@
   <data name="lbl_EditUser" xml:space="preserve">
     <value>Thay đổi thông tin người dùng</value>
   </data>
+  <data name="lbl_ChangePassword" xml:space="preserve">
+    <value>Thay đổi mật khẩu</value>
+  </data>
   
   <data name="lbl_No" xml:space="preserve">
     <value>Stt</value>
@@ -188,6 +191,15 @@
   </data>
   <data name="lbl_Action" xml:space="preserve">
     <value>Hành động</value>
+  </data>
+  <data name="lbl_Password" xml:space="preserve">
+    <value>Mật khẩu</value>
+  </data>
+  <data name="lbl_NewPassword" xml:space="preserve">
+    <value>Mật khẩu mới</value>
+  </data>
+  <data name="lbl_ConfirmPassword" xml:space="preserve">
+    <value>Nhập lại mật khẩu</value>
   </data>
   
   <data name="msg_NotEmpty" xml:space="preserve">

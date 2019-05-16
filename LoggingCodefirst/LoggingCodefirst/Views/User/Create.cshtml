@@ -29,39 +29,39 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label asp-for="Email"></label>
+                                    <label asp-for="Email">@UserLocalizer.GetLocalizedString("lbl_Email")</label>
                                     <input asp-for="Email" class="form-control"/>
                                     <span asp-validation-for="Email" class="text-danger"></span>
                                 </div>
                                 <div class="form-group">
-                                    <label asp-for="Password"></label>
+                                    <label asp-for="Password">@UserLocalizer.GetLocalizedString("lbl_Password")</label>
                                     <input asp-for="Password" type="password" class="form-control" />
                                     <span asp-validation-for="Password" class="text-danger"></span>
                                 </div>
                                 <div class="form-group">
-                                    <label asp-for="Fullname"></label>
+                                    <label asp-for="Fullname">@UserLocalizer.GetLocalizedString("lbl_Fullname")</label>
                                     <input asp-for="Fullname" class="form-control" />
                                     <span asp-validation-for="Fullname" class="text-danger"></span>
                                 </div>
                                 <div class="form-group">
-                                    <label asp-for="IsActive"></label>
+                                    <label asp-for="IsActive">@UserLocalizer.GetLocalizedString("lbl_IsActive")</label>
                                     <input type="checkbox" asp-for="IsActive" class="form-control"/>
                                     <span asp-validation-for="IsActive" class="text-danger"></span>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label asp-for="StoreId"></label>
+                                    <label asp-for="StoreId">@UserLocalizer.GetLocalizedString("lbl_Store")</label>
                                     <select asp-for="StoreId" class="form-control" asp-items="ViewBag.StoreId"></select>
                                     <span asp-validation-for="StoreId" class="text-danger"></span>
                                 </div>
                                 <div class="form-group">
-                                    <label asp-for="Address"></label>
+                                    <label asp-for="Address">@UserLocalizer.GetLocalizedString("lbl_Address")</label>
                                     <input asp-for="Address" class="form-control" />
                                     <span asp-validation-for="Address" class="text-danger"></span>
                                 </div>
                                 <div class="form-group">
-                                    <label asp-for="Phone"></label>
+                                    <label asp-for="Phone">@UserLocalizer.GetLocalizedString("lbl_Phone")</label>
                                     <input asp-for="Phone" type="number" class="form-control" />
                                     <span asp-validation-for="Phone" class="text-danger"></span>
                                 </div>
