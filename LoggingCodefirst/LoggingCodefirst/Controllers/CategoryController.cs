@@ -31,9 +31,9 @@ namespace LoggingCodefirst.Controllers
         #region Public Methods
 
         /// <summary>
-        /// Index Category Get Function
+        /// Index Category
         /// </summary>
-        /// <returns>Category Index View</returns>
+        /// <returns>Category Index</returns>
         [HttpGet]
         public async Task<IActionResult> Index()
         {
@@ -42,9 +42,9 @@ namespace LoggingCodefirst.Controllers
         }
 
         /// <summary>
-        /// Create Category Get Function
+        /// Create Category
         /// </summary>
-        /// <returns>Category Create View</returns>
+        /// <returns>Category Create Partial</returns>
         [HttpGet]
         public IActionResult Create()
         {
@@ -52,9 +52,10 @@ namespace LoggingCodefirst.Controllers
         }
 
         /// <summary>
-        /// Create Category Post Function
+        /// Create Category
         /// </summary>
-        /// <returns>Category Index View</returns>
+        /// <param name="categoryViewModel">CategoryViewModel</param>
+        /// <returns>brand index</returns>
         [HttpPost]
         public async Task<IActionResult> Create(CategoryViewModel categoryViewModel)
         {
@@ -72,9 +73,10 @@ namespace LoggingCodefirst.Controllers
         }
 
         /// <summary>
-        /// Edit Category Get Function
+        /// Edit Category
         /// </summary>
-        /// <returns>Category Edit View</returns>
+        /// <param name="id">Category id</param>
+        /// <returns>Edit Partial</returns>
         [HttpGet]        
         public async Task<IActionResult> Edit(int? id)
         {
@@ -92,9 +94,10 @@ namespace LoggingCodefirst.Controllers
         }
 
         /// <summary>
-        /// Edit Category Post Function
+        /// Edit Category
         /// </summary>
-        /// <returns>Category Index View</returns>
+        /// <param name="categoryViewModel">CategoryViewModel</param>
+        /// <returns>index category</returns>
         [HttpPost]
         public async Task<IActionResult> Edit(CategoryViewModel categoryViewModel)
         {
@@ -112,9 +115,10 @@ namespace LoggingCodefirst.Controllers
         }
 
         /// <summary>
-        /// Delete Category Get Function
+        /// Delete Category
         /// </summary>
-        /// <returns>Category Index View</returns>
+        /// <param name="id">Category id</param>
+        /// <returns>Category index</returns>
         [HttpGet]        
         public async Task<IActionResult> Delete(int? id)
         {

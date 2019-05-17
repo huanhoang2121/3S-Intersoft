@@ -19,6 +19,7 @@ namespace LoggingCodefirst.ViewModels
             CreateMap<Store, StoreViewModel>();
 //            Map for User
             CreateMap<User, UserViewModel>();
+            CreateMap<User, UserEditViewModel>();
             CreateMap<User, UserChangePasswordViewModel>();
         }
     }

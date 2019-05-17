@@ -186,6 +186,9 @@
   <data name="lbl_IsActive" xml:space="preserve">
     <value>IsActive</value>
   </data>
+  <data name="lbl_Image" xml:space="preserve">
+    <value>Image</value>
+  </data>
   <data name="lbl_Action" xml:space="preserve">
     <value>Action</value>
   </data>

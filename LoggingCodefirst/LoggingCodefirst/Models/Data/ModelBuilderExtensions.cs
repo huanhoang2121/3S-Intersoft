@@ -33,7 +33,7 @@ namespace LoggingCodefirst.Models.Data
                 }
             ); 
             modelBuilder.Entity<User>().HasData(  
-                new User()
+                new User
                 {
                     Id = 1, 
                     Email = "huan.hv@3si.com.vn", 
@@ -42,6 +42,7 @@ namespace LoggingCodefirst.Models.Data
                     Phone = "0964973404", 
                     Address = "Huế, Thừa thiên Huế", 
                     StoreId = 2, 
+                    ImagePath = "05172019110557huan.jpg", 
                     IsActive = true
                 }
             );  

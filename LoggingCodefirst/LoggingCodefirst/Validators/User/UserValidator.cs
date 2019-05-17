@@ -19,6 +19,8 @@ namespace LoggingCodefirst.Validators.User
                 .NotNull().WithMessage(localizer.GetLocalizedString("msg_NotEmpty"))
                 .MinimumLength(8).WithMessage(localizer.GetLocalizedString("msg_8Characters"))
                 .Matches("^(?=.*[0-9])(?=.*[a-zA-Z])([a-zA-Z0-9]+)$").WithMessage(localizer.GetLocalizedString("msg_ValidPassword"));
+            RuleFor(x => x.ConfirmPassword).Equal(x => x.Password)
+                .WithMessage(localizer.GetLocalizedString("msg_ConfirmPassword"));
             
             RuleFor(x => x.Fullname)
                 .NotNull().WithMessage(localizer.GetLocalizedString("msg_NotEmpty"));

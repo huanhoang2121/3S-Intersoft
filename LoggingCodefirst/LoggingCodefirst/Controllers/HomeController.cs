@@ -9,16 +9,31 @@ namespace LoggingCodefirst.Controllers
 {
     public class HomeController : Controller
     {
+        
+        #region Public Methods
+
+        /// <summary>
+        /// Home Index
+        /// </summary>
+        /// <returns>Home Index</returns>
         public IActionResult Index()
         {
             return View();
         }
 
+        /// <summary>
+        /// Home Privacy
+        /// </summary>
+        /// <returns>Home Privacy</returns>
         public IActionResult Privacy()
         {
             return View();
         }
 
+        /// <summary>
+        /// Home Error
+        /// </summary>
+        /// <returns>Home Error</returns>
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
@@ -41,5 +56,7 @@ namespace LoggingCodefirst.Controllers
         
             return LocalRedirect(returnUrl);
         }
+        
+        #endregion
     }
 }

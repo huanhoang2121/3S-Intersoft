@@ -219,6 +219,8 @@ namespace LoggingCodefirst.Migrations
                     b.Property<string>("Fullname")
                         .HasMaxLength(100);
 
+                    b.Property<string>("ImagePath");
+
                     b.Property<bool>("IsActive");
 
                     b.Property<string>("Password")
@@ -246,8 +248,9 @@ namespace LoggingCodefirst.Migrations
                             Address = "Huế, Thừa thiên Huế",
                             Email = "huan.hv@3si.com.vn",
                             Fullname = "Hoàng Văn Huấn",
+                            ImagePath = "05172019110557huan.jpg",
                             IsActive = true,
-                            Password = "10000:WQlkvGDAvT/Ri+bdJhmZgvO7CLsgbHmt9mvFod7m1Xtx0k1J",
+                            Password = "10000:pxptb0cUx+KmYTqq7ziJCgA1/2PYEz/eqiziGEZOs+rydJBJ",
                             Phone = "0964973404",
                             StoreId = 2
                         });

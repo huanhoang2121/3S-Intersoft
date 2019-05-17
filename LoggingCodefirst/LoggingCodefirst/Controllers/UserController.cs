@@ -35,7 +35,7 @@ namespace LoggingCodefirst.Controllers
         #region Public Methods
         
         /// <summary>
-        /// Index User Get Function
+        /// Index User
         /// </summary>
         /// <returns>Index User</returns>
         [HttpGet]
@@ -46,7 +46,7 @@ namespace LoggingCodefirst.Controllers
         }
 
         /// <summary>
-        /// Create User Get Function
+        /// Create User
         /// </summary>
         /// <returns>Create User</returns>
         [HttpGet]
@@ -57,9 +57,9 @@ namespace LoggingCodefirst.Controllers
         }
         
         /// <summary>
-        /// Create User Post Function
+        /// Create User
         /// </summary>
-        /// <param name="createViewModel"></param>
+        /// <param name="createViewModel">UserViewModel</param>
         /// <returns>Index User</returns>
         [HttpPost]
         public async Task<IActionResult> Create(UserViewModel createViewModel)
@@ -80,9 +80,9 @@ namespace LoggingCodefirst.Controllers
         }
         
         /// <summary>
-        /// Edit User Get Function
+        /// Edit User
         /// </summary>
-        /// <param name="id"></param>
+        /// <param name="id">User id</param>
         /// <returns>Edit User</returns>
         [HttpGet]
         public async Task<IActionResult> Edit(int? id)
@@ -101,9 +101,9 @@ namespace LoggingCodefirst.Controllers
         }
         
         /// <summary>
-        /// Edit User Post Function
+        /// Edit User
         /// </summary>
-        /// <param name="editViewModel"></param>
+        /// <param name="editViewModel">UserEditViewModel</param>
         /// <returns>Index User</returns>
         [HttpPost]
         public async Task<IActionResult> Edit(UserEditViewModel editViewModel)
@@ -124,9 +124,9 @@ namespace LoggingCodefirst.Controllers
         }
         
         /// <summary>
-        /// ChangePassword User Get Function
+        /// ChangePassword User
         /// </summary>
-        /// <param name="id"></param>
+        /// <param name="id">User id</param>
         /// <returns>ChangePassword</returns>
         [HttpGet]
         public async Task<IActionResult> ChangePassword(int? id)
@@ -144,9 +144,9 @@ namespace LoggingCodefirst.Controllers
         }
         
         /// <summary>
-        /// ChangePassword User Post Function
+        /// ChangePassword User
         /// </summary>
-        /// <param name="changePasswordModel"></param>
+        /// <param name="changePasswordModel">UserChangePasswordViewModel</param>
         /// <returns>Index User</returns>
         [HttpPost]
         public async Task<IActionResult> ChangePassword(UserChangePasswordViewModel changePasswordModel)
@@ -166,9 +166,9 @@ namespace LoggingCodefirst.Controllers
         }
         
         /// <summary>
-        /// Delete User Get Function
+        /// Delete User
         /// </summary>
-        /// <param name="id"></param>
+        /// <param name="id">User id</param>
         /// <returns>Index User</returns>
         [HttpGet]
         public async Task<IActionResult> Delete(int? id)

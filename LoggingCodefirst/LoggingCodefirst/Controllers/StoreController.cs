@@ -31,7 +31,7 @@ namespace LoggingCodefirst.Controllers
         #region Public Methods
         
         /// <summary>
-        /// Index Store Get Function
+        /// Index Store
         /// </summary>
         /// <returns>Index Store</returns>
         [HttpGet]
@@ -42,7 +42,7 @@ namespace LoggingCodefirst.Controllers
         }
 
         /// <summary>
-        /// Create Store Get Function
+        /// Create Store
         /// </summary>
         /// <returns>Create Store</returns>
         [HttpGet]
@@ -52,9 +52,9 @@ namespace LoggingCodefirst.Controllers
         }
         
         /// <summary>
-        /// Create Store Post Function
+        /// Create Store
         /// </summary>
-        /// <param name="createViewModel"></param>
+        /// <param name="createViewModel">StoreViewModel</param>
         /// <returns>Index Store</returns>
         [HttpPost]
         public async Task<IActionResult> Create(StoreViewModel createViewModel)
@@ -73,9 +73,9 @@ namespace LoggingCodefirst.Controllers
         }
 
         /// <summary>
-        /// Edit Store Get Function
+        /// Edit Store
         /// </summary>
-        /// <param name="id"></param>
+        /// <param name="id">Store id</param>
         /// <returns>Edit Store</returns>
         [HttpGet]
         public async Task<IActionResult> Edit(int? id)
@@ -94,9 +94,9 @@ namespace LoggingCodefirst.Controllers
         }
            
         /// <summary>
-        /// Edit Store Post Function
+        /// Edit Store
         /// </summary>
-        /// <param name="editViewModel"></param>
+        /// <param name="editViewModel">StoreViewModel</param>
         /// <returns>Index Store</returns>
         [HttpPost]
         public async Task<IActionResult> Edit(StoreViewModel editViewModel)
@@ -115,9 +115,9 @@ namespace LoggingCodefirst.Controllers
         }
         
         /// <summary>
-        /// Delete Store Get Function
+        /// Delete Store
         /// </summary>
-        /// <param name="id"></param>
+        /// <param name="id">Store id</param>
         /// <returns>Index Store</returns>
         [HttpGet]
         public async Task<IActionResult> Delete(int? id)

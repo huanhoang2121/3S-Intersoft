@@ -41,6 +41,8 @@
           <e p="20190506035152_UpdateProductImagePath.cs" t="Include" />
           <e p="20190512144342_UpdateStock3.Designer.cs" t="Include" />
           <e p="20190512144342_UpdateStock3.cs" t="Include" />
+          <e p="20190517040814_UpdateUserImagePath.Designer.cs" t="Include" />
+          <e p="20190517040814_UpdateUserImagePath.cs" t="Include" />
           <e p="DataContextModelSnapshot.cs" t="Include" />
         </e>
         <e p="Models" t="Include">
@@ -82,12 +84,8 @@
           <e p="StoreResource.vi-VN.resx" t="Include" />
           <e p="UserResource.en-US.resx" t="Include" />
           <e p="UserResource.vi-VN.resx" t="Include" />
-          <e p="ViewResource.en-US.resx" t="Include" />
-          <e p="ViewResource.vi-VN.resx" t="Include" />
         </e>
         <e p="Services" t="Include">
-          <e p="BrandService.cs" t="Include" />
-          <e p="CategoryService.cs" t="Include" />
           <e p="IBrandService.cs" t="Include" />
           <e p="ICategoryService.cs" t="Include" />
           <e p="IProductService.cs" t="Include" />
@@ -95,10 +93,6 @@
           <e p="IStoreService.cs" t="Include" />
           <e p="IUserService.cs" t="Include" />
           <e p="LocalizationService.cs" t="Include" />
-          <e p="ProductService.cs" t="Include" />
-          <e p="StockService.cs" t="Include" />
-          <e p="StoreService.cs" t="Include" />
-          <e p="UserService.cs" t="Include" />
         </e>
         <e p="Startup.cs" t="Include" />
         <e p="Validators" t="Include">
@@ -113,6 +107,7 @@
             <e p="UserEditValidator.cs" t="Include" />
             <e p="UserValidator.cs" t="Include" />
           </e>
+          <e p="ValidateImageAttribute.cs" t="Include" />
         </e>
         <e p="ViewModels" t="Include">
           <e p="BrandViewModel.cs" t="Include" />
@@ -1471,6 +1466,14 @@
             <e p="05162019105359quan.jpg" t="Include" />
             <e p="0516201914150320190420_111947.jpg" t="Include" />
             <e p="0516201914150420190420_111947.jpg" t="Include" />
+            <e p="05172019110557huan.jpg" t="Include" />
+            <e p="05172019110603quan.jpg" t="Include" />
+            <e p="05172019130614huan.jpg" t="Include" />
+            <e p="05172019130637download.jpeg" t="Include" />
+            <e p="05172019130656tai_xuong_7a45fb79-6c1b-412a-7670-b7962538ff4f_large.jpg" t="Include" />
+            <e p="05172019130739tai_xuong_7a45fb79-6c1b-412a-7670-b7962538ff4f_large.jpg" t="Include" />
+            <e p="051720191336145cde4a68b9f7a9775a788f12.xlsx" t="Include" />
+            <e p="05172019133704tai_xuong_7a45fb79-6c1b-412a-7670-b7962538ff4f_large.jpg" t="Include" />
             <e p="05_06_2019_09_12_40ao-adidas-trang-1492535561-2298159-1492535561.jpeg" t="Include" />
             <e p="05_06_2019_11_12_24quan.jpg" t="Include" />
             <e p="05_06_2019_11_12_39quan.jpg" t="Include" />

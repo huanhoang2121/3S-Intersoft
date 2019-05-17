@@ -24,7 +24,7 @@
         <div class="col-12">
             <div class="card">
                 <div class="card-body">
-                    <form asp-action="Create">
+                    <form asp-action="Create" enctype="multipart/form-data">
                         <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                         <div class="row">
                             <div class="col-md-6">
@@ -39,9 +39,9 @@
                                     <span asp-validation-for="Password" class="text-danger"></span>
                                 </div>
                                 <div class="form-group">
-                                    <label asp-for="Fullname">@UserLocalizer.GetLocalizedString("lbl_Fullname")</label>
-                                    <input asp-for="Fullname" class="form-control" />
-                                    <span asp-validation-for="Fullname" class="text-danger"></span>
+                                    <label asp-for="ConfirmPassword">@UserLocalizer.GetLocalizedString("lbl_ConfirmPassword")</label>
+                                    <input asp-for="ConfirmPassword" type="password" class="form-control" />
+                                    <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
                                 </div>
                                 <div class="form-group">
                                     <label asp-for="IsActive">@UserLocalizer.GetLocalizedString("lbl_IsActive")</label>
@@ -50,6 +50,11 @@
                                 </div>
                             </div>
                             <div class="col-md-6">
+                                <div class="form-group">
+                                    <label asp-for="Fullname">@UserLocalizer.GetLocalizedString("lbl_Fullname")</label>
+                                    <input asp-for="Fullname" class="form-control" />
+                                    <span asp-validation-for="Fullname" class="text-danger"></span>
+                                </div>
                                 <div class="form-group">
                                     <label asp-for="StoreId">@UserLocalizer.GetLocalizedString("lbl_Store")</label>
                                     <select asp-for="StoreId" class="form-control" asp-items="ViewBag.StoreId"></select>
@@ -64,6 +69,11 @@
                                     <label asp-for="Phone">@UserLocalizer.GetLocalizedString("lbl_Phone")</label>
                                     <input asp-for="Phone" type="number" class="form-control" />
                                     <span asp-validation-for="Phone" class="text-danger"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="ImageFile">@UserLocalizer.GetLocalizedString("lbl_Image")</label>
+                                    <input type="file" asp-for="ImageFile" class="form-control-file"/>
+                                    <span asp-validation-for="ImageFile" class="text-danger"></span>
                                 </div>
                                 <div class="form-group">
                                     <a class="btn btn-cyan" asp-action="Index">@Localizer.GetLocalizedString("btn_Back")</a>

@@ -27,23 +27,12 @@ namespace LoggingCodefirst.Controllers
         #endregion
 
         #region Public Methods
-
+        
         /// <summary>
-        /// Get Login User Function
+        /// Login User
         /// </summary>
-        /// <returns>User Login</returns>
-        
-//        [HttpGet]
-//        public IActionResult Login(string returnUrl)
-//        {
-//            if (returnUrl == null)
-//            {
-//                var loginViewModel = new LoginViewModel {ReturnUrl = AuthorizedActionFilter.Returnurl};
-//                return View();
-//            }
-//            return View();
-//        }
-        
+        /// <param name="returnUrl">returnUrl</param>
+        /// <returns>Login form</returns>
         [HttpGet]
         public IActionResult Login(string returnUrl)
         {
@@ -53,9 +42,10 @@ namespace LoggingCodefirst.Controllers
         }
         
         /// <summary>
-        /// Post Login User Function
+        /// Post Login User
         /// </summary>
-        /// <returns>User Index</returns>
+        /// <param name="loginViewModel">LoginViewModel</param>
+        /// <returns>view</returns>
         [HttpPost]
         public async Task<IActionResult> Login(LoginViewModel loginViewModel)
         {
@@ -64,9 +54,10 @@ namespace LoggingCodefirst.Controllers
                 var isValidUser = _userService.Login(loginViewModel);
                 if (isValidUser)
                 {
-                    var user = await _userService.GetUserNameAsync(loginViewModel.Email);
+                    var user = await _userService.GetUserAsync(loginViewModel.Email);
                     HttpContext.Session.SetString("userid", user.Id.ToString());
                     HttpContext.Session.SetString("username", user.Fullname);
+                    HttpContext.Session.SetString("imagepath", user.ImagePath);
                         
                     TempData["SuccessMessage"] = _localizer.GetLocalizedString("msg_LoginSuccess").ToString();
                     return Redirect(loginViewModel.ReturnUrl ?? "/");
@@ -78,7 +69,7 @@ namespace LoggingCodefirst.Controllers
         }
         
         /// <summary>
-        /// Logout User Function
+        /// Logout User
         /// </summary>
         /// <returns>Home Index</returns>
         [HttpGet]

@@ -5,8 +5,15 @@ namespace LoggingCodefirst.Services
 {
     public class LocalizationService<T>
     { 
+        
+        #region Private Members
+
         private readonly IStringLocalizer _localizer;
  
+        #endregion
+        
+        #region Constructors
+
         public LocalizationService(IStringLocalizerFactory factory)
         {
             var type = typeof(T);
@@ -15,12 +22,21 @@ namespace LoggingCodefirst.Services
             _localizer = factory.Create(baseName, assemblyName);
         }
         
+        #endregion       
+        
+        #region Public Methods
+
         public LocalizedString GetLocalizedString(string key)
         {
             return _localizer[key];
         }
+        
+        #endregion       
+
     }
     
+    #region Public Dummy Class
+
     /// <summary>
     /// Dummy class for grouping localizarion Common Resource
     /// </summary> 
@@ -66,8 +82,6 @@ namespace LoggingCodefirst.Services
     /// </summary>
     public class StoreResource{ }
     
-    /// <summary>
-    /// Dummy class for grouping localizarion View Resource
-    /// </summary>    public class UserResource{ }
-    public class ViewResource{ }
+    #endregion 
+    
 }

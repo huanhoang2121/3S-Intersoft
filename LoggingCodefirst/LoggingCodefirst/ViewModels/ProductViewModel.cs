@@ -2,6 +2,7 @@
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using LoggingCodefirst.Models;
+using LoggingCodefirst.Validators;
 using Microsoft.AspNetCore.Http;
 
 namespace LoggingCodefirst.ViewModels
@@ -19,9 +20,9 @@ namespace LoggingCodefirst.ViewModels
         public int ModelYear { get; set; }
         [DisplayName("Product Image")] 
         public string ImagePath { get; set; } 
-        [DisplayName("Product Image")] 
+        [DisplayName("Product Image")]  
+        [ValidateImage]
         public IFormFile ImageFile { get; set; } 
-        
         [DisplayName("List Price")]
         [DisplayFormat(DataFormatString = "{0:0}", ApplyFormatInEditMode = true)]
         public decimal ListPrice { get; set; }

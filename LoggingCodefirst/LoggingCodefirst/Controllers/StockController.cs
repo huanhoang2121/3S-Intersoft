@@ -38,7 +38,7 @@ namespace LoggingCodefirst.Controllers
         #region Public Methods
 
         /// <summary>
-        /// Index Stock Get Function
+        /// Index Stock
         /// </summary>
         /// <returns>Index Stock</returns>
         [HttpGet]
@@ -49,7 +49,7 @@ namespace LoggingCodefirst.Controllers
         }
 
         /// <summary>
-        /// Create Stock Get Function
+        /// Create Stock
         /// </summary>
         /// <returns>Create Stock</returns>
         [HttpGet]
@@ -61,9 +61,9 @@ namespace LoggingCodefirst.Controllers
         }
 
         /// <summary>
-        ///  Create Stock Post Function
+        ///  Create Stock
         /// </summary>
-        /// <param name="createViewModel"></param>
+        /// <param name="createViewModel">StockViewModel</param>
         /// <returns>Index Stock</returns>
         [HttpPost]
         public async Task<IActionResult> Create(StockViewModel createViewModel)
@@ -86,10 +86,10 @@ namespace LoggingCodefirst.Controllers
         }
 
         /// <summary>
-        /// Edit Stock Get Function
+        /// Edit Stock
         /// </summary>
-        /// <param name="productid"></param>
-        /// <param name="storeid"></param>
+        /// <param name="productid">product id</param>
+        /// <param name="storeid">store id</param>
         /// <returns>Edit Stock</returns>
         [HttpGet]
         public async Task<IActionResult> Edit(int? productid, int? storeid)
@@ -110,9 +110,9 @@ namespace LoggingCodefirst.Controllers
         }
 
         /// <summary>
-        /// Edit Stock Post Function
+        /// Edit Stock
         /// </summary>
-        /// <param name="editViewModel"></param>
+        /// <param name="editViewModel">StockViewModel</param>
         /// <returns>Index Stock</returns>
         [HttpPost]
         public async Task<IActionResult> Edit(StockViewModel editViewModel)
@@ -135,10 +135,10 @@ namespace LoggingCodefirst.Controllers
         }
 
         /// <summary>
-        /// Delete Stock Get Function
+        /// Delete Stock
         /// </summary>
-        /// <param name="productid"></param>
-        /// <param name="storeid"></param>
+        /// <param name="productid">product id</param>
+        /// <param name="storeid">store id</param>
         /// <returns>Index Stock</returns>
         [HttpGet]
         public async Task<IActionResult> Delete(int? productid, int? storeid)

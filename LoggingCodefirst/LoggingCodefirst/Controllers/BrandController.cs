@@ -50,11 +50,12 @@ namespace LoggingCodefirst.Controllers
         {
             return PartialView("_CreatePartial");
         }
-
+        
         /// <summary>
-        /// Create Brand Post Function
+        /// Create Brand
         /// </summary>
-        /// <returns>Brand Index View</returns>
+        /// <param name="brandViewModel">BrandViewModel</param>
+        /// <returns>Brand Index</returns>
         [HttpPost]
         public async Task<IActionResult> Create(BrandViewModel brandViewModel)
         {
@@ -72,9 +73,10 @@ namespace LoggingCodefirst.Controllers
         }
 
         /// <summary>
-        /// Edit Brand Get Function
+        /// Edit Brand
         /// </summary>
-        /// <returns>Brand Edit View</returns>
+        /// <param name="id">brand id</param>
+        /// <returns>Edit Partial</returns>
         [HttpGet]        
         public async Task<IActionResult> Edit(int? id)
         {
@@ -92,9 +94,10 @@ namespace LoggingCodefirst.Controllers
         }
 
         /// <summary>
-        /// Edit Brand Post Function
+        /// Edit Brand
         /// </summary>
-        /// <returns>Brand Index View</returns>
+        /// <param name="brandViewModel">BrandViewModel</param>
+        /// <returns>index brand</returns>
         [HttpPost]
         public async Task<IActionResult> Edit(BrandViewModel brandViewModel)
         {
@@ -112,9 +115,10 @@ namespace LoggingCodefirst.Controllers
         }
 
         /// <summary>
-        /// Delete Brand Get Function
+        /// Delete brand
         /// </summary>
-        /// <returns>Brand Index View</returns>
+        /// <param name="id">brand id</param>
+        /// <returns>index brand</returns>
         [HttpGet]  
         public async Task<IActionResult> Delete(int? id)
         {

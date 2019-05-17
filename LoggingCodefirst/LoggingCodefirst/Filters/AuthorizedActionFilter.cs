@@ -25,7 +25,6 @@ namespace LoggingCodefirst.Filters
             }
         }
 
-//        [ServiceFilter(typeof(SampleActionFilter))]
         public void OnActionExecuted(ActionExecutedContext context)
         {
             // do something after the action executes
