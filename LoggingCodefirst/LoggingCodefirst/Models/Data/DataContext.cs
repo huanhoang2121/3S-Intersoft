@@ -41,7 +41,6 @@ namespace LoggingCodefirst.Models.Data
             modelBuilder.Entity<User>().Property(t => t.Fullname).HasMaxLength(100);
             modelBuilder.Entity<User>().Property(t => t.Address).HasMaxLength(255);
             modelBuilder.Entity<User>().Property(t => t.Phone).HasMaxLength(20);
-            modelBuilder.Entity<User>().Property(t => t.Role).HasMaxLength(50);
             
             modelBuilder.Entity<Category>().ToTable("Category");
             modelBuilder.Entity<Category>().Property(t => t.CategoryName).IsRequired().HasMaxLength(100);

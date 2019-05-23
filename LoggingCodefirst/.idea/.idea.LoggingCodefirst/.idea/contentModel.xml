@@ -48,6 +48,12 @@
           <e p="20190522064218_RemoveRole.cs" t="Include" />
           <e p="20190522085118_UpdateUserRole.Designer.cs" t="Include" />
           <e p="20190522085118_UpdateUserRole.cs" t="Include" />
+          <e p="20190523101139_UpdateUserRoleInt.Designer.cs" t="Include" />
+          <e p="20190523101139_UpdateUserRoleInt.cs" t="Include" />
+          <e p="20190523101409_RemoveUserRole.Designer.cs" t="Include" />
+          <e p="20190523101409_RemoveUserRole.cs" t="Include" />
+          <e p="20190523101650_AddUserRole.Designer.cs" t="Include" />
+          <e p="20190523101650_AddUserRole.cs" t="Include" />
           <e p="DataContextModelSnapshot.cs" t="Include" />
         </e>
         <e p="Models" t="Include">

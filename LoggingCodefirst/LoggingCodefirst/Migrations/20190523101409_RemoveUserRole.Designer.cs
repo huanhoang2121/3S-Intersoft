@@ -3,14 +3,16 @@ using LoggingCodefirst.Models.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace LoggingCodefirst.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20190523101409_RemoveUserRole")]
+    partial class RemoveUserRole
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -230,8 +232,6 @@ namespace LoggingCodefirst.Migrations
                     b.Property<string>("Phone")
                         .HasMaxLength(20);
 
-                    b.Property<int>("Role");
-
                     b.Property<int>("StoreId");
 
                     b.HasKey("Id");
@@ -252,9 +252,8 @@ namespace LoggingCodefirst.Migrations
                             Fullname = "Hoàng Văn Huấn",
                             ImagePath = "05172019110557huan.jpg",
                             IsActive = true,
-                            Password = "10000:C9uX/JZ2I/3+upTK1IydMLchvDNTSLGkGnScuB8AYawZhoJW",
+                            Password = "10000:dtCapCeNi+ChKdm9qu0xfikxemuZ3+T9LVQOZiHIajH9szKH",
                             Phone = "0964973404",
-                            Role = 1,
                             StoreId = 2
                         });
                 });
