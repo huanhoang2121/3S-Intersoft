@@ -1,13 +1,14 @@
 ﻿using System.Threading.Tasks;
-using LoggingCodefirst.Filters;
+using LoggingCodefirst.Resources;
 using LoggingCodefirst.Services;
 using LoggingCodefirst.ViewModels;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace LoggingCodefirst.Controllers
-{
-    [ServiceFilter(typeof(AuthorizedActionFilter))]
+{  
+    [Authorize(Roles = "Admin")]    
     public class UserController : Controller
     {
         #region Private Members
@@ -25,9 +26,9 @@ namespace LoggingCodefirst.Controllers
             IStoreService storeService, 
             LocalizationService<UserResource> localizer)
         {
-            _localizer = localizer;
             _userService = userService;
             _storeService = storeService;
+            _localizer = localizer;
         }
 
         #endregion
@@ -91,13 +92,13 @@ namespace LoggingCodefirst.Controllers
             {
                 return BadRequest();
             }
-            var user = await _userService.GetUserEditAsync(id.Value);
-            if (user == null)
+            var editViewModel = await _userService.GetUserEditAsync(id.Value);
+            if (editViewModel == null)
             {
                 return BadRequest();
             }
-            ViewBag.StoreId = new SelectList(_storeService.Stores(), "Id", "StoreName", user.StoreId);
-            return View(user);
+            ViewBag.StoreId = new SelectList(_storeService.Stores(), "Id", "StoreName", editViewModel.StoreId);
+            return View(editViewModel);
         }
         
         /// <summary>

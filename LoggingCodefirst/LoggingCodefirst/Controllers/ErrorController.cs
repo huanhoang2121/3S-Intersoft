@@ -22,8 +22,9 @@ namespace LoggingCodefirst.Controllers
         /// </summary>
         /// <returns>Error 401 view</returns>
         [Route("Error/401")]
-        public IActionResult Error401()
+        public IActionResult Error401(string requestPath)
         {
+            ViewBag.RequestPath = requestPath ?? "/";
             return View();
         }
         

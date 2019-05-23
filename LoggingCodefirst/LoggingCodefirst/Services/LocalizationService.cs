@@ -33,55 +33,5 @@ namespace LoggingCodefirst.Services
         
         #endregion       
 
-    }
-    
-    #region Public Dummy Class
-
-    /// <summary>
-    /// Dummy class for grouping localizarion Common Resource
-    /// </summary> 
-    public class CommonResource{ }
-    
-    /// <summary>
-    /// Dummy class for grouping localizarion Brand Resource
-    /// </summary>
-    public class HomeResource{ }
-    
-    /// <summary>
-    /// Dummy class for grouping localizarion Error Resource
-    /// </summary>
-    public class ErrorResource{ }
-    
-    /// <summary>
-    /// Dummy class for grouping localizarion Brand Resource
-    /// </summary>
-    public class UserResource{ }
-    
-    /// <summary>
-    /// Dummy class for grouping localizarion Brand Resource
-    /// </summary>
-    public class BrandResource{ }
-    
-    /// <summary>
-    /// Dummy class for grouping localizarion Category Resource
-    /// </summary>
-    public class CategoryResource{ }
-    
-    /// <summary>
-    /// Dummy class for grouping localizarion Product Resource
-    /// </summary>
-    public class ProductResource{ }
-    
-    /// <summary>
-    /// Dummy class for grouping localizarion Product Resource
-    /// </summary>
-    public class StockResource{ }
-    
-    /// <summary>
-    /// Dummy class for grouping localizarion Product Resource
-    /// </summary>
-    public class StoreResource{ }
-    
-    #endregion 
-    
+    }   
 }

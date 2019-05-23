@@ -22,6 +22,7 @@ namespace LoggingCodefirst.ViewModels
         public string Address { get; set; } 
         [DisplayName("IsActive")]
         public bool IsActive { get; set; }
+        public string Role { get; set; } 
         
         public string ImagePath { get; set; } 
         [ValidateImage]

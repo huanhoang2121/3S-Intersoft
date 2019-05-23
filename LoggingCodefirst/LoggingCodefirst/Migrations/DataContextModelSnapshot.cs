@@ -230,6 +230,9 @@ namespace LoggingCodefirst.Migrations
                     b.Property<string>("Phone")
                         .HasMaxLength(20);
 
+                    b.Property<string>("Role")
+                        .HasMaxLength(50);
+
                     b.Property<int>("StoreId");
 
                     b.HasKey("Id");
@@ -250,8 +253,9 @@ namespace LoggingCodefirst.Migrations
                             Fullname = "Hoàng Văn Huấn",
                             ImagePath = "05172019110557huan.jpg",
                             IsActive = true,
-                            Password = "10000:pxptb0cUx+KmYTqq7ziJCgA1/2PYEz/eqiziGEZOs+rydJBJ",
+                            Password = "10000:iBSOy74HViTRvKRNt9rK3tiFJaW7N1wEsbkW/kW+KrxxMSpO",
                             Phone = "0964973404",
+                            Role = "Admin",
                             StoreId = 2
                         });
                 });

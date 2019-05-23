@@ -2,10 +2,11 @@
 using System.Globalization;
 using AutoMapper;
 using FluentValidation.AspNetCore;
-using LoggingCodefirst.Filters;
 using LoggingCodefirst.Models.Data;
+using LoggingCodefirst.Resources;
 using LoggingCodefirst.Services;
 using LoggingCodefirst.Validators.User;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -36,7 +37,9 @@ namespace LoggingCodefirst
                 options.CheckConsentNeeded = context => true;
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
+            
             services.AddAutoMapper();
+            services.AddSession();
             
             services.AddScoped<IUserService, UserService>();
             services.AddScoped<IStoreService, StoreService>();
@@ -45,16 +48,22 @@ namespace LoggingCodefirst
             services.AddScoped<IProductService, ProductService>();
             services.AddScoped<IStockService, StockService>();
             
-            services.AddSession();
             services.AddHttpContextAccessor();
-
+            
+            services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+                .AddCookie(options =>
+                {
+                    options.AccessDeniedPath = new PathString("/Error/401");
+                    options.LoginPath = new PathString("/Account/Login");
+                    options.ReturnUrlParameter = "RequestPath";
+                    options.SlidingExpiration = true;
+                });
+            
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 //            validate
             services.AddMvc().AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<LoginValidator>());
             
             services.AddDbContext<DataContext>(item => item.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
-            
-            services.AddScoped<AuthorizedActionFilter>();
             
             #region Resources
             
@@ -141,6 +150,8 @@ namespace LoggingCodefirst
             app.UseCookiePolicy();
             app.UseSession();
             
+            app.UseAuthentication();
+           
             #region Resources
             
             var options = app.ApplicationServices.GetService<IOptions<RequestLocalizationOptions>>();

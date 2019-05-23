@@ -1,10 +1,10 @@
 ﻿{
   "version": "1.0.0",
   "restore": {
-    "projectUniqueName": "/home/local/3SI/huan.hv/3S-Intersoft/LoggingCodefirst/LoggingCodefirst/LoggingCodefirst.csproj",
+    "projectUniqueName": "/home/local/3SI/huan.hv/RiderProjects/3S-Intersoft/LoggingCodefirst/LoggingCodefirst/LoggingCodefirst.csproj",
     "projectName": "LoggingCodefirst",
-    "projectPath": "/home/local/3SI/huan.hv/3S-Intersoft/LoggingCodefirst/LoggingCodefirst/LoggingCodefirst.csproj",
-    "outputPath": "/home/local/3SI/huan.hv/3S-Intersoft/LoggingCodefirst/LoggingCodefirst/obj/",
+    "projectPath": "/home/local/3SI/huan.hv/RiderProjects/3S-Intersoft/LoggingCodefirst/LoggingCodefirst/LoggingCodefirst.csproj",
+    "outputPath": "/home/local/3SI/huan.hv/RiderProjects/3S-Intersoft/LoggingCodefirst/LoggingCodefirst/obj/",
     "projectStyle": "PackageReference",
     "fallbackFolders": [
       "/usr/share/dotnet/sdk/NuGetFallbackFolder"
@@ -39,6 +39,10 @@
           "target": "Package",
           "version": "[2.2.0, )",
           "autoReferenced": true
+        },
+        "Microsoft.AspNetCore.Authentication.Cookies": {
+          "target": "Package",
+          "version": "[2.2.0, )"
         },
         "Microsoft.AspNetCore.Razor.Design": {
           "suppressParent": "All",

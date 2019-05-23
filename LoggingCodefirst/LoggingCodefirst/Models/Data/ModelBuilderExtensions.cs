@@ -42,6 +42,7 @@ namespace LoggingCodefirst.Models.Data
                     Phone = "0964973404", 
                     Address = "Huế, Thừa thiên Huế", 
                     StoreId = 2, 
+                    Role = "Admin", 
                     ImagePath = "05172019110557huan.jpg", 
                     IsActive = true
                 }

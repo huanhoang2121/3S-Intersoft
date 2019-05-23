@@ -1,13 +1,14 @@
 using System.Threading.Tasks;
-using LoggingCodefirst.Filters;
+using LoggingCodefirst.Resources;
 using LoggingCodefirst.Services;
 using LoggingCodefirst.ViewModels;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace LoggingCodefirst.Controllers
-{
-    [ServiceFilter(typeof(AuthorizedActionFilter))]
+{    
+    [Authorize]
     public class StockController : Controller
     {
         #region Private Members
@@ -140,7 +141,8 @@ namespace LoggingCodefirst.Controllers
         /// <param name="productid">product id</param>
         /// <param name="storeid">store id</param>
         /// <returns>Index Stock</returns>
-        [HttpGet]
+        [HttpGet]  
+        [Authorize(Roles = "Admin")]  
         public async Task<IActionResult> Delete(int? productid, int? storeid)
         {
             if (productid == null || storeid == null)

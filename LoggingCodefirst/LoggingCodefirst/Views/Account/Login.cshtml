@@ -30,15 +30,7 @@
                 <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                 <div class="row p-b-30">
                     <div class="col-12">
-                        @if (ViewBag.ReturnUrl != null)
-                        {
-                            <input asp-for="ReturnUrl" type="hidden" value="@ViewBag.ReturnUrl">
-                        }
-                        else
-                        {
-                            <input asp-for="ReturnUrl" type="hidden">
-                        }
-                        
+                        <input type="hidden" asp-for="RequestPath" value="@ViewBag.RequestPath" />
                         <div class="input-group mb-3">
                             <div class="input-group-prepend">
                                 <span class="input-group-text bg-success text-white"><i class="ti-user"></i></span>

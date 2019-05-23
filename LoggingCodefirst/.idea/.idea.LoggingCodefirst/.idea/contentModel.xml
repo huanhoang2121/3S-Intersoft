@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="$USER_HOME$/.Rider2018.1/system/resharper-host/local/Transient/ReSharperHost/v12/SolutionCaches/_LoggingCodefirst.-693576437.00" t="ExcludeRecursive" />
+    <e p="$USER_HOME$/.Rider2018.1/system/resharper-host/local/Transient/ReSharperHost/v12/SolutionCaches/_LoggingCodefirst.-1918299450.00" t="ExcludeRecursive" />
     <e p="$PROJECT_DIR$" t="IncludeFlat">
       <e p="LoggingCodefirst" t="IncludeRecursive">
         <e p="Controllers" t="Include">
@@ -14,9 +14,6 @@
           <e p="StockController.cs" t="Include" />
           <e p="StoreController.cs" t="Include" />
           <e p="UserController.cs" t="Include" />
-        </e>
-        <e p="Filters" t="Include">
-          <e p="AuthorizedActionFilter.cs" t="Include" />
         </e>
         <e p="Infrastructure" t="Include">
           <e p="SecurePasswordHasher.cs" t="Include" />
@@ -43,6 +40,14 @@
           <e p="20190512144342_UpdateStock3.cs" t="Include" />
           <e p="20190517040814_UpdateUserImagePath.Designer.cs" t="Include" />
           <e p="20190517040814_UpdateUserImagePath.cs" t="Include" />
+          <e p="20190521045142_AddRole.Designer.cs" t="Include" />
+          <e p="20190521045142_AddRole.cs" t="Include" />
+          <e p="20190521045533_AddUserRoleRelationships.Designer.cs" t="Include" />
+          <e p="20190521045533_AddUserRoleRelationships.cs" t="Include" />
+          <e p="20190522064218_RemoveRole.Designer.cs" t="Include" />
+          <e p="20190522064218_RemoveRole.cs" t="Include" />
+          <e p="20190522085118_UpdateUserRole.Designer.cs" t="Include" />
+          <e p="20190522085118_UpdateUserRole.cs" t="Include" />
           <e p="DataContextModelSnapshot.cs" t="Include" />
         </e>
         <e p="Models" t="Include">
@@ -51,7 +56,6 @@
           <e p="Customer.cs" t="Include" />
           <e p="Data" t="Include">
             <e p="DataContext.cs" t="Include" />
-            <e p="EntityConfiguration.cs" t="Include" />
             <e p="ModelBuilderExtensions.cs" t="Include" />
           </e>
           <e p="Order.cs" t="Include" />
@@ -66,23 +70,41 @@
           <e p="launchSettings.json" t="Include" />
         </e>
         <e p="Resources" t="Include">
-          <e p="BrandResource.en-US.resx" t="Include" />
+          <e p="BrandResource.Designer.cs" t="Include" />
+          <e p="BrandResource.resx" t="Include" />
+          <e p="BrandResource.vi-VN.Designer.cs" t="Include" />
           <e p="BrandResource.vi-VN.resx" t="Include" />
-          <e p="CategoryResource.en-US.resx" t="Include" />
+          <e p="CategoryResource.Designer.cs" t="Include" />
+          <e p="CategoryResource.resx" t="Include" />
+          <e p="CategoryResource.vi-VN.Designer.cs" t="Include" />
           <e p="CategoryResource.vi-VN.resx" t="Include" />
-          <e p="CommonResource.en-US.resx" t="Include" />
+          <e p="CommonResource.Designer.cs" t="Include" />
+          <e p="CommonResource.resx" t="Include" />
+          <e p="CommonResource.vi-VN.Designer.cs" t="Include" />
           <e p="CommonResource.vi-VN.resx" t="Include" />
-          <e p="ErrorResource.en-US.resx" t="Include" />
+          <e p="ErrorResource.Designer.cs" t="Include" />
+          <e p="ErrorResource.resx" t="Include" />
+          <e p="ErrorResource.vi-VN.Designer.cs" t="Include" />
           <e p="ErrorResource.vi-VN.resx" t="Include" />
-          <e p="HomeResource.en-US.resx" t="Include" />
+          <e p="HomeResource.Designer.cs" t="Include" />
+          <e p="HomeResource.resx" t="Include" />
+          <e p="HomeResource.vi-VN.Designer.cs" t="Include" />
           <e p="HomeResource.vi-VN.resx" t="Include" />
-          <e p="ProductResource.en-US.resx" t="Include" />
+          <e p="ProductResource.Designer.cs" t="Include" />
+          <e p="ProductResource.resx" t="Include" />
+          <e p="ProductResource.vi-VN.Designer.cs" t="Include" />
           <e p="ProductResource.vi-VN.resx" t="Include" />
-          <e p="StockResource.en-US.resx" t="Include" />
+          <e p="StockResource.Designer.cs" t="Include" />
+          <e p="StockResource.resx" t="Include" />
+          <e p="StockResource.vi-VN.Designer.cs" t="Include" />
           <e p="StockResource.vi-VN.resx" t="Include" />
-          <e p="StoreResource.en-US.resx" t="Include" />
+          <e p="StoreResource.Designer.cs" t="Include" />
+          <e p="StoreResource.resx" t="Include" />
+          <e p="StoreResource.vi-VN.Designer.cs" t="Include" />
           <e p="StoreResource.vi-VN.resx" t="Include" />
-          <e p="UserResource.en-US.resx" t="Include" />
+          <e p="UserResource.Designer.cs" t="Include" />
+          <e p="UserResource.resx" t="Include" />
+          <e p="UserResource.vi-VN.Designer.cs" t="Include" />
           <e p="UserResource.vi-VN.resx" t="Include" />
         </e>
         <e p="Services" t="Include">
@@ -1476,6 +1498,13 @@
             <e p="05172019133704tai_xuong_7a45fb79-6c1b-412a-7670-b7962538ff4f_large.jpg" t="Include" />
             <e p="05172019134242user.png" t="Include" />
             <e p="05172019140413tai_xuong_7a45fb79-6c1b-412a-7670-b7962538ff4f_large.jpg" t="Include" />
+            <e p="05172019140535download.jpeg" t="Include" />
+            <e p="05202019141035user.png" t="Include" />
+            <e p="05202019141427user.png" t="Include" />
+            <e p="05212019115923user.png" t="Include" />
+            <e p="05212019120054user.png" t="Include" />
+            <e p="05212019123219tai_xuong__1__1d1f2ab4-3330-491f-77e3-2725057f69a6_large.jpg" t="Include" />
+            <e p="05222019161535user.png" t="Include" />
             <e p="05_06_2019_09_12_40ao-adidas-trang-1492535561-2298159-1492535561.jpeg" t="Include" />
             <e p="05_06_2019_11_12_24quan.jpg" t="Include" />
             <e p="05_06_2019_11_12_39quan.jpg" t="Include" />

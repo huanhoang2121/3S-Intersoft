@@ -1,12 +1,13 @@
 using System.Threading.Tasks;
-using LoggingCodefirst.Filters;
+using LoggingCodefirst.Resources;
 using LoggingCodefirst.Services;
 using LoggingCodefirst.ViewModels;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace LoggingCodefirst.Controllers
 {
-    [ServiceFilter(typeof(AuthorizedActionFilter))]
+    [Authorize]  
     public class CategoryController : Controller
     {
         #region Private Members
@@ -119,7 +120,8 @@ namespace LoggingCodefirst.Controllers
         /// </summary>
         /// <param name="id">Category id</param>
         /// <returns>Category index</returns>
-        [HttpGet]        
+        [HttpGet]       
+        [Authorize(Roles = "Admin")]     
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)

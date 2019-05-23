@@ -1,5 +1,6 @@
 ﻿using System;
 using FluentValidation;
+using LoggingCodefirst.Resources;
 using LoggingCodefirst.Services;
 using LoggingCodefirst.ViewModels;
 
@@ -11,7 +12,7 @@ namespace LoggingCodefirst.Validators
         {
             RuleFor(x => x.BrandName)
                 .Must((reg, x) => !brandService.IsExistedName(reg.Id,reg.BrandName))
-                .WithMessage((reg, x) => String.Format(localizer.GetLocalizedString("msg_Exists"), x));
+                .WithMessage((reg, x) => string.Format(localizer.GetLocalizedString("msg_Exists"), x));
             RuleFor(x => x.BrandName)
                 .NotNull().WithMessage(localizer.GetLocalizedString("msg_NotEmpty"));
         }

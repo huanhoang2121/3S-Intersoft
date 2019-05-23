@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="dataSourceStorageLocal">
-    <data-source name="huandb@localhost" uuid="473fa9e4-3968-4ee1-ba5b-f4b3c5ab5c2a">
+    <data-source name="huandb@localhost" uuid="cc28db0b-7a85-4b96-a885-330fa94f7173">
       <database-info product="Microsoft SQL Server" version="15.00.1400" jdbc-version="4.2" driver-name="Microsoft JDBC Driver 7.2 for SQL Server" driver-version="7.2.1.0">
         <extra-name-characters>$#@</extra-name-characters>
         <identifier-quote-string>&quot;</identifier-quote-string>

@@ -1,12 +1,13 @@
 using System.Threading.Tasks;
-using LoggingCodefirst.Filters;
+using LoggingCodefirst.Resources;
 using LoggingCodefirst.Services;
 using LoggingCodefirst.ViewModels;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace LoggingCodefirst.Controllers
-{
-    [ServiceFilter(typeof(AuthorizedActionFilter))]
+{  
+    [Authorize]  
     public class BrandController : Controller
     {
         #region Private Members
@@ -120,6 +121,7 @@ namespace LoggingCodefirst.Controllers
         /// <param name="id">brand id</param>
         /// <returns>index brand</returns>
         [HttpGet]  
+        [Authorize(Roles = "Admin")]  
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)

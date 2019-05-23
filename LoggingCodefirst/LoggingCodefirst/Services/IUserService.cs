@@ -28,7 +28,7 @@ namespace LoggingCodefirst.Services
         /// </summary>
         /// <param name="loginViewModel">LoginViewModel</param>
         /// <returns>Could be Login?</returns>
-        bool Login(LoginViewModel loginViewModel);
+        Task<bool> Login(LoginViewModel loginViewModel);
         
         /// <summary>
         /// GetUserAsync
@@ -135,9 +135,11 @@ namespace LoggingCodefirst.Services
         /// </summary>
         /// <param name="loginViewModel">LoginViewModel</param>
         /// <returns>Could be Login?</returns>
-        public bool Login(LoginViewModel loginViewModel)
+        public async Task<bool> Login(LoginViewModel loginViewModel)
         {  
-            var user = _context.Users.FirstOrDefault(s => s.Email == loginViewModel.Email && SecurePasswordHasher.Verify(loginViewModel.Password, s.Password));
+            var user = await _context.Users
+                .FirstOrDefaultAsync(s => s.Email == loginViewModel.Email && SecurePasswordHasher.Verify(loginViewModel.Password, s.Password));
+
             return user != null;
         }
 
@@ -149,7 +151,7 @@ namespace LoggingCodefirst.Services
         /// <returns>User</returns>
         public async Task<User> GetUserAsync(string email)
         {
-            return await _context.Users.FirstOrDefaultAsync(u => u.Email == email);
+            return await _context.Users.FirstOrDefaultAsync(s => s.Email == email);
         }
         
         /// <inheritdoc />
@@ -184,6 +186,8 @@ namespace LoggingCodefirst.Services
                     Address = createViewModel.Address,
                     StoreId = createViewModel.StoreId,
                     Phone = createViewModel.Phone,
+                    Role = createViewModel.Role,
+                    IsActive = createViewModel.IsActive,
                 };
                 
                 if (createViewModel.ImageFile != null)
@@ -239,6 +243,8 @@ namespace LoggingCodefirst.Services
                 user.Phone = editViewModel.Phone;
                 user.StoreId = editViewModel.StoreId;
                 user.Email = editViewModel.Email;
+                user.Role = editViewModel.Role;
+                user.IsActive = editViewModel.IsActive;
                 
                 if (editViewModel.ImageFile != null)
                 {
