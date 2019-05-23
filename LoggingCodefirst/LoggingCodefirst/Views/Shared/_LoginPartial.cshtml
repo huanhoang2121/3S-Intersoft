@@ -31,7 +31,7 @@
         </ul>
         <!-- Right side toggle and nav items -->
         <ul class="navbar-nav float-right">
-            @if (Context.Session.GetString("username") == null)
+            @if (User.Claims.FirstOrDefault(c => c.Type == "FullName")?.Value == null)
             {
                 <li class="nav-item">
                     <a class="nav-link" asp-area="" asp-controller="Account" asp-action="Login" asp-route-requestPath="@Context.Request.Path">
@@ -44,16 +44,19 @@
                 <!-- User profile -->
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle text-muted waves-effect" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <img src="~/images/@Context.Session.GetString("imagepath")" alt="user" class="rounded-circle" width="31" height="31">
+                        <img src="~/images/@User.Claims.FirstOrDefault(c => c.Type == "ImagePath")?.Value" alt="user" class="rounded-circle" width="31" height="31">
                     </a>
                     <div class="dropdown-menu dropdown-menu-right user-dd animated">
                         <a class="dropdown-item" href="javascript:void(0)">
-                            <i class="ti-user m-r-5 m-l-5"></i> @Localizer.GetLocalizedString("lbl_Hello") @Context.Session.GetString("username")!
+                            <i class="ti-user m-r-5 m-l-5"></i> 
+                            @Localizer.GetLocalizedString("lbl_Hello") @User.Claims.FirstOrDefault(c => c.Type == "FullName")?.Value!
                         </a>
-                        <a class="dropdown-item" asp-controller="User" asp-action="Edit" asp-route-id="@Context.Session.GetString("userid")">
-                            <i class="ti-settings m-r-5 m-l-5"></i> @Localizer.GetLocalizedString("btn_AccountSetting")
+                        <a class="dropdown-item" asp-controller="User" asp-action="Edit" asp-route-id="@User.Claims.FirstOrDefault(c => c.Type == "Id")?.Value">
+                            <i class="ti-settings m-r-5 m-l-5"></i> 
+                            @Localizer.GetLocalizedString("btn_AccountSetting")
                         </a>
-                        <a class="dropdown-item" data-toggle="ajax-modal" style="color: #212529;" href="#" data-url="@Url.Action("ChangePassword","User", new {id = Context.Session.GetString("userid")})">
+                        <a class="dropdown-item" data-toggle="ajax-modal" style="color: #212529;" href="#" 
+                           data-url="@Url.Action("ChangePassword", "User", new {id = User.Claims.FirstOrDefault(c => c.Type == "Id")?.Value })">
                             <i class="ti-key m-r-5 m-l-5"></i> @Localizer.GetLocalizedString("btn_ChangePassword")
                         </a>
                         <a class="dropdown-item" asp-controller="Account" asp-action="Logout">

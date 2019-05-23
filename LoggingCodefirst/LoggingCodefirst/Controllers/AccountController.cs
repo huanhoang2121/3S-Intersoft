@@ -7,7 +7,6 @@ using LoggingCodefirst.ViewModels;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace LoggingCodefirst.Controllers
@@ -62,15 +61,15 @@ namespace LoggingCodefirst.Controllers
                 if (await _userService.Login(loginViewModel))
                 {
                     var user = await _userService.GetUserAsync(loginViewModel.Email);
-                    HttpContext.Session.SetString("userid", user.Id.ToString());
-                    HttpContext.Session.SetString("username", user.Fullname);
-                    HttpContext.Session.SetString("imagepath", user.ImagePath);
-
+                    
                     // create claims
                     var claims = new List<Claim>
                     {
                         new Claim(ClaimTypes.Email, user.Email),
-                        new Claim(ClaimTypes.Role, user.Role)
+                        new Claim(ClaimTypes.Role, user.Role),
+                        new Claim("Id", user.Id.ToString()),
+                        new Claim("FullName", user.Fullname),
+                        new Claim("ImagePath", user.ImagePath)
                     };
 
                     // create identity
@@ -82,7 +81,7 @@ namespace LoggingCodefirst.Controllers
                     // sign-in
                     await HttpContext.SignInAsync(
                         CookieAuthenticationDefaults.AuthenticationScheme, principal, new AuthenticationProperties());
-                
+                    
                     TempData["SuccessMessage"] = _localizer.GetLocalizedString("msg_LoginSuccess").ToString();
                     return Redirect(loginViewModel.RequestPath ?? "/");
                 }     

@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Globalization;
 using AutoMapper;
 using FluentValidation.AspNetCore;
@@ -57,6 +58,7 @@ namespace LoggingCodefirst
                     options.LoginPath = new PathString("/Account/Login");
                     options.ReturnUrlParameter = "RequestPath";
                     options.SlidingExpiration = true;
+                    options.ExpireTimeSpan = TimeSpan.FromMinutes(30);
                 });
             
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);

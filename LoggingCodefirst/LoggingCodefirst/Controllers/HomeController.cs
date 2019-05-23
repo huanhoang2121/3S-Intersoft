@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
+using System.Linq;
+using System.Security.Claims;
 using Microsoft.AspNetCore.Mvc;
 using LoggingCodefirst.ViewModels;
 using Microsoft.AspNetCore.Http;
