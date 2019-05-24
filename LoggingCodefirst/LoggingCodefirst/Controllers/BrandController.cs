@@ -67,7 +67,7 @@ namespace LoggingCodefirst.Controllers
                     TempData["SuccessMessage"] = _localizer.GetLocalizedString("msg_CreateBrandSuccess").ToString();
                     return PartialView("_CreatePartial",brandViewModel); 
                 }
-                ViewData["ErrorMessage"] = _localizer.GetLocalizedString("err_CreateBrand").ToString();
+                TempData["ErrorMessage"] = _localizer.GetLocalizedString("err_CreateBrand").ToString();
                 return PartialView("_CreatePartial", brandViewModel);
             }
             return PartialView("_CreatePartial", brandViewModel);
@@ -109,7 +109,7 @@ namespace LoggingCodefirst.Controllers
                     TempData["SuccessMessage"] = _localizer.GetLocalizedString("msg_EditBrandSuccess").ToString();
                     return PartialView("_EditPartial", brandViewModel);
                 }
-                ViewData["ErrorMessage"] = _localizer.GetLocalizedString("err_EditBrand").ToString();
+                TempData["ErrorMessage"] = _localizer.GetLocalizedString("err_EditBrand").ToString();
                 return PartialView("_EditPartial", brandViewModel);
             }
             return PartialView("_EditPartial", brandViewModel);

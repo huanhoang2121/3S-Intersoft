@@ -67,7 +67,7 @@ namespace LoggingCodefirst.Controllers
                     TempData["SuccessMessage"] = _localizer.GetLocalizedString("msg_CreateCategorySuccess").ToString();
                     return PartialView("_CreatePartial",categoryViewModel); 
                 }
-                ViewData["ErrorMessage"] = _localizer.GetLocalizedString("err_CreateCategory").ToString();
+                TempData["ErrorMessage"] = _localizer.GetLocalizedString("err_CreateCategory").ToString();
                 return PartialView("_CreatePartial", categoryViewModel);
             }
             return PartialView("_CreatePartial", categoryViewModel);
@@ -109,7 +109,7 @@ namespace LoggingCodefirst.Controllers
                     TempData["SuccessMessage"] = _localizer.GetLocalizedString("msg_EditCategorySuccess").ToString();
                     return PartialView("_CreatePartial",categoryViewModel); 
                 }
-                ViewData["ErrorMessage"] = _localizer.GetLocalizedString("err_EditCategory").ToString();
+                TempData["ErrorMessage"] = _localizer.GetLocalizedString("err_EditCategory").ToString();
                 return PartialView("_CreatePartial", categoryViewModel);
             }
             return PartialView("_CreatePartial", categoryViewModel);

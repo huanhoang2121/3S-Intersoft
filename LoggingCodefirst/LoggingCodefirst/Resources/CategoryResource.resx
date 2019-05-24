@@ -18,53 +18,53 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-    
+   
     <data name="msg_CreateCategorySuccess" xml:space="preserve">
-        <value>Thêm mới danh mục thành công!</value>
+        <value>Create Category successfully!</value>
     </data>
     <data name="err_CreateCategory" xml:space="preserve">
-        <value>Thêm mới danh mục lỗi!</value>
+        <value>Create Category failed!</value>
     </data>
     <data name="msg_EditCategorySuccess" xml:space="preserve">
-        <value>Sửa thông tin danh mục thành công!</value>
+        <value>Edit Category successfully!</value>
     </data>
     <data name="err_EditCategory" xml:space="preserve">
-        <value>Sửa thông tin danh mục lỗi!</value>
+        <value>Edit Category failed!</value>
     </data>
     <data name="msg_DeleteCategorySuccess" xml:space="preserve">
-        <value>Xóa danh mục thành công!</value>
+        <value>Delete Category successfully!</value>
     </data>
     <data name="err_DeleteCategory" xml:space="preserve">
-        <value>Xóa danh mục lỗi!</value>
+        <value>Delete Category failed!</value>
     </data>
     <data name="msg_DeleteCategory" xml:space="preserve">
-        <value>Khi bạn xóa danh mục này, các sản phẩm liên quan sẽ bị xóa! Bạn có chắc chắn muốn xóa?</value>
+        <value>When you delete this Category, the related products will be deleted! Are you sure you want to delete?</value>
     </data>
   
     <data name="lbl_Category" xml:space="preserve">
-        <value>Danh mục</value>
+        <value>Category</value>
     </data>
     <data name="lbl_CreateCategory" xml:space="preserve">
-        <value>Thêm danh mục</value>
+        <value>Create Category</value>
     </data>
     <data name="lbl_EditCategory" xml:space="preserve">
-        <value>Thay đổi thông tin danh mục</value>
+        <value>Edit Category</value>
     </data>
   
     <data name="lbl_No" xml:space="preserve">
-        <value>Stt</value>
+        <value>No</value>
     </data>
     <data name="lbl_CategoryName" xml:space="preserve">
-        <value>Tên danh mục</value>
+        <value>Category Name</value>
     </data>
     <data name="lbl_Action" xml:space="preserve">
-        <value>Hành động</value>
+        <value>Action</value>
     </data>
   
     <data name="msg_NotEmpty" xml:space="preserve">
-        <value>Tên danh mục không được để trống!</value>
+        <value>Category Name must not be empty!</value>
     </data>
     <data name="msg_Exists" xml:space="preserve">
-        <value>{0} đã tồn tại!</value>
+        <value>{0} already exists!</value>
     </data>
 </root>

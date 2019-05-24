@@ -34,19 +34,23 @@
                                 <th style="text-align: center;">@UserLocalizer.GetLocalizedString("lbl_No")</th>
                                 <th style="text-align: center;">@UserLocalizer.GetLocalizedString("lbl_Email")</th>
                                 <th style="text-align: center;">@UserLocalizer.GetLocalizedString("lbl_Fullname")</th>
-                                <th style="text-align: center;">@UserLocalizer.GetLocalizedString("lbl_Phone")</th>
                                 <th style="text-align: center;">@UserLocalizer.GetLocalizedString("lbl_Store")</th>
+                                <th style="text-align: center;">@UserLocalizer.GetLocalizedString("lbl_Role")</th>
+                                <th style="text-align: center;">@UserLocalizer.GetLocalizedString("lbl_Phone")</th>
                                 <th style="text-align: center;">@UserLocalizer.GetLocalizedString("lbl_Address")</th>
                                 <th style="text-align: center;">@UserLocalizer.GetLocalizedString("lbl_Image")</th>
                                 <th style="text-align: center;">@UserLocalizer.GetLocalizedString("lbl_Action")</th>
                             </tr>
                             </thead>
                             <tbody> 
-                            @{ var stt = 0; }
+                            @{ var stt = 0;}
                             @foreach (var item in Model)
                             {
                                 stt += 1;
-                                <tr>
+                                var rowscolor = item.IsActive ? "class=table-success" : "class=table-danger";
+                                var role = item.Role == 1 ? "Admin" : "User";
+                                
+                                <tr @rowscolor>
                                     <td style="text-align: center;">
                                         @stt
                                     </td>
@@ -57,10 +61,13 @@
                                         @Html.DisplayFor(modelItem => item.Fullname)
                                     </td>
                                     <td>
-                                        @Html.DisplayFor(modelItem => item.Phone)
+                                        @Html.DisplayFor(modelItem => item.Store.StoreName)
                                     </td>
                                     <td>
-                                        @Html.DisplayFor(modelItem => item.Store.StoreName)
+                                        @role
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Phone)
                                     </td>
                                     <td>
                                         @Html.DisplayFor(modelItem => item.Address)
@@ -75,7 +82,7 @@
                                         <a data-toggle="ajax-modal" data-url="@Url.Action("ChangePassword", new {id = item.Id})">
                                             <i class="mdi mdi-key-variant" style="font-size: 24px; color: black"></i>
                                         </a>
-                                        <a asp-action="Delete" asp-route-id="@item.Id" 
+                                        <a asp-action="Delete" asp-route-id="@item.Id"
                                            onclick="return confirm('@UserLocalizer.GetLocalizedString("msg_DeleteUser")');">
                                             <i class="fa fa-trash" style="font-size: 24px; color: red; padding-left: 5px;"></i>
                                         </a>

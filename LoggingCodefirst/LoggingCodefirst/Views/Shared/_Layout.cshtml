@@ -53,6 +53,14 @@
                 };
             </script>
         }
+@*         @if (ViewData["ErrorMessage"] != null) *@
+@*         { *@
+@*             <script type="text/javascript"> *@
+@*                 window.onload = function () { *@
+@*                     toastr.error("@ViewData["ErrorMessage"]","@Localizer.GetLocalizedString("msg_Error")"); *@
+@*                 }; *@
+@*             </script> *@
+@*         } *@
         
         @RenderBody()
                               

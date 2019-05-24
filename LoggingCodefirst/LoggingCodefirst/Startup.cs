@@ -16,7 +16,6 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Options;
 
 namespace LoggingCodefirst
 {
@@ -35,21 +34,12 @@ namespace LoggingCodefirst
             services.Configure<CookiePolicyOptions>(options =>
             {
                 // This lambda determines whether user consent for non-essential cookies is needed for a given request.
-                options.CheckConsentNeeded = context => true;
+                options.CheckConsentNeeded = context => false;
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
-            
-            services.AddAutoMapper();
-            services.AddSession();
-            
-            services.AddScoped<IUserService, UserService>();
-            services.AddScoped<IStoreService, StoreService>();
-            services.AddScoped<IBrandService, BrandService>();
-            services.AddScoped<ICategoryService, CategoryService>();
-            services.AddScoped<IProductService, ProductService>();
-            services.AddScoped<IStockService, StockService>();
-            
-            services.AddHttpContextAccessor();
+
+            // Add CookieAuthentication
+            #region Add CookieAuthentication
             
             services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
                 .AddCookie(options =>
@@ -61,26 +51,13 @@ namespace LoggingCodefirst
                     options.ExpireTimeSpan = TimeSpan.FromMinutes(30);
                 });
             
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
-//            validate
-            services.AddMvc().AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<LoginValidator>());
-            
-            services.AddDbContext<DataContext>(item => item.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
-            
-            #region Resources
+            #endregion
+ 
+            // Add Localization
+            #region AddLocalization
             
             services.AddLocalization(options => options.ResourcesPath = "Resources");
-
-            services.AddSingleton<LocalizationService<CommonResource>>();
-            services.AddSingleton<LocalizationService<HomeResource>>();
-            services.AddSingleton<LocalizationService<ErrorResource>>();
-            services.AddSingleton<LocalizationService<UserResource>>();
-            services.AddSingleton<LocalizationService<BrandResource>>();
-            services.AddSingleton<LocalizationService<CategoryResource>>();
-            services.AddSingleton<LocalizationService<ProductResource>>();
-            services.AddSingleton<LocalizationService<StockResource>>();
-            services.AddSingleton<LocalizationService<StoreResource>>();
- 
+            
             services.Configure<RequestLocalizationOptions>(options =>
             {
                 var supportedCultures = new List<CultureInfo>
@@ -91,10 +68,46 @@ namespace LoggingCodefirst
                 options.DefaultRequestCulture = new RequestCulture("en-US");
                 options.SupportedCultures = supportedCultures;
                 options.SupportedUICultures = supportedCultures;
-            }); 
+            });
+
+            services.AddSingleton<LocalizationService<CommonResource>>();
+            services.AddSingleton<LocalizationService<HomeResource>>();
+            services.AddSingleton<LocalizationService<ErrorResource>>();
+            services.AddSingleton<LocalizationService<UserResource>>();
+            services.AddSingleton<LocalizationService<BrandResource>>();
+            services.AddSingleton<LocalizationService<CategoryResource>>();
+            services.AddSingleton<LocalizationService<ProductResource>>();
+            services.AddSingleton<LocalizationService<StockResource>>();
+            services.AddSingleton<LocalizationService<StoreResource>>();
+  
+            
+            #endregion
+
+            // Add application services.    
+            #region Add Service
+            
+            services.AddScoped<IUserService, UserService>();
+            services.AddScoped<IStoreService, StoreService>();
+            services.AddScoped<IBrandService, BrandService>();
+            services.AddScoped<ICategoryService, CategoryService>();
+            services.AddScoped<IProductService, ProductService>();
+            services.AddScoped<IStockService, StockService>();   
             
             #endregion
             
+            services.AddDbContext<DataContext>(item => item.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));   
+
+            services.AddAutoMapper();
+            services.AddHttpContextAccessor();
+            
+            // Add FluentValidation
+            services.AddMvc().AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<LoginValidator>());
+
+            // If the app uses session state, call AddSession.
+            services.AddMvc().AddSessionStateTempDataProvider();
+            services.AddSession();
+
+            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -146,22 +159,29 @@ namespace LoggingCodefirst
                 }
             });
             
+            
             app.UseRequestLocalization();
+
+            // Use HTTPS Redirection Middleware to redirect HTTP requests to HTTPS.
             app.UseHttpsRedirection();
+
+            // Return static files and end the pipeline.
             app.UseStaticFiles();
+           
+            // Use Cookie Policy Middleware to conform to EU General Data 
+            // Protection Regulation (GDPR) regulations.
             app.UseCookiePolicy();
+
+            // Authenticate before the user accesses secure resources.
+            app.UseAuthentication();
+
+            // If the app uses session state, call Session Middleware after Cookie 
+            // Policy Middleware and before MVC Middleware.
             app.UseSession();
             
-            app.UseAuthentication();
-           
-            #region Resources
+            app.UseMvcWithDefaultRoute();
             
-            var options = app.ApplicationServices.GetService<IOptions<RequestLocalizationOptions>>();
-            app.UseRequestLocalization(options.Value);
-            
-            #endregion
-
-
+            // Add MVC to the request pipeline.
             app.UseMvc(routes =>
             {
                 routes.MapRoute(

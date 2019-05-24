@@ -28,7 +28,7 @@ namespace LoggingCodefirst.Services
         /// </summary>
         /// <param name="loginViewModel">LoginViewModel</param>
         /// <returns>Could be Login?</returns>
-        Task<bool> Login(LoginViewModel loginViewModel);
+        Task<bool> LoginAsync(LoginViewModel loginViewModel);
         
         /// <summary>
         /// GetUserAsync
@@ -135,11 +135,13 @@ namespace LoggingCodefirst.Services
         /// </summary>
         /// <param name="loginViewModel">LoginViewModel</param>
         /// <returns>Could be Login?</returns>
-        public async Task<bool> Login(LoginViewModel loginViewModel)
+        public async Task<bool> LoginAsync(LoginViewModel loginViewModel)
         {  
             var user = await _context.Users
-                .FirstOrDefaultAsync(s => s.Email == loginViewModel.Email && SecurePasswordHasher.Verify(loginViewModel.Password, s.Password));
-
+                .FirstOrDefaultAsync(s => s.Email == loginViewModel.Email 
+                                          && SecurePasswordHasher.Verify(loginViewModel.Password, s.Password) 
+//                                          && s.IsActive
+                                          );
             return user != null;
         }
 

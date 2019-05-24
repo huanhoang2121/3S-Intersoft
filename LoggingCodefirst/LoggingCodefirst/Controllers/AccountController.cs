@@ -58,7 +58,7 @@ namespace LoggingCodefirst.Controllers
         {
             if (ModelState.IsValid)
             {
-                if (await _userService.Login(loginViewModel))
+                if (await _userService.LoginAsync(loginViewModel))
                 {
                     var user = await _userService.GetUserAsync(loginViewModel.Email);
 
