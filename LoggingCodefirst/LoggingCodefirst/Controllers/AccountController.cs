@@ -60,19 +60,13 @@ namespace LoggingCodefirst.Controllers
             {
                 if (await _userService.LoginAsync(loginViewModel))
                 {
-                    var user = await _userService.GetUserAsync(loginViewModel.Email);
-
-                    var role = "User";
-                    if (user.Role == 1)
-                    {
-                        role = "Admin";
-                    }
+                    var user = await _userService.GetUserByEmailAsync(loginViewModel.Email);
                     
                     // create claims
                     var claims = new List<Claim>
                     {
                         new Claim(ClaimTypes.Email, user.Email),
-                        new Claim(ClaimTypes.Role, role),
+                        new Claim(ClaimTypes.Role, user.Role.RoleName),
                         new Claim("Id", user.Id.ToString()),
                         new Claim("FullName", user.Fullname),
                         new Claim("ImagePath", user.ImagePath)

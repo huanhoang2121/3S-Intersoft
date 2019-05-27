@@ -13,7 +13,7 @@ namespace LoggingCodefirst.Migrations
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
-                    Title = table.Column<string>(nullable: false),
+                    RoleName = table.Column<string>(nullable: false),
                     Description = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
@@ -23,12 +23,12 @@ namespace LoggingCodefirst.Migrations
 
             migrationBuilder.InsertData(
                 table: "Role",
-                columns: new[] { "Id", "Description", "Title" },
+                columns: new[] { "Id", "Description", "RoleName" },
                 values: new object[] { 1, "View Home", "User" });
 
             migrationBuilder.InsertData(
                 table: "Role",
-                columns: new[] { "Id", "Description", "Title" },
+                columns: new[] { "Id", "Description", "RoleName" },
                 values: new object[] { 2, "View All", "Admin" });
 
             migrationBuilder.UpdateData(

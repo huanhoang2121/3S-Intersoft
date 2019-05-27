@@ -44,16 +44,6 @@
           <e p="20190521045142_AddRole.cs" t="Include" />
           <e p="20190521045533_AddUserRoleRelationships.Designer.cs" t="Include" />
           <e p="20190521045533_AddUserRoleRelationships.cs" t="Include" />
-          <e p="20190522064218_RemoveRole.Designer.cs" t="Include" />
-          <e p="20190522064218_RemoveRole.cs" t="Include" />
-          <e p="20190522085118_UpdateUserRole.Designer.cs" t="Include" />
-          <e p="20190522085118_UpdateUserRole.cs" t="Include" />
-          <e p="20190523101139_UpdateUserRoleInt.Designer.cs" t="Include" />
-          <e p="20190523101139_UpdateUserRoleInt.cs" t="Include" />
-          <e p="20190523101409_RemoveUserRole.Designer.cs" t="Include" />
-          <e p="20190523101409_RemoveUserRole.cs" t="Include" />
-          <e p="20190523101650_AddUserRole.Designer.cs" t="Include" />
-          <e p="20190523101650_AddUserRole.cs" t="Include" />
           <e p="DataContextModelSnapshot.cs" t="Include" />
         </e>
         <e p="Models" t="Include">
@@ -67,6 +57,7 @@
           <e p="Order.cs" t="Include" />
           <e p="OrderItem.cs" t="Include" />
           <e p="Product.cs" t="Include" />
+          <e p="Role.cs" t="Include" />
           <e p="Stock.cs" t="Include" />
           <e p="Store.cs" t="Include" />
           <e p="User.cs" t="Include" />
@@ -117,6 +108,7 @@
           <e p="IBrandService.cs" t="Include" />
           <e p="ICategoryService.cs" t="Include" />
           <e p="IProductService.cs" t="Include" />
+          <e p="IRoleService.cs" t="Include" />
           <e p="IStockService.cs" t="Include" />
           <e p="IStoreService.cs" t="Include" />
           <e p="IUserService.cs" t="Include" />
@@ -1518,6 +1510,8 @@
             <e p="05242019140452tai_xuong__1__1d1f2ab4-3330-491f-77e3-2725057f69a6_large.jpg" t="Include" />
             <e p="05242019143651icon.png" t="Include" />
             <e p="05242019144831download.jpeg" t="Include" />
+            <e p="05242019170616tai_xuong_7a45fb79-6c1b-412a-7670-b7962538ff4f_large.jpg" t="Include" />
+            <e p="05272019103701user.png" t="Include" />
             <e p="05_06_2019_09_12_40ao-adidas-trang-1492535561-2298159-1492535561.jpeg" t="Include" />
             <e p="05_06_2019_11_12_24quan.jpg" t="Include" />
             <e p="05_06_2019_11_12_39quan.jpg" t="Include" />

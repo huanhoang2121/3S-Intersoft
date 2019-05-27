@@ -15,6 +15,7 @@ namespace LoggingCodefirst.Controllers
 
         private readonly IUserService _userService;
         private readonly IStoreService _storeService;
+        private readonly IRoleService _roleService;
         private readonly LocalizationService<UserResource> _localizer;
 
         #endregion
@@ -24,10 +25,12 @@ namespace LoggingCodefirst.Controllers
         public UserController(
             IUserService userService, 
             IStoreService storeService, 
+            IRoleService roleService,
             LocalizationService<UserResource> localizer)
         {
             _userService = userService;
             _storeService = storeService;
+            _roleService = roleService;
             _localizer = localizer;
         }
 
@@ -54,6 +57,7 @@ namespace LoggingCodefirst.Controllers
         public IActionResult Create()
         {
             ViewBag.StoreId = new SelectList(_storeService.Stores(), "Id", "StoreName");
+            ViewBag.RoleId = new SelectList(_roleService.Roles(), "Id", "RoleName");
             return View();
         }
         
@@ -74,9 +78,11 @@ namespace LoggingCodefirst.Controllers
                 }
                 ViewData["ErrorMessage"] = _localizer.GetLocalizedString("err_CreateUser").ToString();
                 ViewBag.StoreId = new SelectList(_storeService.Stores(), "Id", "StoreName", createViewModel.StoreId);
+                ViewBag.RoleId = new SelectList(_roleService.Roles(), "Id", "RoleName", createViewModel.RoleId);
                 return View(createViewModel);
             }
             ViewBag.StoreId = new SelectList(_storeService.Stores(), "Id", "StoreName", createViewModel.StoreId);
+            ViewBag.RoleId = new SelectList(_roleService.Roles(), "Id", "RoleName", createViewModel.RoleId);
             return View(createViewModel);
         }
         
@@ -98,6 +104,7 @@ namespace LoggingCodefirst.Controllers
                 return BadRequest();
             }
             ViewBag.StoreId = new SelectList(_storeService.Stores(), "Id", "StoreName", editViewModel.StoreId);
+            ViewBag.RoleId = new SelectList(_roleService.Roles(), "Id", "RoleName", editViewModel.RoleId);
             return View(editViewModel);
         }
         
@@ -118,9 +125,11 @@ namespace LoggingCodefirst.Controllers
                 }
                 ViewData["ErrorMessage"] = _localizer.GetLocalizedString("err_EditUser").ToString();
                 ViewBag.StoreId = new SelectList(_storeService.Stores(), "Id", "StoreName", editViewModel.StoreId);
+                ViewBag.RoleId = new SelectList(_roleService.Roles(), "Id", "RoleName", editViewModel.RoleId);
                 return View(editViewModel);
             }
             ViewBag.StoreId = new SelectList(_storeService.Stores(), "Id", "StoreName", editViewModel.StoreId);
+            ViewBag.RoleId = new SelectList(_roleService.Roles(), "Id", "RoleName", editViewModel.RoleId);
             return View(editViewModel);
         }
         

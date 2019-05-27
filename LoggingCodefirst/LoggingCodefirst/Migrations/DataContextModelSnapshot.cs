@@ -113,6 +113,23 @@ namespace LoggingCodefirst.Migrations
                         });
                 });
 
+            modelBuilder.Entity("LoggingCodefirst.Models.Role", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Description");
+
+                    b.Property<string>("RoleName")
+                        .IsRequired()
+                        .HasMaxLength(100);
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Role");
+                });
+
             modelBuilder.Entity("LoggingCodefirst.Models.Stock", b =>
                 {
                     b.Property<int>("ProductId");
@@ -230,7 +247,7 @@ namespace LoggingCodefirst.Migrations
                     b.Property<string>("Phone")
                         .HasMaxLength(20);
 
-                    b.Property<int>("Role");
+                    b.Property<int>("RoleId");
 
                     b.Property<int>("StoreId");
 
@@ -238,6 +255,8 @@ namespace LoggingCodefirst.Migrations
 
                     b.HasIndex("Email")
                         .IsUnique();
+
+                    b.HasIndex("RoleId");
 
                     b.HasIndex("StoreId");
 
@@ -252,9 +271,9 @@ namespace LoggingCodefirst.Migrations
                             Fullname = "Hoàng Văn Huấn",
                             ImagePath = "05172019110557huan.jpg",
                             IsActive = true,
-                            Password = "10000:C9uX/JZ2I/3+upTK1IydMLchvDNTSLGkGnScuB8AYawZhoJW",
+                            Password = "10000:8pn/hxFG9jAgIq/+7+CURmO3Yt7bbuuZ1KUjxaQRovK8YIWj",
                             Phone = "0964973404",
-                            Role = 1,
+                            RoleId = 1,
                             StoreId = 2
                         });
                 });
@@ -287,6 +306,11 @@ namespace LoggingCodefirst.Migrations
 
             modelBuilder.Entity("LoggingCodefirst.Models.User", b =>
                 {
+                    b.HasOne("LoggingCodefirst.Models.Role", "Role")
+                        .WithMany("Users")
+                        .HasForeignKey("RoleId")
+                        .OnDelete(DeleteBehavior.Cascade);
+
                     b.HasOne("LoggingCodefirst.Models.Store", "Store")
                         .WithMany("Users")
                         .HasForeignKey("StoreId")

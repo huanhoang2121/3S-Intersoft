@@ -35,7 +35,7 @@ namespace LoggingCodefirst.Services
         /// </summary>
         /// <param name="email">User email</param>
         /// <returns>User</returns>
-        Task<User> GetUserAsync(string email);
+        Task<User> GetUserByEmailAsync(string email);
         
         /// <summary>
         /// GetListUserAsync
@@ -151,9 +151,11 @@ namespace LoggingCodefirst.Services
         /// </summary>
         /// <param name="email">User email</param>
         /// <returns>User</returns>
-        public async Task<User> GetUserAsync(string email)
+        public async Task<User> GetUserByEmailAsync(string email)
         {
-            return await _context.Users.FirstOrDefaultAsync(s => s.Email == email);
+            return await _context.Users
+                .Include(u => u.Role)
+                .FirstOrDefaultAsync(s => s.Email == email);
         }
         
         /// <inheritdoc />
@@ -165,6 +167,7 @@ namespace LoggingCodefirst.Services
         {
             var users = await _context.Users
                 .Include(u => u.Store)
+                .Include(u => u.Role)
                 .ToListAsync();
             var viewModels = _mapper.Map<List<UserViewModel>>(users);
             return viewModels;
@@ -188,7 +191,7 @@ namespace LoggingCodefirst.Services
                     Address = createViewModel.Address,
                     StoreId = createViewModel.StoreId,
                     Phone = createViewModel.Phone,
-                    Role = createViewModel.Role,
+                    RoleId = createViewModel.RoleId,
                     IsActive = createViewModel.IsActive,
                 };
                 
@@ -245,7 +248,7 @@ namespace LoggingCodefirst.Services
                 user.Phone = editViewModel.Phone;
                 user.StoreId = editViewModel.StoreId;
                 user.Email = editViewModel.Email;
-                user.Role = editViewModel.Role;
+                user.RoleId = editViewModel.RoleId;
                 user.IsActive = editViewModel.IsActive;
                 
                 if (editViewModel.ImageFile != null)

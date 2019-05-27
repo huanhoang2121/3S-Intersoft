@@ -15,6 +15,7 @@ namespace LoggingCodefirst.Models.Data
 //        Sales
         public virtual DbSet<Store> Stores { get; set; }
         public virtual DbSet<User> Users { get; set; }
+        public virtual DbSet<Role> Roles { get; set; }
         
 //        Production
         public virtual DbSet<Category> Categories { get; set; }
@@ -48,6 +49,9 @@ namespace LoggingCodefirst.Models.Data
             modelBuilder.Entity<Brand>().ToTable("Brand");
             modelBuilder.Entity<Brand>().Property(t => t.BrandName).IsRequired().HasMaxLength(100);
             
+            modelBuilder.Entity<Role>().ToTable("Role");
+            modelBuilder.Entity<Role>().Property(t => t.RoleName).IsRequired().HasMaxLength(100);
+            
             modelBuilder.Entity<Product>().ToTable("Product");
             modelBuilder.Entity<Product>().Property(t => t.ProductName).IsRequired().HasMaxLength(100);
             modelBuilder.Entity<Product>().Property(t => t.BrandId).IsRequired();
@@ -64,6 +68,7 @@ namespace LoggingCodefirst.Models.Data
             
 //            ForeignKey
             modelBuilder.Entity<User>().HasOne(s => s.Store).WithMany(g => g.Users).HasForeignKey(s => s.StoreId);
+            modelBuilder.Entity<User>().HasOne(s => s.Role).WithMany(g => g.Users).HasForeignKey(s => s.RoleId);
             
             modelBuilder.Entity<Product>().HasOne(s => s.Category).WithMany(g => g.Products).HasForeignKey(s => s.CategoryId);
             modelBuilder.Entity<Product>().HasOne(s => s.Brand).WithMany(g => g.Products).HasForeignKey(s => s.BrandId);

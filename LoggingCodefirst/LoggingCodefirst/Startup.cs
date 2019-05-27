@@ -92,6 +92,7 @@ namespace LoggingCodefirst
             services.AddScoped<ICategoryService, CategoryService>();
             services.AddScoped<IProductService, ProductService>();
             services.AddScoped<IStockService, StockService>();   
+            services.AddScoped<IRoleService, RoleService>();   
             
             #endregion
             

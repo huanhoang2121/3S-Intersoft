@@ -22,7 +22,6 @@ namespace LoggingCodefirst.ViewModels
         public string Address { get; set; } 
         [DisplayName("IsActive")]
         public bool IsActive { get; set; }
-        public int Role { get; set; } 
         
         public string ImagePath { get; set; } 
         [ValidateImage]
@@ -32,5 +31,7 @@ namespace LoggingCodefirst.ViewModels
         public int StoreId { get; set; }
         [DisplayName("Store Name")]
         public virtual Store Store { get; set; }
+        public int RoleId { get; set; } 
+        public virtual Role Role { get; set; }
     }
 }

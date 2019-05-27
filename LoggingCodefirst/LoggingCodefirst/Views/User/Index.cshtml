@@ -48,7 +48,6 @@
                             {
                                 stt += 1;
                                 var rowscolor = item.IsActive ? "class=table-success" : "class=table-danger";
-                                var role = item.Role == 1 ? "Admin" : "User";
                                 
                                 <tr @rowscolor>
                                     <td style="text-align: center;">
@@ -64,7 +63,7 @@
                                         @Html.DisplayFor(modelItem => item.Store.StoreName)
                                     </td>
                                     <td>
-                                        @role
+                                        @Html.DisplayFor(modelItem => item.Role.RoleName)
                                     </td>
                                     <td>
                                         @Html.DisplayFor(modelItem => item.Phone)
