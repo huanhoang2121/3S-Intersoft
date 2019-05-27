@@ -6,6 +6,7 @@ using LoggingCodefirst.Models;
 using LoggingCodefirst.Models.Data;
 using LoggingCodefirst.ViewModels;
 using Microsoft.EntityFrameworkCore;
+using Serilog;
 
 namespace LoggingCodefirst.Services
 {
@@ -137,7 +138,7 @@ namespace LoggingCodefirst.Services
             }
             catch (Exception e)
             {
-                Console.WriteLine(e);
+                Log.Error(e.Message);
                 return false;
             }
         }
@@ -178,7 +179,7 @@ namespace LoggingCodefirst.Services
             }
             catch (Exception e)
             {
-                Console.WriteLine(e);
+                Log.Error(e.Message);
                 return false;
             }
         }
@@ -201,7 +202,7 @@ namespace LoggingCodefirst.Services
             }
             catch (Exception e)
             {
-                Console.WriteLine(e);
+                Log.Error(e.Message);
                 return false;
             }
         }

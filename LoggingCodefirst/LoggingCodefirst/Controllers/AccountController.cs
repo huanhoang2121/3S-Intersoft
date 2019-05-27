@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Serilog;
 
 namespace LoggingCodefirst.Controllers
 {
@@ -44,6 +45,7 @@ namespace LoggingCodefirst.Controllers
         public IActionResult Login(string requestPath)
         {
             ViewBag.RequestPath = requestPath ?? "/";
+            Log.Information("In the Login!");
             return View();
         }
         
@@ -79,8 +81,7 @@ namespace LoggingCodefirst.Controllers
                     var principal = new ClaimsPrincipal(identity);
 
                     // sign-in
-                    await HttpContext.SignInAsync(
-                        CookieAuthenticationDefaults.AuthenticationScheme, principal, new AuthenticationProperties());
+                    await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, principal, new AuthenticationProperties());
                     
                     TempData["SuccessMessage"] = _localizer.GetLocalizedString("msg_LoginSuccess").ToString();
                     return Redirect(loginViewModel.RequestPath ?? "/");
@@ -98,10 +99,7 @@ namespace LoggingCodefirst.Controllers
         [HttpGet]
         public async Task<IActionResult> Logout()
         {
-            HttpContext.Session.Clear();
-            
             await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
-            
             return RedirectToAction("Index", "Home");
         }
         

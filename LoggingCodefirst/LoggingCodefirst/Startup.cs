@@ -113,7 +113,7 @@ namespace LoggingCodefirst
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
-        {
+        {    
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
@@ -160,7 +160,6 @@ namespace LoggingCodefirst
                 }
             });
             
-            
             app.UseRequestLocalization();
 
             // Use HTTPS Redirection Middleware to redirect HTTP requests to HTTPS.
@@ -176,8 +175,8 @@ namespace LoggingCodefirst
             // Authenticate before the user accesses secure resources.
             app.UseAuthentication();
 
-            // If the app uses session state, call Session Middleware after Cookie 
-            // Policy Middleware and before MVC Middleware.
+            // If the app uses session state, call Session Middleware after
+            // Cookie Policy Middleware and before MVC Middleware.
             app.UseSession();
             
             app.UseMvcWithDefaultRoute();

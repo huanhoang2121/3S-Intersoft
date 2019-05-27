@@ -206,6 +206,9 @@
         <e p="appsettings.Development.json" t="Include" />
         <e p="appsettings.json" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
+        <e p="logs" t="Include">
+          <e p="log20190527.txt" t="Include" />
+        </e>
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="netcoreapp2.2" t="Include">
@@ -1512,6 +1515,7 @@
             <e p="05242019144831download.jpeg" t="Include" />
             <e p="05242019170616tai_xuong_7a45fb79-6c1b-412a-7670-b7962538ff4f_large.jpg" t="Include" />
             <e p="05272019103701user.png" t="Include" />
+            <e p="05272019152147download.jpeg" t="Include" />
             <e p="05_06_2019_09_12_40ao-adidas-trang-1492535561-2298159-1492535561.jpeg" t="Include" />
             <e p="05_06_2019_11_12_24quan.jpg" t="Include" />
             <e p="05_06_2019_11_12_39quan.jpg" t="Include" />

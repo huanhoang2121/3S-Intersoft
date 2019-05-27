@@ -1,0 +1,3 @@
+2019-05-27 14:54:33.038 +07:00 [INF] In the Login!
+2019-05-27 15:21:54.730 +07:00 [ERR] Value cannot be null.
+Parameter name: entity
