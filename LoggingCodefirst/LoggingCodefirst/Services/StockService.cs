@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using AutoMapper;
+using LoggingCodefirst.Interface;
 using LoggingCodefirst.Models;
 using LoggingCodefirst.Models.Data;
 using LoggingCodefirst.ViewModels;
@@ -10,57 +11,6 @@ using Serilog;
 
 namespace LoggingCodefirst.Services
 {
-    public interface IStockService
-    {
-        
-        #region Public Methods
-
-        /// <summary>
-        /// Get Stocks
-        /// </summary>
-        /// <returns>Stocks</returns>
-        IEnumerable<Stock> Stocks();      
-        
-        /// <summary>
-        /// GetListStockAsync
-        /// </summary>
-        /// <returns>ListStock</returns>
-        Task<List<StockViewModel>> GetListStockAsync();
-        
-        /// <summary>
-        /// CreateStockAsync
-        /// </summary>
-        /// <param name="createViewModel">StockViewModel</param>
-        /// <returns>Could be Created?</returns>
-        Task<bool> CreateStockAsync(StockViewModel createViewModel);
-        
-        /// <summary>
-        /// GetStockEditAsync
-        /// </summary>
-        /// <param name="productid">product id</param>
-        /// <param name="storeid">store id</param>
-        /// <returns>StockViewModel</returns>
-        Task<StockViewModel> GetStockEditAsync(int productid, int storeid);
-        
-        /// <summary>
-        /// EditStockAsync
-        /// </summary>
-        /// <param name="editViewModel">StockViewModel</param>
-        /// <returns>Could be Edited?</returns>
-        Task<bool> EditStockAsync(StockViewModel editViewModel);
-        
-        /// <summary>
-        /// DeleteStockAsync
-        /// </summary>
-        /// <param name="productid">product id</param>
-        /// <param name="storeid">store id</param>
-        /// <returns>Could be Deleted?</returns>
-        Task<bool> DeleteStockAsync(int productid, int storeid);
-        
-        #endregion
-
-    }//end of interface
-    
     public class StockService : IStockService
     {
         
@@ -90,7 +40,15 @@ namespace LoggingCodefirst.Services
         /// <returns>Stocks</returns>
         public IEnumerable<Stock> Stocks()
         {
-            return _context.Stocks;
+            try
+            {
+                return _context.Stocks;
+            }
+            catch (Exception e)
+            {
+                Log.Error(e.Message);
+                throw;
+            }
         }
         
         /// <inheritdoc />
@@ -100,12 +58,20 @@ namespace LoggingCodefirst.Services
         /// <returns>ListStock</returns>
         public async Task<List<StockViewModel>> GetListStockAsync()
         {
-            var stocks = await _context.Stocks
-                .Include(s => s.Store)
-                .Include(s => s.Product)
-                .ToListAsync();
-            var viewModels = _mapper.Map<List<StockViewModel>>(stocks);
-            return viewModels;
+            try
+            {
+                var stocks = await _context.Stocks
+                    .Include(s => s.Store)
+                    .Include(s => s.Product)
+                    .ToListAsync();
+                var viewModels = _mapper.Map<List<StockViewModel>>(stocks);
+                return viewModels;
+            }
+            catch (Exception e)
+            {
+                Log.Error(e.Message);
+                throw;
+            }
         }
 
         /// <inheritdoc />
@@ -152,9 +118,17 @@ namespace LoggingCodefirst.Services
         /// <returns>StockViewModel</returns>
         public async Task<StockViewModel> GetStockEditAsync(int productid, int storeid)
         {
-            var stock = await _context.Stocks.FindAsync(productid, storeid);
-            var viewModel = _mapper.Map<StockViewModel>(stock);
-            return viewModel;
+            try
+            {
+                var stock = await _context.Stocks.FindAsync(productid, storeid);
+                var viewModel = _mapper.Map<StockViewModel>(stock);
+                return viewModel;
+            }
+            catch (Exception e)
+            {
+                Log.Error(e.Message);
+                throw;
+            }
         }
 
         /// <inheritdoc />

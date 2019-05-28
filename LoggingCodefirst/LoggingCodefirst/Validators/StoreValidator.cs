@@ -1,5 +1,6 @@
 ﻿using System;
 using FluentValidation;
+using LoggingCodefirst.Interface;
 using LoggingCodefirst.Resources;
 using LoggingCodefirst.Services;
 using LoggingCodefirst.ViewModels;

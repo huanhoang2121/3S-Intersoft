@@ -4,6 +4,11 @@
     <e p="$USER_HOME$/.Rider2018.1/system/resharper-host/local/Transient/ReSharperHost/v12/SolutionCaches/_LoggingCodefirst.-1918299450.00" t="ExcludeRecursive" />
     <e p="$PROJECT_DIR$" t="IncludeFlat">
       <e p="LoggingCodefirst" t="IncludeRecursive">
+        <e p="Authentication" t="Include">
+          <e p="IUserAuthenticationService.cs" t="Include" />
+          <e p="UserAuthenticationService.cs" t="Include" />
+          <e p="UserCookieAuthenticationDefaults.cs" t="Include" />
+        </e>
         <e p="Controllers" t="Include">
           <e p="AccountController.cs" t="Include" />
           <e p="BrandController.cs" t="Include" />
@@ -17,6 +22,16 @@
         </e>
         <e p="Infrastructure" t="Include">
           <e p="SecurePasswordHasher.cs" t="Include" />
+        </e>
+        <e p="Interface" t="Include">
+          <e p="IBrandService.cs" t="Include" />
+          <e p="ICategoryService.cs" t="Include" />
+          <e p="ILocalizationService.cs" t="Include" />
+          <e p="IProductService.cs" t="Include" />
+          <e p="IRoleService.cs" t="Include" />
+          <e p="IStockService.cs" t="Include" />
+          <e p="IStoreService.cs" t="Include" />
+          <e p="IUserService.cs" t="Include" />
         </e>
         <e p="LoggingCodefirst.csproj" t="IncludeRecursive" />
         <e p="Migrations" t="Include">
@@ -105,14 +120,14 @@
           <e p="UserResource.vi-VN.resx" t="Include" />
         </e>
         <e p="Services" t="Include">
-          <e p="IBrandService.cs" t="Include" />
-          <e p="ICategoryService.cs" t="Include" />
-          <e p="IProductService.cs" t="Include" />
-          <e p="IRoleService.cs" t="Include" />
-          <e p="IStockService.cs" t="Include" />
-          <e p="IStoreService.cs" t="Include" />
-          <e p="IUserService.cs" t="Include" />
+          <e p="BrandService.cs" t="Include" />
+          <e p="CategoryService.cs" t="Include" />
           <e p="LocalizationService.cs" t="Include" />
+          <e p="ProductService.cs" t="Include" />
+          <e p="RoleService.cs" t="Include" />
+          <e p="StockService.cs" t="Include" />
+          <e p="StoreService.cs" t="Include" />
+          <e p="UserService.cs" t="Include" />
         </e>
         <e p="Startup.cs" t="Include" />
         <e p="Validators" t="Include">
@@ -208,6 +223,7 @@
         <e p="bin" t="ExcludeRecursive" />
         <e p="logs" t="Include">
           <e p="log20190527.txt" t="Include" />
+          <e p="log20190528.txt" t="Include" />
         </e>
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">

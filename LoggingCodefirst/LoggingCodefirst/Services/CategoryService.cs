@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
+using LoggingCodefirst.Interface;
 using LoggingCodefirst.Models;
 using LoggingCodefirst.Models.Data;
 using LoggingCodefirst.ViewModels;
@@ -11,63 +12,6 @@ using Serilog;
 
 namespace LoggingCodefirst.Services
 {
-    public interface ICategoryService
-    {
-        
-        #region Public Methods
-
-        /// <summary>
-        /// Get Categories
-        /// </summary>
-        /// <returns>Categories</returns>
-        IEnumerable<Category> Categories();  
-        
-        /// <summary>
-        /// GetListCategoryAsync
-        /// </summary>
-        /// <returns>ListCategory</returns>
-        Task<List<CategoryViewModel>> GetListCategoryAsync();
-        
-        /// <summary>
-        /// CreateCategoryAsync
-        /// </summary>
-        /// <param name="categoryCreateViewModel">CategoryViewModel</param>
-        /// <returns>Could be Created?</returns>
-        Task<bool> CreateCategoryAsync(CategoryViewModel categoryCreateViewModel);
-        
-        /// <summary>
-        /// GetCategoryEditAsync
-        /// </summary>
-        /// <param name="id">Category id</param>
-        /// <returns>CategoryViewModel</returns>
-        Task<CategoryViewModel> GetCategoryEditAsync(int id);
-        
-        /// <summary>
-        /// EditCategoryAsync
-        /// </summary>
-        /// <param name="createViewModel">CategoryViewModel</param>
-        /// <returns>Could be Edited?</returns>
-        Task<bool> EditCategoryAsync(CategoryViewModel createViewModel);
-        
-        /// <summary>
-        /// DeleteCategoryAsync
-        /// </summary>
-        /// <param name="id">Category id</param>
-        /// <returns>Could be Deleted?</returns>
-        Task<bool> DeleteCategoryAsync(int id);
-        
-        /// <summary>
-        /// IsExistedName
-        /// </summary>
-        /// <param name="id">Category id</param>
-        /// <param name="name">Category name</param>
-        /// <returns>ExistedName</returns>
-        bool IsExistedName(int id, string name);
-        
-        #endregion
-
-    }//end of interface
-    
     public class CategoryService : ICategoryService
     {
         
@@ -97,7 +41,15 @@ namespace LoggingCodefirst.Services
         /// <returns>Categories</returns>
         public IEnumerable<Category> Categories()
         {
-            return _context.Categories;
+            try
+            {
+                return _context.Categories;
+            }
+            catch (Exception e)
+            {
+                Log.Error(e.Message);
+                throw;
+            }
         }
         
         /// <inheritdoc />
@@ -107,9 +59,17 @@ namespace LoggingCodefirst.Services
         /// <returns>ListCategory</returns>
         public async Task<List<CategoryViewModel>> GetListCategoryAsync()
         {
-            var categories = await _context.Categories.ToListAsync();
-            var viewModels = _mapper.Map<List<CategoryViewModel>>(categories);
-            return viewModels;
+            try
+            {
+                var categories = await _context.Categories.ToListAsync();
+                var viewModels = _mapper.Map<List<CategoryViewModel>>(categories);
+                return viewModels;
+            }
+            catch (Exception e)
+            {
+                Log.Error(e.Message);
+                throw;
+            }
         }
 
         /// <inheritdoc />
@@ -145,9 +105,17 @@ namespace LoggingCodefirst.Services
         /// <returns>CategoryViewModel</returns>
         public async Task<CategoryViewModel> GetCategoryEditAsync(int id)
         {
-            var store = await _context.Categories.FindAsync(id);
-            var viewModel = _mapper.Map<CategoryViewModel>(store);
-            return viewModel;
+            try
+            {
+                var store = await _context.Categories.FindAsync(id);
+                var viewModel = _mapper.Map<CategoryViewModel>(store);
+                return viewModel;
+            }
+            catch (Exception e)
+            {
+                Log.Error(e.Message);
+                throw;
+            }
         }
 
         /// <inheritdoc />
@@ -205,7 +173,15 @@ namespace LoggingCodefirst.Services
         /// <returns>ExistedName</returns>
         public bool IsExistedName(int id, string name)
         {
-            return _context.Categories.Any(b => b.CategoryName == name && b.Id != id);
+            try
+            {
+                return _context.Categories.Any(b => b.CategoryName == name && b.Id != id);
+            }
+            catch (Exception e)
+            {
+                Log.Error(e.Message);
+                throw;
+            }
         }
         
         #endregion

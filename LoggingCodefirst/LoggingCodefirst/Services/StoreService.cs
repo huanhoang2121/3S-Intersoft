@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
+using LoggingCodefirst.Interface;
 using LoggingCodefirst.Models;
 using LoggingCodefirst.Models.Data;
 using LoggingCodefirst.ViewModels;
@@ -11,63 +12,6 @@ using Serilog;
 
 namespace LoggingCodefirst.Services
 {
-    public interface IStoreService
-    {
-        
-        #region Public Methods
-        
-        /// <summary>
-        /// Stores
-        /// </summary>
-        /// <returns>Stores</returns>
-        IEnumerable<Store> Stores();        
-        
-        /// <summary>
-        /// GetListStoreAsync
-        /// </summary>
-        /// <returns>ListStore</returns>
-        Task<List<StoreViewModel>> GetListStoreAsync();
-        
-        /// <summary>
-        /// CreateStoreAsync
-        /// </summary>
-        /// <param name="createViewModel">StoreViewModel</param>
-        /// <returns>Could be Created?</returns>
-        Task<bool> CreateStoreAsync(StoreViewModel createViewModel);
-        
-        /// <summary>
-        /// GetStoreEditAsync
-        /// </summary>
-        /// <param name="id">Store id</param>
-        /// <returns>StoreViewModel</returns>
-        Task<StoreViewModel> GetStoreEditAsync(int id);
-        
-        /// <summary>
-        /// StoreEditAsync
-        /// </summary>
-        /// <param name="editViewModel"></param>
-        /// <returns>Could be Edited?</returns>
-        Task<bool> StoreEditAsync(StoreViewModel editViewModel);
-        
-        /// <summary>
-        /// DeleteStoreAsync
-        /// </summary>
-        /// <param name="id">Store id</param>
-        /// <returns>Could be Deleted?</returns>
-        Task<bool> DeleteStoreAsync(int id);
-        
-        /// <summary>
-        /// IsExistedEmail
-        /// </summary>
-        /// <param name="id">Store id</param>
-        /// <param name="name">Store name</param>
-        /// <returns>ExistedName</returns>
-        bool IsExistedEmail(int id, string name);
-        
-        #endregion
-        
-    }//end of interface
-    
     public class StoreService : IStoreService
     {
         
@@ -97,7 +41,15 @@ namespace LoggingCodefirst.Services
         /// <returns>Stores</returns>
         public IEnumerable<Store> Stores()
         {
-            return _context.Stores;
+            try
+            {
+                return _context.Stores;
+            }
+            catch (Exception e)
+            {
+                Log.Error(e.Message);
+                throw;
+            }
         }
 
         /// <inheritdoc />
@@ -107,12 +59,20 @@ namespace LoggingCodefirst.Services
         /// <returns>ListStore</returns>
         public async Task<List<StoreViewModel>> GetListStoreAsync()
         {
-            var stores = await _context.Stores
-                .Include(s => s.Stocks)
-                .ThenInclude(i => i.Product)
-                .ToListAsync();
-            var viewModels = _mapper.Map<List<StoreViewModel>>(stores);
-            return viewModels;
+            try
+            {
+                var stores = await _context.Stores
+                    .Include(s => s.Stocks)
+                    .ThenInclude(i => i.Product)
+                    .ToListAsync();
+                var viewModels = _mapper.Map<List<StoreViewModel>>(stores);
+                return viewModels;
+            }
+            catch (Exception e)
+            {
+                Log.Error(e.Message);
+                throw;
+            }
         }
         
         /// <inheritdoc />
@@ -154,9 +114,17 @@ namespace LoggingCodefirst.Services
         /// <returns>StoreViewModel</returns>
         public async Task<StoreViewModel> GetStoreEditAsync(int id)
         {
-            var store = await _context.Stores.FindAsync(id);
-            var viewModel = _mapper.Map<StoreViewModel>(store);
-            return viewModel;
+            try
+            {
+                var store = await _context.Stores.FindAsync(id);
+                var viewModel = _mapper.Map<StoreViewModel>(store);
+                return viewModel;
+            }
+            catch (Exception e)
+            {
+                Log.Error(e.Message);
+                throw;
+            }
         }
 
         /// <inheritdoc />
@@ -220,7 +188,15 @@ namespace LoggingCodefirst.Services
         /// <returns>ExistedEmail</returns>
         public bool IsExistedEmail(int id, string email)
         {
-            return _context.Stores.Any(b => b.Email == email && b.Id != id);
+            try
+            {
+                return _context.Stores.Any(b => b.Email == email && b.Id != id);
+            }
+            catch (Exception e)
+            {
+                Log.Error(e.Message);
+                throw;
+            }
         }
 
         #endregion

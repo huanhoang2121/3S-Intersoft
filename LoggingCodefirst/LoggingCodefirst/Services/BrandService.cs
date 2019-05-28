@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
+using LoggingCodefirst.Interface;
 using LoggingCodefirst.Models;
 using LoggingCodefirst.Models.Data;
 using LoggingCodefirst.ViewModels;
@@ -11,63 +12,6 @@ using Serilog;
 
 namespace LoggingCodefirst.Services
 {
-    public interface IBrandService
-    {
-        
-        #region Public Methods
-        
-        /// <summary>
-        /// Get Brands
-        /// </summary>
-        /// <returns>Brands</returns>
-        IEnumerable<Brand> Brands();
-        
-        /// <summary>
-        /// GetListBrandAsync
-        /// </summary>
-        /// <returns>ListBrand</returns>
-        Task<List<BrandViewModel>> GetListBrandAsync();
-        
-        /// <summary>
-        /// CreateBrandAsync
-        /// </summary>
-        /// <param name="brandViewModel">BrandViewModel</param>
-        /// <returns>Could be Created?</returns>
-        Task<bool> CreateBrandAsync(BrandViewModel brandViewModel);
-        
-        /// <summary>
-        /// GetBrandEditAsync
-        /// </summary>
-        /// <param name="id">Brand id</param>
-        /// <returns>Brand</returns>
-        Task<BrandViewModel> GetBrandEditAsync(int id);
-        
-        /// <summary>
-        /// EditBrandAsync
-        /// </summary>
-        /// <param name="brandViewModel">BrandViewModel</param>
-        /// <returns>Could be Edited?</returns>
-        Task<bool> EditBrandAsync(BrandViewModel brandViewModel);
-        
-        /// <summary>
-        /// DeleteBrandAsync
-        /// </summary>
-        /// <param name="id">Brand id</param>
-        /// <returns>Could be Deleted?</returns>
-        Task<bool> DeleteBrandAsync(int id);
-        
-        /// <summary>
-        /// IsExistedName
-        /// </summary>
-        /// <param name="id">Brand id</param>
-        /// <param name="name">Brand name</param>
-        /// <returns>ExistedName</returns>
-        bool IsExistedName(int id, string name);
-        
-        #endregion
-        
-    }//end of interface
-    
     public class BrandService : IBrandService
     {
         
@@ -97,7 +41,15 @@ namespace LoggingCodefirst.Services
         /// <returns>Brands</returns>
         public IEnumerable<Brand> Brands()
         {
-            return _context.Brands;
+            try
+            {
+                return _context.Brands;
+            }
+            catch (Exception e)
+            {
+                Log.Error(e.Message);
+                throw;
+            }
         }
 
         /// <inheritdoc />
@@ -107,9 +59,17 @@ namespace LoggingCodefirst.Services
         /// <returns>ListBrand</returns>
         public async Task<List<BrandViewModel>> GetListBrandAsync()
         {
-            var brands = await _context.Brands.ToListAsync();
-            var viewModels = _mapper.Map<List<BrandViewModel>>(brands);
-            return viewModels;
+            try
+            {
+                var brands = await _context.Brands.ToListAsync();
+                var viewModels = _mapper.Map<List<BrandViewModel>>(brands);
+                return viewModels;
+            }
+            catch (Exception e)
+            {
+                Log.Error(e.Message);
+                throw;
+            }
         }
 
         /// <inheritdoc />
@@ -145,9 +105,17 @@ namespace LoggingCodefirst.Services
         /// <returns>Brand</returns>
         public async Task<BrandViewModel> GetBrandEditAsync(int id)
         {
-            var store = await _context.Brands.FindAsync(id);
-            var viewModel = _mapper.Map<BrandViewModel>(store);
-            return viewModel;
+            try
+            {
+                var store = await _context.Brands.FindAsync(id);
+                var viewModel = _mapper.Map<BrandViewModel>(store);
+                return viewModel;
+            }
+            catch (Exception e)
+            {
+                Log.Error(e.Message);
+                throw;
+            }
         }
 
         /// <inheritdoc />
@@ -205,7 +173,15 @@ namespace LoggingCodefirst.Services
         /// <returns>ExistedName</returns>
         public bool IsExistedName(int id, string name)
         {
-            return _context.Brands.Any(b => b.BrandName == name && b.Id != id);
+            try
+            {
+                return _context.Brands.Any(b => b.BrandName == name && b.Id != id);
+            }
+            catch (Exception e)
+            {
+                Log.Error(e.Message);
+                throw;
+            }
         }
         
         #endregion

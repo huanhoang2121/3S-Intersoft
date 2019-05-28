@@ -1,24 +1,12 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using LoggingCodefirst.Interface;
 using LoggingCodefirst.Models;
 using LoggingCodefirst.Models.Data;
+using Serilog;
 
 namespace LoggingCodefirst.Services
 {
-    public interface IRoleService
-    {
-        
-        #region Public Methods
-        
-        /// <summary>
-        /// Stores
-        /// </summary>
-        /// <returns>Stores</returns>
-        IEnumerable<Role> Roles();        
-        
-        #endregion
-        
-    }//end of interface
-    
     public class RoleService : IRoleService
     {
         
@@ -46,7 +34,15 @@ namespace LoggingCodefirst.Services
         /// <returns>Stores</returns>
         public IEnumerable<Role> Roles()
         {
-            return _context.Roles;
+            try
+            {
+                return _context.Roles;
+            }
+            catch (Exception e)
+            {
+                Log.Error(e.Message);
+                throw;
+            }
         }
 
         #endregion

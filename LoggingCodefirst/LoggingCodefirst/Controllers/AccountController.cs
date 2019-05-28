@@ -1,11 +1,9 @@
-﻿using System.Collections.Generic;
-using System.Security.Claims;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
+using LoggingCodefirst.Authentication;
+using LoggingCodefirst.Interface;
 using LoggingCodefirst.Resources;
 using LoggingCodefirst.Services;
 using LoggingCodefirst.ViewModels;
-using Microsoft.AspNetCore.Authentication;
-using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Serilog;
@@ -18,7 +16,8 @@ namespace LoggingCodefirst.Controllers
         #region Private Members
         
         private readonly IUserService _userService;
-        private readonly LocalizationService<UserResource> _localizer;
+        private readonly LocalizationService<UserResource> _localizer;        
+        private readonly IUserAuthenticationService _authenticationService;
          
         #endregion
         
@@ -26,10 +25,11 @@ namespace LoggingCodefirst.Controllers
         
         public AccountController(
             IUserService userService, 
-            LocalizationService<UserResource> localizer)
+            LocalizationService<UserResource> localizer, IUserAuthenticationService authenticationService)
         {
             _userService = userService;
             _localizer = localizer;
+            _authenticationService = authenticationService;
         }
         
         #endregion
@@ -45,7 +45,7 @@ namespace LoggingCodefirst.Controllers
         public IActionResult Login(string requestPath)
         {
             ViewBag.RequestPath = requestPath ?? "/";
-            Log.Information("In the Login!");
+//            Log.Information("In the Login!");
             return View();
         }
         
@@ -64,30 +64,13 @@ namespace LoggingCodefirst.Controllers
                 {
                     var user = await _userService.GetUserByEmailAsync(loginViewModel.Email);
                     
-                    // create claims
-                    var claims = new List<Claim>
-                    {
-                        new Claim(ClaimTypes.Email, user.Email),
-                        new Claim(ClaimTypes.Role, user.Role.RoleName),
-                        new Claim("Id", user.Id.ToString()),
-                        new Claim("FullName", user.Fullname),
-                        new Claim("ImagePath", user.ImagePath)
-                    };
-
-                    // create identity
-                    var identity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
-
-                    // create principal
-                    var principal = new ClaimsPrincipal(identity);
-
-                    // sign-in
-                    await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, principal, new AuthenticationProperties());
+                    await _authenticationService.SignIn(user, loginViewModel.Rememberme);
                     
                     TempData["SuccessMessage"] = _localizer.GetLocalizedString("msg_LoginSuccess").ToString();
                     return Redirect(loginViewModel.RequestPath ?? "/");
                 }     
                 ViewData["ErrorMessage"] = _localizer.GetLocalizedString("err_Login");
-                return View();  
+                return View(loginViewModel);  
             }
             return View(loginViewModel);
         }
@@ -99,7 +82,7 @@ namespace LoggingCodefirst.Controllers
         [HttpGet]
         public async Task<IActionResult> Logout()
         {
-            await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+            await _authenticationService.SignOut();
             return RedirectToAction("Index", "Home");
         }
         

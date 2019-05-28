@@ -1,9 +1,13 @@
-﻿using System.Reflection;
+﻿using System;
+using System.Reflection;
+using LoggingCodefirst.Interface;
 using Microsoft.Extensions.Localization;
+using Serilog;
 
 namespace LoggingCodefirst.Services
 {
-    public class LocalizationService<T>
+    
+    public class LocalizationService<T> :ILocalizationService
     { 
         
         #region Private Members
@@ -28,7 +32,15 @@ namespace LoggingCodefirst.Services
 
         public LocalizedString GetLocalizedString(string key)
         {
-            return _localizer[key];
+            try
+            {
+                return _localizer[key];
+            }
+            catch (Exception e)
+            {
+                Log.Error(e.Message);
+                throw;
+            }
         }
         
         #endregion       

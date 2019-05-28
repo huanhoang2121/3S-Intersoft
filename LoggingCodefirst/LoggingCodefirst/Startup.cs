@@ -1,13 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Globalization;
 using AutoMapper;
 using FluentValidation.AspNetCore;
+using LoggingCodefirst.Authentication;
+using LoggingCodefirst.Interface;
 using LoggingCodefirst.Models.Data;
 using LoggingCodefirst.Resources;
 using LoggingCodefirst.Services;
 using LoggingCodefirst.Validators.User;
-using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -40,15 +40,15 @@ namespace LoggingCodefirst
 
             // Add CookieAuthentication
             #region Add CookieAuthentication
-            
-            services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
-                .AddCookie(options =>
+
+            services.AddAuthentication(UserCookieAuthenticationDefaults.AuthenticationScheme)
+                .AddCookie(UserCookieAuthenticationDefaults.AuthenticationScheme, options =>
                 {
-                    options.AccessDeniedPath = new PathString("/Error/401");
-                    options.LoginPath = new PathString("/Account/Login");
-                    options.ReturnUrlParameter = "RequestPath";
-                    options.SlidingExpiration = true;
-                    options.ExpireTimeSpan = TimeSpan.FromMinutes(30);
+                    options.AccessDeniedPath =       UserCookieAuthenticationDefaults.AccessDeniedPath;
+                    options.ReturnUrlParameter =     UserCookieAuthenticationDefaults.ReturnUrlParameter;
+                    options.LoginPath =              UserCookieAuthenticationDefaults.LoginPath;
+                    options.LogoutPath =             UserCookieAuthenticationDefaults.LogoutPath;
+                    options.ExpireTimeSpan =         UserCookieAuthenticationDefaults.ExpireTimeSpan;
                 });
             
             #endregion
@@ -93,6 +93,8 @@ namespace LoggingCodefirst
             services.AddScoped<IProductService, ProductService>();
             services.AddScoped<IStockService, StockService>();   
             services.AddScoped<IRoleService, RoleService>();   
+            
+            services.AddScoped<IUserAuthenticationService, UserAuthenticationService>();   
             
             #endregion
             
