@@ -2,7 +2,7 @@
 
 namespace LoggingCodefirst.Interface
 {
-    public interface ILocalizationService
+    public interface ILocalizationService<T>
     {
         
         #region Public Method

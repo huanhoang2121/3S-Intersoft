@@ -96,6 +96,9 @@
   <data name="lbl_Password" xml:space="preserve">
     <value>Password</value>
   </data>
+  <data name="lbl_CurrentPassword" xml:space="preserve">
+    <value>Current Password</value>
+  </data>
   <data name="lbl_NewPassword" xml:space="preserve">
     <value>New Password</value>
   </data>
@@ -106,8 +109,8 @@
     <value>Role</value>
   </data>
   
-  <data name="msg_NotEmpty" xml:space="preserve">
-    <value>{PropertyName} must not be empty!</value>
+  <data name="msg_CurrentPassword" xml:space="preserve">
+    <value>Current password is not correct!</value>
   </data>
   <data name="msg_8Characters" xml:space="preserve">
     <value>Password cannot be less than 8 characters!</value>
@@ -123,5 +126,23 @@
   </data>
   <data name="msg_ValidPassword" xml:space="preserve">
     <value>Password must contain both letters and numbers!</value>
+  </data>
+  <data name="msg_EmailNotEmpty" xml:space="preserve">
+    <value>Email address must not be empty!</value>
+  </data>
+  <data name="msg_PasswordNotEmpty" xml:space="preserve">
+    <value>Password must not be empty!</value>
+  </data>
+  <data name="msg_FullNameNotEmpty" xml:space="preserve">
+    <value>Full name must not be empty!</value>
+  </data>
+  <data name="msg_CurrentPasswordNotEmpty" xml:space="preserve">
+    <value>Current password must not be empty!</value>
+  </data>
+  <data name="msg_NewPasswordNotEmpty" xml:space="preserve">
+    <value>New password must not be empty!</value>
+  </data>
+  <data name="msg_ConfirmPasswordNotEmpty" xml:space="preserve">
+    <value>Confirm password must not be empty!</value>
   </data>
 </root>

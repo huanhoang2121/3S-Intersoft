@@ -7,7 +7,7 @@ using Serilog;
 namespace LoggingCodefirst.Services
 {
     
-    public class LocalizationService<T> :ILocalizationService
+    public class LocalizationService<T> :ILocalizationService<T>
     { 
         
         #region Private Members

@@ -99,6 +99,9 @@
   <data name="lbl_Password" xml:space="preserve">
     <value>Mật khẩu</value>
   </data>
+  <data name="lbl_CurrentPassword" xml:space="preserve">
+    <value>Mật khẩu hiện tại</value>
+  </data>
   <data name="lbl_NewPassword" xml:space="preserve">
     <value>Mật khẩu mới</value>
   </data>
@@ -106,8 +109,8 @@
     <value>Nhập lại mật khẩu</value>
   </data>
   
-  <data name="msg_NotEmpty" xml:space="preserve">
-    <value>{PropertyName} không được để trống!</value>
+  <data name="msg_CurrentPassword" xml:space="preserve">
+    <value>Mật khẩu hiện tại không đúng!</value>
   </data>
   <data name="msg_8Characters" xml:space="preserve">
     <value>Mật khẩu không thể ít hơn 8 ký tự.</value>
@@ -123,5 +126,23 @@
   </data>
   <data name="msg_ValidPassword" xml:space="preserve">
     <value>Mật khẩu phải chứa cả chữ, số và không có kí tự đặc biệt!</value>
+  </data>
+  <data name="msg_EmailNotEmpty" xml:space="preserve">
+    <value>Địa chỉ email không được để trống!</value>
+  </data>
+  <data name="msg_PasswordNotEmpty" xml:space="preserve">
+    <value>Mật khẩu không được để trống!</value>
+  </data>
+  <data name="msg_FullNameNotEmpty" xml:space="preserve">
+    <value>Họ và tên không được để trống!</value>
+  </data>
+  <data name="msg_CurrentPasswordNotEmpty" xml:space="preserve">
+    <value>Mật khẩu hiện tại không được để trống!</value>
+  </data>
+  <data name="msg_NewPasswordNotEmpty" xml:space="preserve">
+    <value>Mật khẩu mới không được để trống!</value>
+  </data>
+  <data name="msg_ConfirmPasswordNotEmpty" xml:space="preserve">
+    <value>Xác nhận mật khẩu không được để trống!</value>
   </data>
 </root>

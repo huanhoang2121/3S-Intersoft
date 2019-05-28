@@ -314,6 +314,23 @@ namespace LoggingCodefirst.Services
             }
         }
 
+        public bool IsCurrentPassword(int id, string password)
+        {
+            try
+            {
+                var user = _context.Users.FirstOrDefault(s => s.Id == id && SecurePasswordHasher.Verify(password, s.Password));
+                if (user != null)
+                {
+                    return true;
+                }
+                return false;
+            }
+            catch (Exception e)
+            {
+                Log.Error(e.Message);
+                throw;
+            }        
+        }
 
         #endregion
         

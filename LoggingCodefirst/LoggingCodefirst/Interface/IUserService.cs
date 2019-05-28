@@ -83,8 +83,16 @@ namespace LoggingCodefirst.Interface
         /// </summary>
         /// <param name="id">User id</param>
         /// <param name="email">User email</param>
-        /// <returns>ExistedEmail</returns>
+        /// <returns>Could be Existed Email</returns>
         bool IsExistedEmail(int id, string email);
+
+        /// <summary>
+        /// IsCurrentPassword
+        /// </summary>
+        /// <param name="id">User id</param>
+        /// <param name="password">User password</param>
+        /// <returns>Could be CurrentPassword</returns>
+        bool IsCurrentPassword(int id, string password);
         
         #endregion
         

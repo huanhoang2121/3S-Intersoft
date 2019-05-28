@@ -45,5 +45,251 @@ namespace LoggingCodefirst.Resources {
                 resourceCulture = value;
             }
         }
+        
+        public static string msg_LoginSuccess {
+            get {
+                return ResourceManager.GetString("msg_LoginSuccess", resourceCulture);
+            }
+        }
+        
+        public static string err_Login {
+            get {
+                return ResourceManager.GetString("err_Login", resourceCulture);
+            }
+        }
+        
+        public static string msg_CreateUserSuccess {
+            get {
+                return ResourceManager.GetString("msg_CreateUserSuccess", resourceCulture);
+            }
+        }
+        
+        public static string err_CreateUser {
+            get {
+                return ResourceManager.GetString("err_CreateUser", resourceCulture);
+            }
+        }
+        
+        public static string msg_EditUserSuccess {
+            get {
+                return ResourceManager.GetString("msg_EditUserSuccess", resourceCulture);
+            }
+        }
+        
+        public static string err_EditUser {
+            get {
+                return ResourceManager.GetString("err_EditUser", resourceCulture);
+            }
+        }
+        
+        public static string msg_ChangePasswordSuccess {
+            get {
+                return ResourceManager.GetString("msg_ChangePasswordSuccess", resourceCulture);
+            }
+        }
+        
+        public static string err_ChangePassword {
+            get {
+                return ResourceManager.GetString("err_ChangePassword", resourceCulture);
+            }
+        }
+        
+        public static string msg_DeleteUserSuccess {
+            get {
+                return ResourceManager.GetString("msg_DeleteUserSuccess", resourceCulture);
+            }
+        }
+        
+        public static string err_DeleteUser {
+            get {
+                return ResourceManager.GetString("err_DeleteUser", resourceCulture);
+            }
+        }
+        
+        public static string msg_DeleteUser {
+            get {
+                return ResourceManager.GetString("msg_DeleteUser", resourceCulture);
+            }
+        }
+        
+        public static string lbl_User {
+            get {
+                return ResourceManager.GetString("lbl_User", resourceCulture);
+            }
+        }
+        
+        public static string lbl_CreateUser {
+            get {
+                return ResourceManager.GetString("lbl_CreateUser", resourceCulture);
+            }
+        }
+        
+        public static string lbl_EditUser {
+            get {
+                return ResourceManager.GetString("lbl_EditUser", resourceCulture);
+            }
+        }
+        
+        public static string lbl_ChangePassword {
+            get {
+                return ResourceManager.GetString("lbl_ChangePassword", resourceCulture);
+            }
+        }
+        
+        public static string lbl_No {
+            get {
+                return ResourceManager.GetString("lbl_No", resourceCulture);
+            }
+        }
+        
+        public static string lbl_Email {
+            get {
+                return ResourceManager.GetString("lbl_Email", resourceCulture);
+            }
+        }
+        
+        public static string lbl_Fullname {
+            get {
+                return ResourceManager.GetString("lbl_Fullname", resourceCulture);
+            }
+        }
+        
+        public static string lbl_Phone {
+            get {
+                return ResourceManager.GetString("lbl_Phone", resourceCulture);
+            }
+        }
+        
+        public static string lbl_Store {
+            get {
+                return ResourceManager.GetString("lbl_Store", resourceCulture);
+            }
+        }
+        
+        public static string lbl_Address {
+            get {
+                return ResourceManager.GetString("lbl_Address", resourceCulture);
+            }
+        }
+        
+        public static string lbl_IsActive {
+            get {
+                return ResourceManager.GetString("lbl_IsActive", resourceCulture);
+            }
+        }
+        
+        public static string lbl_Image {
+            get {
+                return ResourceManager.GetString("lbl_Image", resourceCulture);
+            }
+        }
+        
+        public static string lbl_Action {
+            get {
+                return ResourceManager.GetString("lbl_Action", resourceCulture);
+            }
+        }
+        
+        public static string lbl_Password {
+            get {
+                return ResourceManager.GetString("lbl_Password", resourceCulture);
+            }
+        }
+        
+        public static string lbl_CurrentPassword {
+            get {
+                return ResourceManager.GetString("lbl_CurrentPassword", resourceCulture);
+            }
+        }
+        
+        public static string lbl_NewPassword {
+            get {
+                return ResourceManager.GetString("lbl_NewPassword", resourceCulture);
+            }
+        }
+        
+        public static string lbl_ConfirmPassword {
+            get {
+                return ResourceManager.GetString("lbl_ConfirmPassword", resourceCulture);
+            }
+        }
+        
+        public static string lbl_Role {
+            get {
+                return ResourceManager.GetString("lbl_Role", resourceCulture);
+            }
+        }
+        
+        public static string msg_CurrentPassword {
+            get {
+                return ResourceManager.GetString("msg_CurrentPassword", resourceCulture);
+            }
+        }
+        
+        public static string msg_8Characters {
+            get {
+                return ResourceManager.GetString("msg_8Characters", resourceCulture);
+            }
+        }
+        
+        public static string msg_ConfirmPassword {
+            get {
+                return ResourceManager.GetString("msg_ConfirmPassword", resourceCulture);
+            }
+        }
+        
+        public static string msg_Exists {
+            get {
+                return ResourceManager.GetString("msg_Exists", resourceCulture);
+            }
+        }
+        
+        public static string msg_ValidEmail {
+            get {
+                return ResourceManager.GetString("msg_ValidEmail", resourceCulture);
+            }
+        }
+        
+        public static string msg_ValidPassword {
+            get {
+                return ResourceManager.GetString("msg_ValidPassword", resourceCulture);
+            }
+        }
+        
+        public static string msg_EmailNotEmpty {
+            get {
+                return ResourceManager.GetString("msg_EmailNotEmpty", resourceCulture);
+            }
+        }
+        
+        public static string msg_PasswordNotEmpty {
+            get {
+                return ResourceManager.GetString("msg_PasswordNotEmpty", resourceCulture);
+            }
+        }
+        
+        public static string msg_FullNameNotEmpty {
+            get {
+                return ResourceManager.GetString("msg_FullNameNotEmpty", resourceCulture);
+            }
+        }
+        
+        public static string msg_CurrentPasswordNotEmpty {
+            get {
+                return ResourceManager.GetString("msg_CurrentPasswordNotEmpty", resourceCulture);
+            }
+        }
+        
+        public static string msg_NewPasswordNotEmpty {
+            get {
+                return ResourceManager.GetString("msg_NewPasswordNotEmpty", resourceCulture);
+            }
+        }
+        
+        public static string msg_ConfirmPasswordNotEmpty {
+            get {
+                return ResourceManager.GetString("msg_ConfirmPasswordNotEmpty", resourceCulture);
+            }
+        }
     }
 }

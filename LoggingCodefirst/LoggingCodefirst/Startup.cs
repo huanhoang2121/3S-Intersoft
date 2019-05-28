@@ -92,7 +92,7 @@ namespace LoggingCodefirst
             services.AddScoped<ICategoryService, CategoryService>();
             services.AddScoped<IProductService, ProductService>();
             services.AddScoped<IStockService, StockService>();   
-            services.AddScoped<IRoleService, RoleService>();   
+            services.AddScoped<IRoleService, RoleService>();     
             
             services.AddScoped<IUserAuthenticationService, UserAuthenticationService>();   
             
@@ -156,6 +156,9 @@ namespace LoggingCodefirst
                             break;
                         case StatusCodes.Status500InternalServerError:
                             context.Request.Path ="/Error/500";
+                            await next();
+                            break;
+                        default:
                             await next();
                             break;
                     }

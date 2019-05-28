@@ -9,10 +9,12 @@ namespace LoggingCodefirst.Validators.User
     { 
         public LoginValidator(LocalizationService<UserResource> localizer)
         {
-            RuleFor(x => x.Email).NotNull().WithMessage(localizer.GetLocalizedString("msg_NotEmpty"))
+            RuleFor(x => x.Email).NotNull().WithMessage(localizer.GetLocalizedString("msg_EmailNotEmpty"))
                 .EmailAddress().WithMessage(localizer.GetLocalizedString("msg_ValidEmail"));
-            RuleFor(x => x.Password).NotNull().WithMessage(localizer.GetLocalizedString("msg_NotEmpty"))
-                .MinimumLength(8).WithMessage(localizer.GetLocalizedString("msg_8Characters"));
+            
+            RuleFor(x => x.Password).NotNull().WithMessage(localizer.GetLocalizedString("msg_PasswordNotEmpty"))
+                .MinimumLength(8).WithMessage(localizer.GetLocalizedString("msg_8Characters"))
+                .Matches("^(?=.*[0-9])(?=.*[a-zA-Z])([a-zA-Z0-9]+)$").WithMessage(localizer.GetLocalizedString("msg_ValidPassword"));
         }
     }
 }
