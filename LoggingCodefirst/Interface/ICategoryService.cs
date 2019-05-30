@@ -14,13 +14,7 @@ namespace LoggingCodefirst.Interface
         /// Get Categories
         /// </summary>
         /// <returns>Categories</returns>
-        IEnumerable<Category> Categories();  
-        
-        /// <summary>
-        /// GetListCategoryAsync
-        /// </summary>
-        /// <returns>ListCategory</returns>
-        Task<List<CategoryViewModel>> GetListCategoryAsync();
+        IEnumerable<CategoryViewModel> GetCategories();  
         
         /// <summary>
         /// CreateCategoryAsync

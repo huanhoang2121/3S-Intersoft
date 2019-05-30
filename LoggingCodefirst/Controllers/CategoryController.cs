@@ -37,9 +37,9 @@ namespace LoggingCodefirst.Controllers
         /// </summary>
         /// <returns>Category Index</returns>
         [HttpGet]
-        public async Task<IActionResult> Index()
+        public IActionResult Index()
         {
-            var categories = await _categoryService.GetListCategoryAsync();
+            var categories = _categoryService.GetCategories();
             return View(categories);
         }
 

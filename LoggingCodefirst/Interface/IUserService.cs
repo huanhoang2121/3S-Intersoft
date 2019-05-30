@@ -14,7 +14,7 @@ namespace LoggingCodefirst.Interface
         /// Users
         /// </summary>
         /// <returns>Users</returns>
-        IEnumerable<User> Users();   
+        IEnumerable<UserViewModel> GetUsers();   
         
         /// <summary>
         /// Login
@@ -29,12 +29,6 @@ namespace LoggingCodefirst.Interface
         /// <param name="email">User email</param>
         /// <returns>User</returns>
         Task<User> GetUserByEmailAsync(string email);
-        
-        /// <summary>
-        /// GetListUserAsync
-        /// </summary>
-        /// <returns>ListUser</returns>
-        Task<List<UserViewModel>> GetListUserAsync();
         
         /// <summary>
         /// CreateUserAsync

@@ -15,7 +15,7 @@ namespace LoggingCodefirst.Interface
         /// Stores
         /// </summary>
         /// <returns>Stores</returns>
-        IEnumerable<Role> Roles();        
+        IEnumerable<Role> GetRoles();        
         
         #endregion
         

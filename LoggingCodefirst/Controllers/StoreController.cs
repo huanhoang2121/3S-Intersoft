@@ -37,9 +37,9 @@ namespace LoggingCodefirst.Controllers
         /// </summary>
         /// <returns>Index Store</returns>
         [HttpGet]
-        public async Task<IActionResult> Index()
+        public IActionResult Index()
         {
-            var stores = await _storeService.GetListStoreAsync();
+            var stores = _storeService.GetStores();
             return View(stores);
         }
 

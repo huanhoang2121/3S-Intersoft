@@ -41,11 +41,15 @@ namespace LoggingCodefirst.Services
         /// Users
         /// </summary>
         /// <returns>Users</returns>
-        public IEnumerable<User> Users()
+        public IEnumerable<UserViewModel> GetUsers()
         {
             try
             {
-                return _context.Users.Include(s => s.Store);
+                var users =  _context.Users
+                    .Include(u => u.Store)
+                    .Include(u => u.Role);
+                var viewModels = _mapper.Map<IEnumerable<UserViewModel>>(users);
+                return viewModels;
             }
             catch (Exception e)
             {
@@ -88,29 +92,6 @@ namespace LoggingCodefirst.Services
                 return await _context.Users
                     .Include(u => u.Role)
                     .FirstOrDefaultAsync(s => s.Email == email);
-            }
-            catch (Exception e)
-            {
-                Log.Error(e.Message);
-                throw;
-            }
-        }
-        
-        /// <inheritdoc />
-        /// <summary>
-        /// GetListUserAsync
-        /// </summary>
-        /// <returns>ListUser</returns>
-        public async Task<List<UserViewModel>> GetListUserAsync()
-        {
-            try
-            {
-                var users = await _context.Users
-                    .Include(u => u.Store)
-                    .Include(u => u.Role)
-                    .ToListAsync();
-                var viewModels = _mapper.Map<List<UserViewModel>>(users);
-                return viewModels;
             }
             catch (Exception e)
             {

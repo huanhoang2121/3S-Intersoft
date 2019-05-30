@@ -14,13 +14,7 @@ namespace LoggingCodefirst.Interface
         /// Stores
         /// </summary>
         /// <returns>Stores</returns>
-        IEnumerable<Store> Stores();        
-        
-        /// <summary>
-        /// GetListStoreAsync
-        /// </summary>
-        /// <returns>ListStore</returns>
-        Task<List<StoreViewModel>> GetListStoreAsync();
+        IEnumerable<StoreViewModel> GetStores();        
         
         /// <summary>
         /// CreateStoreAsync

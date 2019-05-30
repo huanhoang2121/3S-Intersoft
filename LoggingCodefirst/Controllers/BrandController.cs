@@ -37,9 +37,9 @@ namespace LoggingCodefirst.Controllers
         /// </summary>
         /// <returns>Brand Index View</returns>
         [HttpGet]
-        public async Task<IActionResult> Index()
+        public IActionResult Index()
         {
-            var brands = await _brandService.GetListBrandAsync();
+            var brands =  _brandService.GetBrands();
             return View(brands);
         }
 

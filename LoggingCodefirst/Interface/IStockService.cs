@@ -14,13 +14,7 @@ namespace LoggingCodefirst.Interface
         /// Get Stocks
         /// </summary>
         /// <returns>Stocks</returns>
-        IEnumerable<Stock> Stocks();      
-        
-        /// <summary>
-        /// GetListStockAsync
-        /// </summary>
-        /// <returns>ListStock</returns>
-        Task<List<StockViewModel>> GetListStockAsync();
+        IEnumerable<StockViewModel> GetStocks();      
         
         /// <summary>
         /// CreateStockAsync

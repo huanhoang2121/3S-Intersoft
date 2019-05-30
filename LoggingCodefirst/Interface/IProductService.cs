@@ -14,13 +14,7 @@ namespace LoggingCodefirst.Interface
         /// Products
         /// </summary>
         /// <returns>Products</returns>
-        IEnumerable<Product> Products(); 
-        
-        /// <summary>
-        /// GetListProductAsync
-        /// </summary>
-        /// <returns>ProductViewModel</returns>
-        Task<List<ProductViewModel>> GetListProductAsync();
+        IEnumerable<ProductViewModel> GetProducts(); 
         
         /// <summary>
         /// CreateProductAsync

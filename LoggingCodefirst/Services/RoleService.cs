@@ -32,7 +32,7 @@ namespace LoggingCodefirst.Services
         /// Stores
         /// </summary>
         /// <returns>Stores</returns>
-        public IEnumerable<Role> Roles()
+        public IEnumerable<Role> GetRoles()
         {
             try
             {

@@ -39,35 +39,16 @@ namespace LoggingCodefirst.Services
         /// Products
         /// </summary>
         /// <returns>Products</returns>
-        public IEnumerable<Product> Products()
+        public IEnumerable<ProductViewModel> GetProducts()
         {
             try
             {
-                return _context.Products;
-            }
-            catch (Exception e)
-            {
-                Log.Error(e.Message);
-                throw;
-            }
-        }
-
-        /// <inheritdoc />
-        /// <summary>
-        /// GetListProductAsync
-        /// </summary>
-        /// <returns>ProductViewModel</returns>
-        public async Task<List<ProductViewModel>> GetListProductAsync()
-        {
-            try
-            {
-                var products = await _context.Products
+                var products = _context.Products
                     .Include(u => u.Brand)
                     .Include(u => u.Category)
                     .Include(s => s.Stocks)
-                    .ThenInclude(i => i.Store)
-                    .ToListAsync();
-                var viewModels = _mapper.Map<List<ProductViewModel>>(products);
+                    .ThenInclude(i => i.Store);
+                var viewModels = _mapper.Map<IEnumerable<ProductViewModel>>(products);
                 return viewModels;
             }
             catch (Exception e)

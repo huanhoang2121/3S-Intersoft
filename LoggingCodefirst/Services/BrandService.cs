@@ -39,30 +39,12 @@ namespace LoggingCodefirst.Services
         /// Get Brands
         /// </summary>
         /// <returns>Brands</returns>
-        public IEnumerable<Brand> Brands()
+        public IEnumerable<BrandViewModel> GetBrands()
         {
             try
             {
-                return _context.Brands;
-            }
-            catch (Exception e)
-            {
-                Log.Error(e.Message);
-                throw;
-            }
-        }
-
-        /// <inheritdoc />
-        /// <summary>
-        /// GetListBrandAsync
-        /// </summary>
-        /// <returns>ListBrand</returns>
-        public async Task<List<BrandViewModel>> GetListBrandAsync()
-        {
-            try
-            {
-                var brands = await _context.Brands.ToListAsync();
-                var viewModels = _mapper.Map<List<BrandViewModel>>(brands);
+                var brands = _context.Brands;
+                var viewModels = _mapper.Map<IEnumerable<BrandViewModel>>(brands);
                 return viewModels;
             }
             catch (Exception e)

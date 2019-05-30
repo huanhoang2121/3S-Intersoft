@@ -39,33 +39,14 @@ namespace LoggingCodefirst.Services
         /// Stores
         /// </summary>
         /// <returns>Stores</returns>
-        public IEnumerable<Store> Stores()
+        public IEnumerable<StoreViewModel> GetStores()
         {
             try
             {
-                return _context.Stores;
-            }
-            catch (Exception e)
-            {
-                Log.Error(e.Message);
-                throw;
-            }
-        }
-
-        /// <inheritdoc />
-        /// <summary>
-        /// GetListStoreAsync
-        /// </summary>
-        /// <returns>ListStore</returns>
-        public async Task<List<StoreViewModel>> GetListStoreAsync()
-        {
-            try
-            {
-                var stores = await _context.Stores
+                var stores = _context.Stores
                     .Include(s => s.Stocks)
-                    .ThenInclude(i => i.Product)
-                    .ToListAsync();
-                var viewModels = _mapper.Map<List<StoreViewModel>>(stores);
+                    .ThenInclude(i => i.Product);
+                var viewModels = _mapper.Map<IEnumerable<StoreViewModel>>(stores);
                 return viewModels;
             }
             catch (Exception e)

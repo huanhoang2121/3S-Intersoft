@@ -44,9 +44,9 @@ namespace LoggingCodefirst.Controllers
         /// </summary>
         /// <returns>Index Product</returns>
         [HttpGet]
-        public async Task<IActionResult> Index()
+        public IActionResult Index()
         {
-            var products = await _productService.GetListProductAsync();
+            var products = _productService.GetProducts();
             return View(products);
         }
 
@@ -57,8 +57,8 @@ namespace LoggingCodefirst.Controllers
         [HttpGet]
         public IActionResult Create()
         {
-            ViewData["BrandId"] = new SelectList(_brandService.Brands(), "Id", "BrandName");
-            ViewData["CategoryId"] = new SelectList(_categoryService.Categories(), "Id", "CategoryName");
+            ViewData["BrandId"] = new SelectList(_brandService.GetBrands(), "Id", "BrandName");
+            ViewData["CategoryId"] = new SelectList(_categoryService.GetCategories(), "Id", "CategoryName");
             return View();
         }
 
@@ -78,12 +78,12 @@ namespace LoggingCodefirst.Controllers
                     return RedirectToAction(nameof(Index));
                 }
                 ViewData["ErrorMessage"] = _localizer.GetLocalizedString("err_CreateProduct").ToString();
-                ViewData["BrandId"] = new SelectList(_brandService.Brands(), "Id", "BrandName", createViewModel.BrandId);
-                ViewData["CategoryId"] = new SelectList(_categoryService.Categories(), "Id", "CategoryName", createViewModel.CategoryId);
+                ViewData["BrandId"] = new SelectList(_brandService.GetBrands(), "Id", "BrandName", createViewModel.BrandId);
+                ViewData["CategoryId"] = new SelectList(_categoryService.GetCategories(), "Id", "CategoryName", createViewModel.CategoryId);
                 return View(createViewModel);
             }
-            ViewData["BrandId"] = new SelectList(_brandService.Brands(), "Id", "BrandName", createViewModel.BrandId);
-            ViewData["CategoryId"] = new SelectList(_categoryService.Categories(), "Id", "CategoryName", createViewModel.CategoryId);
+            ViewData["BrandId"] = new SelectList(_brandService.GetBrands(), "Id", "BrandName", createViewModel.BrandId);
+            ViewData["CategoryId"] = new SelectList(_categoryService.GetCategories(), "Id", "CategoryName", createViewModel.CategoryId);
             return View(createViewModel);
         }
 
@@ -106,8 +106,8 @@ namespace LoggingCodefirst.Controllers
                 return BadRequest();
             }
 
-            ViewData["BrandId"] = new SelectList(_brandService.Brands(), "Id", "BrandName", product.BrandId);
-            ViewData["CategoryId"] = new SelectList(_categoryService.Categories(), "Id", "CategoryName", product.CategoryId);
+            ViewData["BrandId"] = new SelectList(_brandService.GetBrands(), "Id", "BrandName", product.BrandId);
+            ViewData["CategoryId"] = new SelectList(_categoryService.GetCategories(), "Id", "CategoryName", product.CategoryId);
             return View(product);
         }
 
@@ -127,12 +127,12 @@ namespace LoggingCodefirst.Controllers
                     return RedirectToAction(nameof(Index));
                 }
                 ViewData["ErrorMessage"] = _localizer.GetLocalizedString("err_EditProduct").ToString();
-                ViewData["BrandId"] = new SelectList(_brandService.Brands(), "Id", "BrandName", editViewModel.BrandId);
-                ViewData["CategoryId"] = new SelectList(_categoryService.Categories(), "Id", "CategoryName", editViewModel.CategoryId);
+                ViewData["BrandId"] = new SelectList(_brandService.GetBrands(), "Id", "BrandName", editViewModel.BrandId);
+                ViewData["CategoryId"] = new SelectList(_categoryService.GetCategories(), "Id", "CategoryName", editViewModel.CategoryId);
                 return View(editViewModel);
             }
-            ViewData["BrandId"] = new SelectList(_brandService.Brands(), "Id", "BrandName", editViewModel.BrandId);
-            ViewData["CategoryId"] = new SelectList(_categoryService.Categories(), "Id", "CategoryName", editViewModel.CategoryId);
+            ViewData["BrandId"] = new SelectList(_brandService.GetBrands(), "Id", "BrandName", editViewModel.BrandId);
+            ViewData["CategoryId"] = new SelectList(_categoryService.GetCategories(), "Id", "CategoryName", editViewModel.CategoryId);
             return View(editViewModel);
         }
         

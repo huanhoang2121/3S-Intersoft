@@ -14,13 +14,7 @@ namespace LoggingCodefirst.Interface
         /// Get Brands
         /// </summary>
         /// <returns>Brands</returns>
-        IEnumerable<Brand> Brands();
-        
-        /// <summary>
-        /// GetListBrandAsync
-        /// </summary>
-        /// <returns>ListBrand</returns>
-        Task<List<BrandViewModel>> GetListBrandAsync();
+        IEnumerable<BrandViewModel> GetBrands();
         
         /// <summary>
         /// CreateBrandAsync

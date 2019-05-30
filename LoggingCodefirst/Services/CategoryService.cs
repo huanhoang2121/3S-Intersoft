@@ -39,30 +39,12 @@ namespace LoggingCodefirst.Services
         /// Get Categories
         /// </summary>
         /// <returns>Categories</returns>
-        public IEnumerable<Category> Categories()
+        public IEnumerable<CategoryViewModel> GetCategories()
         {
             try
             {
-                return _context.Categories;
-            }
-            catch (Exception e)
-            {
-                Log.Error(e.Message);
-                throw;
-            }
-        }
-        
-        /// <inheritdoc />
-        /// <summary>
-        /// GetListCategoryAsync
-        /// </summary>
-        /// <returns>ListCategory</returns>
-        public async Task<List<CategoryViewModel>> GetListCategoryAsync()
-        {
-            try
-            {
-                var categories = await _context.Categories.ToListAsync();
-                var viewModels = _mapper.Map<List<CategoryViewModel>>(categories);
+                var categories = _context.Categories;
+                var viewModels = _mapper.Map<IEnumerable<CategoryViewModel>>(categories);
                 return viewModels;
             }
             catch (Exception e)
@@ -71,7 +53,7 @@ namespace LoggingCodefirst.Services
                 throw;
             }
         }
-
+        
         /// <inheritdoc />
         /// <summary>
         /// CreateCategoryAsync
