@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using LoggingCodefirst.Models;
 using LoggingCodefirst.ViewModels;
@@ -9,7 +10,7 @@ namespace LoggingCodefirst.Interface
     {
         
         #region Public Methods
-        
+
         /// <summary>
         /// Get Brands
         /// </summary>
@@ -22,7 +23,7 @@ namespace LoggingCodefirst.Interface
         /// <param name="brandViewModel">BrandViewModel</param>
         /// <returns>Could be Created?</returns>
         Task<bool> CreateBrandAsync(BrandViewModel brandViewModel);
-        
+
         /// <summary>
         /// GetBrandEditAsync
         /// </summary>

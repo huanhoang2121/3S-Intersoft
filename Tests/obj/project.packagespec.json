@@ -14,7 +14,11 @@
     ],
     "frameworks": {
       "netcoreapp2.2": {
-        "projectReferences": {}
+        "projectReferences": {
+          "/home/local/3SI/huan.hv/3S-Intersoft/LoggingCodefirst/LoggingCodefirst.csproj": {
+            "projectPath": "/home/local/3SI/huan.hv/3S-Intersoft/LoggingCodefirst/LoggingCodefirst.csproj"
+          }
+        }
       }
     },
     "warningProperties": {
@@ -26,6 +30,26 @@
   "frameworks": {
     "netcoreapp2.2": {
       "dependencies": {
+        "Microsoft.AspNetCore.Mvc": {
+          "target": "Package",
+          "version": "[2.2.0, )"
+        },
+        "Microsoft.AspNetCore.Mvc.Abstractions": {
+          "target": "Package",
+          "version": "[2.2.0, )"
+        },
+        "Microsoft.AspNetCore.Mvc.ViewFeatures": {
+          "target": "Package",
+          "version": "[2.2.0, )"
+        },
+        "Microsoft.EntityFrameworkCore.InMemory": {
+          "target": "Package",
+          "version": "[3.0.0-preview5.19227.1, )"
+        },
+        "Microsoft.EntityFrameworkCore.Relational": {
+          "target": "Package",
+          "version": "[3.0.0-preview5.19227.1, )"
+        },
         "Microsoft.NET.Test.Sdk": {
           "target": "Package",
           "version": "[16.0.1, )"

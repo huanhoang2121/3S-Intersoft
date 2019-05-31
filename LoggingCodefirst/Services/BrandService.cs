@@ -23,13 +23,13 @@ namespace LoggingCodefirst.Services
         #endregion
         
         #region Constructors
-
+        
         public BrandService(DataContext context, IMapper mapper)
         {
             _mapper = mapper;
             _context = context;
         }
-        
+
         #endregion
 
         #region Public Methods
@@ -89,8 +89,8 @@ namespace LoggingCodefirst.Services
         {
             try
             {
-                var store = await _context.Brands.FindAsync(id);
-                var viewModel = _mapper.Map<BrandViewModel>(store);
+                var brand = await _context.Brands.FindAsync(id);
+                var viewModel = _mapper.Map<BrandViewModel>(brand);
                 return viewModel;
             }
             catch (Exception e)

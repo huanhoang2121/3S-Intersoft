@@ -21,6 +21,12 @@ namespace LoggingCodefirst.Controllers
         #region Constructors
 
         public BrandController(
+            IBrandService brandService)
+        {
+            _brandService = brandService;
+        }
+        
+        public BrandController(
             IBrandService brandService, 
             LocalizationService<BrandResource> localizer)
         {
