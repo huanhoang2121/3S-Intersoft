@@ -27,8 +27,7 @@ namespace LoggingCodefirst.Authentication
         /// Ctor
         /// </summary>
         /// <param name="httpContextAccessor">HTTP context accessor</param>
-        public UserAuthenticationService(
-            IHttpContextAccessor httpContextAccessor)
+        public UserAuthenticationService(IHttpContextAccessor httpContextAccessor)
         {
             _httpContextAccessor = httpContextAccessor;
         }

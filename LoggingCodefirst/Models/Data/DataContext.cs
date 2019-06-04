@@ -16,6 +16,7 @@ namespace LoggingCodefirst.Models.Data
         public virtual DbSet<Store> Stores { get; set; }
         public virtual DbSet<User> Users { get; set; }
         public virtual DbSet<Role> Roles { get; set; }
+        public virtual DbSet<Order> Orders { get; set; }
         
 //        Production
         public virtual DbSet<Category> Categories { get; set; }
@@ -27,6 +28,7 @@ namespace LoggingCodefirst.Models.Data
         {  
 //            EntityConfiguration
             modelBuilder.Entity<Store>().ToTable("Store");
+            
             modelBuilder.Entity<Store>().Property(t => t.Email).IsRequired().HasMaxLength(50);
             modelBuilder.Entity<Store>().HasIndex(u => u.Email).IsUnique();
             modelBuilder.Entity<Store>().Property(t => t.StoreName).IsRequired().HasMaxLength(100);

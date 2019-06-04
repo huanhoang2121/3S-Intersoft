@@ -1,9 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Claims;
+using LoggingCodefirst.Authentication;
 using LoggingCodefirst.Infrastructure;
 using LoggingCodefirst.Models;
 using LoggingCodefirst.Models.Data;
+using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Diagnostics;
 using Moq;
@@ -12,6 +15,24 @@ namespace Tests.Common
 {
     public class TestHelpers
     {
+        public static DefaultHttpContext GetTestHttpContext()
+        {
+            var claims = new List<Claim>
+            {
+                new Claim(ClaimTypes.Email, "huan.hv@3si.com.vn"),
+                new Claim(ClaimTypes.Role, "Admin"),
+                new Claim("Id", "1"),
+                new Claim("FullName", "huan"),
+                new Claim("ImagePath", "image.png")
+            };
+            
+            //create principal for the current authentication scheme
+            var userIdentity = new ClaimsIdentity(claims, UserCookieAuthenticationDefaults.AuthenticationScheme);
+            var userPrincipal = new ClaimsPrincipal(userIdentity);
+
+            return new DefaultHttpContext { User = userPrincipal }; 
+        }
+        
         /// <summary>
         /// Get Mock DbSet
         /// </summary>
