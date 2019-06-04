@@ -19,27 +19,27 @@ using LoggingCodefirst;
 #line default
 #line hidden
 #line 2 "/home/local/3SI/huan.hv/3S-Intersoft/LoggingCodefirst/Views/_ViewImports.cshtml"
-using LoggingCodefirst.Resources;
+using LoggingCodefirst.Interface;
 
 #line default
 #line hidden
 #line 3 "/home/local/3SI/huan.hv/3S-Intersoft/LoggingCodefirst/Views/_ViewImports.cshtml"
+using LoggingCodefirst.Resources;
+
+#line default
+#line hidden
+#line 4 "/home/local/3SI/huan.hv/3S-Intersoft/LoggingCodefirst/Views/_ViewImports.cshtml"
 using LoggingCodefirst.ViewModels;
 
 #line default
 #line hidden
-#line 6 "/home/local/3SI/huan.hv/3S-Intersoft/LoggingCodefirst/Views/_ViewImports.cshtml"
+#line 5 "/home/local/3SI/huan.hv/3S-Intersoft/LoggingCodefirst/Views/_ViewImports.cshtml"
 using Microsoft.AspNetCore.Http;
 
 #line default
 #line hidden
-#line 8 "/home/local/3SI/huan.hv/3S-Intersoft/LoggingCodefirst/Views/_ViewImports.cshtml"
-using LoggingCodefirst.Services;
-
-#line default
-#line hidden
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"619dbe634dd82e11d4a7efc38e2faa0bd35e5bb4", @"/Views/Shared/_NavigationPartial.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"cb4807872076cf67f845e777f0d4eb7e4e3fbeea", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"2a31015e85e4a5f218136f52e310f72066c1f73d", @"/Views/_ViewImports.cshtml")]
     public class Views_Shared__NavigationPartial : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("class", new global::Microsoft.AspNetCore.Html.HtmlString("sidebar-link waves-effect sidebar-link"), global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -80,7 +80,7 @@ using LoggingCodefirst.Services;
             WriteLiteral("<div class=\"scroll-sidebar\">\r\n    <!-- Sidebar navigation-->\r\n    <nav class=\"sidebar-nav\">\r\n        <ul id=\"sidebarnav\" class=\"p-t-30\">\r\n            <li class=\"sidebar-item\">\r\n                ");
             EndContext();
             BeginContext(193, 267, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "619dbe634dd82e11d4a7efc38e2faa0bd35e5bb47731", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "619dbe634dd82e11d4a7efc38e2faa0bd35e5bb47732", async() => {
                 BeginContext(306, 84, true);
                 WriteLiteral("\r\n                    <i class=\"mdi mdi-view-dashboard\"></i><span class=\"hide-menu\">");
                 EndContext();
@@ -116,7 +116,7 @@ using LoggingCodefirst.Services;
             WriteLiteral("\r\n            </li>\r\n            <li class=\"sidebar-item\">\r\n                ");
             EndContext();
             BeginContext(536, 263, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "619dbe634dd82e11d4a7efc38e2faa0bd35e5bb410082", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "619dbe634dd82e11d4a7efc38e2faa0bd35e5bb410083", async() => {
                 BeginContext(652, 74, true);
                 WriteLiteral("\r\n                    <i class=\"mdi mdi-lock\"></i><span class=\"hide-menu\">");
                 EndContext();
@@ -152,7 +152,7 @@ using LoggingCodefirst.Services;
             WriteLiteral("\r\n            </li>\r\n            <li class=\"sidebar-item\">\r\n                ");
             EndContext();
             BeginContext(875, 268, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "619dbe634dd82e11d4a7efc38e2faa0bd35e5bb412418", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "619dbe634dd82e11d4a7efc38e2faa0bd35e5bb412419", async() => {
                 BeginContext(989, 83, true);
                 WriteLiteral("\r\n                    <i class=\"mdi mdi-source-branch\"></i><span class=\"hide-menu\">");
                 EndContext();
@@ -188,7 +188,7 @@ using LoggingCodefirst.Services;
             WriteLiteral("\r\n            </li>\r\n            <li class=\"sidebar-item\">\r\n                ");
             EndContext();
             BeginContext(1219, 270, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "619dbe634dd82e11d4a7efc38e2faa0bd35e5bb414774", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "619dbe634dd82e11d4a7efc38e2faa0bd35e5bb414775", async() => {
                 BeginContext(1336, 79, true);
                 WriteLiteral("\r\n                    <i class=\"mdi mdi-view-list\"></i><span class=\"hide-menu\">");
                 EndContext();
@@ -224,7 +224,7 @@ using LoggingCodefirst.Services;
             WriteLiteral("\r\n            </li>\r\n            <li class=\"sidebar-item\">\r\n                ");
             EndContext();
             BeginContext(1565, 268, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "619dbe634dd82e11d4a7efc38e2faa0bd35e5bb417126", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "619dbe634dd82e11d4a7efc38e2faa0bd35e5bb417127", async() => {
                 BeginContext(1681, 79, true);
                 WriteLiteral("\r\n                    <i class=\"mdi mdi-biohazard\"></i><span class=\"hide-menu\">");
                 EndContext();
@@ -260,7 +260,7 @@ using LoggingCodefirst.Services;
             WriteLiteral("\r\n            </li>\r\n            <li class=\"sidebar-item\">\r\n                ");
             EndContext();
             BeginContext(1909, 268, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "619dbe634dd82e11d4a7efc38e2faa0bd35e5bb419477", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "619dbe634dd82e11d4a7efc38e2faa0bd35e5bb419478", async() => {
                 BeginContext(2023, 83, true);
                 WriteLiteral("\r\n                    <i class=\"mdi mdi-store-24-hour\"></i><span class=\"hide-menu\">");
                 EndContext();
@@ -296,7 +296,7 @@ using LoggingCodefirst.Services;
             WriteLiteral("\r\n            </li>\r\n            <li class=\"sidebar-item\">\r\n                ");
             EndContext();
             BeginContext(2253, 260, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "619dbe634dd82e11d4a7efc38e2faa0bd35e5bb421834", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "619dbe634dd82e11d4a7efc38e2faa0bd35e5bb421835", async() => {
                 BeginContext(2367, 75, true);
                 WriteLiteral("\r\n                    <i class=\"mdi mdi-store\"></i><span class=\"hide-menu\">");
                 EndContext();
@@ -332,7 +332,7 @@ using LoggingCodefirst.Services;
             WriteLiteral("\r\n            </li>\r\n            <li class=\"sidebar-item\">\r\n                ");
             EndContext();
             BeginContext(2589, 264, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "619dbe634dd82e11d4a7efc38e2faa0bd35e5bb424177", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "619dbe634dd82e11d4a7efc38e2faa0bd35e5bb424178", async() => {
                 BeginContext(2702, 81, true);
                 WriteLiteral("\r\n                    <i class=\"mdi mdi-account-box\"></i><span class=\"hide-menu\">");
                 EndContext();
@@ -380,23 +380,23 @@ using LoggingCodefirst.Services;
         }
         #pragma warning restore 1998
         [global::Microsoft.AspNetCore.Mvc.Razor.Internal.RazorInjectAttribute]
-        public LocalizationService<ErrorResource> ErrorLocalizer { get; private set; }
+        public ILocalizationService<ErrorResource> ErrorLocalizer { get; private set; }
         [global::Microsoft.AspNetCore.Mvc.Razor.Internal.RazorInjectAttribute]
-        public LocalizationService<StoreResource> StoreLocalizer { get; private set; }
+        public ILocalizationService<StoreResource> StoreLocalizer { get; private set; }
         [global::Microsoft.AspNetCore.Mvc.Razor.Internal.RazorInjectAttribute]
-        public LocalizationService<StockResource> StockLocalizer { get; private set; }
+        public ILocalizationService<StockResource> StockLocalizer { get; private set; }
         [global::Microsoft.AspNetCore.Mvc.Razor.Internal.RazorInjectAttribute]
-        public LocalizationService<ProductResource> ProductLocalizer { get; private set; }
+        public ILocalizationService<ProductResource> ProductLocalizer { get; private set; }
         [global::Microsoft.AspNetCore.Mvc.Razor.Internal.RazorInjectAttribute]
-        public LocalizationService<CategoryResource> CategoryLocalizer { get; private set; }
+        public ILocalizationService<CategoryResource> CategoryLocalizer { get; private set; }
         [global::Microsoft.AspNetCore.Mvc.Razor.Internal.RazorInjectAttribute]
-        public LocalizationService<BrandResource> BrandLocalizer { get; private set; }
+        public ILocalizationService<BrandResource> BrandLocalizer { get; private set; }
         [global::Microsoft.AspNetCore.Mvc.Razor.Internal.RazorInjectAttribute]
-        public LocalizationService<UserResource> UserLocalizer { get; private set; }
+        public ILocalizationService<UserResource> UserLocalizer { get; private set; }
         [global::Microsoft.AspNetCore.Mvc.Razor.Internal.RazorInjectAttribute]
-        public LocalizationService<HomeResource> HomeLocalizer { get; private set; }
+        public ILocalizationService<HomeResource> HomeLocalizer { get; private set; }
         [global::Microsoft.AspNetCore.Mvc.Razor.Internal.RazorInjectAttribute]
-        public LocalizationService<CommonResource> Localizer { get; private set; }
+        public ILocalizationService<CommonResource> Localizer { get; private set; }
         [global::Microsoft.AspNetCore.Mvc.Razor.Internal.RazorInjectAttribute]
         public global::Microsoft.AspNetCore.Mvc.ViewFeatures.IModelExpressionProvider ModelExpressionProvider { get; private set; }
         [global::Microsoft.AspNetCore.Mvc.Razor.Internal.RazorInjectAttribute]

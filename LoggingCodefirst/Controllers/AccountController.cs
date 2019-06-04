@@ -2,11 +2,9 @@
 using LoggingCodefirst.Authentication;
 using LoggingCodefirst.Interface;
 using LoggingCodefirst.Resources;
-using LoggingCodefirst.Services;
 using LoggingCodefirst.ViewModels;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Serilog;
 
 namespace LoggingCodefirst.Controllers
 {
@@ -16,7 +14,7 @@ namespace LoggingCodefirst.Controllers
         #region Private Members
         
         private readonly IUserService _userService;
-        private readonly LocalizationService<UserResource> _localizer;        
+        private readonly ILocalizationService<UserResource> _localizer;        
         private readonly IUserAuthenticationService _authenticationService;
          
         #endregion
@@ -25,7 +23,7 @@ namespace LoggingCodefirst.Controllers
         
         public AccountController(
             IUserService userService, 
-            LocalizationService<UserResource> localizer, IUserAuthenticationService authenticationService)
+            ILocalizationService<UserResource> localizer, IUserAuthenticationService authenticationService)
         {
             _userService = userService;
             _localizer = localizer;

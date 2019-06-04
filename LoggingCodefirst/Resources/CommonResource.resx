@@ -57,6 +57,9 @@
   <data name="lbl_Hello" xml:space="preserve">
     <value>Hello</value>
   </data>
+  <data name="lbl_Search" xml:space="preserve">
+    <value>Search &amp; enter</value>
+  </data>
   <data name="btn_AccountSetting" xml:space="preserve">
     <value>Account Setting</value>
   </data>

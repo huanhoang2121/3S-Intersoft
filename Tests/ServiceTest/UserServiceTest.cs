@@ -1,8 +1,5 @@
 ﻿using System.Linq;
 using System.Threading.Tasks;
-using LoggingCodefirst.Infrastructure;
-using LoggingCodefirst.Models;
-using LoggingCodefirst.Models.Data;
 using LoggingCodefirst.Services;
 using LoggingCodefirst.ViewModels;
 using Tests.Common;
@@ -12,75 +9,35 @@ namespace Tests.ServiceTest
 {
     public class UserServiceTest
     {
-        public void Seed()
-        {
-            var user = new User
-            {
-                Email = "huan.hv@3si.com.vn",
-                Password = SecurePasswordHasher.Hash("Pass1234"),
-                Fullname = "Hoàng Văn Huấn",
-                Address = "Huế",
-                ImagePath = "asdsad.jpg",
-                StoreId = 1,
-                Phone = "0964973404",
-                RoleId = 1,
-                IsActive = true,
-            };
-            _dataContext.Users.Add(user);
-            
-            var role = new Role
-            {
-                RoleName = "Admin",
-                Description = "All roles",
-            };
-            _dataContext.Roles.Add(role);
-            
-            var store = new Store
-            {
-                StoreName = "Hà Nội Store",
-                Phone = "0216444665",
-                Email = "hanoistore@3si.com.vn",
-                Street = "Duy Tân",
-                City = "Hà Nội",
-                State = "Hà Nội",
-                ZipCode = "000055"
-            };
-            _dataContext.Stores.Add(store);
-            
-            _dataContext.SaveChanges();
-        }
-        
         private readonly UserService _userService;
-        private readonly DataContext _dataContext;
 
         public UserServiceTest()
         {
-            _dataContext = TestHelpers.GetDataContext();
+            var dataContext = TestHelpers.GetDataContext();
             AutoMapperConfig.Initialize();
             var mapper = AutoMapperConfig.GetMapper();
 
-            _userService = new UserService(_dataContext, mapper);
-        }
-
-        [Fact]
-        public void GetUser_ReturnNull()
-        {
-            var result = _userService.GetUsers();
-            Assert.Equal(result.Count(), 0);
+            _userService = new UserService(dataContext, mapper);
         }
         
+        /// <summary>
+        /// GetUsers Test
+        /// Return List User
+        /// </summary>
         [Fact]
-        public void GetUser_ReturnUsers()
+        public void GetUsers_ReturnUsers()
         {
-            Seed();
             var result = _userService.GetUsers();
-            Assert.Equal(result.Count(), 1);
+            Assert.Equal(result.Count(), 2);
         }
         
+        /// <summary>
+        /// LoginAsync Test
+        /// </summary>
+        /// <returns>True</returns>
         [Fact]
         public async Task LoginAsync_ReturnTrue()
         {
-            Seed();
             var loginViewModel = new LoginViewModel
             {
                 Email = "huan.hv@3si.com.vn",
@@ -90,23 +47,31 @@ namespace Tests.ServiceTest
             Assert.True(result);
         }
         
+        /// <summary>
+        /// LoginAsync Test
+        /// Email Incorrect
+        /// </summary>
+        /// <returns>False</returns>
         [Fact]
         public async Task LoginAsync_EmailIncorrect_ReturnFalse()
         {
-            Seed();
             var loginViewModel = new LoginViewModel
             {
-                Email = "huanhv@3si.com.vn",
+                Email = "huanhv@32si.com.vn",
                 Password = "Pass1234",
             };
             var result = await _userService.LoginAsync(loginViewModel);
             Assert.False(result);
         }
         
+        /// <summary>
+        /// LoginAsync Test
+        /// Password Incorrect
+        /// </summary>
+        /// <returns>False</returns>
         [Fact]
         public async Task LoginAsync_PasswordIncorrect_ReturnFalse()
         {
-            Seed();
             var loginViewModel = new LoginViewModel
             {
                 Email = "huan.hv@3si.com.vn",
@@ -116,28 +81,38 @@ namespace Tests.ServiceTest
             Assert.False(result);
         }
         
+        /// <summary>
+        /// GetUserByEmailAsync Test
+        /// </summary>
+        /// <returns>User</returns>
         [Fact]
         public async Task GetUserByEmailAsync_ReturnUser()
         {
-            Seed();
             const string email = "huan.hv@3si.com.vn";
-            var result = await _userService.GetUserByEmailAsync(email);
-            Assert.NotNull(result);
+            var user = await _userService.GetUserByEmailAsync(email);
+            Assert.NotNull(user);
         }
         
+        /// <summary>
+        /// GetUserByEmailAsync Test
+        /// Email Incorrect
+        /// </summary>
+        /// <returns>Null</returns>
         [Fact]
-        public async Task GetUserByEmailAsync_ReturnNull()
+        public async Task GetUserByEmailAsync_EmailIncorrect_ReturnNull()
         {
-            Seed();
-            const string email = "huanhv@3si.com.vn";
-            var result = await _userService.GetUserByEmailAsync(email);
-            Assert.Null(result);
+            const string email = "huanhv@32si.com.vn";
+            var user = await _userService.GetUserByEmailAsync(email);
+            Assert.Null(user);
         }
         
+        /// <summary>
+        /// CreateUserAsync Test
+        /// </summary>
+        /// <returns>True</returns>
         [Fact]
         public async Task CreateUserAsync_ReturnTrue()
         {
-            Seed();
             var user = new UserViewModel
             {
                 Email = "huan.hv@3si.com.vn",
@@ -154,28 +129,50 @@ namespace Tests.ServiceTest
             Assert.True(result);
         }
         
+        /// <summary>
+        /// CreateUserAsync Test
+        /// UserNull
+        /// </summary>
+        /// <returns>False</returns>
         [Fact]
-        public async Task GetUserEditAsync_ReturnUserEditViewModel()
+        public async Task CreateUserAsync_UserNull_ReturnFalse()
         {
-            Seed();
-            const int id = 1;
-            var result = await _userService.GetUserEditAsync(id);
-            Assert.NotNull(result);
+            var user = new UserViewModel();
+            var result = await _userService.CreateUserAsync(user);
+            Assert.False(result);
         }
         
+        /// <summary>
+        /// GetUserEditAsync Test
+        /// </summary>
+        /// <returns>User</returns>
+        [Fact]
+        public async Task GetUserEditAsync_ReturnUser()
+        {
+            const int id = 1;
+            var user = await _userService.GetUserEditAsync(id);
+            Assert.NotNull(user);
+        }
+        
+        /// <summary>
+        /// GetUserEditAsync Test
+        /// </summary>
+        /// <returns>Null</returns>
         [Fact]
         public async Task GetUserEditAsync_ReturnNull()
         {
-            Seed();
             const int id = 0;
-            var result = await _userService.GetUserEditAsync(id);
-            Assert.Null(result);
+            var user = await _userService.GetUserEditAsync(id);
+            Assert.Null(user);
         }
         
+        /// <summary>
+        /// EditUserAsync Test
+        /// </summary>
+        /// <returns>True</returns>
         [Fact]
         public async Task EditUserAsync_ReturnTrue()
         {
-            Seed();
             var user = new UserEditViewModel
             {
                 Id = 1,
@@ -192,30 +189,51 @@ namespace Tests.ServiceTest
             Assert.True(result);
         }
         
+        /// <summary>
+        /// EditUserAsync Test
+        /// UserNull
+        /// </summary>
+        /// <returns>False</returns>
         [Fact]
-        public async Task GetChangePasswordAsync_ReturnUserChangePasswordViewModel()
+        public async Task EditUserAsync_UserNull_ReturnFalse()
         {
-            
-            Seed();
+            var user = new UserEditViewModel();
+            var result = await _userService.EditUserAsync(user);
+            Assert.False(result);
+        }
+        
+        /// <summary>
+        /// GetChangePasswordAsync Test
+        /// </summary>
+        /// <returns>User</returns>
+        [Fact]
+        public async Task GetChangePasswordAsync_ReturnUser()
+        {
             const int id = 1;
             var result = await _userService.GetChangePasswordAsync(id);
             Assert.NotNull(result);
         }
         
+        
+        /// <summary>
+        /// GetChangePasswordAsync Test
+        /// </summary>
+        /// <returns>Null</returns>
         [Fact]
         public async Task GetChangePasswordAsync_ReturnNull()
         {
-            
-            Seed();
             const int id = 0;
             var result = await _userService.GetChangePasswordAsync(id);
             Assert.Null(result);
         }
         
+        /// <summary>
+        /// ChangePasswordAsync Test
+        /// </summary>
+        /// <returns>True</returns>
         [Fact]
         public async Task ChangePasswordAsync_ReturnTrue()
         {
-            Seed();
             var user = new UserChangePasswordViewModel
             {
                 Id = 1,
@@ -225,78 +243,93 @@ namespace Tests.ServiceTest
             Assert.True(result);
         }
         
+        /// <summary>
+        /// ChangePasswordAsync Test
+        /// UserNUll
+        /// </summary>
+        /// <returns>False</returns>
+        [Fact]
+        public async Task ChangePasswordAsync_UserNUll_ReturnFalse()
+        {
+            var user = new UserChangePasswordViewModel();
+            var result = await _userService.ChangePasswordAsync(user);
+            Assert.False(result);
+        }
+        
+        /// <summary>
+        /// DeleteUserAsync Test
+        /// </summary>
+        /// <returns>True</returns>
         [Fact]
         public async Task DeleteUserAsync_ReturnTrue()
         {
-            Seed();
             const int id = 1;
             var result = await _userService.DeleteUserAsync(id);
             Assert.True(result);
         }
         
+        /// <summary>
+        /// DeleteUserAsync Test
+        /// </summary>
+        /// <returns>False</returns>
         [Fact]
         public async Task DeleteUserAsync_ReturnFalse()
         {
-            Seed();
             const int id = 0;
             var result = await _userService.DeleteUserAsync(id);
             Assert.False(result);
         }
         
+        /// <summary>
+        /// IsExistedEmail Test
+        /// </summary>
+        /// <returns>True</returns>
         [Fact]
         public void IsExistedEmail_ReturnTrue()
         {
-            Seed();
             const int id = 0;
             const string email = "huan.hv@3si.com.vn";
             var result =  _userService.IsExistedEmail(id, email);
             Assert.True(result);
         }
         
+        /// <summary>
+        /// IsExistedEmail Test
+        /// </summary>
+        /// <returns>False</returns>
         [Fact]
         public void IsExistedEmail_ReturnFalse()
         {
-            Seed();
             const int id = 1;
             const string email = "huan.hv@3si.com.vn";
             var result =  _userService.IsExistedEmail(id, email);
             Assert.False(result);
         }
         
+        /// <summary>
+        /// IsCurrentPassword Test
+        /// </summary>
+        /// <returns>True</returns>
         [Fact]
         public void IsCurrentPassword_ReturnTrue()
         {
-            Seed();
             const int id = 1;
-            const string email = "Pass1234";
-            var result =  _userService.IsCurrentPassword(id, email);
+            const string password = "Pass1234";
+            var result =  _userService.IsCurrentPassword(id, password);
             Assert.True(result);
         }
         
+        /// <summary>
+        /// IsCurrentPassword Test
+        /// </summary>
+        /// <returns>False</returns>
         [Fact]
         public void IsCurrentPassword_ReturnFalse()
         {
-            Seed();
-            const int id = 0;
-            const string email = "Pass12345";
-            var result =  _userService.IsCurrentPassword(id, email);
+            const int id = 1;
+            const string password = "Pass12345";
+            var result =  _userService.IsCurrentPassword(id, password);
             Assert.False(result);
         }
-        
-//        [Theory]
-//        [MemberData("huan.hv" + "@3si.com.vn", "Pass1234", true)]
-//        [MemberData("huan" + "@3si.com.vn", "Pass1234", false)]
-//        [MemberData("huan.hv" + "@3si.com.vn", "Pass12345", false)]
-//        public async Task LoginAsync_WhenCalled_ReturnFalse(string email, string password, bool expected)
-//        {
-//            Seed();
-//            var loginViewModel = new LoginViewModel
-//            {
-//                Email = email,
-//                Password = password,
-//            };
-//            var result = await _userService.LoginAsync(loginViewModel);
-//            Assert.Equal(result, expected);
-//        }
     }
 }

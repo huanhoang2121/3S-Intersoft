@@ -19,27 +19,27 @@ using LoggingCodefirst;
 #line default
 #line hidden
 #line 2 "/home/local/3SI/huan.hv/3S-Intersoft/LoggingCodefirst/Views/_ViewImports.cshtml"
-using LoggingCodefirst.Resources;
+using LoggingCodefirst.Interface;
 
 #line default
 #line hidden
 #line 3 "/home/local/3SI/huan.hv/3S-Intersoft/LoggingCodefirst/Views/_ViewImports.cshtml"
+using LoggingCodefirst.Resources;
+
+#line default
+#line hidden
+#line 4 "/home/local/3SI/huan.hv/3S-Intersoft/LoggingCodefirst/Views/_ViewImports.cshtml"
 using LoggingCodefirst.ViewModels;
 
 #line default
 #line hidden
-#line 6 "/home/local/3SI/huan.hv/3S-Intersoft/LoggingCodefirst/Views/_ViewImports.cshtml"
+#line 5 "/home/local/3SI/huan.hv/3S-Intersoft/LoggingCodefirst/Views/_ViewImports.cshtml"
 using Microsoft.AspNetCore.Http;
 
 #line default
 #line hidden
-#line 8 "/home/local/3SI/huan.hv/3S-Intersoft/LoggingCodefirst/Views/_ViewImports.cshtml"
-using LoggingCodefirst.Services;
-
-#line default
-#line hidden
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"5240e59bdfe8db6ea738e5f4d02a9c872d577062", @"/Views/Stock/_CreatePartial.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"cb4807872076cf67f845e777f0d4eb7e4e3fbeea", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"2a31015e85e4a5f218136f52e310f72066c1f73d", @"/Views/_ViewImports.cshtml")]
     public class Views_Stock__CreatePartial : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<StockViewModel>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("class", new global::Microsoft.AspNetCore.Html.HtmlString("form-control"), global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -94,7 +94,7 @@ using LoggingCodefirst.Services;
                 ");
             EndContext();
             BeginContext(554, 1141, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5240e59bdfe8db6ea738e5f4d02a9c872d5770626961", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5240e59bdfe8db6ea738e5f4d02a9c872d5770626962", async() => {
                 BeginContext(630, 56, true);
                 WriteLiteral("\n                    <input name=\"IsValid\" type=\"hidden\"");
                 EndContext();
@@ -109,7 +109,7 @@ WriteAttributeValue("", 694, ViewData.ModelState.IsValid.ToString(), 694, 39, fa
                 WriteLiteral(" />\n                    <div class=\"form-group\">\n                        ");
                 EndContext();
                 BeginContext(807, 80, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("label", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5240e59bdfe8db6ea738e5f4d02a9c872d5770627909", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("label", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5240e59bdfe8db6ea738e5f4d02a9c872d5770627910", async() => {
                     BeginContext(833, 46, false);
 #line 17 "/home/local/3SI/huan.hv/3S-Intersoft/LoggingCodefirst/Views/Stock/_CreatePartial.cshtml"
                                             Write(StockLocalizer.GetLocalizedString("lbl_Store"));
@@ -139,7 +139,7 @@ __Microsoft_AspNetCore_Mvc_TagHelpers_LabelTagHelper.For = ModelExpressionProvid
                 WriteLiteral("\n                        ");
                 EndContext();
                 BeginContext(912, 85, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("select", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5240e59bdfe8db6ea738e5f4d02a9c872d5770629835", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("select", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5240e59bdfe8db6ea738e5f4d02a9c872d5770629836", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_TagHelpers_SelectTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.SelectTagHelper>();
@@ -169,7 +169,7 @@ __Microsoft_AspNetCore_Mvc_TagHelpers_SelectTagHelper.Items = ViewBag.StoreId;
                 WriteLiteral("\n                    </div>\n                    <div class=\"form-group\">\n                        ");
                 EndContext();
                 BeginContext(1094, 84, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("label", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5240e59bdfe8db6ea738e5f4d02a9c872d57706212051", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("label", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5240e59bdfe8db6ea738e5f4d02a9c872d57706212052", async() => {
                     BeginContext(1122, 48, false);
 #line 21 "/home/local/3SI/huan.hv/3S-Intersoft/LoggingCodefirst/Views/Stock/_CreatePartial.cshtml"
                                               Write(StockLocalizer.GetLocalizedString("lbl_Product"));
@@ -199,7 +199,7 @@ __Microsoft_AspNetCore_Mvc_TagHelpers_LabelTagHelper.For = ModelExpressionProvid
                 WriteLiteral("\n                        ");
                 EndContext();
                 BeginContext(1203, 89, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("select", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5240e59bdfe8db6ea738e5f4d02a9c872d57706213987", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("select", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5240e59bdfe8db6ea738e5f4d02a9c872d57706213988", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_TagHelpers_SelectTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.SelectTagHelper>();
@@ -229,7 +229,7 @@ __Microsoft_AspNetCore_Mvc_TagHelpers_SelectTagHelper.Items = ViewBag.ProductId;
                 WriteLiteral("\n                    </div>\n                    <div class=\"form-group\">\n                        ");
                 EndContext();
                 BeginContext(1389, 84, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("label", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5240e59bdfe8db6ea738e5f4d02a9c872d57706216209", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("label", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5240e59bdfe8db6ea738e5f4d02a9c872d57706216210", async() => {
                     BeginContext(1416, 49, false);
 #line 25 "/home/local/3SI/huan.hv/3S-Intersoft/LoggingCodefirst/Views/Stock/_CreatePartial.cshtml"
                                              Write(StockLocalizer.GetLocalizedString("lbl_Quantity"));
@@ -259,7 +259,7 @@ __Microsoft_AspNetCore_Mvc_TagHelpers_LabelTagHelper.For = ModelExpressionProvid
                 WriteLiteral("\n                        ");
                 EndContext();
                 BeginContext(1498, 58, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("input", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "5240e59bdfe8db6ea738e5f4d02a9c872d57706218144", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("input", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "5240e59bdfe8db6ea738e5f4d02a9c872d57706218145", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_TagHelpers_InputTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.InputTagHelper>();
@@ -286,7 +286,7 @@ __Microsoft_AspNetCore_Mvc_TagHelpers_InputTagHelper.For = ModelExpressionProvid
                 WriteLiteral("\n                        ");
                 EndContext();
                 BeginContext(1581, 63, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("span", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5240e59bdfe8db6ea738e5f4d02a9c872d57706220165", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("span", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "5240e59bdfe8db6ea738e5f4d02a9c872d57706220166", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_TagHelpers_ValidationMessageTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.ValidationMessageTagHelper>();
@@ -353,23 +353,23 @@ __Microsoft_AspNetCore_Mvc_TagHelpers_ValidationMessageTagHelper.For = ModelExpr
         }
         #pragma warning restore 1998
         [global::Microsoft.AspNetCore.Mvc.Razor.Internal.RazorInjectAttribute]
-        public LocalizationService<ErrorResource> ErrorLocalizer { get; private set; }
+        public ILocalizationService<ErrorResource> ErrorLocalizer { get; private set; }
         [global::Microsoft.AspNetCore.Mvc.Razor.Internal.RazorInjectAttribute]
-        public LocalizationService<StoreResource> StoreLocalizer { get; private set; }
+        public ILocalizationService<StoreResource> StoreLocalizer { get; private set; }
         [global::Microsoft.AspNetCore.Mvc.Razor.Internal.RazorInjectAttribute]
-        public LocalizationService<StockResource> StockLocalizer { get; private set; }
+        public ILocalizationService<StockResource> StockLocalizer { get; private set; }
         [global::Microsoft.AspNetCore.Mvc.Razor.Internal.RazorInjectAttribute]
-        public LocalizationService<ProductResource> ProductLocalizer { get; private set; }
+        public ILocalizationService<ProductResource> ProductLocalizer { get; private set; }
         [global::Microsoft.AspNetCore.Mvc.Razor.Internal.RazorInjectAttribute]
-        public LocalizationService<CategoryResource> CategoryLocalizer { get; private set; }
+        public ILocalizationService<CategoryResource> CategoryLocalizer { get; private set; }
         [global::Microsoft.AspNetCore.Mvc.Razor.Internal.RazorInjectAttribute]
-        public LocalizationService<BrandResource> BrandLocalizer { get; private set; }
+        public ILocalizationService<BrandResource> BrandLocalizer { get; private set; }
         [global::Microsoft.AspNetCore.Mvc.Razor.Internal.RazorInjectAttribute]
-        public LocalizationService<UserResource> UserLocalizer { get; private set; }
+        public ILocalizationService<UserResource> UserLocalizer { get; private set; }
         [global::Microsoft.AspNetCore.Mvc.Razor.Internal.RazorInjectAttribute]
-        public LocalizationService<HomeResource> HomeLocalizer { get; private set; }
+        public ILocalizationService<HomeResource> HomeLocalizer { get; private set; }
         [global::Microsoft.AspNetCore.Mvc.Razor.Internal.RazorInjectAttribute]
-        public LocalizationService<CommonResource> Localizer { get; private set; }
+        public ILocalizationService<CommonResource> Localizer { get; private set; }
         [global::Microsoft.AspNetCore.Mvc.Razor.Internal.RazorInjectAttribute]
         public global::Microsoft.AspNetCore.Mvc.ViewFeatures.IModelExpressionProvider ModelExpressionProvider { get; private set; }
         [global::Microsoft.AspNetCore.Mvc.Razor.Internal.RazorInjectAttribute]

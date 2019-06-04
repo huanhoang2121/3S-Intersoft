@@ -69,17 +69,16 @@ namespace LoggingCodefirst
                 options.SupportedCultures = supportedCultures;
                 options.SupportedUICultures = supportedCultures;
             });
-
-            services.AddSingleton<LocalizationService<CommonResource>>();
-            services.AddSingleton<LocalizationService<HomeResource>>();
-            services.AddSingleton<LocalizationService<ErrorResource>>();
-            services.AddSingleton<LocalizationService<UserResource>>();
-            services.AddSingleton<LocalizationService<BrandResource>>();
-            services.AddSingleton<LocalizationService<CategoryResource>>();
-            services.AddSingleton<LocalizationService<ProductResource>>();
-            services.AddSingleton<LocalizationService<StockResource>>();
-            services.AddSingleton<LocalizationService<StoreResource>>();
-  
+            
+            services.AddScoped<ILocalizationService<CommonResource>, LocalizationService<CommonResource>>();
+            services.AddScoped<ILocalizationService<HomeResource>, LocalizationService<HomeResource>>();
+            services.AddScoped<ILocalizationService<ErrorResource>, LocalizationService<ErrorResource>>();
+            services.AddScoped<ILocalizationService<UserResource>, LocalizationService<UserResource>>();
+            services.AddScoped<ILocalizationService<BrandResource>, LocalizationService<BrandResource>>();
+            services.AddScoped<ILocalizationService<CategoryResource>, LocalizationService<CategoryResource>>();
+            services.AddScoped<ILocalizationService<ProductResource>, LocalizationService<ProductResource>>();
+            services.AddScoped<ILocalizationService<StockResource>, LocalizationService<StockResource>>();
+            services.AddScoped<ILocalizationService<StoreResource>, LocalizationService<StoreResource>>();
             
             #endregion
 
@@ -156,9 +155,6 @@ namespace LoggingCodefirst
                             break;
                         case StatusCodes.Status500InternalServerError:
                             context.Request.Path ="/Error/500";
-                            await next();
-                            break;
-                        default:
                             await next();
                             break;
                     }

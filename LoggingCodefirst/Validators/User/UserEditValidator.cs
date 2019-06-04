@@ -1,15 +1,13 @@
-﻿using System;
-using FluentValidation;
+﻿using FluentValidation;
 using LoggingCodefirst.Interface;
 using LoggingCodefirst.Resources;
-using LoggingCodefirst.Services;
 using LoggingCodefirst.ViewModels;
 
 namespace LoggingCodefirst.Validators.User
 {
     public class UserEditValidator : AbstractValidator<UserEditViewModel>
     {
-        public UserEditValidator(LocalizationService<UserResource> localizer, IUserService userService)
+        public UserEditValidator(ILocalizationService<UserResource> localizer, IUserService userService)
         {
             RuleFor(x => x.Email)
                 .NotNull().WithMessage(localizer.GetLocalizedString("msg_EmailNotEmpty"))

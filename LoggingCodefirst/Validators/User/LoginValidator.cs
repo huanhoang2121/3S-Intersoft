@@ -1,13 +1,13 @@
 ﻿using FluentValidation;
+using LoggingCodefirst.Interface;
 using LoggingCodefirst.Resources;
-using LoggingCodefirst.Services;
 using LoggingCodefirst.ViewModels;
 
 namespace LoggingCodefirst.Validators.User
 {
     public class LoginValidator : AbstractValidator<LoginViewModel>
     { 
-        public LoginValidator(LocalizationService<UserResource> localizer)
+        public LoginValidator(ILocalizationService<UserResource> localizer)
         {
             RuleFor(x => x.Email).NotNull().WithMessage(localizer.GetLocalizedString("msg_EmailNotEmpty"))
                 .EmailAddress().WithMessage(localizer.GetLocalizedString("msg_ValidEmail"));

@@ -1,18 +1,17 @@
 ﻿@using LoggingCodefirst
+@using LoggingCodefirst.Interface
 @using LoggingCodefirst.Resources
 @using LoggingCodefirst.ViewModels
-
-@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 @using Microsoft.AspNetCore.Http
 
-@using LoggingCodefirst.Services
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 
-@inject LocalizationService<CommonResource> Localizer
-@inject LocalizationService<HomeResource> HomeLocalizer
-@inject LocalizationService<UserResource> UserLocalizer
-@inject LocalizationService<BrandResource> BrandLocalizer
-@inject LocalizationService<CategoryResource> CategoryLocalizer
-@inject LocalizationService<ProductResource> ProductLocalizer
-@inject LocalizationService<StockResource> StockLocalizer
-@inject LocalizationService<StoreResource> StoreLocalizer
-@inject LocalizationService<ErrorResource> ErrorLocalizer
+@inject ILocalizationService<CommonResource> Localizer
+@inject ILocalizationService<HomeResource> HomeLocalizer
+@inject ILocalizationService<UserResource> UserLocalizer
+@inject ILocalizationService<BrandResource> BrandLocalizer
+@inject ILocalizationService<CategoryResource> CategoryLocalizer
+@inject ILocalizationService<ProductResource> ProductLocalizer
+@inject ILocalizationService<StockResource> StockLocalizer
+@inject ILocalizationService<StoreResource> StoreLocalizer
+@inject ILocalizationService<ErrorResource> ErrorLocalizer

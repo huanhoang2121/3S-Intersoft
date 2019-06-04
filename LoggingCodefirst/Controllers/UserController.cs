@@ -1,7 +1,6 @@
 ﻿using System.Threading.Tasks;
 using LoggingCodefirst.Interface;
 using LoggingCodefirst.Resources;
-using LoggingCodefirst.Services;
 using LoggingCodefirst.ViewModels;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -17,7 +16,7 @@ namespace LoggingCodefirst.Controllers
         private readonly IUserService _userService;
         private readonly IStoreService _storeService;
         private readonly IRoleService _roleService;
-        private readonly LocalizationService<UserResource> _localizer;
+        private readonly ILocalizationService<UserResource> _localizer;
 
         #endregion
         
@@ -27,7 +26,7 @@ namespace LoggingCodefirst.Controllers
             IUserService userService, 
             IStoreService storeService, 
             IRoleService roleService,
-            LocalizationService<UserResource> localizer)
+            ILocalizationService<UserResource> localizer)
         {
             _userService = userService;
             _storeService = storeService;

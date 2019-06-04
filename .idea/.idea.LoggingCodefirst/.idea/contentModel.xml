@@ -230,6 +230,7 @@
         <e p="logs" t="Include">
           <e p="log20190527.txt" t="Include" />
           <e p="log20190528.txt" t="Include" />
+          <e p="log20190603.txt" t="Include" />
         </e>
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
@@ -1608,8 +1609,13 @@
       <e p="LoggingCodefirst.sln" t="IncludeFlat" />
       <e p="Tests" t="IncludeRecursive">
         <e p="Common" t="Include">
+          <e p="AbstractLogger.cs" t="Include" />
           <e p="AutoMapperConfig.cs" t="Include" />
           <e p="TestHelpers.cs" t="Include" />
+        </e>
+        <e p="ControllerTest" t="Include">
+          <e p="AccountControllerTest.cs" t="Include" />
+          <e p="UserControllerTest.cs" t="Include" />
         </e>
         <e p="ServiceTest" t="Include">
           <e p="BrandServiceTest.cs" t="Include" />

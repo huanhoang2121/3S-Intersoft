@@ -118,6 +118,12 @@ namespace LoggingCodefirst.Resources {
             }
         }
         
+        public static string lbl_Search {
+            get {
+                return ResourceManager.GetString("lbl_Search", resourceCulture);
+            }
+        }
+        
         public static string btn_AccountSetting {
             get {
                 return ResourceManager.GetString("btn_AccountSetting", resourceCulture);

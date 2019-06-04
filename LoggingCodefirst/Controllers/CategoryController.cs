@@ -14,7 +14,7 @@ namespace LoggingCodefirst.Controllers
         #region Private Members
 
         private readonly ICategoryService _categoryService;
-        private readonly LocalizationService<CategoryResource> _localizer;
+        private readonly ILocalizationService<CategoryResource> _localizer;
 
         #endregion
         
@@ -22,7 +22,7 @@ namespace LoggingCodefirst.Controllers
 
         public CategoryController(
             ICategoryService categoryService, 
-            LocalizationService<CategoryResource> localizer)
+            ILocalizationService<CategoryResource> localizer)
         {
             _localizer = localizer;
             _categoryService = categoryService;

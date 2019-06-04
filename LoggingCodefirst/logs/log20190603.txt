@@ -1,0 +1,6 @@
+2019-06-03 09:27:40.205 +07:00 [ERR] Value cannot be null.
+Parameter name: entity
+2019-06-03 09:27:57.922 +07:00 [ERR] Value cannot be null.
+Parameter name: entity
+2019-06-03 09:30:02.103 +07:00 [ERR] Value cannot be null.
+Parameter name: entity

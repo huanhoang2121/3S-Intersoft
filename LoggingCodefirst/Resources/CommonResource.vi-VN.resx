@@ -104,4 +104,7 @@
   <data name="msg_Error" xml:space="preserve">
     <value>Lỗi:</value>
   </data>
+  <data name="lbl_Search" xml:space="preserve">
+    <value>Tìm kiếm...</value>
+  </data>
 </root>

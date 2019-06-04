@@ -1,13 +1,13 @@
 ﻿using FluentValidation;
+using LoggingCodefirst.Interface;
 using LoggingCodefirst.Resources;
-using LoggingCodefirst.Services;
 using LoggingCodefirst.ViewModels;
 
 namespace LoggingCodefirst.Validators
 {
     public class ProductValidator: AbstractValidator<ProductViewModel>
     {
-        public ProductValidator(LocalizationService<ProductResource> localizer)
+        public ProductValidator(ILocalizationService<ProductResource> localizer)
         {
             RuleFor(x => x.ProductName).NotNull().WithMessage(localizer.GetLocalizedString("msg_ProductNameNotEmpty"));
             RuleFor(x => x.ListPrice).NotNull().WithMessage(localizer.GetLocalizedString("msg_ListPriceNotEmpty"));

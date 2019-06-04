@@ -19,7 +19,7 @@ namespace LoggingCodefirst.Services
         #region Constructors
 
         public LocalizationService(IStringLocalizerFactory factory)
-        {
+        { 
             var type = typeof(T);
             var assemblyName = type.GetTypeInfo().Assembly.GetName().Name;
             var baseName = type.Name;
@@ -29,6 +29,8 @@ namespace LoggingCodefirst.Services
         #endregion       
         
         #region Public Methods
+        
+        public LocalizedString this[string key] => _localizer[key];
 
         public LocalizedString GetLocalizedString(string key)
         {

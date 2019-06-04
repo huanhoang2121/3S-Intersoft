@@ -14,7 +14,7 @@ namespace LoggingCodefirst.Controllers
         #region Private Members
 
         private readonly IBrandService _brandService;
-        private readonly LocalizationService<BrandResource> _localizer;
+        private readonly ILocalizationService<BrandResource> _localizer;
 
         #endregion
         
@@ -22,7 +22,7 @@ namespace LoggingCodefirst.Controllers
 
         public BrandController(
             IBrandService brandService, 
-            LocalizationService<BrandResource> localizer)
+            ILocalizationService<BrandResource> localizer)
         {
             _localizer = localizer;
             _brandService = brandService;

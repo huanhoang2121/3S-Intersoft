@@ -14,7 +14,7 @@ namespace LoggingCodefirst.Controllers
         #region Private Members
 
         private readonly IStoreService _storeService;
-        private readonly LocalizationService<StoreResource> _localizer;
+        private readonly ILocalizationService<StoreResource> _localizer;
 
         #endregion
         
@@ -22,7 +22,7 @@ namespace LoggingCodefirst.Controllers
         
         public StoreController(
             IStoreService storeService, 
-            LocalizationService<StoreResource> localizer)
+            ILocalizationService<StoreResource> localizer)
         {
             _localizer = localizer;
             _storeService = storeService;

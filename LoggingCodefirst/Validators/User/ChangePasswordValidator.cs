@@ -1,14 +1,13 @@
 ﻿using FluentValidation;
 using LoggingCodefirst.Interface;
 using LoggingCodefirst.Resources;
-using LoggingCodefirst.Services;
 using LoggingCodefirst.ViewModels;
 
 namespace LoggingCodefirst.Validators.User
 {
     public class ChangePasswordValidator: AbstractValidator<UserChangePasswordViewModel>
     {
-        public ChangePasswordValidator(LocalizationService<UserResource> localizer, IUserService userService)
+        public ChangePasswordValidator(ILocalizationService<UserResource> localizer, IUserService userService)
         {
             RuleFor(x => x.CurrentPassword)
                 .Must((reg, x) => userService.IsCurrentPassword(reg.Id, reg.CurrentPassword))

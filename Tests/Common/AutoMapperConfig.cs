@@ -8,8 +8,8 @@ namespace Tests.Common
     {
         private static readonly object ThisLock = new object();
         private static bool _initialized;
-
         private static IMapper _mapper;
+        
         // Centralize automapper initialize
         public static void Initialize()
         {

@@ -17,7 +17,7 @@ namespace LoggingCodefirst.Controllers
         private readonly IProductService _productService;
         private readonly IBrandService _brandService;
         private readonly ICategoryService _categoryService;
-        private readonly LocalizationService<ProductResource> _localizer;
+        private readonly ILocalizationService<ProductResource> _localizer;
 
         #endregion
         
@@ -27,7 +27,7 @@ namespace LoggingCodefirst.Controllers
             IProductService productService,
             IBrandService brandService, 
             ICategoryService categoryService, 
-            LocalizationService<ProductResource> localizer)
+            ILocalizationService<ProductResource> localizer)
         {
             _localizer = localizer;
             _productService = productService;
