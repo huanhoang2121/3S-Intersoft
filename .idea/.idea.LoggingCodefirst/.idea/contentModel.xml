@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="$USER_HOME$/.Rider2018.1/system/resharper-host/local/Transient/ReSharperHost/v12/SolutionCaches/_LoggingCodefirst.1174688886.00" t="ExcludeRecursive" />
+    <e p="$USER_HOME$/.Rider2018.1/system/resharper-host/local/Transient/ReSharperHost/v12/SolutionCaches/_LoggingCodefirst.1422686771.00" t="ExcludeRecursive" />
     <e p="$USER_HOME$/.nuget/packages/microsoft.net.test.sdk/16.1.1/build/netcoreapp1.0" t="Include">
       <e p="Microsoft.NET.Test.Sdk.Program.cs" t="Include" />
     </e>
@@ -171,6 +171,7 @@
             <e p="Index.cshtml" t="Include" />
             <e p="_CreatePartial.cshtml" t="Include" />
             <e p="_EditPartial.cshtml" t="Include" />
+            <e p="_ImportPartial.cshtml" t="Include" />
           </e>
           <e p="Category" t="Include">
             <e p="Index.cshtml" t="Include" />
@@ -231,6 +232,7 @@
           <e p="log20190527.txt" t="Include" />
           <e p="log20190528.txt" t="Include" />
           <e p="log20190603.txt" t="Include" />
+          <e p="log20190709.txt" t="Include" />
         </e>
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
@@ -1495,6 +1497,9 @@
               <e p="sidebarmenu.js" t="Include" />
               <e p="waves.js" t="Include" />
             </e>
+          </e>
+          <e p="export" t="Include">
+            <e p="190709_143856.xlsx" t="Include" />
           </e>
           <e p="favicon.ico" t="Include" />
           <e p="images" t="Include">

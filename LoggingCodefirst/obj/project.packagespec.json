@@ -1,10 +1,10 @@
 ﻿{
   "version": "1.0.0",
   "restore": {
-    "projectUniqueName": "/home/local/3SI/huan.hv/3S-Intersoft/LoggingCodefirst/LoggingCodefirst.csproj",
+    "projectUniqueName": "/home/huanhv/RiderProjects/3S-Intersoft/LoggingCodefirst/LoggingCodefirst.csproj",
     "projectName": "LoggingCodefirst",
-    "projectPath": "/home/local/3SI/huan.hv/3S-Intersoft/LoggingCodefirst/LoggingCodefirst.csproj",
-    "outputPath": "/home/local/3SI/huan.hv/3S-Intersoft/LoggingCodefirst/obj/",
+    "projectPath": "/home/huanhv/RiderProjects/3S-Intersoft/LoggingCodefirst/LoggingCodefirst.csproj",
+    "outputPath": "/home/huanhv/RiderProjects/3S-Intersoft/LoggingCodefirst/obj/",
     "projectStyle": "PackageReference",
     "fallbackFolders": [
       "/usr/share/dotnet/sdk/NuGetFallbackFolder"
@@ -29,6 +29,10 @@
         "AutoMapper.Extensions.Microsoft.DependencyInjection": {
           "target": "Package",
           "version": "[6.0.0, )"
+        },
+        "EPPlus.Core": {
+          "target": "Package",
+          "version": "[1.5.4, )"
         },
         "FluentValidation.AspNetCore": {
           "target": "Package",

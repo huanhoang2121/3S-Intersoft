@@ -1,10 +1,10 @@
 ﻿{
   "version": "1.0.0",
   "restore": {
-    "projectUniqueName": "/home/local/3SI/huan.hv/3S-Intersoft/Tests/Tests.csproj",
+    "projectUniqueName": "/home/huanhv/RiderProjects/3S-Intersoft/Tests/Tests.csproj",
     "projectName": "Tests",
-    "projectPath": "/home/local/3SI/huan.hv/3S-Intersoft/Tests/Tests.csproj",
-    "outputPath": "/home/local/3SI/huan.hv/3S-Intersoft/Tests/obj/",
+    "projectPath": "/home/huanhv/RiderProjects/3S-Intersoft/Tests/Tests.csproj",
+    "outputPath": "/home/huanhv/RiderProjects/3S-Intersoft/Tests/obj/",
     "projectStyle": "PackageReference",
     "fallbackFolders": [
       "/usr/share/dotnet/sdk/NuGetFallbackFolder"
@@ -15,8 +15,8 @@
     "frameworks": {
       "netcoreapp2.2": {
         "projectReferences": {
-          "/home/local/3SI/huan.hv/3S-Intersoft/LoggingCodefirst/LoggingCodefirst.csproj": {
-            "projectPath": "/home/local/3SI/huan.hv/3S-Intersoft/LoggingCodefirst/LoggingCodefirst.csproj"
+          "/home/huanhv/RiderProjects/3S-Intersoft/LoggingCodefirst/LoggingCodefirst.csproj": {
+            "projectPath": "/home/huanhv/RiderProjects/3S-Intersoft/LoggingCodefirst/LoggingCodefirst.csproj"
           }
         }
       }

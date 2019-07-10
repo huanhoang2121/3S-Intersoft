@@ -28,6 +28,12 @@
   <data name="btn_Create" xml:space="preserve">
     <value>Thêm</value>
   </data>
+  <data name="btn_Import" xml:space="preserve">
+    <value>Nhập bằng excel</value>
+  </data>
+  <data name="btn_Export" xml:space="preserve">
+    <value>Xuất tệp tin</value>
+  </data>
   <data name="btn_Edit" xml:space="preserve">
     <value>Sửa</value>
   </data>

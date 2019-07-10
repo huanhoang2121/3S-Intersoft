@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="dataSourceStorageLocal">
-    <data-source name="HuanDB@localhost" uuid="770385e9-f87b-4cb7-a9ee-e8a1c912ba1f">
-      <database-info product="Microsoft SQL Server" version="15.00.1400" jdbc-version="4.2" driver-name="Microsoft JDBC Driver 7.2 for SQL Server" driver-version="7.2.1.0">
+    <data-source name="HuanDB@localhost" uuid="f6879b6c-76b1-413b-867a-202e464cad11">
+      <database-info product="Microsoft SQL Server" version="14.00.3162" jdbc-version="4.2" driver-name="Microsoft JDBC Driver 7.2 for SQL Server" driver-version="7.2.1.0">
         <extra-name-characters>$#@</extra-name-characters>
         <identifier-quote-string>&quot;</identifier-quote-string>
       </database-info>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="HuanDB@localhost" uuid="770385e9-f87b-4cb7-a9ee-e8a1c912ba1f">
+    <data-source source="LOCAL" name="HuanDB@localhost" uuid="f6879b6c-76b1-413b-867a-202e464cad11">
       <driver-ref>sqlserver.ms</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.microsoft.sqlserver.jdbc.SQLServerDriver</jdbc-driver>

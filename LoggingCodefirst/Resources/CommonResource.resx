@@ -28,6 +28,12 @@
   <data name="btn_Create" xml:space="preserve">
     <value>Create</value>
   </data>
+  <data name="btn_Import" xml:space="preserve">
+    <value>Import from excel</value>
+  </data>
+  <data name="btn_Export" xml:space="preserve">
+    <value>Export file</value>
+  </data>
   <data name="btn_Edit" xml:space="preserve">
     <value>Edit</value>
   </data>

@@ -64,6 +64,18 @@ namespace LoggingCodefirst.Resources {
             }
         }
         
+        public static string btn_Import {
+            get {
+                return ResourceManager.GetString("btn_Import", resourceCulture);
+            }
+        }
+        
+        public static string btn_Export {
+            get {
+                return ResourceManager.GetString("btn_Export", resourceCulture);
+            }
+        }
+        
         public static string btn_Edit {
             get {
                 return ResourceManager.GetString("btn_Edit", resourceCulture);

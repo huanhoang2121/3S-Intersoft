@@ -1,0 +1,2 @@
+2019-07-09 11:41:44.847 +07:00 [ERR] An error occurred while seeding the database: Login failed for user 'SA'.
+2019-07-09 11:42:16.692 +07:00 [ERR] Login failed for user 'SA'.
